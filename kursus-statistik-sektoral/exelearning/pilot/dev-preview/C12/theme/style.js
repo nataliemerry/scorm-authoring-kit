@@ -159,12 +159,67 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
  const brandLogo=document.querySelector('[data-brand-logo]');
  const chrome=document.createElement('div');chrome.className='scene-chrome';chrome.innerHTML=`<div class="scene-identity">${brandLogo?`<img class="scene-brand-logo" src="${safe(brandLogo.src)}" alt="Logo BPS CorpU" width="50" height="52">`:""}<div class="scene-identity-copy"><div class="scene-brand">BPS CORPORATE UNIVERSITY</div><div class="scene-course-title">${safe(title)}</div></div></div><div class="scene-chrome-right"><button type="button" class="scene-fullscreen" aria-label="Buka layar penuh">⛶</button></div>`;document.body.append(chrome);
  const bottom=document.createElement('div');bottom.className='scene-bottom';bottom.innerHTML=`<nav class="scene-progress" aria-label="Progres pengalaman">${names.map((n,i)=>`<button type="button" data-scene-phase="${i}" aria-label="${n}">${i+1}</button>`).join('')}<span class="scene-progress-label"></span></nav><span class="scene-next-note"></span><div class="scene-clock" hidden><span></span><small>SISA WAKTU</small></div><button type="button" class="scene-next"></button>`;document.body.append(bottom);
- const back=document.createElement('button');back.className='scene-arena-back';back.type='button';back.textContent=cid==='C01'?'← Kembali ke alokasi':'← Kembali ke email';back.hidden=true;document.body.append(back);
+ const back=document.createElement('button');back.className='scene-arena-back';back.type='button';back.textContent=cid==='C01'?'← Kembali ke alokasi':(cid==='S01'?'← Kembali ke perancangan':'← Kembali ke email');back.hidden=true;document.body.append(back);
  function say(message){document.querySelector('.scene-announcement')?.remove();const box=document.createElement('div');box.className='scene-announcement';box.setAttribute('role','status');box.textContent=message;document.body.append(box);clearTimeout(toastTimer);toastTimer=setTimeout(()=>box.remove(),5000);}
  function resizeForm(){requestAnimationFrame(()=>{if(window.$form?.instances)Object.values(window.$form.instances).forEach(data=>window.$form.resizeSlideShow(data));window.dispatchEvent(new Event('resize'));});}
  function answersCount(){return new Set([...document.querySelectorAll('.exe-form-container input[type=radio]:checked')].map(r=>r.name)).size;}
  function check(){if(!practiceDone()||answersCount()<2){submitted=false;return false;}document.querySelector('[id^="form-button-check-"]')?.click();submitted=true;return true;}
  function result(){const node=document.querySelector('.scene-final-score');if(!node)return;if(answersCount()<2){node.textContent='Masih ada pertanyaan yang belum dijawab.';return;}const native=document.querySelector('#eXeScoreNodeScore')?.textContent?.trim()||document.querySelector('[id^="form-score-"]')?.textContent?.trim();node.textContent=native||'Dua pertanyaan sudah dijawab.';}
+  function review(){
+   const container=document.querySelector('.scene-review-points');if(!container)return;
+   let qDataList=[];
+   const formNode=document.querySelector('.idevice_node.form[data-idevice-json-data]');
+   if(formNode){try{const d=JSON.parse(formNode.getAttribute('data-idevice-json-data'));if(d&&Array.isArray(d.questionsData))qDataList=d.questionsData;}catch(e){}}
+   if(!qDataList.length&&window.$form?.instances){const inst=Object.values(window.$form.instances)[0];if(inst?.questionsData)qDataList=inst.questionsData;}
+   const slides=document.querySelectorAll('.exe-form-container .FRMP-SlideshowSlide, .exe-form-container .FormView_question');
+   const articles=container.querySelectorAll('article');
+   articles.forEach((art,idx)=>{
+     const slide=slides[idx],qData=qDataList[idx];
+     let selectedText='',isCorrect=false,correctText='',explanation='';
+     if(qData){
+       const correctOpt=qData.answers.find(a=>a[0]===true);
+       if(correctOpt)correctText=correctOpt[1];
+       explanation=qData.feedbackRight||qData.feedbackWrong||'';
+     }
+     if(slide){
+       const checked=slide.querySelector('input[type="radio"]:checked');
+       if(checked){
+         const radios=Array.from(slide.querySelectorAll('input[type="radio"]'));
+         const checkedIdx=radios.indexOf(checked);
+         if(qData&&qData.answers&&checkedIdx>=0&&checkedIdx<qData.answers.length){
+           isCorrect=qData.answers[checkedIdx][0]===true;
+           selectedText=qData.answers[checkedIdx][1];
+         }else{
+           const label=slide.querySelector(`label[for="${checked.id}"]`)||checked.closest('label');
+           selectedText=label?label.textContent.trim():checked.value;
+           isCorrect=(selectedText===correctText);
+         }
+       }
+     }
+     if(!explanation){
+       const existingP=art.querySelector('.scene-review-explanation p')||art.querySelector('div > p');
+       if(existingP)explanation=existingP.textContent.trim();
+     }
+     const h3=art.querySelector('h3');
+     const questionTitle=h3?h3.textContent.trim():(qData?.baseText?.replace(/<[^>]+>/g,'')||('Pertanyaan '+(idx+1)));
+     const numSpan=art.querySelector('.scene-review-num')||art.querySelector('span');
+     const numText=numSpan?numSpan.textContent.trim():String(idx+1);
+
+     const statusBadge=isCorrect
+       ?'<span class="scene-review-badge scene-review-badge-ok">✓ Jawaban Anda Benar (Tepat)</span>'
+       :'<span class="scene-review-badge scene-review-badge-ko">✗ Jawaban Anda Salah (Perlu ditinjau)</span>';
+
+     const userBlock=selectedText
+       ?`<div class="scene-review-block scene-review-user ${isCorrect?'is-correct':'is-wrong'}">${statusBadge}<p class="scene-review-ans"><strong>Pilihan Anda:</strong> ${safe(selectedText)}</p></div>`
+       :`<div class="scene-review-block scene-review-user is-empty"><span class="scene-review-badge scene-review-badge-empty">Belum dijawab</span></div>`;
+
+     const keyBlock=`<div class="scene-review-block scene-review-key"><p class="scene-review-ans"><strong>Kunci Jawaban Benar:</strong> ${safe(correctText||selectedText)}</p></div>`;
+     const expBlock=`<div class="scene-review-block scene-review-explanation"><p class="scene-review-ans"><strong>Pembahasan:</strong> ${safe(explanation)}</p></div>`;
+
+     art.className='scene-review-card';
+     art.innerHTML=`<span class="scene-review-num">${safe(numText)}</span><div class="scene-review-body"><h3>${safe(questionTitle)}</h3>${userBlock}${keyBlock}${expBlock}</div>`;
+   });
+ }
  function show(next,focus=true){phase=next;arena=false;document.body.dataset.scenePhase=phase;
    articles.forEach(a=>{a.hidden=Number(a.dataset.scenePanel)!==phase||a.classList.contains('scene-native-arena');});back.hidden=true;
    bottom.querySelectorAll('button[data-scene-phase]').forEach((b,i)=>{b.disabled=false;b.setAttribute('aria-current',i===phase?'step':'false');});
@@ -172,7 +227,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
    const nextBtn=bottom.querySelector('.scene-next');nextBtn.hidden=phase===0||phase===4||(phase===1&&document.querySelector('.dnd-challenge')?.dataset.complete!=='true');nextBtn.disabled=false;
    nextBtn.textContent=phase===1?'Lanjut ke kuis →':phase===2?'Lihat pembahasan →':'Lihat hasil →';
    bottom.querySelector('.scene-next-note').textContent=timed?'Selesaikan sesuai urutan.':'';
-   resizeForm();result();
+   resizeForm();result();if(phase===3)review();
    if(focus){const heading=articles.find(a=>Number(a.dataset.scenePanel)===phase)?.querySelector('h2');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}}
  }
  function practiceDone(){return document.querySelector('.lesson-root')?.dataset.complete==='true'&&document.querySelector('.sim-root')?.dataset.complete==='true'&&document.querySelector('.dnd-challenge')?.dataset.complete==='true';}
@@ -193,7 +248,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
  const cfg=JSON.parse(data.textContent),view=root.querySelector('.dnd-workspace'),status=root.querySelector('.dnd-status');
  const art=Object.fromEntries([...document.querySelectorAll('[data-dnd-art]')].map(i=>[i.dataset.dndArt,i.src]));
  const mobileTargets=document.createElement('div');mobileTargets.className='dnd-mobile-targets';root.insertBefore(mobileTargets,status);
- root.style.setProperty('--challenge-art',`url("${art[cfg.course==='C01'?'scenes/C01-server.webp':'scenes/C12-mail.webp']}")`);
+ root.style.setProperty('--challenge-art',`url("${art[cfg.course==='C01'?'scenes/C01-server.webp':(cfg.course==='S01'?'scenes/S01-survey.webp':'scenes/C12-mail.webp')]}")`);
  const safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  let scrollFrame=null;
  let step=0,positions={},selected=null,validated=false,history=[],initial={},drag=null,ignoreClick=0;
@@ -207,7 +262,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
  function cardsIn(zone){return items().filter(i=>(positions[i.id]||'bank')===zone).map(card).join('');}
  function render(){
   const s=current(),isBudget=['budget','revision'].includes(s.kind);root.dataset.step=String(step);root.dataset.kind=s.kind;
-  view.innerHTML=`<header class="dnd-heading"><div class="dnd-stage-label">${cfg.course==='C01'?'MEJA ANGGARAN':'STATISTIK SEKTORAL'} · TAHAP ${step+1} DARI ${cfg.steps.length}</div><h2>${safe(s.title)}</h2><p>${safe(s.kind==='budget'?'Setiap token bernilai 10 unit. Bagikan ke perbaikan server dan cadangan data.':s.kind==='revision'?'Server kini perlu 90 unit, cadangan tahap awal 10 unit. Anggaran tetap 100.':s.kind==='sequence'?'Susun alur pengajuan rekomendasi kegiatan statistik.':cfg.course==='C01'?'Tentukan usulan yang perlu didanai sekarang dan yang masih bisa ditunda.':'Kelompokkan usulan yang merupakan statistik sektoral wajib rekomendasi.')}</p><ol class="dnd-steps" aria-label="Tahap tantangan">${cfg.steps.map((_,i)=>`<li ${i===step?'aria-current="step"':''}>${i<step?'✓':i+1}</li>`).join('')}</ol></header>
+  view.innerHTML=`<header class="dnd-heading"><div class="dnd-stage-label">${cfg.course==='C01'?'MEJA ANGGARAN':(cfg.course==='S01'?'PERANCANGAN SAMPLING':'INVESTIGASI EMAIL')} · TAHAP ${step+1} DARI ${cfg.steps.length}</div><h2>${safe(s.title)}</h2><p>${safe(s.kind==='budget'?'Setiap token bernilai 10 unit. Bagikan ke perbaikan server dan cadangan data.':s.kind==='revision'?'Server kini perlu 90 unit, cadangan tahap awal 10 unit. Anggaran tetap 100.':s.kind==='sequence'?(cfg.course==='S01'?'Susun tiga prosedur penarikan sampel yang benar. Sisakan dua langkah berisiko di bank.':'Susun tiga tindakan aman. Sisakan dua tindakan yang berisiko.'):cfg.course==='C01'?'Tentukan usulan yang perlu didanai sekarang dan yang masih bisa ditunda.':(cfg.course==='S01'?'Pisahkan kerangka sampel yang layak dari kondisi cacat kerangka yang berisiko bias.':'Pisahkan indikasi phishing dari tanda yang belum cukup sebagai bukti.'))}</p><ol class="dnd-steps" aria-label="Tahap tantangan">${cfg.steps.map((_,i)=>`<li ${i===step?'aria-current="step"':''}>${i<step?'✓':i+1}</li>`).join('')}</ol></header>
   <details class="dnd-guide"><summary>Petunjuk & rincian kasus</summary><p>${safe(s.intro)}</p><p class="dnd-help">Seret objek ke tempat tujuan. Bisa juga pilih objek, lalu ketuk nama tempat tujuan. Keyboard: Enter untuk memilih, Tab ke tujuan, lalu Enter.</p></details>
   <div class="dnd-board"><section class="dnd-bank dnd-zone" data-drop="bank"><button type="button" class="dnd-drop-title" data-drop-target="bank">${isBudget?'Sisa token & pilihan keputusan':'Berkas yang belum ditempatkan'} <span>${isBudget?100-amount('server')-amount('backup')+' unit tersisa':''}</span></button><div class="dnd-items">${cardsIn('bank')||'<span class="dnd-empty">Semua objek sudah ditempatkan.</span>'}</div></section>
   <div class="dnd-destinations">${zones().map(z=>`<section class="dnd-zone" data-drop="${z.id}" ${z.accept?`data-accept="${z.accept}"`:''}><button type="button" class="dnd-drop-title" data-drop-target="${z.id}">${z.image?`<img src="${safe(art[z.image])}" alt="" draggable="false">`:''}<span><strong>${safe(z.label)}</strong><small>${safe(z.hint)}</small></span>${isBudget&&z.accept==='token'?`<b class="dnd-amount">${amount(z.id)} <small>unit</small></b>`:''}</button><div class="dnd-items">${cardsIn(z.id)||'<span class="dnd-empty">Letakkan di sini</span>'}</div></section>`).join('')}</div></div>
@@ -241,8 +296,12 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
    if(missing.length)message='Masih ada '+missing.length+' berkas yang perlu ditempatkan.';
    else {const wrong=s.items.filter(i=>(positions[i.id]||'bank')!==s.solution[i.id]);if(wrong.length){
     if(cfg.course==='C01')message='Server yang berhenti menahan pengumpulan data, dan cadangan terakhir tidak bisa dipulihkan. Kedua kebutuhan ini lebih mendesak daripada penataan ruangan atau lokakarya tambahan.';
-    else if(s.kind==='sort')message='Survei komoditas daerah, sarana sekolah, dan retribusi pasar merupakan statistik sektoral instansi. Sensus penduduk adalah statistik dasar BPS, dan riset komersial swasta adalah statistik khusus.';
-    else message='Urutkan langkah secara terkoordinasi: mulai dengan koordinasi dan cek duplikasi, ajukan melalui ROMANTIK, lalu tindak lanjuti catatan telaah BPS hingga rekomendasi terbit.';
+    else if(cfg.course==='S01'){
+     if(s.kind==='sort')message='Kerangka sampel harus lengkap mencakup populasi, akurat tanpa duplikasi, dan mutakhir. Pencatatan ganda atau daftar usaha tutup merusak peluang seleksi.';
+     else message='Tetapkan populasi dan kerangka sampel mutakhir terlebih dahulu, tentukan ukuran sampel dan alokasi domain, lalu tarik sampel probabilitas secara acak. Pemilihan sukarela atau penggantian sepihak menimbulkan bias non-sampling.';
+    }
+    else if(s.kind==='sort')message='Alamat pengirim, desakan login, dan tautan yang menutupi tujuan perlu diperiksa. Logo atau salam umum saja belum cukup untuk menyimpulkan adanya phishing.';
+    else message='Jangan lanjutkan interaksi dengan pesan. Periksa lewat kontak yang dikenal, kemudian laporkan temuannya. Mencoba login atau meneruskan tautan dapat menambah risiko.';
     wrong.forEach(i=>view.querySelector(`[data-drag="${i.id}"]`)?.classList.add('dnd-wrong'));
    }}
   }else{
@@ -252,7 +311,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
   }
   if(message){say(message+' Geser kartu atau tokennya, lalu periksa kembali.',true);return;}
   validated=true;render();
-  if(step===cfg.steps.length-1){root.dataset.complete='true';root.classList.add('dnd-completed');say(cfg.course==='C01'?'Alokasi akhir: server 90 unit dan cadangan tahap awal 10 unit. Totalnya tetap 100 unit.':'Urutannya sudah sesuai: koordinasi dan cek duplikasi, pengajuan via ROMANTIK, dan tindak lanjut perbaikan hingga rekomendasi resmi terbit.');document.dispatchEvent(new CustomEvent('lcm-practice-complete'));}
+  if(step===cfg.steps.length-1){root.dataset.complete='true';root.classList.add('dnd-completed');say(cfg.course==='C01'?'Alokasi akhir: server 90 unit dan cadangan tahap awal 10 unit. Totalnya tetap 100 unit.':(cfg.course==='S01'?'Perancangan sampling selesai: kerangka telah dievaluasi dan prosedur penarikan sampel tersusun secara sahih.':'Urutannya sudah sesuai: hentikan interaksi, periksa lewat kontak yang dikenal, kemudian laporkan.'));document.dispatchEvent(new CustomEvent('lcm-practice-complete'));}
   else say(s.kind==='budget'?'Server mendapat 70 unit dan cadangan 30 unit. Pada tahap berikutnya ada perubahan biaya yang perlu ditangani.':'Kartu sudah berada pada kategori yang sesuai. Lanjutkan ke tahap berikutnya.');
  }
  root.addEventListener('click',e=>{if(Date.now()<ignoreClick)return;const card=e.target.closest('[data-drag]'),target=e.target.closest('[data-drop-target],[data-mobile-target]'),action=e.target.closest('[data-dnd-action]');
@@ -285,18 +344,25 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
   {title:'Serapan dan kemajuan pekerjaan tidak sejalan.',body:'Laporan menunjukkan serapan anggaran 90%, tetapi keluaran pekerjaan baru 55%.',image:'scenes/C01-server.webp',prompt:'Apa yang perlu dibahas lebih dahulu?',options:[
    {label:'Tambahkan belanja agar serapannya semakin tinggi',good:false,title:'Penyebab keterlambatan belum diketahui.',body:'Serapan yang lebih tinggi belum menjelaskan pekerjaan yang tertahan. Periksa hambatannya dahulu agar kebutuhan belanja berikutnya dapat dinilai.'},
    {label:'Telusuri pekerjaan yang tertahan dan rencana penyelesaiannya',good:true,title:'Ada dasar untuk menentukan tindak lanjut.',body:'Bagian pekerjaan yang tertahan menjadi jelas. Tim dapat membahas penyebabnya dan menentukan siapa yang perlu menindaklanjuti, sambil memeriksa penggunaan anggarannya.'}]}
+ ]:cid==='S01'?[
+  {title:'Daftar usaha direktori kadaluarsa.',body:'Menjelang pelaksanaan survei UMKM, direktori yang tersedia ternyata berasal dari pendataan tiga tahun lalu tanpa informasi status aktif.',image:'scenes/S01-survey.webp',prompt:'Bagaimana Anda menangani kerangka sampel tersebut?',options:[
+   {label:'Lakukan pemutakhiran cepat (listing) pada blok sampel terpilih',good:true,title:'Peluang seleksi unit usaha tetap valid dan terukur.',body:'Pemutakhiran cepat memastikan usaha baru terdata dan usaha yang sudah tutup dikeluarkan dari daftar sebelum sampel akhir ditarik.'},
+   {label:'Gunakan daftar lama dan serahkan penggantian responden kepada pencacah',good:false,title:'Penggantian sepihak di lapangan menimbulkan bias seleksi.',body:'Penggantian responden tanpa prosedur acak merusak syarat sampel probabilitas dan menurunkan keandalan data.'}]},
+  {title:'Proporsi kelompok populasi sangat timpang.',body:'Dalam survei pengguna layanan, 90% pemohon berada di kota dan 10% di daerah terpencil. Estimasi harus andal untuk kedua wilayah.',image:'scenes/S01-sampling.webp',prompt:'Bagaimana Anda merancang penarikan sampelnya?',options:[
+   {label:'Gunakan stratified random sampling dengan strata perkotaan dan perdesaan',good:true,title:'Keterwakilan subkelompok perdesaan terlindungi.',body:'Stratifikasi menjamin alokasi sampel yang memadai untuk daerah perdesaan sehingga estimasi tetap presisi.'},
+   {label:'Gunakan penarikan acak sederhana (SRS) pada satu daftar gabungan',good:false,title:'Kelompok perdesaan berisiko terjaring terlalu sedikit.',body:'SRS murni pada populasi timpang dapat menghasilkan sampel perdesaan yang terlalu sedikit untuk diestimasi secara andal.'}]}
  ]:[
-  {title:'Survei Mendadak Menjelang Akhir Tahun Anggaran',body:'Pimpinan meminta tim Anda segera menyelenggarakan survei kepuasan layanan publik dalam waktu dua minggu agar serapan anggaran optimal. Namun, rancangan kuesioner belum dikonsultasikan dengan Walidata dan belum diajukan ke aplikasi ROMANTIK.',image:'scenes/C12-mail.webp',prompt:'Bagaimana langkah keputusan yang Anda ambil?',options:[
-   {label:'Koordinasikan dengan Walidata dan ajukan permohonan ke ROMANTIK',good:true,title:'Rancangan ditelaah secara metodologis.',body:'Koordinasi memastikan kuesioner terstandar, tidak terjadi duplikasi kegiatan dengan instansi lain, serta terbit surat rekomendasi resmi BPS.'},
-   {label:'Cetak kuesioner dan segera lakukan pencacahan di lapangan',good:false,title:'Pengumpulan data mengabaikan prosedur rekomendasi.',body:'Pelaksanaan tanpa rekomendasi berisiko menghasilkan data yang bias, duplikatif, dan tidak dapat diintegrasikan ke portal Satu Data Indonesia.'}]},
-  {title:'Publikasi Data Indikator Tanpa Dokumen Metadata',body:'Data hasil kompilasi administrasi sektoral telah siap disajikan ke publik. Bagian hubungan masyarakat mengusulkan agar tabel angka langsung diunggah ke website tanpa perlu menyusun dokumen metadata indikator karena dianggap merepotkan.',image:'scenes/C12-lock.webp',prompt:'Bagaimana tindakan Anda dalam situasi ini?',options:[
-   {label:'Susun metadata statistik sebelum data dipublikasikan',good:true,title:'Data terdokumentasi dan transparan bagi pengguna.',body:'Metadata memuat konsep, definisi, dan metodologi sehingga data dapat dipahami dan dipertanggungjawabkan lintas instansi pemerintah.'},
-   {label:'Unggah tabel angka langsung tanpa dokumen metadata',good:false,title:'Angka rilis tanpa kejelasan konsep dan definisi.',body:'Pengguna data tidak mengetahui cakupan variabel dan batasannya, sehingga berpotensi menimbulkan salah interpretasi kebijakan.'}]}
+  {title:'Ada permintaan login lewat email.',body:'Pengirim mengaku sebagai administrator. Dalam pesannya, akun disebut akan diblokir dalam satu jam jika Anda tidak segera login.',image:'scenes/C12-mail.webp',snippet:'Dari: admin@bpss-portal-update.example',prompt:'Bagaimana Anda memastikan permintaan ini?',options:[
+   {label:'Coba login dari tautan email untuk memastikannya',good:false,title:'Mencoba tautan itu menambah risiko.',body:'Jika alamatnya palsu, data akun yang dimasukkan bisa jatuh ke pengirim. Periksa permintaannya lewat alamat layanan atau kontak TI yang sudah dikenal.'},
+   {label:'Hubungi TI melalui kontak yang sudah dikenal',good:true,title:'Permintaan bisa dipastikan tanpa mencoba tautannya.',body:'Kontak TI yang sudah dikenal memberi jalur pemeriksaan terpisah dari email tadi. Tidak ada data akun yang perlu dimasukkan ke tautan pengirim.'}]},
+  {title:'Kode verifikasi diminta melalui telepon.',body:'Seseorang mengaku petugas TI dan meminta Anda membacakan kode untuk “memperbaiki akun”.',image:'scenes/C12-lock.webp',prompt:'Bagaimana Anda merespons?',options:[
+   {label:'Tolak membagikan kode, lalu hubungi TI lewat kontak resmi',good:true,title:'Kode tidak diberikan kepada penelepon.',body:'Anda dapat mengakhiri percakapan dan menghubungi TI lewat kontak resmi yang tersimpan. Pengakuan penelepon sebagai petugas belum membuktikan identitasnya.'},
+   {label:'Bacakan kodenya karena penelepon mengaku petugas',good:false,title:'Kode yang dibagikan bisa disalahgunakan.',body:'Kode verifikasi adalah bagian dari pemeriksaan akses. Jika sudah dibagikan atau akses telanjur diberikan, segera minta penanganan akun kepada TI melalui kanal resmi.'}]}
  ];
- function imageFor(index){return cid==='C01'?(index===2?'scenes/C01-meeting.webp':'scenes/C01-server.webp'):(index===2?'scenes/C12-lock.webp':'scenes/C12-mail.webp');}
+ function imageFor(index){return cid==='S01'?(index===2?'scenes/S01-sampling.webp':'scenes/S01-survey.webp'):(cid==='C01'?(index===2?'scenes/C01-meeting.webp':'scenes/C01-server.webp'):(index===2?'scenes/C12-lock.webp':'scenes/C12-mail.webp'));}
  function focusHeading(container){const h=container.querySelector('h2');if(h){h.tabIndex=-1;h.focus({preventScroll:true});}}
  function theory(l){return l.body.split(/\n\n/).map((paragraph,i)=>`<p class="lesson-body">${safe(paragraph)} ${(l.paragraph_sources[i]||[]).map(n=>`<a class="lesson-citation" href="${safe(l.references[n-1].url)}" target="_blank" rel="noopener noreferrer" aria-label="Sumber ${n}: ${safe(l.references[n-1].publisher)}">[${n}]</a>`).join(' ')}</p>`).join('');}
- function sources(l){return `<aside class="lesson-sources" aria-label="Sumber materi"><h3>Sumber materi</h3><ol>${l.references.map(r=>`<li><a href="${safe(r.url)}" target="_blank" rel="noopener noreferrer">${safe(r.publisher)} · ${safe(r.title)} (${safe(r.year)})</a><p>${safe(r.section)}</p></li>`).join('')}</ol><p class="lesson-source-note">Diparafrasakan dalam bahasa Indonesia. Sumber diperiksa pada ${cid==='C01'?'13 November 2026':'14 November 2026'}.</p></aside>`;}
+ function sources(l){return `<aside class="lesson-sources" aria-label="Sumber materi"><h3>Sumber materi</h3><ol>${l.references.map(r=>`<li><a href="${safe(r.url)}" target="_blank" rel="noopener noreferrer">${safe(r.publisher)} · ${safe(r.title)} (${safe(r.year)})</a><p>${safe(r.section)}</p></li>`).join('')}</ol><p class="lesson-source-note">Diparafrasakan dalam bahasa Indonesia. Sumber diperiksa pada ${cid==='S01'?'14':'13'} November 2026.</p></aside>`;}
  function study(){const l=cfg.lessons[page];seen.add(page);const correct=checked.has(page)&&studyAnswers[page]===l.correct;
   const check=l.mode==='check'?`<form class="simple-check"><fieldset><legend>${safe(l.prompt)}</legend><p>Pilih satu jawaban, lalu tekan <strong>Periksa jawaban</strong>.</p>${l.options.map((o,i)=>`<label><input type="radio" name="lesson-answer" value="${i}" ${studyAnswers[page]===i?'checked':''}><span>${safe(o)}</span></label>`).join('')}</fieldset><button type="submit" class="simple-check-button">Periksa jawaban</button></form><div class="simple-check-feedback" role="status" ${!checked.has(page)?'hidden':''}>${checked.has(page)?safe(correct?l.feedback:'Jawaban ini belum sesuai dengan kasus. Coba pilihan lain.'):''}</div>`:'';
   content.innerHTML=`<div class="simple-lesson-layout"><div class="simple-lesson-art"><img src="${safe(art[imageFor(page)])}" alt=""></div><article class="simple-lesson-copy"><h2>${safe(l.title)}</h2>${theory(l)}${sources(l)}<button type="button" class="simple-example-button" aria-expanded="${examples.has(page)}" aria-controls="lesson-example" data-simple-example>${examples.has(page)?'Tutup contoh':'Lihat contoh'}</button><div id="lesson-example" class="simple-example" ${examples.has(page)?'':'hidden'}><strong>Contoh simulasi</strong><p>${safe(l.example)}</p><p class="lesson-example-note">${safe(l.example_note)}</p></div>${check}</article></div>`;

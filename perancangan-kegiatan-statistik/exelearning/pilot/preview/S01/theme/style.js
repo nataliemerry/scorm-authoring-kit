@@ -165,6 +165,61 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
  function answersCount(){return new Set([...document.querySelectorAll('.exe-form-container input[type=radio]:checked')].map(r=>r.name)).size;}
  function check(){if(!practiceDone()||answersCount()<2){submitted=false;return false;}document.querySelector('[id^="form-button-check-"]')?.click();submitted=true;return true;}
  function result(){const node=document.querySelector('.scene-final-score');if(!node)return;if(answersCount()<2){node.textContent='Masih ada pertanyaan yang belum dijawab.';return;}const native=document.querySelector('#eXeScoreNodeScore')?.textContent?.trim()||document.querySelector('[id^="form-score-"]')?.textContent?.trim();node.textContent=native||'Dua pertanyaan sudah dijawab.';}
+  function review(){
+   const container=document.querySelector('.scene-review-points');if(!container)return;
+   let qDataList=[];
+   const formNode=document.querySelector('.idevice_node.form[data-idevice-json-data]');
+   if(formNode){try{const d=JSON.parse(formNode.getAttribute('data-idevice-json-data'));if(d&&Array.isArray(d.questionsData))qDataList=d.questionsData;}catch(e){}}
+   if(!qDataList.length&&window.$form?.instances){const inst=Object.values(window.$form.instances)[0];if(inst?.questionsData)qDataList=inst.questionsData;}
+   const slides=document.querySelectorAll('.exe-form-container .FRMP-SlideshowSlide, .exe-form-container .FormView_question');
+   const articles=container.querySelectorAll('article');
+   articles.forEach((art,idx)=>{
+     const slide=slides[idx],qData=qDataList[idx];
+     let selectedText='',isCorrect=false,correctText='',explanation='';
+     if(qData){
+       const correctOpt=qData.answers.find(a=>a[0]===true);
+       if(correctOpt)correctText=correctOpt[1];
+       explanation=qData.feedbackRight||qData.feedbackWrong||'';
+     }
+     if(slide){
+       const checked=slide.querySelector('input[type="radio"]:checked');
+       if(checked){
+         const radios=Array.from(slide.querySelectorAll('input[type="radio"]'));
+         const checkedIdx=radios.indexOf(checked);
+         if(qData&&qData.answers&&checkedIdx>=0&&checkedIdx<qData.answers.length){
+           isCorrect=qData.answers[checkedIdx][0]===true;
+           selectedText=qData.answers[checkedIdx][1];
+         }else{
+           const label=slide.querySelector(`label[for="${checked.id}"]`)||checked.closest('label');
+           selectedText=label?label.textContent.trim():checked.value;
+           isCorrect=(selectedText===correctText);
+         }
+       }
+     }
+     if(!explanation){
+       const existingP=art.querySelector('.scene-review-explanation p')||art.querySelector('div > p');
+       if(existingP)explanation=existingP.textContent.trim();
+     }
+     const h3=art.querySelector('h3');
+     const questionTitle=h3?h3.textContent.trim():(qData?.baseText?.replace(/<[^>]+>/g,'')||('Pertanyaan '+(idx+1)));
+     const numSpan=art.querySelector('.scene-review-num')||art.querySelector('span');
+     const numText=numSpan?numSpan.textContent.trim():String(idx+1);
+
+     const statusBadge=isCorrect
+       ?'<span class="scene-review-badge scene-review-badge-ok">✓ Jawaban Anda Benar (Tepat)</span>'
+       :'<span class="scene-review-badge scene-review-badge-ko">✗ Jawaban Anda Salah (Perlu ditinjau)</span>';
+
+     const userBlock=selectedText
+       ?`<div class="scene-review-block scene-review-user ${isCorrect?'is-correct':'is-wrong'}">${statusBadge}<p class="scene-review-ans"><strong>Pilihan Anda:</strong> ${safe(selectedText)}</p></div>`
+       :`<div class="scene-review-block scene-review-user is-empty"><span class="scene-review-badge scene-review-badge-empty">Belum dijawab</span></div>`;
+
+     const keyBlock=`<div class="scene-review-block scene-review-key"><p class="scene-review-ans"><strong>Kunci Jawaban Benar:</strong> ${safe(correctText||selectedText)}</p></div>`;
+     const expBlock=`<div class="scene-review-block scene-review-explanation"><p class="scene-review-ans"><strong>Pembahasan:</strong> ${safe(explanation)}</p></div>`;
+
+     art.className='scene-review-card';
+     art.innerHTML=`<span class="scene-review-num">${safe(numText)}</span><div class="scene-review-body"><h3>${safe(questionTitle)}</h3>${userBlock}${keyBlock}${expBlock}</div>`;
+   });
+ }
  function show(next,focus=true){phase=next;arena=false;document.body.dataset.scenePhase=phase;
    articles.forEach(a=>{a.hidden=Number(a.dataset.scenePanel)!==phase||a.classList.contains('scene-native-arena');});back.hidden=true;
    bottom.querySelectorAll('button[data-scene-phase]').forEach((b,i)=>{b.disabled=false;b.setAttribute('aria-current',i===phase?'step':'false');});
@@ -172,7 +227,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
    const nextBtn=bottom.querySelector('.scene-next');nextBtn.hidden=phase===0||phase===4||(phase===1&&document.querySelector('.dnd-challenge')?.dataset.complete!=='true');nextBtn.disabled=false;
    nextBtn.textContent=phase===1?'Lanjut ke kuis →':phase===2?'Lihat pembahasan →':'Lihat hasil →';
    bottom.querySelector('.scene-next-note').textContent=timed?'Selesaikan sesuai urutan.':'';
-   resizeForm();result();
+   resizeForm();result();if(phase===3)review();
    if(focus){const heading=articles.find(a=>Number(a.dataset.scenePanel)===phase)?.querySelector('h2');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}}
  }
  function practiceDone(){return document.querySelector('.lesson-root')?.dataset.complete==='true'&&document.querySelector('.sim-root')?.dataset.complete==='true'&&document.querySelector('.dnd-challenge')?.dataset.complete==='true';}

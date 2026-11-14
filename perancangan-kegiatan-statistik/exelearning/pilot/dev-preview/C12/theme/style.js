@@ -165,6 +165,61 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
  function answersCount(){return new Set([...document.querySelectorAll('.exe-form-container input[type=radio]:checked')].map(r=>r.name)).size;}
  function check(){if(!practiceDone()||answersCount()<2){submitted=false;return false;}document.querySelector('[id^="form-button-check-"]')?.click();submitted=true;return true;}
  function result(){const node=document.querySelector('.scene-final-score');if(!node)return;if(answersCount()<2){node.textContent='Masih ada pertanyaan yang belum dijawab.';return;}const native=document.querySelector('#eXeScoreNodeScore')?.textContent?.trim()||document.querySelector('[id^="form-score-"]')?.textContent?.trim();node.textContent=native||'Dua pertanyaan sudah dijawab.';}
+  function review(){
+   const container=document.querySelector('.scene-review-points');if(!container)return;
+   let qDataList=[];
+   const formNode=document.querySelector('.idevice_node.form[data-idevice-json-data]');
+   if(formNode){try{const d=JSON.parse(formNode.getAttribute('data-idevice-json-data'));if(d&&Array.isArray(d.questionsData))qDataList=d.questionsData;}catch(e){}}
+   if(!qDataList.length&&window.$form?.instances){const inst=Object.values(window.$form.instances)[0];if(inst?.questionsData)qDataList=inst.questionsData;}
+   const slides=document.querySelectorAll('.exe-form-container .FRMP-SlideshowSlide, .exe-form-container .FormView_question');
+   const articles=container.querySelectorAll('article');
+   articles.forEach((art,idx)=>{
+     const slide=slides[idx],qData=qDataList[idx];
+     let selectedText='',isCorrect=false,correctText='',explanation='';
+     if(qData){
+       const correctOpt=qData.answers.find(a=>a[0]===true);
+       if(correctOpt)correctText=correctOpt[1];
+       explanation=qData.feedbackRight||qData.feedbackWrong||'';
+     }
+     if(slide){
+       const checked=slide.querySelector('input[type="radio"]:checked');
+       if(checked){
+         const radios=Array.from(slide.querySelectorAll('input[type="radio"]'));
+         const checkedIdx=radios.indexOf(checked);
+         if(qData&&qData.answers&&checkedIdx>=0&&checkedIdx<qData.answers.length){
+           isCorrect=qData.answers[checkedIdx][0]===true;
+           selectedText=qData.answers[checkedIdx][1];
+         }else{
+           const label=slide.querySelector(`label[for="${checked.id}"]`)||checked.closest('label');
+           selectedText=label?label.textContent.trim():checked.value;
+           isCorrect=(selectedText===correctText);
+         }
+       }
+     }
+     if(!explanation){
+       const existingP=art.querySelector('.scene-review-explanation p')||art.querySelector('div > p');
+       if(existingP)explanation=existingP.textContent.trim();
+     }
+     const h3=art.querySelector('h3');
+     const questionTitle=h3?h3.textContent.trim():(qData?.baseText?.replace(/<[^>]+>/g,'')||('Pertanyaan '+(idx+1)));
+     const numSpan=art.querySelector('.scene-review-num')||art.querySelector('span');
+     const numText=numSpan?numSpan.textContent.trim():String(idx+1);
+
+     const statusBadge=isCorrect
+       ?'<span class="scene-review-badge scene-review-badge-ok">✓ Jawaban Anda Benar (Tepat)</span>'
+       :'<span class="scene-review-badge scene-review-badge-ko">✗ Jawaban Anda Salah (Perlu ditinjau)</span>';
+
+     const userBlock=selectedText
+       ?`<div class="scene-review-block scene-review-user ${isCorrect?'is-correct':'is-wrong'}">${statusBadge}<p class="scene-review-ans"><strong>Pilihan Anda:</strong> ${safe(selectedText)}</p></div>`
+       :`<div class="scene-review-block scene-review-user is-empty"><span class="scene-review-badge scene-review-badge-empty">Belum dijawab</span></div>`;
+
+     const keyBlock=`<div class="scene-review-block scene-review-key"><p class="scene-review-ans"><strong>Kunci Jawaban Benar:</strong> ${safe(correctText||selectedText)}</p></div>`;
+     const expBlock=`<div class="scene-review-block scene-review-explanation"><p class="scene-review-ans"><strong>Pembahasan:</strong> ${safe(explanation)}</p></div>`;
+
+     art.className='scene-review-card';
+     art.innerHTML=`<span class="scene-review-num">${safe(numText)}</span><div class="scene-review-body"><h3>${safe(questionTitle)}</h3>${userBlock}${keyBlock}${expBlock}</div>`;
+   });
+ }
  function show(next,focus=true){phase=next;arena=false;document.body.dataset.scenePhase=phase;
    articles.forEach(a=>{a.hidden=Number(a.dataset.scenePanel)!==phase||a.classList.contains('scene-native-arena');});back.hidden=true;
    bottom.querySelectorAll('button[data-scene-phase]').forEach((b,i)=>{b.disabled=false;b.setAttribute('aria-current',i===phase?'step':'false');});
@@ -172,7 +227,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
    const nextBtn=bottom.querySelector('.scene-next');nextBtn.hidden=phase===0||phase===4||(phase===1&&document.querySelector('.dnd-challenge')?.dataset.complete!=='true');nextBtn.disabled=false;
    nextBtn.textContent=phase===1?'Lanjut ke kuis →':phase===2?'Lihat pembahasan →':'Lihat hasil →';
    bottom.querySelector('.scene-next-note').textContent=timed?'Selesaikan sesuai urutan.':'';
-   resizeForm();result();
+   resizeForm();result();if(phase===3)review();
    if(focus){const heading=articles.find(a=>Number(a.dataset.scenePanel)===phase)?.querySelector('h2');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}}
  }
  function practiceDone(){return document.querySelector('.lesson-root')?.dataset.complete==='true'&&document.querySelector('.sim-root')?.dataset.complete==='true'&&document.querySelector('.dnd-challenge')?.dataset.complete==='true';}
@@ -211,7 +266,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
   <details class="dnd-guide"><summary>Petunjuk & rincian kasus</summary><p>${safe(s.intro)}</p><p class="dnd-help">Seret objek ke tempat tujuan. Bisa juga pilih objek, lalu ketuk nama tempat tujuan. Keyboard: Enter untuk memilih, Tab ke tujuan, lalu Enter.</p></details>
   <div class="dnd-board"><section class="dnd-bank dnd-zone" data-drop="bank"><button type="button" class="dnd-drop-title" data-drop-target="bank">${isBudget?'Sisa token & pilihan keputusan':'Berkas yang belum ditempatkan'} <span>${isBudget?100-amount('server')-amount('backup')+' unit tersisa':''}</span></button><div class="dnd-items">${cardsIn('bank')||'<span class="dnd-empty">Semua objek sudah ditempatkan.</span>'}</div></section>
   <div class="dnd-destinations">${zones().map(z=>`<section class="dnd-zone" data-drop="${z.id}" ${z.accept?`data-accept="${z.accept}"`:''}><button type="button" class="dnd-drop-title" data-drop-target="${z.id}">${z.image?`<img src="${safe(art[z.image])}" alt="" draggable="false">`:''}<span><strong>${safe(z.label)}</strong><small>${safe(z.hint)}</small></span>${isBudget&&z.accept==='token'?`<b class="dnd-amount">${amount(z.id)} <small>unit</small></b>`:''}</button><div class="dnd-items">${cardsIn(z.id)||'<span class="dnd-empty">Letakkan di sini</span>'}</div></section>`).join('')}</div></div>
-  <footer class="dnd-controls"><button type="button" data-dnd-action="undo" ${!history.length?'disabled':''}>↶ Urungkan</button><button type="button" data-dnd-action="reset">Atur ulang tahap ini</button>${step?'<button type="button" data-dnd-action="back">← Tahap sebelumnya</button>':''}<button type="button" class="dnd-check" data-dnd-action="check">${validated?(step===cfg.steps.length-1?'Tantangan selesai ✓':'Lanjut ke tahap berikutnya →'):'Periksa rencana saya'}</button></footer>`;
+  <footer class="dnd-controls"><button type="button" data-dnd-action="undo" ${!history.length?'disabled':''}>↶ Urungkan</button><button type="button" data-dnd-action="reset">Atur ulang tahap ini</button><button type="button" data-dnd-action="solution">Tampilkan jawaban</button>${step?'<button type="button" data-dnd-action="back">← Tahap sebelumnya</button>':''}<button type="button" class="dnd-check" data-dnd-action="check">${validated?(step===cfg.steps.length-1?'Tantangan selesai ✓':'Lanjut ke tahap berikutnya →'):'Periksa rencana saya'}</button></footer>`;
   mobileTargets.innerHTML=zones().map(z=>`<button type="button" class="dnd-mobile-drop" data-mobile-target="${z.id}" data-drop="${z.id}">${safe(z.label)}${z.accept==='token'?' · '+amount(z.id)+' unit':''}</button>`).join('');
  }
  function invalidate(){validated=false;root.dataset.complete='false';root.classList.remove('dnd-completed');}
@@ -221,7 +276,19 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
   if((positions[id]||'bank')===target){selected=null;render();return;}
   history.push({...positions});if(zone?.single)items().filter(i=>positions[i.id]===target).forEach(i=>positions[i.id]='bank');positions[id]=target;selected=null;invalidate();render();say(item.label+' dipindahkan ke '+(zone?.label||'tempat asal')+'.');
  }
- function enter(next){step=next;selected=null;history=[];invalidate();if(current().kind==='budget')positions=Object.fromEntries(tokens.map(i=>[i.id,'bank']));else if(current().kind==='revision')positions={...positions,...Object.fromEntries(current().items.map(i=>[i.id,'bank']))};else positions=Object.fromEntries(current().items.map(i=>[i.id,'bank']));initial={...positions};render();say('Tahap '+(step+1)+' siap. Susun rencana Anda.');}
+ function applySolution(){
+   const s=current();selected=null;invalidate();
+   if(s.kind==='sort'||s.kind==='sequence'){
+    positions={...Object.fromEntries(s.items.map(i=>[i.id,s.solution[i.id]||'bank']))};
+   }else if(s.kind==='budget'){
+    positions=Object.fromEntries(tokens.map((i,idx)=>[i.id,idx<7?'server':'backup']));
+   }else if(s.kind==='revision'){
+    positions={...Object.fromEntries(tokens.map((i,idx)=>[i.id,idx<9?'server':'backup'])),stage:'decision',extra:'bank',delay:'bank'};
+   }
+   render();
+   say('Jawaban yang tepat ditampilkan. Tekan "Periksa rencana saya" untuk memverifikasi atau Anda dapat mengatur ulang untuk mencoba sendiri.');
+  }
+  function enter(next){step=next;selected=null;history=[];invalidate();if(current().kind==='budget')positions=Object.fromEntries(tokens.map(i=>[i.id,'bank']));else if(current().kind==='revision')positions={...positions,...Object.fromEntries(current().items.map(i=>[i.id,'bank']))};else positions=Object.fromEntries(current().items.map(i=>[i.id,'bank']));initial={...positions};render();say('Tahap '+(step+1)+' siap. Susun rencana Anda.');}
  function validate(){
   const s=current();let message='';
   if(s.kind==='sort'||s.kind==='sequence'){
@@ -250,7 +317,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
  root.addEventListener('click',e=>{if(Date.now()<ignoreClick)return;const card=e.target.closest('[data-drag]'),target=e.target.closest('[data-drop-target],[data-mobile-target]'),action=e.target.closest('[data-dnd-action]');
   if(card){selected=selected===card.dataset.drag?null:card.dataset.drag;view.querySelectorAll('[data-drag]').forEach(c=>c.setAttribute('aria-pressed',c.dataset.drag===selected?'true':'false'));say(selected?'Objek dipilih. Pilih nama tempat tujuannya.':'Pilihan dibatalkan.');}
   else if(target){if(selected)move(selected,target.dataset.dropTarget||target.dataset.mobileTarget);else say('Pilih objek terlebih dahulu, atau seret langsung ke tempat ini.');}
-  else if(action){switch(action.dataset.dndAction){case'undo':if(history.length){positions=history.pop();selected=null;invalidate();render();say('Pemindahan terakhir dibatalkan.');}break;case'reset':history.push({...positions});positions={...initial};selected=null;invalidate();render();say('Tahap ini diatur ulang.');break;case'back':enter(step-1);break;case'check':if(validated){if(step<cfg.steps.length-1)enter(step+1);}else validate();break;}}
+  else if(action){switch(action.dataset.dndAction){case'undo':if(history.length){positions=history.pop();selected=null;invalidate();render();say('Pemindahan terakhir dibatalkan.');}break;case'reset':history.push({...positions});positions={...initial};selected=null;invalidate();render();say('Tahap ini diatur ulang.');break;case'solution':history.push({...positions});applySolution();break;case'back':enter(step-1);break;case'check':if(validated){if(step<cfg.steps.length-1)enter(step+1);}else validate();break;}}
  });
  root.addEventListener('keydown',e=>{if(e.key==='Escape'){selected=null;render();say('Pilihan dibatalkan.');}});
  root.addEventListener('pointerdown',e=>{const c=e.target.closest('[data-drag]');if(!c||e.button!==0)return;drag={id:c.dataset.drag,startX:e.clientX,startY:e.clientY,x:e.clientX,y:e.clientY,source:c,pointer:e.pointerId,ghost:null};c.setPointerCapture(e.pointerId);});
