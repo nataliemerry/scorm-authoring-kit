@@ -110,7 +110,7 @@ async function lab(p,cid,shots=true){
  for(let i=0;i<2;i++){
   assert.equal(await p.locator('[data-simple-choice]').count(),2);assert(await p.locator('[data-simple-sim=next]').isDisabled());
   await p.locator('[data-simple-choice="0"]').click();const first=await p.locator('.simple-consequence').innerText();await p.locator('[data-simple-choice="1"]').click();assert.notEqual(await p.locator('.simple-consequence').innerText(),first);
-  await p.locator('[data-simple-choice="'+(cid==='C01'?(i===0?0:1):(cid==='S01'?0:(i===0?1:0)))+'"]').click();assert.equal(await p.locator('.simple-consequence').getAttribute('data-good'),'true');
+  const good=(await p.locator('.simple-consequence').getAttribute('data-good'))==='true'?'1':'0';await p.locator('[data-simple-choice="'+good+'"]').click();assert.equal(await p.locator('.simple-consequence').getAttribute('data-good'),'true');
   if(shots)await shot(p,cid+'-simple-situation-'+(i+1)+'.png');
   if(i===1){await p.locator('[data-simple-sim=back]').click();assert.equal(await p.locator('.sim-root').getAttribute('data-case'),'0');assert.equal(await p.locator('[data-simple-choice][aria-pressed=true]').count(),1);await p.locator('[data-simple-sim=next]').click();}
   await p.locator('[data-simple-sim=next]').click();
@@ -164,7 +164,7 @@ async function lab(p,cid,shots=true){
   await page.goto(base+'/'+cid+'/index.html');await page.locator('.scene-chrome').waitFor();await learn(page,cid);await lab(page,cid);await shot(page,cid+'-challenge-start.png');
   await page.locator('[data-scene-phase="2"]').click();assert.equal(await page.getAttribute('body','data-scene-phase'),'1');
   await check(page);assert.equal(await page.locator('.dnd-status.is-error').count(),1);
-  const first=cid==='C01'?'server':(cid==='S01'?'unik':'domain'),zone=cid==='C01'?'later':(cid==='S01'?'cacat':'weak');await place(page,first,zone,true);await page.locator('[data-dnd-action=undo]').click();assert.equal(await page.locator(`[data-drag="${first}"]`).evaluate(e=>e.closest('[data-drop]').dataset.drop),'bank');
+  const first=cid==='C01'?'server':(cid==='S01'?'unik':'domain'),zone=cid==='C01'?'later':(cid==='S01'?'cacat':'weak');await place(page,first,zone,true);await page.locator('[data-dnd-action=undo]').click();assert.equal(await page.locator(`[data-drag="${first}"]`).evaluate(e=>e.closest('[data-drop]').dataset.drop),'bank');await page.locator('[data-dnd-action=solution]').click();assert(await page.locator('.dnd-status').innerText().then(t=>t.includes('Jawaban yang tepat ditampilkan')));await page.locator('[data-dnd-action=reset]').click();assert.equal(await page.locator(`[data-drag="${first}"]`).evaluate(e=>e.closest('[data-drop]').dataset.drop),'bank');
   await complete(page,cid);await page.locator('.scene-next').click();await page.locator('.scene-next').click();assert.equal(await page.getAttribute('body','data-scene-phase'),'2');
   await answer(page,cid,0,!zero);
   if(cid==='C01'){await page.locator('.scene-next').click();assert.equal(await page.getAttribute('body','data-scene-phase'),'2');assert.equal(await page.evaluate(()=>window.lms.values['cmi.core.lesson_status']),'incomplete');assert.equal(await page.evaluate(()=>window.lms.calls.some(([k])=>k==='cmi.core.score.raw')),false);report.checks.push('One unanswered native quiz question blocks submission and keeps incomplete');}

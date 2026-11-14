@@ -1386,6 +1386,9 @@ var $form = {
      * @returns {String}
      */
     getProcessTextSelectionQuestion(baseText, optionType, answer, data) {
+        if (typeof baseText === 'string') {
+            baseText = baseText.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+        }
         baseText = $form.replaceResourceDirectoryPaths(data, baseText);
         let id = this.generateRandomId();
         let stringTitle;
