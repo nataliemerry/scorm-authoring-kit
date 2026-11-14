@@ -161,6 +161,7 @@ async function lab(p,cid,shots=true){
   await page.locator('[data-scene-phase="2"]').click();assert.equal(await page.getAttribute('body','data-scene-phase'),'1');
   await check(page);assert.equal(await page.locator('.dnd-status.is-error').count(),1);
   const first=cid==='C01'?'server':'panen',zone=cid==='C01'?'later':'bukan_sektoral';await place(page,first,zone,true);await page.locator('[data-dnd-action=undo]').click();assert.equal(await page.locator(`[data-drag="${first}"]`).evaluate(e=>e.closest('[data-drop]').dataset.drop),'bank');
+   await page.locator('[data-dnd-action=solution]').click();assert(await page.locator('.dnd-status').innerText().then(t=>t.includes('Jawaban yang tepat ditampilkan')));await page.locator('[data-dnd-action=reset]').click();assert.equal(await page.locator(`[data-drag="${first}"]`).evaluate(e=>e.closest('[data-drop]').dataset.drop),'bank');
   await complete(page,cid);await page.locator('.scene-next').click();await page.locator('.scene-next').click();assert.equal(await page.getAttribute('body','data-scene-phase'),'2');
   await answer(page,cid,0,!zero);
   if(cid==='C01'){await page.locator('.scene-next').click();assert.equal(await page.getAttribute('body','data-scene-phase'),'2');assert.equal(await page.evaluate(()=>window.lms.values['cmi.core.lesson_status']),'incomplete');assert.equal(await page.evaluate(()=>window.lms.calls.some(([k])=>k==='cmi.core.score.raw')),false);report.checks.push('One unanswered native quiz question blocks submission and keeps incomplete');}

@@ -1,6 +1,6 @@
 {
   "version": "LCM-2026-11-14-word-crossings",
-  "archive_sha256": "118998a9f7e474e0aef58b3064a7e2690ce2f81bbca3c21a7c6982fc5b044dc2",
+  "archive_sha256": "54f26b4ec780a62ded1e451876b801cce63670688308c8ccc1c10c393c04f6e1",
   "files": {
     "AGENTS.md": "edb257596d7344eb670d3e4729efbbf172d22c04bda1bcc2c593494b752918a9",
     "START-HERE.md": "799316b05fb6c30fb6628f479bf858138e00d66429ad91bad43f17c81fff509a",
@@ -43,7 +43,7 @@
     "exelearning/pilot/README.md": "f53ba37a217194a5bc7664e6f9949fa19e8eb7180207a1a0dc11a9356261f61e",
     "exelearning/pilot/asset_prompts.json": "55974a992750842032b2e3b2044f8b90cf8b83d6c9613416e5058a575b8009c1",
     "exelearning/pilot/challenge.css": "d395e95890f8c1e4c28d484a3a52e54c7ddda8c6af0643f8094b1226d6d81dcd",
-    "exelearning/pilot/challenge.humanized.js": "324ba56d824026d1a4df2266bd42af236e05f78675b730b483b18b20eea5fb0a",
+    "exelearning/pilot/challenge.humanized.js": "9ad67fc6af9584f5a0a2bfe0ce280a86828f32fa3291add78e4ca317c12fa6af",
     "exelearning/pilot/dist_scorm/C01_Smart_Budgeting_SCORM12.zip": "76bf5c44de58dbee7a050241ee1072182dd583f56863bbb501704dfd7191d804",
     "exelearning/pilot/dist_scorm/C12_Cybersecurity_Challenge_SCORM12.zip": "53f50d7729b039bc5879c95af96ae0cecc85b4be433784e6bb39a22b1b88717c",
     "exelearning/pilot/drag-words.css": "7d496e0cd94a4a06799b0219354947beb2579cc0df8994744386f8ce8203a998",
