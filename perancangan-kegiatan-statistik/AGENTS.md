@@ -1,0 +1,1 @@
+For SCORM work, read START-HERE.md and the supplied scorm-exe-scenes skill. Preserve the approved design, native scoring and offline assets. Only C01/C12 are baseline courses. Adapt a new topic explicitly; do not execute the generic builder for unrelated courses.

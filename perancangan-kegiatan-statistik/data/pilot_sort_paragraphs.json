@@ -1,0 +1,104 @@
+{
+  "C01": {
+    "initial_order": [
+      "p3",
+      "p1",
+      "p4",
+      "p2"
+    ],
+    "correct_order": [
+      "p1",
+      "p2",
+      "p3",
+      "p4"
+    ],
+    "title": "Dari laporan ke rencana tindak lanjut",
+    "explanation": "Laporan dibaca bersama hasil kerja, hambatan ditelusuri, lalu tindak lanjut disusun.",
+    "paragraphs": [
+      {
+        "id": "p1",
+        "text": "Unit menerima laporan akhir bulan. Dana yang telah dibelanjakan cukup besar, tetapi beberapa pekerjaan masih tertahan."
+      },
+      {
+        "id": "p2",
+        "text": "Untuk memahami laporan itu, tim membandingkan penggunaan dana dengan keluaran yang sudah dihasilkan. Perbandingan ini memperlihatkan bagian pekerjaan yang belum selesai."
+      },
+      {
+        "id": "p3",
+        "text": "Bagian yang belum selesai tersebut ditelusuri bersama pelaksana. Tim mencatat hambatan serta kebutuhan yang perlu ditangani agar pekerjaan dapat berjalan."
+      },
+      {
+        "id": "p4",
+        "text": "Catatan hasil penelusuran itu digunakan untuk menyusun tindak lanjut. Penanggung jawab dan waktu penyelesaiannya dibahas sebelum kebutuhan belanja berikutnya dinilai."
+      }
+    ]
+  },
+  "C12": {
+    "initial_order": [
+      "p3",
+      "p1",
+      "p4",
+      "p2"
+    ],
+    "correct_order": [
+      "p1",
+      "p2",
+      "p3",
+      "p4"
+    ],
+    "title": "Dari email mencurigakan ke penanganan",
+    "explanation": "Interaksi dengan pesan dihentikan, permintaan diperiksa melalui kontak yang dikenal, lalu bukti diserahkan untuk penanganan.",
+    "paragraphs": [
+      {
+        "id": "p1",
+        "text": "Sebuah email meminta pegawai segera masuk ke akun melalui sebuah tautan. Pesan itu mengancam pemblokiran akun dalam satu jam."
+      },
+      {
+        "id": "p2",
+        "text": "Ancaman dalam email tersebut membuat pegawai ragu. Ia menghentikan interaksi dengan pesan dan menghubungi petugas TI melalui kontak resmi yang sudah dikenal."
+      },
+      {
+        "id": "p3",
+        "text": "Petugas yang dihubungi lewat kontak itu memastikan bahwa tidak ada permintaan masuk akun dari layanan resmi. Tautan dalam pesan pun tidak digunakan."
+      },
+      {
+        "id": "p4",
+        "text": "Konfirmasi petugas itu disertakan saat pegawai menyerahkan bukti email melalui kanal pelaporan instansi. Pesan mencurigakan dapat ditangani lebih lanjut."
+      }
+    ]
+  },
+  "S01": {
+    "title": "Alur Perancangan Penyelenggaraan Survei Statistik",
+    "explanation": "Perancangan output mendahului perumusan variabel, penyusunan kerangka sampel, hingga pengujian rencana pengolahan data.",
+    "paragraphs": [
+      {
+        "id": "p1",
+        "text": "Perancang survei menetapkan spesifikasi output statistik yang dibutuhkan serta dimensi kualitas dan metadata yang menjadi acuan keluaran."
+      },
+      {
+        "id": "p2",
+        "text": "Berdasarkan output tersebut, variabel penelitian didefinisikan secara operasional dan dijabarkan ke dalam indikator terukur serta butir pertanyaan kuesioner."
+      },
+      {
+        "id": "p3",
+        "text": "Selanjutnya, tim menetapkan populasi target, menyusun kerangka sampel yang lengkap dan mutakhir, serta menentukan metode penarikan sampel yang efisien."
+      },
+      {
+        "id": "p4",
+        "text": "Rancangan pengumpulan data, prosedur pengolahan, aturan validasi editing-coding, serta jadwal kerja diselaraskan sebelum instrumen diujicobakan ke lapangan."
+      }
+    ],
+    "initial_order": [
+      "p3",
+      "p1",
+      "p4",
+      "p2"
+    ],
+    "correct_order": [
+      "p1",
+      "p2",
+      "p3",
+      "p4"
+    ]
+  }
+}

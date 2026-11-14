@@ -1,0 +1,179 @@
+{
+  "grid": [
+    "WSGSRHLKSA",
+    "KDSAWFCLZK",
+    "WBDMKHRATU",
+    "OUTPUTTSJR",
+    "QCHEQBQTLA",
+    "SMRLWTGEJS",
+    "MJCXWCNRCI",
+    "CXTVVHCVDH",
+    "DSTRATAYDK",
+    "QFXKXYCYDR"
+  ],
+  "words": [
+    {
+      "term": "OUTPUT",
+      "cells": [
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "clue": "Produk atau layanan nyata yang dihasilkan dari kegiatan statistik.",
+      "meaning": "Keluaran nyata berupa tabel angka, peta tematik, indikator, atau publikasi."
+    },
+    {
+      "term": "SAMPEL",
+      "cells": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "clue": "Sebagian unit yang ditarik dari populasi untuk mewakili karakteristik keseluruhan.",
+      "meaning": "Unsur-unsur terpilih tempat informasi survei dikumpulkan."
+    },
+    {
+      "term": "STRATA",
+      "cells": [
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          8,
+          6
+        ]
+      ],
+      "clue": "Subkelompok populasi yang dibentuk sehomogen mungkin di dalam kelompoknya.",
+      "meaning": "Lapisan populasi dalam teknik penarikan bertingkat (stratified sampling)."
+    },
+    {
+      "term": "KLASTER",
+      "cells": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "clue": "Gugus unit observasi yang berdekatan secara geografis dan heterogen di dalamnya.",
+      "meaning": "Kelompok unit sampling wilayah seperti blok sensus atau desa."
+    },
+    {
+      "term": "AKURASI",
+      "cells": [
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "clue": "Kondisi kerangka data yang dicatat tepat satu kali tanpa duplikasi.",
+      "meaning": "Kriteria ideal kerangka sampel yang menjamin ketelitian dan kejelasan batas."
+    }
+  ]
+}

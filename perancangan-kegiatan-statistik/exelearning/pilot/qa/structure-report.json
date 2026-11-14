@@ -1,0 +1,32 @@
+[
+  {
+    "course": "C01",
+    "bytes": 1526801,
+    "sco_count": 1,
+    "manifest_files_valid": true,
+    "bundled_fonts": 2,
+    "generated_images": 4,
+    "official_logo": 1,
+    "preview_matches_export": true
+  },
+  {
+    "course": "C12",
+    "bytes": 1313026,
+    "sco_count": 1,
+    "manifest_files_valid": true,
+    "bundled_fonts": 2,
+    "generated_images": 4,
+    "official_logo": 1,
+    "preview_matches_export": true
+  },
+  {
+    "course": "S01",
+    "bytes": 1644465,
+    "sco_count": 1,
+    "manifest_files_valid": true,
+    "bundled_fonts": 2,
+    "generated_images": 4,
+    "official_logo": 1,
+    "preview_matches_export": true
+  }
+]

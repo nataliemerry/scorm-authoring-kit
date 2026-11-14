@@ -1,0 +1,134 @@
+[
+  {
+    "id": "C01",
+    "simpeg_domain": "Anggaran/Keuangan",
+    "original_title": "Smart Budgeting",
+    "international_title": "Performance-Based Budgeting & Resource Allocation",
+    "standard_framework": "OECD Public Financial Management & World Bank Guidelines",
+    "objective": "Menentukan prioritas belanja berdasarkan urgensi, dampak terhadap output, dan efektivitas anggaran.",
+    "micro_content": "Tiga faktor kunci prioritas belanja: urgensi kebutuhan, dampak langsung terhadap output kinerja, dan efisiensi anggaran unit.",
+    "scorm_scenario": {
+      "type": "card_exploration",
+      "instruction": "Buka dua kartu kegiatan untuk melihat tingkat urgensi, manfaat, dan risiko belanja.",
+      "cards": [
+        {
+          "title": "Perbaikan Sistem Data",
+          "details": "Server pengumpulan data mengalami gangguan kritis. Risiko: keterlambatan pelaporan indikator nasional."
+        },
+        {
+          "title": "Dekorasi Ruang Rapat",
+          "details": "Pembaruan tata ruang rapat internal. Risiko: estetika kurang segar, namun tidak mengganggu layanan publik."
+        }
+      ]
+    },
+    "quizzes": [
+      {
+        "question": "Jika hanya satu kebutuhan dapat dibiayai segera, mana yang diprioritaskan?",
+        "options": [
+          "A. Perbaikan sistem pengumpulan data",
+          "B. Pembaruan dekorasi ruang rapat",
+          "C. Membagi dana sama rata"
+        ],
+        "answer_key": "A",
+        "feedback": "Gangguan sistem mengancam output utama. Prioritaskan kebutuhan berdampak langsung pada layanan dan target."
+      },
+      {
+        "question": "Realisasi anggaran 95%, tetapi output baru 60%. Langkah berikutnya?",
+        "options": [
+          "A. Mempercepat belanja tambahan",
+          "B. Mengevaluasi hambatan output",
+          "C. Menghentikan evaluasi"
+        ],
+        "answer_key": "B",
+        "feedback": "Penyerapan anggaran bukan satu-satunya ukuran keberhasilan; pencapaian output tetap perlu dievaluasi."
+      }
+    ]
+  },
+  {
+    "id": "C12",
+    "simpeg_domain": "TIK",
+    "original_title": "Cybersecurity Challenge",
+    "international_title": "Information Security Awareness & Threat Defense",
+    "standard_framework": "ISO/IEC 27001 Information Security Management",
+    "objective": "Mengenali tanda phishing dan memilih tindakan yang memperkuat keamanan akun.",
+    "micro_content": "Ketahanan keamanan informasi dimulai dari kewaspadaan mengenali email phishing, verifikasi keaslian sumber, dan pengaktifan autentikasi berlapis.",
+    "scorm_scenario": {
+      "type": "email_phishing_detector",
+      "instruction": "Ketuk 3 tanda bahaya pada email simulasi administrator palsu: alamat domain asing, tautan login mencurigakan, dan nada ancaman pemblokiran.",
+      "clues": [
+        {
+          "sender": "admin@bpss-portal-update.com (Domain palsu)"
+        },
+        {
+          "urgency": "Akun akan diblokir dalam 1 jam!"
+        },
+        {
+          "link": "http://bit.ly/login-update-bps"
+        }
+      ]
+    },
+    "quizzes": [
+      {
+        "question": "Email mencurigakan meminta login melalui tautan. Respons yang tepat?",
+        "options": [
+          "A. Klik tautan untuk mencoba",
+          "B. Hindari tautan dan lapor resmi",
+          "C. Teruskan agar rekan mencoba"
+        ],
+        "answer_key": "B",
+        "feedback": "Jangan memasukkan kredensial melalui tautan mencurigakan; laporkan melalui kanal yang resmi."
+      },
+      {
+        "question": "Langkah apa yang memperkuat keamanan akun?",
+        "options": [
+          "A. MFA dan kata sandi kuat",
+          "B. Satu kata sandi di semua sistem",
+          "C. Membagikan kata sandi ke tim"
+        ],
+        "answer_key": "A",
+        "feedback": "Autentikasi multifaktor dan kata sandi yang kuat menambah perlindungan akses akun."
+      }
+    ]
+  },
+  {
+    "id": "S01",
+    "simpeg_domain": "Statistik Sektoral",
+    "original_title": "Persiapan Penyelenggaraan Kegiatan Statistik",
+    "international_title": "Statistical Activity Design & Sampling Preparation",
+    "standard_framework": "GSBPM 5.0 & UN Fundamental Principles of Official Statistics",
+    "objective": "Memahami tahapan perancangan kegiatan statistik, spesifikasi output, perumusan indikator, serta penyiapan kerangka dan metode penarikan sampel sesuai standar kualitas statistik resmi.",
+    "micro_content": "Perancangan kegiatan statistik merupakan fondasi kendali mutu; kesalahan rancangan berdampak langsung pada bias estimasi dan kualitas data.",
+    "scorm_scenario": {
+      "type": "sampling_design_detector",
+      "instruction": "Evaluasi kelaikan kerangka sampel dan susun tahapan prosedur penarikan sampel yang baku.",
+      "clues": [
+        {
+          "sender": "Kerangka Sampel Layak",
+          "details": "Lengkap, akurat, dan mutakhir."
+        }
+      ]
+    },
+    "quizzes": [
+      {
+        "question": "Apa syarat utama kerangka sampel yang baik agar sampel berpeluang (probability sample) dapat ditarik secara sah?",
+        "options": [
+          "A. Kerangka sampel harus lengkap mencakup populasi target, akurat tanpa duplikasi, dan mutakhir (up to date).",
+          "B. Kerangka sampel cukup memuat responden yang bersedia diwawancarai oleh petugas di lapangan.",
+          "C. Kerangka sampel hanya perlu memuat unit usaha yang berada di pusat kota agar hemat biaya."
+        ],
+        "answer_key": "A",
+        "feedback": "Kerangka sampel yang ideal wajib memenuhi kriteria kelengkapan (completeness), akurasi (tidak tumpang tindih), dan kemutakhiran (current) agar setiap anggota populasi target memiliki peluang terpilih yang diketahui dan bukan nol."
+      },
+      {
+        "question": "Dalam perancangan survei, apa perbedaan mendasar antara stratifikasi (stratified sampling) dan pengelompokan (cluster sampling)?",
+        "options": [
+          "A. Stratifikasi dilakukan non-acak, sedangkan klaster selalu menggunakan penarikan purposif.",
+          "B. Strata dibentuk sehomogen mungkin di dalam kelompok dan semua strata terwakili; klaster dibentuk seheterogen mungkin di dalam kelompok dan hanya beberapa klaster yang dipilih.",
+          "C. Strata hanya berlaku untuk data administratif, sedangkan klaster hanya digunakan pada sensus penduduk."
+        ],
+        "answer_key": "B",
+        "feedback": "Pada stratified sampling, unit di dalam strata dibuat sehomogen mungkin dan setiap strata wajib terwakili sampel. Sebaliknya, pada cluster sampling, unit di dalam klaster diupayakan seheterogen mungkin dan hanya klaster terpilih yang dicacah demi efisiensi operasional."
+      }
+    ]
+  }
+]

@@ -1,0 +1,143 @@
+{
+  "C01": {
+    "headline": "Dua usulan masuk. Dananya hanya cukup untuk satu.",
+    "intro": "Server pengumpulan data mengalami gangguan, sementara usulan penataan ruang rapat juga menunggu. Dana yang tersedia perlu diarahkan ke kebutuhan yang paling mendesak.",
+    "start": "Lihat kedua usulan",
+    "practice_title": "Bagaimana Anda membagi anggarannya?",
+    "practice_note": "Ketuk gambar untuk memeriksa kebutuhannya. Setelah itu, geser alokasi dan lihat apa yang berubah.",
+    "cards": [
+      {
+        "label": "Perbaikan sistem data",
+        "image": "scenes/C01-server.webp",
+        "title": "Server sedang bermasalah",
+        "body": "Pengumpulan data terganggu. Jika perbaikan ditunda, pelaporan juga bisa terlambat."
+      },
+      {
+        "label": "Dekorasi ruang rapat",
+        "image": "scenes/C01-meeting.webp",
+        "title": "Penataan ruang rapat",
+        "body": "Usulan ini memperbaiki tampilan ruangan. Penundaannya tidak langsung menghambat layanan data."
+      }
+    ],
+    "reflection": "Perbaikan server berkaitan langsung dengan kelangsungan pengumpulan data. Penataan ruang rapat masih bisa menunggu karena ruangan tetap dapat digunakan. Saat biaya perbaikan naik, lingkup dan tahapan pekerjaan perlu dibahas lagi agar alokasinya tetap cukup.",
+    "takeaway": "Saat menelaah usulan belanja berikutnya, periksa pekerjaan yang akan tertahan bila usulan itu ditunda.",
+    "quizzes": [
+      {
+        "question": "Jika dana hanya cukup untuk satu usulan, mana yang Anda dahulukan?",
+        "options": [
+          "A. Memperbaiki sistem pengumpulan data",
+          "B. Menata ulang ruang rapat",
+          "C. Membagi dana sama rata"
+        ],
+        "answer_key": "A",
+        "feedback": "Sistem yang terganggu sudah menahan pekerjaan. Perbaikannya perlu mendapat dana yang cukup; pembagian sama rata bisa membuat kebutuhan itu tidak terpenuhi."
+      },
+      {
+        "question": "Anggaran sudah terpakai, tetapi hasil kerja belum tercapai. Apa yang Anda periksa lebih dahulu?",
+        "options": [
+          "A. Peluang menambah belanja",
+          "B. Hambatan yang membuat hasil kerja belum tercapai",
+          "C. Pilihan untuk menunda evaluasi"
+        ],
+        "answer_key": "B",
+        "feedback": "Cari pekerjaan yang belum selesai dan penyebabnya. Dari situ baru dapat dinilai apakah masalahnya ada pada pelaksanaan, kebutuhan biaya, atau hal lain."
+      }
+    ]
+  },
+  "C12": {
+    "headline": "Email ini meminta Anda segera login. Apa yang terasa janggal?",
+    "intro": "Sebuah email meminta Anda segera login agar akun tidak diblokir. Pengirimnya mengaku sebagai administrator. Permintaan seperti ini perlu diperiksa sebelum ditindaklanjuti.",
+    "start": "Periksa emailnya",
+    "practice_title": "Bagian mana yang membuat Anda ragu?",
+    "practice_note": "Ketuk bagian yang mencurigakan. Anda tidak akan membuka tautan sungguhan.",
+    "cards": [
+      {
+        "label": "admin@bpss-portal-update.com",
+        "image": "scenes/C12-mail.webp",
+        "title": "Alamatnya mirip, tetapi berbeda",
+        "body": "Nama pengirim bisa dibuat seolah-olah resmi. Cocokkan domainnya melalui kanal yang sudah Anda kenal."
+      },
+      {
+        "label": "Akun diblokir dalam 1 jam!",
+        "image": "scenes/C12-lock.webp",
+        "title": "Anda didesak bertindak cepat",
+        "body": "Ancaman pemblokiran membuat penerima terburu-buru. Desakan ini justru alasan untuk berhenti dan memeriksa."
+      },
+      {
+        "label": "bit.ly/login-update-bps",
+        "image": "scenes/C12-mail.webp",
+        "title": "Tujuan tautannya disembunyikan",
+        "body": "Tautan pendek tidak memperlihatkan alamat tujuan. Jangan masukkan kata sandi lewat tautan pada pesan ini."
+      }
+    ],
+    "reflection": "Ada alasan untuk menahan diri pada pesan ini: alamat pengirim menyerupai layanan resmi, penerima didesak segera login, dan tujuan tautannya tidak terlihat langsung. Logo dan sapaan umum tidak cukup untuk memastikan identitas pengirim.",
+    "takeaway": "Untuk urusan akun, gunakan alamat layanan atau kontak TI yang sudah Anda kenal. Pesan yang mencurigakan dapat dilaporkan melalui prosedur instansi.",
+    "quizzes": [
+      {
+        "question": "Email tadi meminta Anda segera login. Tindakan mana yang Anda pilih?",
+        "options": [
+          "A. Membuka tautannya untuk memastikan",
+          "B. Menghindari tautan dan melapor melalui kanal resmi",
+          "C. Meneruskannya agar rekan mencoba"
+        ],
+        "answer_key": "B",
+        "feedback": "Tidak perlu mencoba tautannya untuk memastikan pesan itu benar. Periksa permintaan dan laporkan temuan melalui kontak resmi yang Anda peroleh secara terpisah."
+      },
+      {
+        "question": "Apa yang membantu melindungi akun dari pengambilalihan?",
+        "options": [
+          "A. Menggunakan MFA dan kata sandi yang kuat",
+          "B. Memakai satu kata sandi untuk semua layanan",
+          "C. Membagikan kata sandi kepada tim"
+        ],
+        "answer_key": "A",
+        "feedback": "Kata sandi yang kuat melindungi akses awal. MFA meminta faktor pemeriksaan tambahan saat login. Kode maupun persetujuan login tetap harus dijaga."
+      }
+    ]
+  },
+  "S01": {
+    "headline": "Merancang survei statistik: dari kebutuhan output hingga penarikan sampel.",
+    "intro": "Perancangan kegiatan statistik menentukan kualitas data resmi. Kesalahan rancangan kerangka sampel dan pemilihan metode penarikan sampel akan menyebabkan bias hasil survei.",
+    "start": "Mulai perancangan",
+    "practice_title": "Bagaimana Anda menyusun kerangka dan metode penarikan sampel?",
+    "practice_note": "Evaluasi kelaikan kerangka sampel, lalu susun urutan prosedur penarikan sampel yang baku.",
+    "cards": [
+      {
+        "label": "Instrumen Survei & Kuesioner",
+        "image": "scenes/S01-survey.webp",
+        "title": "Perancangan Variabel dan Kuesioner",
+        "body": "Variabel dan indikator terukur dijabarkan menjadi pertanyaan terstruktur pada instrumen pengumpulan data."
+      },
+      {
+        "label": "Kerangka & Skema Sampling",
+        "image": "scenes/S01-sampling.webp",
+        "title": "Kerangka Sampel dan Peluang Seleksi",
+        "body": "Kerangka sampel yang lengkap, akurat, dan mutakhir menjamin setiap unit memiliki peluang terpilih yang terukur."
+      }
+    ],
+    "reflection": "Perancangan kegiatan statistik menuntut ketelitian sejak penetapan spesifikasi output, perumusan indikator terukur, hingga pemilihan metode sampling. Kerangka sampel yang mutakhir dan pemisahan perlakuan strata yang homogen menjamin estimasi statistik dapat dipertanggungjawabkan secara metodologis.",
+    "takeaway": "Saat merancang kegiatan statistik berikutnya, pastikan kerangka sampel memenuhi syarat kelengkapan, akurasi, dan kemutakhiran sebelum sampel ditarik.",
+    "quizzes": [
+      {
+        "question": "Apa syarat utama kerangka sampel yang baik agar sampel berpeluang (probability sample) dapat ditarik secara sah?",
+        "options": [
+          "A. Kerangka sampel harus lengkap mencakup populasi target, akurat tanpa duplikasi, dan mutakhir (up to date).",
+          "B. Kerangka sampel cukup memuat responden yang bersedia diwawancarai oleh petugas di lapangan.",
+          "C. Kerangka sampel hanya perlu memuat unit usaha yang berada di pusat kota agar hemat biaya."
+        ],
+        "answer_key": "A",
+        "feedback": "Kerangka sampel yang ideal wajib memenuhi kriteria kelengkapan (completeness), akurasi (tidak tumpang tindih), dan kemutakhiran (current) agar setiap anggota populasi target memiliki peluang terpilih yang diketahui dan bukan nol."
+      },
+      {
+        "question": "Dalam perancangan survei, apa perbedaan mendasar antara stratifikasi (stratified sampling) dan pengelompokan (cluster sampling)?",
+        "options": [
+          "A. Stratifikasi dilakukan non-acak, sedangkan klaster selalu menggunakan penarikan purposif.",
+          "B. Strata dibentuk sehomogen mungkin di dalam kelompok dan semua strata terwakili; klaster dibentuk seheterogen mungkin di dalam kelompok dan hanya beberapa klaster yang dipilih.",
+          "C. Strata hanya berlaku untuk data administratif, sedangkan klaster hanya digunakan pada sensus penduduk."
+        ],
+        "answer_key": "B",
+        "feedback": "Pada stratified sampling, unit di dalam strata dibuat sehomogen mungkin dan setiap strata wajib terwakili sampel. Sebaliknya, pada cluster sampling, unit di dalam klaster diupayakan seheterogen mungkin dan hanya klaster terpilih yang dicacah demi efisiensi operasional."
+      }
+    ]
+  }
+}

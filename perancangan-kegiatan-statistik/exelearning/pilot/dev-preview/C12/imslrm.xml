@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1">
+  <general uniqueElementName="general">
+    <identifier>
+      <catalog uniqueElementName="catalog">none</catalog>
+      <entry uniqueElementName="entry">ODE-20261114143321SFMU5A</entry>
+    </identifier>
+    <title>
+      <string language="id">C12 Cybersecurity Challenge</string>
+    </title>
+    <language>id</language>
+    <description>
+      <string language="id">Sebuah email meminta Anda segera login agar akun tidak diblokir. Pengirimnya mengaku sebagai administrator. Permintaan seperti ini perlu diperiksa sebelum ditindaklanjuti.</string>
+    </description>
+    <aggregationLevel uniqueElementName="aggregationLevel">
+      <source uniqueElementName="source">LOM-ESv1.0</source>
+      <value uniqueElementName="value">2</value>
+    </aggregationLevel>
+  </general>
+  <lifeCycle>
+    <contribute>
+      <role uniqueElementName="role">
+        <source uniqueElementName="source">LOM-ESv1.0</source>
+        <value uniqueElementName="value">author</value>
+      </role>
+      <entity>BEGIN:VCARD VERSION:3.0 FN:BPS Corporate University EMAIL;TYPE=INTERNET: ORG: END:VCARD</entity>
+      <date>
+        <dateTime uniqueElementName="dateTime">2026-11-14T14:33:57.00+07:00</dateTime>
+        <description>
+          <string language="id">Metadata creation date</string>
+        </description>
+      </date>
+    </contribute>
+  </lifeCycle>
+  <metaMetadata uniqueElementName="metaMetadata">
+    <contribute>
+      <role uniqueElementName="role">
+        <source uniqueElementName="source">LOM-ESv1.0</source>
+        <value uniqueElementName="value">creator</value>
+      </role>
+      <entity>BEGIN:VCARD VERSION:3.0 FN:BPS Corporate University EMAIL;TYPE=INTERNET: ORG: END:VCARD</entity>
+      <date>
+        <dateTime uniqueElementName="dateTime">2026-11-14T14:33:57.00+07:00</dateTime>
+        <description>
+          <string language="id">Metadata creation date</string>
+        </description>
+      </date>
+    </contribute>
+    <metadataSchema>LOM-ESv1.0</metadataSchema>
+    <language>id</language>
+  </metaMetadata>
+  <technical uniqueElementName="technical">
+    <otherPlatformRequirements>
+      <string language="id">editor: eXe Learning</string>
+    </otherPlatformRequirements>
+  </technical>
+  <educational>
+    <language>id</language>
+  </educational>
+  <rights uniqueElementName="rights">
+    <copyrightAndOtherRestrictions uniqueElementName="copyrightAndOtherRestrictions">
+      <source uniqueElementName="source">LOM-ESv1.0</source>
+      <value uniqueElementName="value">propietary license</value>
+    </copyrightAndOtherRestrictions>
+    <access uniqueElementName="access">
+      <accessType uniqueElementName="accessType">
+        <source uniqueElementName="source">LOM-ESv1.0</source>
+        <value uniqueElementName="value">universal</value>
+      </accessType>
+      <description>
+        <string language="en">Default</string>
+      </description>
+    </access>
+  </rights>
+</lom>

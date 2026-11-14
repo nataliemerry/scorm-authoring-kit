@@ -1,0 +1,369 @@
+{
+  "C01": {
+    "objective": "Memahami hubungan anggaran dengan hasil kerja, lalu menilai kebutuhan yang perlu didahulukan.",
+    "lessons": [
+      {
+        "title": "Penganggaran berbasis kinerja",
+        "body": "Penganggaran berbasis kinerja menggunakan informasi hasil kerja dalam keputusan anggaran. Informasi tersebut membantu menjelaskan tujuan belanja dan hasil yang dicapai, baik saat merencanakan kebutuhan dana maupun menilai pelaksanaannya.\n\nInput adalah sumber daya yang digunakan. Keluaran (output) adalah produk atau layanan yang dihasilkan kegiatan. Outcome menjelaskan efek jangka pendek dan menengah dari keluaran tersebut.",
+        "mode": "example",
+        "example": "Dalam perbaikan server, dana 70 unit adalah input. Server yang kembali berfungsi menjadi keluarannya. Pengumpulan data yang dapat berjalan lagi adalah hasil yang ingin diperoleh dari perbaikan itu.",
+        "references": [
+          {
+            "publisher": "OECD",
+            "title": "OECD Good Practices for Performance Budgeting",
+            "year": "2019",
+            "url": "https://www.oecd.org/en/publications/oecd-good-practices-for-performance-budgeting_c90b0305-en/full-report/component-3.html",
+            "doi": "10.1787/c90b0305-en",
+            "verified_on": "2026-11-13",
+            "verification": "Publikasi dan bagian yang dirujuk dibaca pada situs resmi OECD.",
+            "id": "oecd-pb",
+            "section": "Executive summary — definisi performance budgeting"
+          },
+          {
+            "publisher": "OECD",
+            "title": "Glossary of Key Terms in Evaluation and Results-Based Management for Sustainable Development, Second Edition",
+            "year": "2023",
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/06/glossary-of-key-terms-in-evaluation-and-results-based-management-for-sustainable-development-second-edition_2767e14e/632da462-en-fr-es.pdf#page=41",
+            "doi": "10.1787/632da462-en-fr-es",
+            "verified_on": "2026-11-13",
+            "verification": "PDF 64 halaman pada domain resmi OECD; entri dan halaman PDF dicocokkan.",
+            "id": "oecd-glossary",
+            "section": "Entri Inputs (halaman PDF 41), Outcomes dan Outputs (halaman PDF 47)"
+          }
+        ],
+        "paragraph_sources": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas."
+      },
+      {
+        "title": "Serapan, efisiensi, dan efektivitas",
+        "body": "Serapan memberi gambaran tentang dana yang telah dibelanjakan. Penilaian kegiatan juga memerlukan informasi hasilnya. Dalam pedoman OECD, laporan pelaksanaan anggaran akhir tahun mencakup informasi keuangan dan laporan kinerja.\n\nEfisiensi berkaitan dengan penggunaan sumber daya untuk mencapai hasil secara ekonomis dan tepat waktu. Efektivitas melihat sejauh mana tujuan dan hasil kegiatan tercapai.",
+        "mode": "example",
+        "example": "Serapan 90% dan keluaran yang baru mencapai 55% perlu ditelusuri lebih lanjut. Pekerjaan mana yang tertahan? Kedua angka itu belum cukup untuk menyimpulkan penyebabnya atau menentukan perlunya tambahan belanja.",
+        "references": [
+          {
+            "publisher": "OECD",
+            "title": "OECD Good Practices for Performance Budgeting",
+            "year": "2019",
+            "url": "https://www.oecd.org/en/publications/oecd-good-practices-for-performance-budgeting_c90b0305-en/full-report/component-9.html",
+            "doi": "10.1787/c90b0305-en",
+            "verified_on": "2026-11-13",
+            "verification": "Publikasi dan bagian yang dirujuk dibaca pada situs resmi OECD.",
+            "id": "oecd-pb",
+            "section": "Good Practice 5 — pelaporan keuangan bersama laporan kinerja"
+          },
+          {
+            "publisher": "OECD",
+            "title": "Glossary of Key Terms in Evaluation and Results-Based Management for Sustainable Development, Second Edition",
+            "year": "2023",
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/06/glossary-of-key-terms-in-evaluation-and-results-based-management-for-sustainable-development-second-edition_2767e14e/632da462-en-fr-es.pdf#page=31",
+            "doi": "10.1787/632da462-en-fr-es",
+            "verified_on": "2026-11-13",
+            "verification": "PDF 64 halaman pada domain resmi OECD; entri dan halaman PDF dicocokkan.",
+            "id": "oecd-glossary",
+            "section": "Entri Effectiveness dan Efficiency (halaman PDF 31)"
+          }
+        ],
+        "paragraph_sources": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas."
+      },
+      {
+        "title": "Prioritas, kelayakan, dan risiko",
+        "body": "Prioritas belanja dihubungkan dengan tujuan dan arah kebijakan pemerintah. Usulan anggaran perlu mengacu pada rencana program serta prioritas yang sudah ditetapkan.\n\nSebelum keputusan pendanaan, penilaian usulan (appraisal) memeriksa relevansi, kelayakan, dan kemungkinan keberlanjutan rencana. Analisis risiko menelaah faktor yang dapat menghambat pencapaian tujuan serta konsekuensi yang tidak diinginkan.",
+        "mode": "check",
+        "prompt": "Server berhenti bekerja, sementara ruang rapat masih bisa dipakai. Pertanyaan mana yang paling membantu menentukan prioritas?",
+        "options": [
+          "Usulan mana yang paling cepat menghabiskan dana?",
+          "Pekerjaan apa yang terhenti jika perbaikannya ditunda?",
+          "Usulan mana yang tampil paling menarik?"
+        ],
+        "correct": 1,
+        "feedback": "Dampak pada pekerjaan membantu menentukan urgensi usulan. Kesiapan pelaksanaan dan kecukupan biayanya tetap perlu diperiksa.",
+        "example": "Server yang berhenti menghambat pengumpulan data. Ruang rapat masih bisa dipakai meskipun belum ditata ulang. Dampak penundaan kedua usulan ini berbeda, sehingga keduanya tidak harus mendapat prioritas yang sama.",
+        "references": [
+          {
+            "publisher": "OECD",
+            "title": "OECD Good Practices for Performance Budgeting",
+            "year": "2019",
+            "url": "https://www.oecd.org/en/publications/oecd-good-practices-for-performance-budgeting_c90b0305-en/full-report/component-6.html",
+            "doi": "10.1787/c90b0305-en",
+            "verified_on": "2026-11-13",
+            "verification": "Publikasi dan bagian yang dirujuk dibaca pada situs resmi OECD.",
+            "id": "oecd-pb",
+            "section": "Good Practice 2 — keselarasan usulan anggaran dengan prioritas"
+          },
+          {
+            "publisher": "OECD",
+            "title": "Glossary of Key Terms in Evaluation and Results-Based Management for Sustainable Development, Second Edition",
+            "year": "2023",
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/06/glossary-of-key-terms-in-evaluation-and-results-based-management-for-sustainable-development-second-edition_2767e14e/632da462-en-fr-es.pdf#page=21",
+            "doi": "10.1787/632da462-en-fr-es",
+            "verified_on": "2026-11-13",
+            "verification": "PDF 64 halaman pada domain resmi OECD; entri dan halaman PDF dicocokkan.",
+            "id": "oecd-glossary",
+            "section": "Entri Appraisal (halaman PDF 21) dan Risk analysis (halaman PDF 58)"
+          }
+        ],
+        "paragraph_sources": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas."
+      }
+    ],
+    "source": "https://www.oecd.org/en/publications/oecd-good-practices-for-performance-budgeting_c90b0305-en.html",
+    "verified_on": "2026-11-13"
+  },
+  "C12": {
+    "objective": "Mengenali cara kerja phishing dan memahami alasan di balik pemeriksaan pesan serta perlindungan akun.",
+    "lessons": [
+      {
+        "title": "Phishing dan rekayasa sosial",
+        "body": "Phishing adalah penipuan melalui pesan yang menyamar sebagai pihak tepercaya. Pelaku berusaha membuat penerima menyerahkan informasi, membuka tautan berbahaya, atau melakukan tindakan yang memberi akses ke akun.\n\nCara ini memanfaatkan kepercayaan dan reaksi penerima. Nama instansi atau logo membuat pesan terlihat resmi. Ancaman pemblokiran mendorong orang bertindak sebelum sempat memeriksa permintaannya.",
+        "mode": "example",
+        "example": "Nama tampilan menyebut “Administrator BPS”, tetapi alamatnya admin@bpss-portal-update.example. Tampilan tersebut belum membuktikan siapa pengirimnya. Alamat pengirim dan alasan permintaannya masih perlu diperiksa.",
+        "references": [
+          {
+            "publisher": "NIST",
+            "title": "Phishing — Small Business Cybersecurity Corner",
+            "year": "pembaruan 2026",
+            "updated_on": "2026-10-16",
+            "url": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/phishing",
+            "verified_on": "2026-11-13",
+            "verification": "Definisi, tanda pesan, verifikasi melalui kontak dikenal, dan tanggal pembaruan dibaca pada halaman resmi NIST.",
+            "id": "nist-phishing",
+            "section": "What is Phishing?; How to Spot a Phish"
+          }
+        ],
+        "paragraph_sources": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas."
+      },
+      {
+        "title": "Identitas pengirim dan tujuan tautan",
+        "body": "Alamat email bisa dibuat menyerupai alamat resmi melalui perubahan huruf atau tambahan angka. Kemiripan nama belum membuktikan hubungan dengan instansi tersebut. Pada tautan, teks yang terlihat juga bisa berbeda dari alamat tujuan sebenarnya.\n\nJika permintaan meragukan, konfirmasikan melalui kontak yang sudah dikenal atau alamat resmi yang diperoleh secara terpisah. Jangan mengandalkan informasi kontak dari pesan yang sedang diragukan.",
+        "mode": "example",
+        "example": "Email meminta Anda segera login. Untuk memeriksa permintaannya, buka layanan melalui alamat yang biasa digunakan atau hubungi TI lewat kontak yang sudah tersimpan. Anda tidak perlu mencoba tautan dalam email itu.",
+        "references": [
+          {
+            "publisher": "Microsoft Learn",
+            "title": "How to protect against phishing attacks — Microsoft Defender for Endpoint",
+            "year": "pembaruan 2026",
+            "updated_on": "2026-07-14",
+            "url": "https://learn.microsoft.com/en-us/defender-endpoint/malware/phishing",
+            "verified_on": "2026-11-13",
+            "verification": "Halaman resmi Microsoft; bagian Learn the signs of a phishing scam dan tanggal pembaruan dicocokkan.",
+            "id": "microsoft-phishing",
+            "section": "Learn the signs of a phishing scam"
+          },
+          {
+            "publisher": "NIST",
+            "title": "Phishing — Small Business Cybersecurity Corner",
+            "year": "pembaruan 2026",
+            "updated_on": "2026-10-16",
+            "url": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/phishing",
+            "verified_on": "2026-11-13",
+            "verification": "Definisi, tanda pesan, verifikasi melalui kontak dikenal, dan tanggal pembaruan dibaca pada halaman resmi NIST.",
+            "id": "nist-phishing",
+            "section": "How to Spot a Phish — verifikasi melalui kontak yang dikenal"
+          }
+        ],
+        "paragraph_sources": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas."
+      },
+      {
+        "title": "Autentikasi dan MFA",
+        "body": "MFA, atau autentikasi multifaktor, memeriksa identitas dengan dua atau lebih jenis faktor. Misalnya, kata sandi dipadukan dengan faktor kepemilikan seperti kunci keamanan. Pemeriksaan tambahan ini menjadi hambatan jika kata sandi bocor.\n\nTidak semua bentuk MFA tahan phishing. Kode sekali pakai dan kode SMS masih dapat menjadi sasaran penipuan. Kode verifikasi tetap perlu dijaga, meskipun akun sudah menggunakan MFA.",
+        "mode": "check",
+        "prompt": "Seseorang mengaku petugas TI dan meminta kode verifikasi melalui telepon. Apa tindakan Anda?",
+        "options": [
+          "Bacakan kode agar pekerjaannya cepat selesai",
+          "Tolak membagikan kode dan hubungi TI lewat kontak yang dikenal",
+          "Kirim kode ke grup agar rekan ikut memeriksa"
+        ],
+        "correct": 1,
+        "feedback": "Kode verifikasi tidak perlu dibagikan kepada penelepon. Hubungi TI melalui kontak yang sudah dikenal untuk memastikan permintaannya.",
+        "example": "Penelepon mengaku petugas TI dan meminta kode verifikasi. Jangan membacakan kodenya. Akhiri percakapan, lalu hubungi TI melalui kontak yang sudah Anda kenal untuk memeriksa permintaan tersebut.",
+        "references": [
+          {
+            "publisher": "NIST",
+            "title": "Multi-Factor Authentication — Small Business Cybersecurity Corner",
+            "year": "pembaruan 2026",
+            "updated_on": "2026-01-05",
+            "url": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/multi-factor-authentication",
+            "verified_on": "2026-11-13",
+            "verification": "Definisi faktor, manfaat MFA dan keterbatasan OTP dibaca pada halaman resmi NIST.",
+            "id": "nist-mfa",
+            "section": "What is Multi-Factor Authentication (MFA)?; How does MFA Protect My Business From this Threat?; Taking MFA to the Next Level"
+          }
+        ],
+        "paragraph_sources": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas."
+      }
+    ],
+    "source": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/phishing",
+    "verified_on": "2026-11-13"
+  },
+  "S01": {
+    "objective": "Memahami tahapan perancangan kegiatan statistik, spesifikasi output, perumusan indikator, serta penyiapan kerangka dan metode penarikan sampel sesuai standar kualitas statistik resmi.",
+    "lessons": [
+      {
+        "title": "Merancang Output dan Mutu Statistik Resmi",
+        "body": "Perancangan kegiatan statistik mengacu pada General Statistical Business Process Model (GSBPM) sebagai fondasi utama penjaminan mutu sejak awal (quality by design). Tahap perancangan menentukan spesifikasi keluaran data, kebutuhan tabel, dan rencana analisis yang dapat diterapkan kembali secara konsisten.\n\nKeluaran statistik resmi harus memenuhi tujuh dimensi kualitas: relevansi, akurasi, ketepatan waktu, aksesibilitas, keterbandingan, koherensi, dan kemudahan interpretasi. Setiap rancangan keluaran wajib dilengkapi metadata statistik terstandar mencakup konsep, definisi operasional, klasifikasi, cakupan, dan keterbatasan data.",
+        "mode": "example",
+        "example": "Tim perancang survei sektoral menyusun rancangan tabulasi indikator ketenagakerjaan daerah dan metadata lengkap sebelum kuesioner dibuat. Langkah ini memastikan data yang dihasilkan relevan bagi perencana kebijakan daerah dan koheren dengan statistik nasional.",
+        "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas.",
+        "references": [
+          {
+            "publisher": "UNECE",
+            "title": "Generic Statistical Business Process Model (GSBPM) Version 5.0",
+            "year": "2016",
+            "url": "https://unece.org/statistics/networks-of-experts/gsbpm",
+            "verified_on": "2026-11-14",
+            "verification": "Dokumen resmi standar internasional GSBPM v5.0 UNECE; fase 2 (Design) dibaca dan diselaraskan.",
+            "id": "unece-gsbpm",
+            "section": "Phase 2 (Design) — sub-process 2.1 Design outputs"
+          },
+          {
+            "publisher": "United Nations Statistical Commission",
+            "title": "Fundamental Principles of Official Statistics",
+            "year": "2014",
+            "url": "https://unstats.un.org/unsd/dnss/gp/FP-New-E.pdf",
+            "verified_on": "2026-11-14",
+            "verification": "Dokumen resolusi Sidang Umum PBB A/RES/68/261 mengenai prinsip kualitas dan integritas statistik resmi.",
+            "id": "unsc-principles",
+            "section": "Principle 1 (Relevance, impartiality and equal access) & Principle 3 (Accountability and transparency)"
+          },
+          {
+            "publisher": "Badan Pusat Statistik",
+            "title": "Peraturan Badan Pusat Statistik Nomor 5 Tahun 2020 tentang Petunjuk Teknis Pelaksanaan Penyelenggaraan Metadata Statistik Sektoral",
+            "year": "2020",
+            "url": "https://peraturan.bpk.go.id/Details/163863/peraturan-bps-no-5-tahun-2020",
+            "verified_on": "2026-11-14",
+            "verification": "Basis data peraturan resmi BPK RI; definisi variabel, indikator, dan standar metadata statistik sektoral diverifikasi.",
+            "id": "bps-perban5-2020",
+            "section": "Pasal 3 dan Lampiran — Struktur Metadata Variabel dan Indikator"
+          }
+        ],
+        "paragraph_sources": [
+          [
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "title": "Variabel, Indikator, dan Kerangka Sampel",
+        "body": "Variabel adalah konsep yang dapat diukur dan memiliki variasi hasil pengukuran pada objek pengamatan, yang wajib dilengkapi dengan batasan referensi waktu atau periode enumerasi. Agar konsep variabel yang abstrak dapat dikumpulkan di lapangan, perancang merumuskan indikator sebagai penanda terukur yang diterjemahkan ke dalam butir pertanyaan kuesioner.\n\nPenarikan sampel memerlukan kerangka sampel (sample frame) berupa daftar lengkap unit populasi yang memenuhi tiga kriteria ideal: lengkap mencakup seluruh populasi target, akurat tanpa pencatatan ganda atau batas yang kabur, serta terkini (up to date). Kerangka yang kadaluarsa atau tidak lengkap akan merusak peluang pemilihan acak dan menimbulkan bias estimasi.",
+        "mode": "example",
+        "example": "Untuk survei UMKM daerah tahun 2026, penggunaan direktori usaha tahun 2020 tanpa pemutakhiran melanggar syarat kemutakhiran. Usaha baru yang berdiri tidak berpeluang terpilih, sedangkan usaha yang sudah tutup memboroskan biaya kunjungan pencacah.",
+        "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas.",
+        "references": [
+          {
+            "publisher": "Badan Pusat Statistik",
+            "title": "Peraturan Badan Pusat Statistik Nomor 5 Tahun 2020 tentang Petunjuk Teknis Pelaksanaan Penyelenggaraan Metadata Statistik Sektoral",
+            "year": "2020",
+            "url": "https://peraturan.bpk.go.id/Details/163863/peraturan-bps-no-5-tahun-2020",
+            "verified_on": "2026-11-14",
+            "verification": "Basis data peraturan resmi BPK RI; definisi variabel, indikator, dan standar metadata statistik sektoral diverifikasi.",
+            "id": "bps-perban5-2020",
+            "section": "Lampiran I — Pedoman Pengisian Metadata Variabel dan Indikator"
+          },
+          {
+            "publisher": "Chapman and Hall/CRC",
+            "title": "Sampling: Design and Analysis (Second Edition)",
+            "year": "2019",
+            "url": "https://www.routledge.com/Sampling-Design-and-Analysis/Lohr/p/book/9780367273415",
+            "verified_on": "2026-11-14",
+            "verification": "Bab 2, 3, dan 5 mengenai Probability Sampling, Stratified Sampling, dan Cluster Sampling dicocokkan.",
+            "id": "lohr-sampling",
+            "section": "Chapter 2 — Simple Probability Sampling & Sampling Frames"
+          }
+        ],
+        "paragraph_sources": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      {
+        "title": "Metode Penarikan Sampel Probabilitas",
+        "body": "Teknik penarikan sampel probabilitas (probability sampling) menjamin setiap unit dalam populasi memiliki peluang terpilih yang diketahui dan lebih dari nol, sehingga hasil survei dapat diestimasi ke tingkat populasi dengan margin of error terukur. Penetapan ukuran sampel mempertimbangkan tingkat presisi, varians variabel kunci, dan alokasi domain analisis.\n\nDalam stratified random sampling, populasi dibagi menjadi strata yang di dalamnya sehomogen mungkin dan setiap strata terwakili dalam sampel. Sebaliknya, pada cluster sampling, kelompok unit (seperti blok sensus) dibentuk seheterogen mungkin di dalam dan hanya beberapa klaster terpilih yang dicacah demi efisiensi biaya dan operasional lapangan.",
+        "mode": "check",
+        "prompt": "Jika survei memiliki populasi yang heterogen antar kelompok wilayah dan perancang ingin menjamin setiap subkelompok wilayah terwakili dengan presisi terukur, metode apa yang paling tepat dipilih?",
+        "options": [
+          "Stratified random sampling dengan alokasi proporsional",
+          "Convenience sampling dari responden yang mudah dijangkau",
+          "Haphazard sampling sukarela tanpa prosedur acak"
+        ],
+        "correct": 0,
+        "feedback": "Tepat. Stratified random sampling membagi populasi ke dalam strata yang terpisah sehingga setiap subkelompok dipastikan terwakili dalam sampel dengan ukuran yang proporsional atau optimal.",
+        "example": "Survei kepuasan layanan publik membagi populasi menjadi kelompok wilayah perkotaan dan perdesaan sebagai dua strata terpisah. Setiap strata ditarik sampel secara acak independen sehingga kedua wilayah terwakili secara andal.",
+        "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas.",
+        "references": [
+          {
+            "publisher": "Chapman and Hall/CRC",
+            "title": "Sampling: Design and Analysis (Second Edition)",
+            "year": "2019",
+            "url": "https://www.routledge.com/Sampling-Design-and-Analysis/Lohr/p/book/9780367273415",
+            "verified_on": "2026-11-14",
+            "verification": "Bab 2, 3, dan 5 mengenai Probability Sampling, Stratified Sampling, dan Cluster Sampling dicocokkan.",
+            "id": "lohr-sampling",
+            "section": "Chapter 3 (Stratified Sampling) & Chapter 5 (Cluster Sampling)"
+          }
+        ],
+        "paragraph_sources": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ]
+      }
+    ]
+  }
+}

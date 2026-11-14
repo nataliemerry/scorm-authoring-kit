@@ -1,0 +1,88 @@
+{
+  "C01": {
+    "headline": "Anggaran terbatas. Mana yang Anda selamatkan?",
+    "mission": "Dua usulan menunggu persetujuan. Temukan dampaknya sebelum menentukan prioritas.",
+    "kind": "budget",
+    "targets": [
+      "Prioritas layanan",
+      "Dapat ditunda"
+    ],
+    "items": [
+      [
+        "Perbaikan sistem data",
+        0,
+        "Gangguan server menghambat pengumpulan dan pelaporan indikator nasional."
+      ],
+      [
+        "Dekorasi ruang rapat",
+        1,
+        "Penyegaran ruangan tidak langsung memengaruhi kesinambungan layanan."
+      ]
+    ],
+    "insight": "Dahulukan kesinambungan layanan dan manfaat yang dapat dibuktikan, bukan sekadar menghabiskan pagu."
+  },
+  "C12": {
+    "headline": "Akun Anda akan diblokir. Percaya email ini?",
+    "mission": "Email simulasi meminta Anda segera login. Temukan tiga tanda bahaya tanpa membuka tautannya.",
+    "kind": "email",
+    "targets": [
+      "Identitas pengirim",
+      "Tekanan psikologis",
+      "Tujuan tautan"
+    ],
+    "items": [
+      [
+        "admin@bpss-portal-update.com",
+        0,
+        "Nama tampak mirip, tetapi domain ini bukan bukti identitas resmi. Verifikasi lewat kanal yang dikenal."
+      ],
+      [
+        "Akun diblokir dalam 1 jam!",
+        1,
+        "Desakan waktu digunakan agar penerima bertindak sebelum memeriksa."
+      ],
+      [
+        "bit.ly/login-update-bps",
+        2,
+        "Tautan pendek menyamarkan tujuan. Jangan memasukkan kredensial melalui pesan mencurigakan."
+      ]
+    ],
+    "insight": "Hindari tautan mencurigakan, laporkan melalui kanal resmi, dan gunakan MFA serta kata sandi kuat."
+  },
+  "S01": {
+    "headline": "Merancang kegiatan statistik yang sahih dan andal.",
+    "mission": "Sebagai penyelenggara statistik, Anda bertugas menyusun perancangan kegiatan statistik dari spesifikasi output, instrumen kuesioner, hingga kerangka dan metode penarikan sampel.",
+    "targets": [
+      "Kerangka Layak",
+      "Cacat Kerangka"
+    ],
+    "items": [
+      [
+        "Pencatatan tunggal dan batas tegas",
+        0,
+        "Memenuhi syarat akurasi."
+      ],
+      [
+        "Pemutakhiran periode berjalan",
+        0,
+        "Memenuhi syarat kemutakhiran."
+      ],
+      [
+        "Mencakup seluruh populasi target",
+        0,
+        "Memenuhi syarat kelengkapan."
+      ],
+      [
+        "Pencatatan ganda kantor cabang",
+        1,
+        "Menyebabkan duplikasi dan bias bobot."
+      ],
+      [
+        "Direktori lama tanpa status aktif",
+        1,
+        "Mengabaikan unit baru dan usaha tutup."
+      ]
+    ],
+    "insight": "Perancangan yang matang dan kerangka sampel yang mutakhir merupakan syarat mutlak bagi kualitas data statistik resmi."
+  }
+}

@@ -1,0 +1,503 @@
+{
+  "id": "S01",
+  "title": "Persiapan Penyelenggaraan Kegiatan Statistik",
+  "audience": "Pejabat Fungsional Statistisi dan Penyelenggara Statistik Sektoral",
+  "objective": "Memahami tahapan perancangan kegiatan statistik, spesifikasi output, perumusan indikator, serta penyiapan kerangka dan metode penarikan sampel sesuai standar kualitas statistik resmi.",
+  "language": "id",
+  "tone": "Semi-formal, natural dan profesional",
+  "interaction_profile": "evidence-sequence",
+  "branding": {
+    "logo": "assets/branding/bps-corpu-transparent.png",
+    "placement": "top-left",
+    "preserve_original": true
+  },
+  "lessons": [
+    {
+      "title": "Merancang Output dan Mutu Statistik Resmi",
+      "body": "Perancangan kegiatan statistik mengacu pada General Statistical Business Process Model (GSBPM) sebagai fondasi utama penjaminan mutu sejak awal (quality by design). Tahap perancangan menentukan spesifikasi keluaran data, kebutuhan tabel, dan rencana analisis yang dapat diterapkan kembali secara konsisten.\n\nKeluaran statistik resmi harus memenuhi tujuh dimensi kualitas: relevansi, akurasi, ketepatan waktu, aksesibilitas, keterbandingan, koherensi, dan kemudahan interpretasi. Setiap rancangan keluaran wajib dilengkapi metadata statistik terstandar mencakup konsep, definisi operasional, klasifikasi, cakupan, dan keterbatasan data.",
+      "mode": "example",
+      "example": "Tim perancang survei sektoral menyusun rancangan tabulasi indikator ketenagakerjaan daerah dan metadata lengkap sebelum kuesioner dibuat. Langkah ini memastikan data yang dihasilkan relevan bagi perencana kebijakan daerah dan koheren dengan statistik nasional.",
+      "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas.",
+      "references": [
+        {
+          "publisher": "UNECE",
+          "title": "Generic Statistical Business Process Model (GSBPM) Version 5.0",
+          "year": "2016",
+          "url": "https://unece.org/statistics/networks-of-experts/gsbpm",
+          "verified_on": "2026-11-14",
+          "verification": "Dokumen resmi standar internasional GSBPM v5.0 UNECE; fase 2 (Design) dibaca dan diselaraskan.",
+          "id": "unece-gsbpm",
+          "section": "Phase 2 (Design) — sub-process 2.1 Design outputs"
+        },
+        {
+          "publisher": "United Nations Statistical Commission",
+          "title": "Fundamental Principles of Official Statistics",
+          "year": "2014",
+          "url": "https://unstats.un.org/unsd/dnss/gp/FP-New-E.pdf",
+          "verified_on": "2026-11-14",
+          "verification": "Dokumen resolusi Sidang Umum PBB A/RES/68/261 mengenai prinsip kualitas dan integritas statistik resmi.",
+          "id": "unsc-principles",
+          "section": "Principle 1 (Relevance, impartiality and equal access) & Principle 3 (Accountability and transparency)"
+        },
+        {
+          "publisher": "Badan Pusat Statistik",
+          "title": "Peraturan Badan Pusat Statistik Nomor 5 Tahun 2020 tentang Petunjuk Teknis Pelaksanaan Penyelenggaraan Metadata Statistik Sektoral",
+          "year": "2020",
+          "url": "https://peraturan.bpk.go.id/Details/163863/peraturan-bps-no-5-tahun-2020",
+          "verified_on": "2026-11-14",
+          "verification": "Basis data peraturan resmi BPK RI; definisi variabel, indikator, dan standar metadata statistik sektoral diverifikasi.",
+          "id": "bps-perban5-2020",
+          "section": "Pasal 3 dan Lampiran — Struktur Metadata Variabel dan Indikator"
+        }
+      ],
+      "paragraph_sources": [
+        [
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "title": "Variabel, Indikator, dan Kerangka Sampel",
+      "body": "Variabel adalah konsep yang dapat diukur dan memiliki variasi hasil pengukuran pada objek pengamatan, yang wajib dilengkapi dengan batasan referensi waktu atau periode enumerasi. Agar konsep variabel yang abstrak dapat dikumpulkan di lapangan, perancang merumuskan indikator sebagai penanda terukur yang diterjemahkan ke dalam butir pertanyaan kuesioner.\n\nPenarikan sampel memerlukan kerangka sampel (sample frame) berupa daftar lengkap unit populasi yang memenuhi tiga kriteria ideal: lengkap mencakup seluruh populasi target, akurat tanpa pencatatan ganda atau batas yang kabur, serta terkini (up to date). Kerangka yang kadaluarsa atau tidak lengkap akan merusak peluang pemilihan acak dan menimbulkan bias estimasi.",
+      "mode": "example",
+      "example": "Untuk survei UMKM daerah tahun 2026, penggunaan direktori usaha tahun 2020 tanpa pemutakhiran melanggar syarat kemutakhiran. Usaha baru yang berdiri tidak berpeluang terpilih, sedangkan usaha yang sudah tutup memboroskan biaya kunjungan pencacah.",
+      "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas.",
+      "references": [
+        {
+          "publisher": "Badan Pusat Statistik",
+          "title": "Peraturan Badan Pusat Statistik Nomor 5 Tahun 2020 tentang Petunjuk Teknis Pelaksanaan Penyelenggaraan Metadata Statistik Sektoral",
+          "year": "2020",
+          "url": "https://peraturan.bpk.go.id/Details/163863/peraturan-bps-no-5-tahun-2020",
+          "verified_on": "2026-11-14",
+          "verification": "Basis data peraturan resmi BPK RI; definisi variabel, indikator, dan standar metadata statistik sektoral diverifikasi.",
+          "id": "bps-perban5-2020",
+          "section": "Lampiran I — Pedoman Pengisian Metadata Variabel dan Indikator"
+        },
+        {
+          "publisher": "Chapman and Hall/CRC",
+          "title": "Sampling: Design and Analysis (Second Edition)",
+          "year": "2019",
+          "url": "https://www.routledge.com/Sampling-Design-and-Analysis/Lohr/p/book/9780367273415",
+          "verified_on": "2026-11-14",
+          "verification": "Bab 2, 3, dan 5 mengenai Probability Sampling, Stratified Sampling, dan Cluster Sampling dicocokkan.",
+          "id": "lohr-sampling",
+          "section": "Chapter 2 — Simple Probability Sampling & Sampling Frames"
+        }
+      ],
+      "paragraph_sources": [
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "title": "Metode Penarikan Sampel Probabilitas",
+      "body": "Teknik penarikan sampel probabilitas (probability sampling) menjamin setiap unit dalam populasi memiliki peluang terpilih yang diketahui dan lebih dari nol, sehingga hasil survei dapat diestimasi ke tingkat populasi dengan margin of error terukur. Penetapan ukuran sampel mempertimbangkan tingkat presisi, varians variabel kunci, dan alokasi domain analisis.\n\nDalam stratified random sampling, populasi dibagi menjadi strata yang di dalamnya sehomogen mungkin dan setiap strata terwakili dalam sampel. Sebaliknya, pada cluster sampling, kelompok unit (seperti blok sensus) dibentuk seheterogen mungkin di dalam dan hanya beberapa klaster terpilih yang dicacah demi efisiensi biaya dan operasional lapangan.",
+      "mode": "check",
+      "prompt": "Jika survei memiliki populasi yang heterogen antar kelompok wilayah dan perancang ingin menjamin setiap subkelompok wilayah terwakili dengan presisi terukur, metode apa yang paling tepat dipilih?",
+      "options": [
+        "Stratified random sampling dengan alokasi proporsional",
+        "Convenience sampling dari responden yang mudah dijangkau",
+        "Haphazard sampling sukarela tanpa prosedur acak"
+      ],
+      "correct": 0,
+      "feedback": "Tepat. Stratified random sampling membagi populasi ke dalam strata yang terpisah sehingga setiap subkelompok dipastikan terwakili dalam sampel dengan ukuran yang proporsional atau optimal.",
+      "example": "Survei kepuasan layanan publik membagi populasi menjadi kelompok wilayah perkotaan dan perdesaan sebagai dua strata terpisah. Setiap strata ditarik sampel secara acak independen sehingga kedua wilayah terwakili secara andal.",
+      "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas.",
+      "references": [
+        {
+          "publisher": "Chapman and Hall/CRC",
+          "title": "Sampling: Design and Analysis (Second Edition)",
+          "year": "2019",
+          "url": "https://www.routledge.com/Sampling-Design-and-Analysis/Lohr/p/book/9780367273415",
+          "verified_on": "2026-11-14",
+          "verification": "Bab 2, 3, dan 5 mengenai Probability Sampling, Stratified Sampling, dan Cluster Sampling dicocokkan.",
+          "id": "lohr-sampling",
+          "section": "Chapter 3 (Stratified Sampling) & Chapter 5 (Cluster Sampling)"
+        }
+      ],
+      "paragraph_sources": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ]
+    }
+  ],
+  "situations": [
+    {
+      "title": "Daftar usaha direktori kadaluarsa.",
+      "body": "Menjelang pelaksanaan survei UMKM, direktori yang tersedia ternyata berasal dari pendataan tiga tahun lalu tanpa informasi status aktif.",
+      "prompt": "Bagaimana Anda menangani kerangka sampel tersebut?",
+      "options": [
+        {
+          "label": "Lakukan pemutakhiran cepat (listing) pada blok sampel terpilih",
+          "good": true,
+          "title": "Peluang seleksi unit usaha tetap valid dan terukur.",
+          "body": "Pemutakhiran cepat memastikan usaha baru terdata dan usaha yang sudah tutup dikeluarkan dari daftar sebelum sampel akhir ditarik."
+        },
+        {
+          "label": "Gunakan daftar lama dan serahkan penggantian responden kepada pencacah",
+          "good": false,
+          "title": "Penggantian sepihak di lapangan menimbulkan bias seleksi.",
+          "body": "Penggantian responden tanpa prosedur acak merusak syarat sampel probabilitas dan menurunkan keandalan data."
+        }
+      ]
+    },
+    {
+      "title": "Proporsi kelompok populasi sangat timpang.",
+      "body": "Dalam survei pengguna layanan, 90% pemohon berada di kota dan 10% di daerah terpencil. Estimasi harus andal untuk kedua wilayah.",
+      "prompt": "Bagaimana Anda merancang penarikan sampelnya?",
+      "options": [
+        {
+          "label": "Gunakan stratified random sampling dengan strata perkotaan dan perdesaan",
+          "good": true,
+          "title": "Keterwakilan subkelompok perdesaan terlindungi.",
+          "body": "Stratifikasi menjamin alokasi sampel yang memadai untuk daerah perdesaan sehingga estimasi tetap presisi."
+        },
+        {
+          "label": "Gunakan penarikan acak sederhana (SRS) pada satu daftar gabungan",
+          "good": false,
+          "title": "Kelompok perdesaan berisiko terjaring terlalu sedikit.",
+          "body": "SRS murni pada populasi timpang dapat menghasilkan sampel perdesaan yang terlalu sedikit untuk diestimasi secara andal."
+        }
+      ]
+    }
+  ],
+  "word_search": {
+    "grid": [
+      "WSGSRHLKSA",
+      "KDSAWFCLZK",
+      "WBDMKHRATU",
+      "OUTPUTTSJR",
+      "QCHEQBQTLA",
+      "SMRLWTGEJS",
+      "MJCXWCNRCI",
+      "CXTVVHCVDH",
+      "DSTRATAYDK",
+      "QFXKXYCYDR"
+    ],
+    "words": [
+      {
+        "term": "OUTPUT",
+        "meaning": "Keluaran nyata berupa tabel angka, peta tematik, indikator, atau publikasi.",
+        "cells": [
+          [3, 0],
+          [3, 1],
+          [3, 2],
+          [3, 3],
+          [3, 4],
+          [3, 5]
+        ],
+        "clue": "Produk atau layanan nyata yang dihasilkan dari kegiatan statistik."
+      },
+      {
+        "term": "SAMPEL",
+        "meaning": "Unsur-unsur terpilih tempat informasi survei dikumpulkan.",
+        "cells": [
+          [0, 3],
+          [1, 3],
+          [2, 3],
+          [3, 3],
+          [4, 3],
+          [5, 3]
+        ],
+        "clue": "Sebagian unit yang ditarik dari populasi untuk mewakili karakteristik keseluruhan."
+      },
+      {
+        "term": "STRATA",
+        "meaning": "Lapisan populasi dalam teknik penarikan bertingkat (stratified sampling).",
+        "cells": [
+          [8, 1],
+          [8, 2],
+          [8, 3],
+          [8, 4],
+          [8, 5],
+          [8, 6]
+        ],
+        "clue": "Subkelompok populasi yang dibentuk sehomogen mungkin di dalam kelompoknya."
+      },
+      {
+        "term": "KLASTER",
+        "meaning": "Kelompok unit sampling wilayah seperti blok sensus atau desa.",
+        "cells": [
+          [0, 7],
+          [1, 7],
+          [2, 7],
+          [3, 7],
+          [4, 7],
+          [5, 7],
+          [6, 7]
+        ],
+        "clue": "Gugus unit observasi yang berdekatan secara geografis dan heterogen di dalamnya."
+      },
+      {
+        "term": "AKURASI",
+        "meaning": "Kriteria ideal kerangka sampel yang menjamin ketelitian dan kejelasan batas.",
+        "cells": [
+          [0, 9],
+          [1, 9],
+          [2, 9],
+          [3, 9],
+          [4, 9],
+          [5, 9],
+          [6, 9]
+        ],
+        "clue": "Kondisi kerangka data yang dicatat tepat satu kali tanpa duplikasi."
+      }
+    ]
+  },
+  "drag_words": {
+    "words": [
+      {
+        "id": "frame",
+        "label": "kerangka sampel"
+      },
+      {
+        "id": "indikator",
+        "label": "indikator"
+      },
+      {
+        "id": "strata",
+        "label": "stratifikasi"
+      },
+      {
+        "id": "imputasi",
+        "label": "imputasi data"
+      }
+    ],
+    "gaps": [
+      {
+        "id": "g1",
+        "before": "Daftar seluruh unit dalam populasi target yang lengkap dan mutakhir disebut",
+        "after": ".",
+        "answer": "frame",
+        "feedback": "Kerangka sampel adalah dasar pemilihan unit sampel yang menjamin peluang seleksi terukur."
+      },
+      {
+        "id": "g2",
+        "before": "Penanda terukur yang menjembatani konsep variabel abstrak ke kuesioner adalah",
+        "after": ".",
+        "answer": "indikator",
+        "feedback": "Indikator menerjemahkan aspek kajian menjadi butir informasi yang dapat diamati."
+      },
+      {
+        "id": "g3",
+        "before": "Untuk menjamin keterwakilan subkelompok populasi yang heterogen, perancang menerapkan teknik",
+        "after": ".",
+        "answer": "strata",
+        "feedback": "Stratifikasi membagi populasi menjadi lapisan yang homogen di dalam kelompoknya."
+      }
+    ]
+  },
+  "sort_paragraphs": {
+    "title": "Alur Perancangan Penyelenggaraan Survei Statistik",
+    "explanation": "Perancangan output mendahului perumusan variabel, penyusunan kerangka sampel, hingga pengujian rencana pengolahan data.",
+    "paragraphs": [
+      {
+        "id": "p1",
+        "text": "Perancang survei menetapkan spesifikasi output statistik yang dibutuhkan serta dimensi kualitas dan metadata yang menjadi acuan keluaran."
+      },
+      {
+        "id": "p2",
+        "text": "Berdasarkan output tersebut, variabel penelitian didefinisikan secara operasional dan dijabarkan ke dalam indikator terukur serta butir pertanyaan kuesioner."
+      },
+      {
+        "id": "p3",
+        "text": "Selanjutnya, tim menetapkan populasi target, menyusun kerangka sampel yang lengkap dan mutakhir, serta menentukan metode penarikan sampel yang efisien."
+      },
+      {
+        "id": "p4",
+        "text": "Rancangan pengumpulan data, prosedur pengolahan, aturan validasi editing-coding, serta jadwal kerja diselaraskan sebelum instrumen diujicobakan ke lapangan."
+      }
+    ],
+    "initial_order": [
+      "p3",
+      "p1",
+      "p4",
+      "p2"
+    ],
+    "correct_order": [
+      "p1",
+      "p2",
+      "p3",
+      "p4"
+    ]
+  },
+  "practice": {
+    "course": "S01",
+    "steps": [
+      {
+        "title": "Evaluasi Kelaikan Kerangka Sampel",
+        "intro": "Ada lima kondisi calon kerangka sampel survei usaha daerah. Pisahkan kondisi yang memenuhi kriteria kerangka layak dari kondisi cacat kerangka yang berisiko menimbulkan bias.",
+        "kind": "sort",
+        "items": [
+          {
+            "id": "unik",
+            "label": "Unit dicatat satu kali dengan batas wilayah tegas",
+            "detail": "Memenuhi kriteria akurasi tanpa risiko tumpang tindih."
+          },
+          {
+            "id": "mutakhir",
+            "label": "Daftar unit dimutakhirkan pada periode berjalan",
+            "detail": "Memenuhi kriteria kemutakhiran kondisi usaha riil."
+          },
+          {
+            "id": "lengkap",
+            "label": "Mencakup seluruh unit dalam populasi target",
+            "detail": "Memenuhi kriteria kelengkapan (completeness)."
+          },
+          {
+            "id": "ganda",
+            "label": "Pencatatan ganda pada kantor cabang dan pusat",
+            "detail": "Duplikasi merusak peluang seleksi yang adil."
+          },
+          {
+            "id": "tutup",
+            "label": "Memuat usaha yang sudah tutup tanpa status aktif",
+            "detail": "Kadaluarsa dan menyebabkan pemborosan operasional."
+          }
+        ],
+        "zones": [
+          {
+            "id": "layak",
+            "label": "Kerangka Layak",
+            "hint": "Memenuhi syarat completeness, akurasi, dan mutakhir"
+          },
+          {
+            "id": "cacat",
+            "label": "Cacat Kerangka",
+            "hint": "Berisiko menimbulkan bias cakupan dan non-sampling error"
+          }
+        ],
+        "solution": {
+          "unik": "layak",
+          "mutakhir": "layak",
+          "lengkap": "layak",
+          "ganda": "cacat",
+          "tutup": "cacat"
+        }
+      },
+      {
+        "title": "Urutan Prosedur Penarikan Sampel Bertahap",
+        "intro": "Susun tiga langkah perancangan penarikan sampel yang baku pada urutan 1–3. Dua langkah yang keliru atau berisiko tidak perlu dipindahkan (biarkan di bank).",
+        "kind": "sequence",
+        "items": [
+          {
+            "id": "populasi",
+            "label": "Tetapkan populasi target dan kerangka sampel mutakhir",
+            "detail": "Fondasi awal agar setiap unit populasi memiliki peluang seleksi."
+          },
+          {
+            "id": "alokasi",
+            "label": "Hitung ukuran sampel minimum dan alokasikan ke strata",
+            "detail": "Menjamin presisi margin of error terpenuhi pada tiap domain."
+          },
+          {
+            "id": "tarik",
+            "label": "Tarik unit sampel secara acak dengan peluang terukur",
+            "detail": "Menerapkan skema probability sampling sesuai rancangan."
+          },
+          {
+            "id": "kuota",
+            "label": "Pilih responden sukarela yang paling mudah ditemui",
+            "detail": "Non-probability sampling yang menimbulkan bias subjektivitas."
+          },
+          {
+            "id": "ganti",
+            "label": "Ganti unit sampel yang menolak secara sepihak",
+            "detail": "Penggantian tanpa protokol acak merusak keterwakilan sampel."
+          }
+        ],
+        "zones": [
+          {
+            "id": "first",
+            "label": "1 · Tetapkan Populasi & Kerangka",
+            "hint": "Langkah fondasi identifikasi unit"
+          },
+          {
+            "id": "second",
+            "label": "2 · Hitung Ukuran & Alokasi Sampel",
+            "hint": "Tentukan presisi dan alokasi domain"
+          },
+          {
+            "id": "third",
+            "label": "3 · Tarik Sampel Probabilitas",
+            "hint": "Pemilihan acak dengan peluang terukur"
+          }
+        ],
+        "solution": {
+          "populasi": "first",
+          "alokasi": "second",
+          "tarik": "third",
+          "kuota": "bank",
+          "ganti": "bank"
+        }
+      }
+    ]
+  },
+  "quizzes": [
+    {
+      "question": "Apa syarat utama kerangka sampel yang baik agar sampel berpeluang (probability sample) dapat ditarik secara sah?",
+      "options": [
+        "A. Kerangka sampel harus lengkap mencakup populasi target, akurat tanpa duplikasi, dan mutakhir (up to date).",
+        "B. Kerangka sampel cukup memuat responden yang bersedia diwawancarai oleh petugas di lapangan.",
+        "C. Kerangka sampel hanya perlu memuat unit usaha yang berada di pusat kota agar hemat biaya."
+      ],
+      "answer_key": "A",
+      "feedback": "Kerangka sampel yang ideal wajib memenuhi kriteria kelengkapan (completeness), akurasi (tidak tumpang tindih), dan kemutakhiran (current) agar setiap anggota populasi target memiliki peluang terpilih yang diketahui dan bukan nol."
+    },
+    {
+      "question": "Dalam perancangan survei, apa perbedaan mendasar antara stratifikasi (stratified sampling) dan pengelompokan (cluster sampling)?",
+      "options": [
+        "A. Stratifikasi dilakukan non-acak, sedangkan klaster selalu menggunakan penarikan purposif.",
+        "B. Strata dibentuk sehomogen mungkin di dalam kelompok dan semua strata terwakili; klaster dibentuk seheterogen mungkin di dalam kelompok dan hanya beberapa klaster yang dipilih.",
+        "C. Strata hanya berlaku untuk data administratif, sedangkan klaster hanya digunakan pada sensus penduduk."
+      ],
+      "answer_key": "B",
+      "feedback": "Pada stratified sampling, unit di dalam strata dibuat sehomogen mungkin dan setiap strata wajib terwakili sampel. Sebaliknya, pada cluster sampling, unit di dalam klaster diupayakan seheterogen mungkin dan hanya klaster terpilih yang dicacah demi efisiensi operasional."
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/scenes/S01.webp",
+      "role": "scene",
+      "provenance": "Generated via Gemini Image model from prompt: modern statistical workstation with dual monitors, sampling heatmaps and archival records; 16:9 editorial 3D matte."
+    },
+    {
+      "file": "assets/scenes/S01-survey.webp",
+      "role": "object-1",
+      "provenance": "Generated via Gemini Image model; alpha cutout of tactile survey tablet and clipboard."
+    },
+    {
+      "file": "assets/scenes/S01-sampling.webp",
+      "role": "object-2",
+      "provenance": "High-resolution 3D matte sampling unit device asset with alpha cutout."
+    },
+    {
+      "file": "assets/mission-reward.webp",
+      "role": "reward",
+      "provenance": "Reused shared baseline; original prompt in docs/asset_prompts.json"
+    }
+  ],
+  "scoring": {
+    "questions": 2,
+    "raw_scores": [
+      0,
+      50,
+      100
+    ],
+    "pass_score": 0,
+    "answered_status": "passed",
+    "unanswered_status": "incomplete"
+  }
+}
