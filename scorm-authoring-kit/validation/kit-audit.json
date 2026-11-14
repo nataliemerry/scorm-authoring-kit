@@ -1,0 +1,94 @@
+{
+  "audit_date": "2026-11-14",
+  "status": "passed",
+  "scope": [
+    "C01 Smart Budgeting",
+    "C12 Cybersecurity Challenge"
+  ],
+  "theme": "lcm-scenes-sort-paragraphs-forward",
+  "starter": {
+    "files": 351,
+    "sha256": "118998a9f7e474e0aef58b3064a7e2690ce2f81bbca3c21a7c6982fc5b044dc2",
+    "fresh_bootstrap_and_source_build": "passed"
+  },
+  "documentation": {
+    "reference_guides": 11,
+    "updated": [
+      "complete course flow",
+      "content schema and answer indexing",
+      "game assistance and reset rules",
+      "source citations and verification dates",
+      "image generation and provenance",
+      "original transparent logo and header",
+      "readability and local font licenses",
+      "native assessment and export workflow",
+      "Codex / Claude Code / Antigravity adapters",
+      "acceptance tests and explicit evidence limits"
+    ]
+  },
+  "interactions": [
+    "Find the words: clues only before finding or explicit assistance",
+    "Drag the Words: gaps with distractor and accessible alternatives",
+    "Sort the Paragraphs: drag, buttons, keyboard, undo and assistance",
+    "Original required multi-stage case drag-and-drop"
+  ],
+  "checks": {
+    "skill_quick_validate": "passed",
+    "deep_bundle_integrity": "passed",
+    "sources_and_native_exports": 2,
+    "theme_source_export_byte_match": "passed",
+    "preview_export_byte_match": "passed",
+    "original_logo_rgba": "passed",
+    "local_fonts_with_OFL": 2,
+    "generated_master_pngs_with_webp": 7,
+    "desktop_short_viewport_mobile_input": "passed",
+    "native_assessment": [
+      {
+        "course": "C01",
+        "raw": 100,
+        "status": "passed"
+      },
+      {
+        "course": "C12",
+        "raw": 0,
+        "status": "passed",
+        "attempt": "fresh"
+      },
+      {
+        "course": "C12",
+        "raw": 50,
+        "status": "passed",
+        "attempt": "fresh"
+      },
+      {
+        "unanswered": 1,
+        "status": "incomplete",
+        "submission": "blocked"
+      }
+    ],
+    "timeout_unanswered_quiz": "not submitted",
+    "runtime_javascript_errors": 0,
+    "cover_note_removed": "checked in both eXeLearning 4.0.6 exports and bootstrapped authoring source",
+    "word_search": "Forward paths only, per-item first-letter hint, no answer disclosure, assisted accounting and reset verified in browser",
+    "word_search_layout": "Both sample layouts validated from starter data and matched against embedded configs in editable projects and native exports. Eleven contract checks passed."
+  },
+  "release_checks": [
+    "Installed skill is checked byte-for-byte against canonical skill",
+    "Outer ZIP member set and every file are checked byte-for-byte against canonical kit",
+    "Distribution checksum is in sibling .sha256 file"
+  ],
+  "limitations": [
+    "No direct GOJAGS, XP or Trophy verification",
+    "No cross-session suspend/resume verification",
+    "No claim of exhaustive accessibility or all-browser coverage",
+    "Primary reference verification date remains 2026-11-13",
+    "New topics require explicit adaptation of documented topic-specific code; brief is not a generic build API",
+    "Cross-agent instructions are portable; tool execution in every agent environment is not verified"
+  ],
+  "evidence": [
+    "template-smoke-report.json",
+    "template-structure-report.json",
+    "standalone-build-report.json",
+    "../VALIDATION.md"
+  ]
+}

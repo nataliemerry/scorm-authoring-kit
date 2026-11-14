@@ -1,0 +1,468 @@
+[
+  {
+    "file": "data/pilot_lessons.json",
+    "section": "C01/1",
+    "field": "title",
+    "before": "Mulai dari hasil yang dibutuhkan.",
+    "after": "Penganggaran berbasis kinerja"
+  },
+  {
+    "file": "data/pilot_lessons.json",
+    "section": "C01/1",
+    "field": "body",
+    "before": "Sebelum menentukan belanja, jelaskan dulu hasil kerja yang ingin dicapai. Bedakan biaya yang digunakan, keluaran pekerjaan, dan manfaatnya.",
+    "after": "Penganggaran berbasis kinerja menggunakan informasi hasil kerja untuk menentukan kebutuhan belanja. Sasaran kegiatan menjadi dasar pembahasan, sehingga usulan dana punya hubungan yang jelas dengan pekerjaan yang akan diselesaikan.\n\nInput adalah sumber daya yang digunakan. Keluaran (output) ialah hasil langsung kegiatan, sedangkan hasil lanjutan (outcome) adalah perubahan yang muncul setelah keluaran itu digunakan. Ketiganya perlu dibedakan saat menyusun maupun menilai anggaran."
+  },
+  {
+    "file": "data/pilot_lessons.json",
+    "section": "C01/1",
+    "field": "example",
+    "before": "Perbaikan server membutuhkan 70 unit. Keluarannya adalah server yang kembali berfungsi. Manfaatnya: pengumpulan data dapat berjalan lagi.",
+    "after": "Dalam perbaikan server, dana 70 unit adalah input. Server yang kembali berfungsi menjadi keluarannya. Pengumpulan data yang dapat berjalan lagi adalah hasil yang ingin diperoleh dari perbaikan itu."
+  },
+  {
+    "file": "data/pilot_lessons.json",
+    "section": "C01/2",
+    "field": "title",
+    "before": "Lihat hasilnya, bukan hanya serapannya.",
+    "after": "Serapan, efisiensi, dan efektivitas"
+  },
+  {
+    "file": "data/pilot_lessons.json",
+    "section": "C01/2",
+    "field": "body",
+    "before": "Serapan menunjukkan anggaran yang sudah digunakan. Untuk menilai kemajuan, bandingkan juga dengan keluaran pekerjaan dan hambatan yang masih ada.",
+    "after": "Serapan anggaran menunjukkan bagian dana yang sudah dibelanjakan. Angka ini berguna untuk memantau pelaksanaan, tetapi belum menjelaskan mutu pekerjaan yang dihasilkan.\n\nEfisiensi melihat hubungan sumber daya dengan hasil yang diperoleh, termasuk waktu pengerjaannya. Efektivitas menilai sejauh mana tujuan kegiatan tercapai. Karena itu, evaluasi memerlukan informasi biaya dan hasil kerja, bukan angka belanja saja."
+  },
+  {
+    "file": "data/pilot_lessons.json",
+    "section": "C01/2",
+    "field": "example",
+    "before": "Serapan sudah 90%, tetapi keluaran baru 55%. Periksa pekerjaan yang tertahan dan penyebabnya sebelum mengusulkan tambahan belanja.",
+    "after": "Serapan 90% dan keluaran yang baru mencapai 55% perlu ditelusuri lebih lanjut. Pekerjaan mana yang tertahan? Kedua angka itu belum cukup untuk menyimpulkan penyebabnya atau menentukan perlunya tambahan belanja."
+  },
+  {
+    "file": "data/pilot_lessons.json",
+    "section": "C01/3",
+    "field": "title",
+    "before": "Dahulukan kebutuhan yang paling mendesak.",
+    "after": "Prioritas belanja dan risiko penundaan"
+  },
+  {
+    "file": "data/pilot_lessons.json",
+    "section": "C01/3",
+    "field": "body",
+    "before": "Periksa pekerjaan yang terganggu bila usulan ditunda. Setelah itu, cek biaya, kesiapan pelaksanaan, dan persetujuan yang diperlukan.",
+    "after": "Prioritas menunjukkan kebutuhan yang perlu didahulukan ketika dana terbatas. Salah satu pertimbangannya adalah risiko penundaan: pekerjaan apa yang terhenti atau memburuk jika suatu usulan belum dibiayai.\n\nUsulan yang mendesak tetap perlu rencana yang bisa dilaksanakan. Biaya dan ruang lingkupnya harus jelas. Jika keduanya berubah, alokasi dana serta persetujuan yang dibutuhkan juga perlu diperiksa kembali."
+  },
+  {
+    "file": "data/pilot_lessons.json",
+    "section": "C01/3",
+    "field": "example",
+    "before": "Server berhenti, sedangkan ruang rapat masih dapat digunakan. Pemulihan layanan perlu didahulukan dibanding penataan ruangan.",
+    "after": "Server yang berhenti menghambat pengumpulan data. Ruang rapat masih bisa dipakai meskipun belum ditata ulang. Dampak penundaan kedua usulan ini berbeda, sehingga keduanya tidak harus mendapat prioritas yang sama."
+  },
+  {
+    "file": "data/pilot_lessons.json",
+    "section": "C12/1",
+    "field": "title",
+    "before": "Periksa alamat pengirim.",
+    "after": "Phishing dan rekayasa sosial"
+  },
+  {
+    "file": "data/pilot_lessons.json",
+    "section": "C12/1",
+    "field": "body",
+    "before": "Nama dan logo dalam email bisa ditiru. Periksa alamat pengirim serta konteks permintaannya sebelum membagikan informasi akun.",
+    "after": "Phishing adalah penipuan melalui pesan yang menyamar sebagai pihak tepercaya. Pelaku berusaha membuat penerima menyerahkan informasi, membuka tautan berbahaya, atau melakukan tindakan yang memberi akses ke akun.\n\nCara ini memanfaatkan kepercayaan dan reaksi penerima. Nama instansi atau logo membuat pesan tampak dikenal; ancaman pemblokiran mendorong orang bertindak sebelum sempat memeriksa permintaannya."
+  },
+  {
+    "file": "data/pilot_lessons.json",
+    "section": "C12/1",
+    "field": "example",
+    "before": "Nama tampilan menyebut “Administrator BPS”, tetapi alamatnya admin@bpss-portal-update.example. Nama tampilan saja tidak membuktikan pesan itu resmi.",
+    "after": "Nama tampilan menyebut “Administrator BPS”, tetapi alamatnya admin@bpss-portal-update.example. Tampilan tersebut belum membuktikan siapa pengirimnya. Alamat pengirim dan alasan permintaannya masih perlu diperiksa."
+  },
+  {
+    "file": "data/pilot_lessons.json",
+    "section": "C12/2",
+    "field": "title",
+    "before": "Buka layanan dari alamat yang Anda kenal.",
+    "after": "Identitas pengirim dan tujuan tautan"
+  },
+  {
+    "file": "data/pilot_lessons.json",
+    "section": "C12/2",
+    "field": "body",
+    "before": "Jika pesan meragukan, verifikasi melalui alamat atau kontak resmi yang sudah Anda simpan. Jangan mencoba tautan atau nomor kontak dari pesan tersebut.",
+    "after": "Nama yang terlihat di kotak masuk berbeda dari alamat email pengirim. Domain adalah bagian alamat setelah tanda @. Pada tautan, domain membantu menunjukkan situs yang akan dituju. Nama yang menyerupai instansi belum membuktikan hubungan dengan instansi tersebut.\n\nTautan pendek menyembunyikan alamat akhirnya. Itu saja belum membuktikan adanya penipuan. Bila permintaan meragukan, verifikasi melalui alamat layanan atau kontak yang sudah dikenal, bukan kontak dari pesan tersebut."
+  },
+  {
+    "file": "data/pilot_lessons.json",
+    "section": "C12/2",
+    "field": "example",
+    "before": "Email meminta Anda login segera. Buka layanan melalui alamat yang biasa digunakan atau hubungi TI lewat kontak yang sudah dikenal.",
+    "after": "Email meminta Anda segera login. Untuk memeriksa permintaannya, buka layanan melalui alamat yang biasa digunakan atau hubungi TI lewat kontak yang sudah tersimpan. Anda tidak perlu mencoba tautan dalam email itu."
+  },
+  {
+    "file": "data/pilot_lessons.json",
+    "section": "C12/3",
+    "field": "title",
+    "before": "Jaga kode verifikasi Anda.",
+    "after": "Autentikasi dan MFA"
+  },
+  {
+    "file": "data/pilot_lessons.json",
+    "section": "C12/3",
+    "field": "body",
+    "before": "Gunakan kata sandi kuat yang berbeda untuk tiap layanan dan aktifkan MFA bila tersedia. Jangan membagikan kode verifikasi atau menyetujui login yang tidak Anda lakukan.",
+    "after": "Autentikasi adalah pemeriksaan identitas saat seseorang mengakses akun. Kata sandi adalah salah satu buktinya. MFA, atau autentikasi multifaktor, meminta gabungan faktor yang berbeda, misalnya kata sandi dan persetujuan melalui aplikasi autentikator.\n\nLapisan tambahan ini juga perlu dijaga. Kode verifikasi atau persetujuan login dapat disalahgunakan jika diberikan kepada orang lain. Kata sandi yang kuat dan berbeda untuk setiap layanan tetap diperlukan."
+  },
+  {
+    "file": "data/pilot_lessons.json",
+    "section": "C12/3",
+    "field": "example",
+    "before": "Penelepon mengaku petugas TI dan meminta kode verifikasi. Tolak membagikan kode, lalu hubungi TI melalui kontak yang sudah dikenal.",
+    "after": "Penelepon mengaku petugas TI dan meminta kode verifikasi. Jangan membacakan kodenya. Akhiri percakapan, lalu hubungi TI melalui kontak yang sudah Anda kenal untuk memeriksa permintaan tersebut."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Server berhenti. Laporan ditunggu hari ini.",
+    "after": "Server berhenti saat laporan masih harus masuk."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Perbaikan memerlukan tiga hari. Tim perlu tetap menangani data yang paling mendesak.",
+    "after": "Perbaikan diperkirakan memerlukan tiga hari. Sementara itu, tim masih menerima data yang perlu segera ditangani."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Layanan bisa berjalan terbatas.",
+    "after": "Data prioritas masih dapat ditangani."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Tim dapat menangani data prioritas sambil mencatat dan memeriksa pekerjaannya. Setelah server pulih, data sementara perlu direkonsiliasi.",
+    "after": "Pekerjaan sementara menambah pencatatan bagi tim. Data tetap perlu diperiksa, lalu dicocokkan kembali setelah server pulih."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Pekerjaan ikut tertunda.",
+    "after": "Antrean menunggu server pulih."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Menunggu perbaikan membuat antrean bertambah. Pertimbangkan prosedur sementara yang disetujui agar layanan mendesak tetap ditangani dengan pemeriksaan.",
+    "after": "Selama perbaikan, data yang menunggu akan bertambah. Jika tersedia prosedur sementara yang disetujui, tim bisa menggunakannya dengan tetap memeriksa data."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Anggaran terpakai, hasil belum tercapai.",
+    "after": "Serapan dan kemajuan pekerjaan tidak sejalan."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Hambatan pekerjaan belum terjawab.",
+    "after": "Penyebab keterlambatan belum diketahui."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Tambahan belanja belum tentu memperbaiki hasil. Telusuri pekerjaan yang tertahan dan penyebabnya sebelum menentukan kebutuhan anggaran berikutnya.",
+    "after": "Serapan yang lebih tinggi belum menjelaskan pekerjaan yang tertahan. Periksa hambatannya dahulu agar kebutuhan belanja berikutnya dapat dinilai."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Pembahasan mengarah pada hasil kerja.",
+    "after": "Ada dasar untuk menentukan tindak lanjut."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Anda dapat menilai hambatan, penanggung jawab, dan tindak lanjutnya. Informasi serapan digunakan bersama kemajuan pekerjaan.",
+    "after": "Bagian pekerjaan yang tertahan menjadi jelas. Tim dapat membahas penyebabnya dan menentukan siapa yang perlu menindaklanjuti, sambil memeriksa penggunaan anggarannya."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Email meminta Anda segera login.",
+    "after": "Ada permintaan login lewat email."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Pengirim memakai nama administrator dan mengancam memblokir akun dalam satu jam.",
+    "after": "Pengirim mengaku sebagai administrator. Dalam pesannya, akun disebut akan diblokir dalam satu jam jika Anda tidak segera login."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Akun justru bisa terpapar.",
+    "after": "Mencoba tautan itu menambah risiko."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Mencoba tautan dengan akun Anda bukan cara verifikasi yang aman. Buka layanan melalui alamat yang sudah dikenal atau hubungi TI lewat kontak resmi yang tersimpan.",
+    "after": "Jika alamatnya palsu, data akun yang dimasukkan bisa jatuh ke pengirim. Periksa permintaannya lewat alamat layanan atau kontak TI yang sudah dikenal."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Permintaan diperiksa melalui kanal lain.",
+    "after": "Permintaan bisa dipastikan tanpa mencoba tautannya."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Anda dapat memastikan apakah pesan benar berasal dari petugas, tanpa memakai tautan atau kontak yang disediakan pengirim.",
+    "after": "Kontak TI yang sudah dikenal memberi jalur pemeriksaan terpisah dari email tadi. Tidak ada data akun yang perlu dimasukkan ke tautan pengirim."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Penelepon meminta kode verifikasi.",
+    "after": "Kode verifikasi diminta melalui telepon."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Akses akun tetap Anda kendalikan.",
+    "after": "Kode tidak diberikan kepada penelepon."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Kode tidak diberikan kepada orang lain. Permintaan diperiksa melalui kontak resmi yang Anda peroleh secara terpisah.",
+    "after": "Anda dapat mengakhiri percakapan dan menghubungi TI lewat kontak resmi yang tersimpan. Pengakuan penelepon sebagai petugas belum membuktikan identitasnya."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Kode dapat dipakai untuk mengakses akun.",
+    "after": "Kode yang dibagikan bisa disalahgunakan."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Jangan membagikan kode verifikasi. Jika terlanjur memberikan akses, segera hubungi tim TI melalui kanal resmi untuk penanganan akun.",
+    "after": "Kode verifikasi adalah bagian dari pemeriksaan akses. Jika sudah dibagikan atau akses telanjur diberikan, segera minta penanganan akun kepada TI melalui kanal resmi."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Pilih satu tindakan untuk melihat akibatnya.",
+    "after": "Pilih tindakan yang akan Anda ambil."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "AKIBAT PILIHAN ANDA",
+    "after": "YANG TERJADI"
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Anda boleh memilih tindakan lainnya untuk membandingkan akibatnya.",
+    "after": "Pilih tindakan satunya jika ingin membandingkan hasilnya."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Belum tepat. Pertimbangkan dampak pada pekerjaan atau akses akun, lalu coba jawaban lain.",
+    "after": "Jawaban ini belum sesuai dengan kasus. Coba pilihan lain."
+  },
+  {
+    "file": "exelearning/pilot/experience.js",
+    "before": "Belum tepat. Coba pikirkan kembali risiko yang dijelaskan pada materi, lalu pilih jawaban lain.",
+    "after": "Jawaban ini belum sesuai. Baca lagi penjelasannya, lalu periksa pilihan lain."
+  },
+  {
+    "file": "scripts/pilot_experiences.py",
+    "before": "data/pilot_lessons.json",
+    "after": "data/pilot_lessons.humanized.json"
+  },
+  {
+    "file": "scripts/pilot_experiences.py",
+    "before": "BELAJAR DULU, LALU COBA",
+    "after": "MATERI DAN LATIHAN"
+  },
+  {
+    "file": "scripts/pilot_experiences.py",
+    "before": "Belanja yang mendukung hasil kerja.",
+    "after": "Anggaran dan hasil kerja"
+  },
+  {
+    "file": "scripts/pilot_experiences.py",
+    "before": "Kenali pesan mencurigakan.",
+    "after": "Mengenali phishing"
+  },
+  {
+    "file": "scripts/pilot_experiences.py",
+    "before": "Pelajari materi, coba dua situasi, lalu selesaikan tantangan praktik. Kasus fiktif.",
+    "after": "Mulai dengan materi, kemudian lanjutkan ke latihan. Semua kasus di sini fiktif."
+  },
+  {
+    "file": "scripts/pilot_experiences.py",
+    "before": "BEKAL SEBELUM PRAKTIK",
+    "after": "MATERI AWAL"
+  },
+  {
+    "file": "scripts/pilot_challenges.py",
+    "before": "Mana yang perlu dibiayai sekarang?",
+    "after": "Pilih usulan yang perlu didanai sekarang."
+  },
+  {
+    "file": "scripts/pilot_challenges.py",
+    "before": "Susun anggarannya, token demi token.",
+    "after": "Bagikan anggaran ke dua kebutuhan prioritas."
+  },
+  {
+    "file": "scripts/pilot_challenges.py",
+    "before": "Biaya berubah. Rencana Anda perlu disesuaikan.",
+    "after": "Biaya perbaikan server naik."
+  },
+  {
+    "file": "scripts/pilot_challenges.py",
+    "before": "Bangun berkas investigasi Anda.",
+    "after": "Periksa bukti pada pesan ini."
+  },
+  {
+    "file": "scripts/pilot_challenges.py",
+    "before": "Sekarang tentukan urutan responsnya.",
+    "after": "Susun urutan penanganan pesan."
+  },
+  {
+    "file": "scripts/pilot_challenges.py",
+    "before": "Seret empat berkas usulan ke papan prioritas. Dana tersedia 100 unit. Utamakan pemulihan layanan dan perlindungan datanya.",
+    "after": "Dana tersedia 100 unit. Kelompokkan empat usulan berdasarkan kebutuhan yang perlu ditangani sekarang dan yang masih bisa ditunda."
+  },
+  {
+    "file": "scripts/pilot_challenges.py",
+    "before": "Setiap token bernilai 10 unit. Seret token ke dua usulan prioritas. Semua token boleh dipindahkan lagi sebelum Anda menetapkan rencana.",
+    "after": "Setiap token bernilai 10 unit. Alokasikan ke perbaikan server dan cadangan data. Jika pembagiannya belum pas, token masih bisa dipindahkan."
+  },
+  {
+    "file": "scripts/pilot_challenges.py",
+    "before": "Penyedia mengonfirmasi biaya server naik menjadi 90 unit. Anggaran tetap 100. Tahap awal cadangan bisa dimulai dengan 10 unit. Pindahkan token, lalu seret satu keputusan ke meja persetujuan.",
+    "after": "Biaya server kini 90 unit, sedangkan anggaran tetap 100. Cadangan data bisa dimulai bertahap dengan 10 unit. Sesuaikan tokennya, kemudian pilih keputusan yang akan diajukan."
+  },
+  {
+    "file": "scripts/pilot_challenges.py",
+    "before": "Seret lima potongan pesan ke kategori yang sesuai. Bedakan tanda phishing yang kuat dengan hal yang belum cukup untuk menyimpulkan pesan itu berbahaya.",
+    "after": "Ada lima potongan informasi dari pesan tadi. Tentukan mana yang menguatkan dugaan phishing dan mana yang belum cukup sebagai bukti."
+  },
+  {
+    "file": "scripts/pilot_challenges.py",
+    "before": "Pilih tiga tindakan aman dan seret ke urutan 1–3. Dua tindakan lain harus tetap di tempat asal. Susunan yang keliru bisa membuat akun atau rekan Anda ikut terpapar.",
+    "after": "Letakkan tiga tindakan yang aman pada urutan 1–3. Dua tindakan yang berisiko tidak perlu dipindahkan."
+  },
+  {
+    "file": "scripts/pilot_challenges.py",
+    "before": "Pengirim mendesak Anda segera memasukkan akun.",
+    "after": "Penerima diminta segera login agar akunnya tidak diblokir."
+  },
+  {
+    "file": "scripts/pilot_challenges.py",
+    "before": "Tujuan alamat login disembunyikan oleh pemendek tautan.",
+    "after": "Alamat singkat ini tidak memperlihatkan tujuan login secara langsung."
+  },
+  {
+    "file": "exelearning/pilot/challenge.js",
+    "before": "Seret token bernilai 10 unit. Biayai pemulihan server dan cadangan datanya.",
+    "after": "Setiap token bernilai 10 unit. Bagikan ke perbaikan server dan cadangan data."
+  },
+  {
+    "file": "exelearning/pilot/challenge.js",
+    "before": "Kelompokkan empat usulan. Utamakan layanan yang terhenti dan perlindungan data.",
+    "after": "Tentukan usulan yang perlu didanai sekarang dan yang masih bisa ditunda."
+  },
+  {
+    "file": "exelearning/pilot/challenge.js",
+    "before": "Periksa dampaknya: server yang terhenti dan cadangan yang gagal perlu ditangani sekarang. Ruangan serta lokakarya masih dapat dijadwalkan kemudian.",
+    "after": "Server yang berhenti menahan pengumpulan data, dan cadangan terakhir tidak bisa dipulihkan. Kedua kebutuhan ini lebih mendesak daripada penataan ruangan atau lokakarya tambahan."
+  },
+  {
+    "file": "exelearning/pilot/challenge.js",
+    "before": "Periksa kekuatan buktinya. Domain tiruan, desakan login, dan tujuan tautan yang tersembunyi perlu diwaspadai. Logo atau salam umum saja belum cukup sebagai bukti.",
+    "after": "Alamat pengirim, desakan login, dan tautan yang menutupi tujuan perlu diperiksa. Logo atau salam umum saja belum cukup untuk menyimpulkan adanya phishing."
+  },
+  {
+    "file": "exelearning/pilot/challenge.js",
+    "before": "Hentikan interaksi terlebih dahulu, verifikasi melalui kontak yang dikenal, lalu laporkan. Mencoba login dan menyebarkan tautan bukan langkah yang aman.",
+    "after": "Jangan lanjutkan interaksi dengan pesan. Periksa lewat kontak yang dikenal, kemudian laporkan temuannya. Mencoba login atau meneruskan tautan dapat menambah risiko."
+  },
+  {
+    "file": "exelearning/pilot/challenge.js",
+    "before": "Pilih keputusan yang tetap berada dalam anggaran: lakukan cadangan secara bertahap. Tambahan dana belum disetujui, sedangkan menunda server membuat layanan tetap terhenti.",
+    "after": "Dana tambahan belum disetujui. Cadangan dapat dikerjakan bertahap, sedangkan pemulihan server tetap diperlukan agar pengumpulan data berjalan lagi."
+  },
+  {
+    "file": "exelearning/pilot/challenge.js",
+    "before": " Anda bisa memindahkan objek dan mencoba lagi.",
+    "after": " Geser kartu atau tokennya, lalu periksa kembali."
+  },
+  {
+    "file": "exelearning/pilot/challenge.js",
+    "before": "Rencana dapat dijalankan: server 90 unit, cadangan tahap awal 10 unit. Perubahan biaya ditangani tanpa melampaui anggaran.",
+    "after": "Alokasi akhir: server 90 unit dan cadangan tahap awal 10 unit. Totalnya tetap 100 unit."
+  },
+  {
+    "file": "exelearning/pilot/challenge.js",
+    "before": "Respons tersusun aman. Anda menghentikan risiko, memeriksa melalui kanal lain, lalu membantu penanganan pesan.",
+    "after": "Urutannya sudah sesuai: hentikan interaksi, periksa lewat kontak yang dikenal, kemudian laporkan."
+  },
+  {
+    "file": "exelearning/pilot/challenge.js",
+    "before": "Rencana awal seimbang: server 70 unit dan cadangan 30 unit. Lanjutkan untuk melihat perkembangan kasus.",
+    "after": "Server mendapat 70 unit dan cadangan 30 unit. Pada tahap berikutnya ada perubahan biaya yang perlu ditangani."
+  },
+  {
+    "file": "exelearning/pilot/challenge.js",
+    "before": "Penempatan sesuai dengan bukti kasus. Lanjutkan ke tahap berikutnya.",
+    "after": "Kartu sudah berada pada kategori yang sesuai. Lanjutkan ke tahap berikutnya."
+  },
+  {
+    "file": "exelearning/pilot/scene.js",
+    "before": "names=['Bekal awal','Simulasi & praktik','Dua keputusan','Pembahasan','Hasil']",
+    "after": "names=['Materi','Situasi & latihan','Kuis','Pembahasan','Hasil']"
+  },
+  {
+    "file": "exelearning/pilot/scene.js",
+    "before": "Tantangan selesai. Sekarang coba dua pertanyaan singkat.",
+    "after": "Latihan selesai. Berikutnya ada dua pertanyaan untuk memeriksa pemahaman Anda."
+  },
+  {
+    "file": "exelearning/pilot/scene.js",
+    "before": "Lanjut ke dua pertanyaan →",
+    "after": "Lanjut ke kuis →"
+  },
+  {
+    "file": "exelearning/pilot/scene.js",
+    "before": "Waktu tantangan berakhir. Anda tetap bisa melanjutkan latihan.",
+    "after": "Waktu 2 menit sudah habis. Latihan tetap bisa dilanjutkan."
+  },
+  {
+    "file": "scripts/pilot_scene_content.py",
+    "before": "from pilot_experiences import lesson,simulation",
+    "after": "from load_humanized import load\n    experiences=load(\"pilot_experiences\")\n    lesson,simulation=experiences.lesson,experiences.simulation"
+  },
+  {
+    "file": "scripts/pilot_scene_content.py",
+    "before": "from pilot_challenges import challenge",
+    "after": "challenge=load(\"pilot_challenges\").challenge"
+  },
+  {
+    "file": "scripts/pilot_scene_content.py",
+    "before": "PILIH TINDAKAN ANDA",
+    "after": "CEK PEMAHAMAN"
+  },
+  {
+    "file": "scripts/pilot_scene_content.py",
+    "before": "Dua pertanyaan singkat dari situasi tadi.",
+    "after": "Jawab kedua pertanyaan berikut berdasarkan materi dan latihan tadi."
+  },
+  {
+    "file": "scripts/pilot_scene_content.py",
+    "before": "Layanan data perlu tetap berjalan.",
+    "after": "Prioritas pada kasus anggaran"
+  },
+  {
+    "file": "scripts/pilot_scene_content.py",
+    "before": "Anda punya alasan untuk meragukan email ini.",
+    "after": "Menilai pesan dan menjaga akses akun"
+  },
+  {
+    "file": "scripts/pilot_scene_content.py",
+    "before": "Bagaimana keputusan Anda?",
+    "after": "Hasil latihan"
+  },
+  {
+    "file": "data/pilot_lessons.humanized.json",
+    "before": "Nama instansi atau logo membuat pesan tampak dikenal; ancaman pemblokiran",
+    "after": "Nama instansi atau logo membuat pesan terlihat resmi. Ancaman pemblokiran"
+  }
+]

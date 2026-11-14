@@ -1,0 +1,4 @@
+interface:
+  display_name: "SCORM eXe Scenes"
+  short_description: "Build sourced SCORM in the approved LCM scene style"
+  default_prompt: "Use $scorm-exe-scenes to create a SCORM course using the bundled LCM design, sourced theory and accessible interactions."

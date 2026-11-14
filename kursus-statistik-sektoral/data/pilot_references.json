@@ -1,0 +1,107 @@
+{
+  "oecd-pb": {
+    "publisher": "OECD",
+    "title": "OECD Good Practices for Performance Budgeting",
+    "year": "2019",
+    "url": "https://www.oecd.org/en/publications/oecd-good-practices-for-performance-budgeting_c90b0305-en.html",
+    "doi": "10.1787/c90b0305-en",
+    "verified_on": "2026-11-13",
+    "verification": "Publikasi dan bagian yang dirujuk dibaca pada situs resmi OECD."
+  },
+  "oecd-glossary": {
+    "publisher": "OECD",
+    "title": "Glossary of Key Terms in Evaluation and Results-Based Management for Sustainable Development, Second Edition",
+    "year": "2023",
+    "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/06/glossary-of-key-terms-in-evaluation-and-results-based-management-for-sustainable-development-second-edition_2767e14e/632da462-en-fr-es.pdf",
+    "doi": "10.1787/632da462-en-fr-es",
+    "verified_on": "2026-11-13",
+    "verification": "PDF 64 halaman pada domain resmi OECD; entri dan halaman PDF dicocokkan."
+  },
+  "nist-phishing": {
+    "publisher": "NIST",
+    "title": "Phishing — Small Business Cybersecurity Corner",
+    "year": "pembaruan 2026",
+    "updated_on": "2026-10-16",
+    "url": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/phishing",
+    "verified_on": "2026-11-13",
+    "verification": "Definisi, tanda pesan, verifikasi melalui kontak dikenal, dan tanggal pembaruan dibaca pada halaman resmi NIST."
+  },
+  "nist-mfa": {
+    "publisher": "NIST",
+    "title": "Multi-Factor Authentication — Small Business Cybersecurity Corner",
+    "year": "pembaruan 2026",
+    "updated_on": "2026-01-05",
+    "url": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/multi-factor-authentication",
+    "verified_on": "2026-11-13",
+    "verification": "Definisi faktor, manfaat MFA dan keterbatasan OTP dibaca pada halaman resmi NIST."
+  },
+  "microsoft-phishing": {
+    "publisher": "Microsoft Learn",
+    "title": "How to protect against phishing attacks — Microsoft Defender for Endpoint",
+    "year": "pembaruan 2026",
+    "updated_on": "2026-07-14",
+    "url": "https://learn.microsoft.com/en-us/defender-endpoint/malware/phishing",
+    "verified_on": "2026-11-13",
+    "verification": "Halaman resmi Microsoft; bagian Learn the signs of a phishing scam dan tanggal pembaruan dicocokkan."
+  },
+  "uu-16-1997": {
+    "id": "uu-16-1997",
+    "publisher": "Republik Indonesia",
+    "title": "Undang-Undang Nomor 16 Tahun 1997 tentang Statistik",
+    "year": "1997",
+    "section": "Pasal 1, Pasal 5, dan Pasal 12 (Jenis Statistik dan Peran BPS)",
+    "url": "https://peraturan.bpk.go.id/Details/45873/uu-no-16-tahun-1997",
+    "verified_on": "2026-11-14",
+    "verification": "Definisi SSN, pembagian jenis statistik dasar, sektoral, khusus, dan peran pembinaan BPS dibaca pada teks resmi undang-undang."
+  },
+  "modul-11-bps": {
+    "id": "modul-11-bps",
+    "publisher": "Badan Pusat Statistik",
+    "title": "Modul 11: Penguatan Statistik Sektoral Tahun 2026",
+    "year": "2026",
+    "section": "Bab 2: Sistem Statistik Nasional, hlm. 4-11",
+    "url": "https://pusdiklat.bps.go.id",
+    "verified_on": "2026-11-14",
+    "verification": "Tujuan SSN, komponen SSN, peran Walidata dan Produsen Data diverifikasi pada modul materi."
+  },
+  "perpres-39-2019": {
+    "id": "perpres-39-2019",
+    "publisher": "Republik Indonesia",
+    "title": "Peraturan Presiden Nomor 39 Tahun 2019 tentang Satu Data Indonesia",
+    "year": "2019",
+    "section": "Pasal 5 (Prinsip Satu Data Indonesia)",
+    "url": "https://peraturan.bpk.go.id/Details/111818/perpres-no-39-tahun-2019",
+    "verified_on": "2026-11-14",
+    "verification": "Empat prinsip Satu Data Indonesia: standar data, metadata, interoperabilitas, dan kode referensi diverifikasi pada lembaran perpres."
+  },
+  "perban-bps-5-2020": {
+    "id": "perban-bps-5-2020",
+    "publisher": "Badan Pusat Statistik",
+    "title": "Peraturan BPS Nomor 5 Tahun 2020 tentang Metadata Statistik",
+    "year": "2020",
+    "section": "Pasal 3 dan Lampiran (Struktur Metadata Kegiatan, Variabel, dan Indikator)",
+    "url": "https://peraturan.bpk.go.id/Details/143521/peraturan-bps-no-5-tahun-2020",
+    "verified_on": "2026-11-14",
+    "verification": "Kewajiban penyusunan metadata statistik dan struktur informasi konsep dan metodologi diperiksa pada peraturan BPS."
+  },
+  "pp-51-1999": {
+    "id": "pp-51-1999",
+    "publisher": "Republik Indonesia",
+    "title": "Peraturan Pemerintah Nomor 51 Tahun 1999 tentang Penyelenggaraan Statistik",
+    "year": "1999",
+    "section": "Pasal 19 dan Pasal 20 (Tata Cara Rekomendasi Statistik Sektoral)",
+    "url": "https://peraturan.bpk.go.id/Details/52482/pp-no-51-tahun-1999",
+    "verified_on": "2026-11-14",
+    "verification": "Kewajiban pemberitahuan rencana survei statistik sektoral kepada BPS dicocokkan pada peraturan pemerintah."
+  },
+  "perban-bps-4-2019": {
+    "id": "perban-bps-4-2019",
+    "publisher": "Badan Pusat Statistik",
+    "title": "Peraturan BPS Nomor 4 Tahun 2019 tentang NSPK Penyelenggaraan Statistik Sektoral",
+    "year": "2019",
+    "section": "Bab III (Rekomendasi dan Mekanisme ROMANTIK)",
+    "url": "https://peraturan.bpk.go.id/Details/134440/peraturan-bps-no-4-tahun-2019",
+    "verified_on": "2026-11-14",
+    "verification": "Mekanisme permohonan rekomendasi melalui aplikasi ROMANTIK diverifikasi pada regulasi BPS."
+  }
+}

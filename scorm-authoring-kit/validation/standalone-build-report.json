@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "directory": "C:\\Users\\PUSDIK~1\\AppData\\Local\\Temp\\lcm-kit-final-audit-arjq5w_v\\project",
+  "checks": [
+    "checksummed bootstrap",
+    "build both editable sources",
+    "structure of two actual exports and matching previews"
+  ]
+}

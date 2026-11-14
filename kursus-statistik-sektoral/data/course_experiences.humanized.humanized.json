@@ -1,0 +1,98 @@
+{
+  "C01": {
+    "headline": "Dua usulan masuk. Dananya hanya cukup untuk satu.",
+    "intro": "Server pengumpulan data mengalami gangguan, sementara usulan penataan ruang rapat juga menunggu. Dana yang tersedia perlu diarahkan ke kebutuhan yang paling mendesak.",
+    "start": "Lihat kedua usulan",
+    "practice_title": "Bagaimana Anda membagi anggarannya?",
+    "practice_note": "Ketuk gambar untuk memeriksa kebutuhannya. Setelah itu, geser alokasi dan lihat apa yang berubah.",
+    "cards": [
+      {
+        "label": "Perbaikan sistem data",
+        "image": "scenes/C01-server.webp",
+        "title": "Server sedang bermasalah",
+        "body": "Pengumpulan data terganggu. Jika perbaikan ditunda, pelaporan juga bisa terlambat."
+      },
+      {
+        "label": "Dekorasi ruang rapat",
+        "image": "scenes/C01-meeting.webp",
+        "title": "Penataan ruang rapat",
+        "body": "Usulan ini memperbaiki tampilan ruangan. Penundaannya tidak langsung menghambat layanan data."
+      }
+    ],
+    "reflection": "Perbaikan server berkaitan langsung dengan kelangsungan pengumpulan data. Penataan ruang rapat masih bisa menunggu karena ruangan tetap dapat digunakan. Saat biaya perbaikan naik, lingkup dan tahapan pekerjaan perlu dibahas lagi agar alokasinya tetap cukup.",
+    "takeaway": "Saat menelaah usulan belanja berikutnya, periksa pekerjaan yang akan tertahan bila usulan itu ditunda.",
+    "quizzes": [
+      {
+        "question": "Jika dana hanya cukup untuk satu usulan, mana yang Anda dahulukan?",
+        "options": [
+          "A. Memperbaiki sistem pengumpulan data",
+          "B. Menata ulang ruang rapat",
+          "C. Membagi dana sama rata"
+        ],
+        "answer_key": "A",
+        "feedback": "Sistem yang terganggu sudah menahan pekerjaan. Perbaikannya perlu mendapat dana yang cukup; pembagian sama rata bisa membuat kebutuhan itu tidak terpenuhi."
+      },
+      {
+        "question": "Anggaran sudah terpakai, tetapi hasil kerja belum tercapai. Apa yang Anda periksa lebih dahulu?",
+        "options": [
+          "A. Peluang menambah belanja",
+          "B. Hambatan yang membuat hasil kerja belum tercapai",
+          "C. Pilihan untuk menunda evaluasi"
+        ],
+        "answer_key": "B",
+        "feedback": "Cari pekerjaan yang belum selesai dan penyebabnya. Dari situ baru dapat dinilai apakah masalahnya ada pada pelaksanaan, kebutuhan biaya, atau hal lain."
+      }
+    ]
+  },
+  "C12": {
+    "headline": "Bagaimana memastikan kegiatan statistik sektoral terstandar dan bebas duplikasi?",
+    "intro": "Instansi pemerintah merencanakan kegiatan statistik sektoral untuk mendukung perumusan kebijakan. Agar data yang dihasilkan sahih dan diakui secara nasional, rancangan kegiatan perlu dikoordinasikan dan diajukan rekomendasinya kepada BPS.",
+    "start": "Mulai pembelajaran",
+    "practice_title": "Pilah usulan dan susun rekomendasi",
+    "practice_note": "Kelompokkan jenis kegiatan dan tentukan urutan langkah koordinasi yang tepat.",
+    "cards": [
+      {
+        "label": "Survei Panen Komoditas",
+        "image": "scenes/C12-mail.webp",
+        "title": "Statistik Sektoral Daerah",
+        "body": "Pendataan spesifik untuk tugas fungsi dinas pertanian daerah."
+      },
+      {
+        "label": "Rekomendasi ROMANTIK",
+        "image": "scenes/C12-lock.webp",
+        "title": "Rekomendasi Resmi BPS",
+        "body": "Pemeriksaan rancangan metodologi sebelum pengumpulan data di lapangan."
+      },
+      {
+        "label": "Metadata Standar",
+        "image": "scenes/C12-mail.webp",
+        "title": "Prinsip Satu Data",
+        "body": "Dokumentasi konsep, definisi, dan metodologi agar data dapat dibandingkan."
+      }
+    ],
+    "reflection": "Penyelenggaraan kegiatan statistik sektoral memerlukan koordinasi sejak tahap perencanaan. Rekomendasi BPS melalui aplikasi ROMANTIK mencegah pemborosan anggaran dan menjamin mutu metodologi, sementara metadata statistik menjamin transparansi data.",
+    "takeaway": "Gunakan aplikasi ROMANTIK untuk setiap rencana kegiatan statistik sektoral, dan pastikan setiap data yang dipublikasikan memenuhi prinsip Satu Data Indonesia.",
+    "quizzes": [
+      {
+        "question": "Sebuah dinas berencana menyelenggarakan survei baru untuk memantau program daerah. Kapan permohonan rekomendasi harus diajukan ke BPS melalui ROMANTIK?",
+        "options": [
+          "A. Pada tahap perencanaan sebelum pengumpulan data dilaksanakan",
+          "B. Setelah seluruh kuesioner terkumpul dan diolah menjadi laporan",
+          "C. Hanya jika diminta oleh auditor eksternal saat pemeriksaan berkas"
+        ],
+        "answer_key": "A",
+        "feedback": "Sesuai regulasi penyelenggaraan statistik, pemberitahuan dan permohonan rekomendasi diajukan pada tahap perencanaan sebelum pelaksanaan pengumpulan data agar metodologi terjamin dan tidak terjadi duplikasi."
+      },
+      {
+        "question": "Dalam kerangka Satu Data Indonesia (Perpres No. 39 Tahun 2019), apa fungsi utama penyusunan metadata statistik oleh produsen data?",
+        "options": [
+          "A. Menggantikan proses pengumpulan data agar biaya kegiatan lebih hemat",
+          "B. Memberikan informasi terstruktur tentang konsep, metodologi, dan kualitas data",
+          "C. Mengunci format agar data tidak dapat diakses instansi pemerintah lain"
+        ],
+        "answer_key": "B",
+        "feedback": "Metadata statistik memberikan konteks, definisi, metodologi, dan batas cakupan data sehingga data dapat dipahami, dipertanggungjawabkan, dan digunakan secara terpadu lintas sektor."
+      }
+    ]
+  }
+}

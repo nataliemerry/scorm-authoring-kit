@@ -1,0 +1,574 @@
+{
+  "sort_paragraphs": {
+    "initial_order": [
+      "p3",
+      "p1",
+      "p4",
+      "p2"
+    ],
+    "correct_order": [
+      "p1",
+      "p2",
+      "p3",
+      "p4"
+    ],
+    "title": "Dari email mencurigakan ke penanganan",
+    "explanation": "Interaksi dengan pesan dihentikan, permintaan diperiksa melalui kontak yang dikenal, lalu bukti diserahkan untuk penanganan.",
+    "paragraphs": [
+      {
+        "id": "p1",
+        "text": "Sebuah email meminta pegawai segera masuk ke akun melalui sebuah tautan. Pesan itu mengancam pemblokiran akun dalam satu jam."
+      },
+      {
+        "id": "p2",
+        "text": "Ancaman dalam email tersebut membuat pegawai ragu. Ia menghentikan interaksi dengan pesan dan menghubungi petugas TI melalui kontak resmi yang sudah dikenal."
+      },
+      {
+        "id": "p3",
+        "text": "Petugas yang dihubungi lewat kontak itu memastikan bahwa tidak ada permintaan masuk akun dari layanan resmi. Tautan dalam pesan pun tidak digunakan."
+      },
+      {
+        "id": "p4",
+        "text": "Konfirmasi petugas itu disertakan saat pegawai menyerahkan bukti email melalui kanal pelaporan instansi. Pesan mencurigakan dapat ditangani lebih lanjut."
+      }
+    ]
+  },
+  "drag_words": {
+    "words": [
+      {
+        "id": "code",
+        "label": "kode verifikasi"
+      },
+      {
+        "id": "logo",
+        "label": "logo pengirim"
+      },
+      {
+        "id": "link",
+        "label": "tautan"
+      },
+      {
+        "id": "contact",
+        "label": "kontak resmi"
+      }
+    ],
+    "gaps": [
+      {
+        "id": "g1",
+        "before": "Saat menerima email login yang mencurigakan, jangan langsung membuka",
+        "after": "di dalamnya.",
+        "answer": "link",
+        "feedback": "Tautan dalam pesan yang meragukan dapat mengarah ke halaman palsu."
+      },
+      {
+        "id": "g2",
+        "before": "Pastikan permintaan melalui",
+        "after": "yang sudah dikenal, di luar pesan tersebut.",
+        "answer": "contact",
+        "feedback": "Jalur yang dikenal memberi pemeriksaan terpisah dari pesan pengirim."
+      },
+      {
+        "id": "g3",
+        "before": "Jangan membacakan",
+        "after": "kepada penelepon yang mengaku petugas TI.",
+        "answer": "code",
+        "feedback": "Pengakuan sebagai petugas belum membuktikan siapa penelepon tersebut."
+      }
+    ]
+  },
+  "word_search": {
+    "grid": [
+      "RPOEPIZRPS",
+      "TMLKODEXHX",
+      "ARAVOEEYIL",
+      "UOZBPNORSB",
+      "TEPXGTNCHY",
+      "APJNFIDKIX",
+      "NWZVTTKXNF",
+      "MZGSCAGOGC",
+      "ADASHSCNGB",
+      "HWMFAZESON"
+    ],
+    "words": [
+      {
+        "term": "PHISHING",
+        "meaning": "Pesan penipuan yang menyamar sebagai pihak tepercaya.",
+        "cells": [
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "clue": "Penipuan melalui pesan yang menyamar sebagai pihak tepercaya."
+      },
+      {
+        "term": "MFA",
+        "meaning": "Pemeriksaan identitas dengan dua atau lebih jenis faktor.",
+        "cells": [
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            9,
+            4
+          ]
+        ],
+        "clue": "Cara masuk akun yang memerlukan dua atau lebih jenis faktor pemeriksaan."
+      },
+      {
+        "term": "IDENTITAS",
+        "meaning": "Identitas pengirim perlu diperiksa, bukan hanya nama tampilannya.",
+        "cells": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            8,
+            5
+          ]
+        ],
+        "clue": "Informasi tentang siapa pengirim sebenarnya, yang perlu diperiksa terpisah dari nama tampilannya."
+      },
+      {
+        "term": "TAUTAN",
+        "meaning": "Teks yang terlihat dapat berbeda dari alamat tujuannya.",
+        "cells": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "clue": "Bagian pesan yang mengarahkan Anda ke alamat lain saat dipilih."
+      },
+      {
+        "term": "KODE",
+        "meaning": "Kode verifikasi tetap perlu dijaga.",
+        "cells": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        "clue": "Rangkaian angka atau karakter untuk verifikasi akses yang tidak boleh dibagikan."
+      }
+    ]
+  },
+  "branding": {
+    "logo": "assets/branding/bps-corpu-transparent.png",
+    "placement": "top-left",
+    "preserve_original": true
+  },
+  "id": "C12",
+  "title": "Cybersecurity Challenge",
+  "audience": "Pimpinan dan pegawai BPS",
+  "objective": "Mengenali cara kerja phishing dan memahami alasan di balik pemeriksaan pesan serta perlindungan akun.",
+  "language": "id",
+  "tone": "Semi-formal, natural dan profesional",
+  "interaction_profile": "evidence-sequence",
+  "lessons": [
+    {
+      "title": "Phishing dan rekayasa sosial",
+      "body": "Phishing adalah penipuan melalui pesan yang menyamar sebagai pihak tepercaya. Pelaku berusaha membuat penerima menyerahkan informasi, membuka tautan berbahaya, atau melakukan tindakan yang memberi akses ke akun.\n\nCara ini memanfaatkan kepercayaan dan reaksi penerima. Nama instansi atau logo membuat pesan terlihat resmi. Ancaman pemblokiran mendorong orang bertindak sebelum sempat memeriksa permintaannya.",
+      "mode": "example",
+      "example": "Nama tampilan menyebut “Administrator BPS”, tetapi alamatnya admin@bpss-portal-update.example. Tampilan tersebut belum membuktikan siapa pengirimnya. Alamat pengirim dan alasan permintaannya masih perlu diperiksa.",
+      "references": [
+        {
+          "publisher": "NIST",
+          "title": "Phishing — Small Business Cybersecurity Corner",
+          "year": "pembaruan 2026",
+          "updated_on": "2026-10-16",
+          "url": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/phishing",
+          "verified_on": "2026-11-13",
+          "verification": "Definisi, tanda pesan, verifikasi melalui kontak dikenal, dan tanggal pembaruan dibaca pada halaman resmi NIST.",
+          "id": "nist-phishing",
+          "section": "What is Phishing?; How to Spot a Phish"
+        }
+      ],
+      "paragraph_sources": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas."
+    },
+    {
+      "title": "Identitas pengirim dan tujuan tautan",
+      "body": "Alamat email bisa dibuat menyerupai alamat resmi melalui perubahan huruf atau tambahan angka. Kemiripan nama belum membuktikan hubungan dengan instansi tersebut. Pada tautan, teks yang terlihat juga bisa berbeda dari alamat tujuan sebenarnya.\n\nJika permintaan meragukan, konfirmasikan melalui kontak yang sudah dikenal atau alamat resmi yang diperoleh secara terpisah. Jangan mengandalkan informasi kontak dari pesan yang sedang diragukan.",
+      "mode": "example",
+      "example": "Email meminta Anda segera login. Untuk memeriksa permintaannya, buka layanan melalui alamat yang biasa digunakan atau hubungi TI lewat kontak yang sudah tersimpan. Anda tidak perlu mencoba tautan dalam email itu.",
+      "references": [
+        {
+          "publisher": "Microsoft Learn",
+          "title": "How to protect against phishing attacks — Microsoft Defender for Endpoint",
+          "year": "pembaruan 2026",
+          "updated_on": "2026-07-14",
+          "url": "https://learn.microsoft.com/en-us/defender-endpoint/malware/phishing",
+          "verified_on": "2026-11-13",
+          "verification": "Halaman resmi Microsoft; bagian Learn the signs of a phishing scam dan tanggal pembaruan dicocokkan.",
+          "id": "microsoft-phishing",
+          "section": "Learn the signs of a phishing scam"
+        },
+        {
+          "publisher": "NIST",
+          "title": "Phishing — Small Business Cybersecurity Corner",
+          "year": "pembaruan 2026",
+          "updated_on": "2026-10-16",
+          "url": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/phishing",
+          "verified_on": "2026-11-13",
+          "verification": "Definisi, tanda pesan, verifikasi melalui kontak dikenal, dan tanggal pembaruan dibaca pada halaman resmi NIST.",
+          "id": "nist-phishing",
+          "section": "How to Spot a Phish — verifikasi melalui kontak yang dikenal"
+        }
+      ],
+      "paragraph_sources": [
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas."
+    },
+    {
+      "title": "Autentikasi dan MFA",
+      "body": "MFA, atau autentikasi multifaktor, memeriksa identitas dengan dua atau lebih jenis faktor. Misalnya, kata sandi dipadukan dengan faktor kepemilikan seperti kunci keamanan. Pemeriksaan tambahan ini menjadi hambatan jika kata sandi bocor.\n\nTidak semua bentuk MFA tahan phishing. Kode sekali pakai dan kode SMS masih dapat menjadi sasaran penipuan. Kode verifikasi tetap perlu dijaga, meskipun akun sudah menggunakan MFA.",
+      "mode": "check",
+      "prompt": "Seseorang mengaku petugas TI dan meminta kode verifikasi melalui telepon. Apa tindakan Anda?",
+      "options": [
+        "Bacakan kode agar pekerjaannya cepat selesai",
+        "Tolak membagikan kode dan hubungi TI lewat kontak yang dikenal",
+        "Kirim kode ke grup agar rekan ikut memeriksa"
+      ],
+      "correct": 1,
+      "feedback": "Kode verifikasi tidak perlu dibagikan kepada penelepon. Hubungi TI melalui kontak yang sudah dikenal untuk memastikan permintaannya.",
+      "example": "Penelepon mengaku petugas TI dan meminta kode verifikasi. Jangan membacakan kodenya. Akhiri percakapan, lalu hubungi TI melalui kontak yang sudah Anda kenal untuk memeriksa permintaan tersebut.",
+      "references": [
+        {
+          "publisher": "NIST",
+          "title": "Multi-Factor Authentication — Small Business Cybersecurity Corner",
+          "year": "pembaruan 2026",
+          "updated_on": "2026-01-05",
+          "url": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/multi-factor-authentication",
+          "verified_on": "2026-11-13",
+          "verification": "Definisi faktor, manfaat MFA dan keterbatasan OTP dibaca pada halaman resmi NIST.",
+          "id": "nist-mfa",
+          "section": "What is Multi-Factor Authentication (MFA)?; How does MFA Protect My Business From this Threat?; Taking MFA to the Next Level"
+        }
+      ],
+      "paragraph_sources": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas."
+    }
+  ],
+  "situations": [
+    {
+      "title": "Ada permintaan login lewat email.",
+      "body": "Pengirim mengaku administrator dan menyebut akun akan diblokir dalam satu jam.",
+      "prompt": "Bagaimana Anda memeriksa permintaan ini?",
+      "options": [
+        {
+          "label": "Coba login dari tautan email",
+          "good": false,
+          "title": "Data akun bisa jatuh ke pengirim.",
+          "body": "Jika alamatnya palsu, data yang dimasukkan dapat disalahgunakan."
+        },
+        {
+          "label": "Hubungi TI melalui kontak yang sudah dikenal",
+          "good": true,
+          "title": "Permintaan diperiksa melalui kanal terpisah.",
+          "body": "Kontak yang dikenal membantu memastikan permintaan tanpa membuka tautan pengirim."
+        }
+      ]
+    },
+    {
+      "title": "Kode verifikasi diminta melalui telepon.",
+      "body": "Seseorang mengaku petugas TI dan meminta kode akun Anda.",
+      "prompt": "Bagaimana Anda merespons?",
+      "options": [
+        {
+          "label": "Tolak membagikan kode dan hubungi TI resmi",
+          "good": true,
+          "title": "Kode tidak diberikan kepada penelepon.",
+          "body": "Akhiri percakapan dan pastikan permintaan melalui kontak resmi yang tersimpan."
+        },
+        {
+          "label": "Bacakan kode kepada penelepon",
+          "good": false,
+          "title": "Kode dapat disalahgunakan.",
+          "body": "Pengakuan sebagai petugas belum membuktikan identitas penelepon."
+        }
+      ]
+    }
+  ],
+  "practice": {
+    "course": "C12",
+    "steps": [
+      {
+        "title": "Periksa bukti pada pesan ini.",
+        "intro": "Ada lima potongan informasi dari pesan tadi. Tentukan mana yang menguatkan dugaan phishing dan mana yang belum cukup sebagai bukti.",
+        "kind": "sort",
+        "items": [
+          {
+            "id": "domain",
+            "label": "admin@bpss-portal-update.example",
+            "detail": "Nama domain menyerupai BPS, tetapi bukan alamat layanan yang dikenal."
+          },
+          {
+            "id": "logo",
+            "label": "Pesan memakai logo BPS",
+            "detail": "Logo tampak rapi dan sesuai warna instansi."
+          },
+          {
+            "id": "deadline",
+            "label": "Akun diblokir dalam 1 jam!",
+            "detail": "Penerima diminta segera login agar akunnya tidak diblokir."
+          },
+          {
+            "id": "greeting",
+            "label": "“Kepada pengguna layanan”",
+            "detail": "Salam tidak menyebut nama penerima."
+          },
+          {
+            "id": "url",
+            "label": "http://bit.ly/login-update-bps",
+            "detail": "Alamat singkat ini tidak memperlihatkan tujuan login secara langsung."
+          }
+        ],
+        "zones": [
+          {
+            "id": "strong",
+            "label": "Indikasi phishing",
+            "hint": "Alasan kuat untuk menghentikan tindakan"
+          },
+          {
+            "id": "weak",
+            "label": "Belum cukup bukti",
+            "hint": "Tidak membuktikan pesan aman atau berbahaya"
+          }
+        ],
+        "solution": {
+          "domain": "strong",
+          "deadline": "strong",
+          "url": "strong",
+          "logo": "weak",
+          "greeting": "weak"
+        }
+      },
+      {
+        "title": "Susun urutan penanganan pesan.",
+        "intro": "Letakkan tiga tindakan yang aman pada urutan 1–3. Dua tindakan yang berisiko tidak perlu dipindahkan.",
+        "kind": "sequence",
+        "items": [
+          {
+            "id": "report",
+            "label": "Laporkan melalui kanal TI resmi",
+            "detail": "Sertakan bukti pesan sesuai prosedur instansi."
+          },
+          {
+            "id": "try",
+            "label": "Coba login untuk memastikan",
+            "detail": "Buka tautan dalam email dan masukkan akun."
+          },
+          {
+            "id": "stop",
+            "label": "Hentikan interaksi dengan pesan",
+            "detail": "Jangan buka tautan, balas, atau kirim data akun."
+          },
+          {
+            "id": "forward",
+            "label": "Teruskan email ke grup kerja",
+            "detail": "Minta rekan mencoba tautan yang sama."
+          },
+          {
+            "id": "verify",
+            "label": "Verifikasi lewat kontak yang dikenal",
+            "detail": "Gunakan alamat layanan atau kontak resmi di luar email ini."
+          }
+        ],
+        "zones": [
+          {
+            "id": "first",
+            "label": "1 · Hentikan risiko",
+            "hint": "Apa tindakan pertama Anda?"
+          },
+          {
+            "id": "second",
+            "label": "2 · Pastikan melalui kanal lain",
+            "hint": "Jangan memakai alamat dari email"
+          },
+          {
+            "id": "third",
+            "label": "3 · Tindak lanjuti temuan",
+            "hint": "Bantu tim menangani pesan"
+          }
+        ],
+        "solution": {
+          "stop": "first",
+          "verify": "second",
+          "report": "third",
+          "try": "bank",
+          "forward": "bank"
+        }
+      }
+    ]
+  },
+  "quizzes": [
+    {
+      "question": "Email tadi meminta Anda segera login. Tindakan mana yang Anda pilih?",
+      "options": [
+        "A. Membuka tautannya untuk memastikan",
+        "B. Menghindari tautan dan melapor melalui kanal resmi",
+        "C. Meneruskannya agar rekan mencoba"
+      ],
+      "answer_key": "B",
+      "feedback": "Tidak perlu mencoba tautannya untuk memastikan pesan itu benar. Periksa permintaan dan laporkan temuan melalui kontak resmi yang Anda peroleh secara terpisah."
+    },
+    {
+      "question": "Apa yang membantu melindungi akun dari pengambilalihan?",
+      "options": [
+        "A. Menggunakan MFA dan kata sandi yang kuat",
+        "B. Memakai satu kata sandi untuk semua layanan",
+        "C. Membagikan kata sandi kepada tim"
+      ],
+      "answer_key": "A",
+      "feedback": "Kata sandi yang kuat melindungi akses awal. MFA meminta faktor pemeriksaan tambahan saat login. Kode maupun persetujuan login tetap harus dijaga."
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/scenes/C12.webp",
+      "role": "scene",
+      "provenance": "Reused bundled GPT Images baseline; original prompt in exelearning/pilot/asset_prompts.json"
+    },
+    {
+      "file": "assets/scenes/C12-mail.webp",
+      "role": "object-1",
+      "provenance": "Reused bundled GPT Images baseline; alpha cutout"
+    },
+    {
+      "file": "assets/scenes/C12-lock.webp",
+      "role": "object-2",
+      "provenance": "Reused bundled GPT Images baseline; alpha cutout"
+    },
+    {
+      "file": "assets/mission-reward.webp",
+      "role": "reward",
+      "provenance": "Reused shared baseline; original prompt in docs/asset_prompts.json"
+    }
+  ],
+  "scoring": {
+    "questions": 2,
+    "raw_scores": [
+      0,
+      50,
+      100
+    ],
+    "pass_score": 0,
+    "answered_status": "passed",
+    "unanswered_status": "incomplete"
+  }
+}

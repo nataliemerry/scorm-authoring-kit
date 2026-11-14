@@ -1,0 +1,263 @@
+{
+  "C01": {
+    "objective": "Memahami hubungan anggaran dengan hasil kerja, lalu menilai kebutuhan yang perlu didahulukan.",
+    "lessons": [
+      {
+        "title": "Penganggaran berbasis kinerja",
+        "body": "Penganggaran berbasis kinerja menggunakan informasi hasil kerja dalam keputusan anggaran. Informasi tersebut membantu menjelaskan tujuan belanja dan hasil yang dicapai, baik saat merencanakan kebutuhan dana maupun menilai pelaksanaannya.\n\nInput adalah sumber daya yang digunakan. Keluaran (output) adalah produk atau layanan yang dihasilkan kegiatan. Outcome menjelaskan efek jangka pendek dan menengah dari keluaran tersebut.",
+        "mode": "example",
+        "example": "Dalam perbaikan server, dana 70 unit adalah input. Server yang kembali berfungsi menjadi keluarannya. Pengumpulan data yang dapat berjalan lagi adalah hasil yang ingin diperoleh dari perbaikan itu.",
+        "references": [
+          {
+            "publisher": "OECD",
+            "title": "OECD Good Practices for Performance Budgeting",
+            "year": "2019",
+            "url": "https://www.oecd.org/en/publications/oecd-good-practices-for-performance-budgeting_c90b0305-en/full-report/component-3.html",
+            "doi": "10.1787/c90b0305-en",
+            "verified_on": "2026-11-13",
+            "verification": "Publikasi dan bagian yang dirujuk dibaca pada situs resmi OECD.",
+            "id": "oecd-pb",
+            "section": "Executive summary — definisi performance budgeting"
+          },
+          {
+            "publisher": "OECD",
+            "title": "Glossary of Key Terms in Evaluation and Results-Based Management for Sustainable Development, Second Edition",
+            "year": "2023",
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/06/glossary-of-key-terms-in-evaluation-and-results-based-management-for-sustainable-development-second-edition_2767e14e/632da462-en-fr-es.pdf#page=41",
+            "doi": "10.1787/632da462-en-fr-es",
+            "verified_on": "2026-11-13",
+            "verification": "PDF 64 halaman pada domain resmi OECD; entri dan halaman PDF dicocokkan.",
+            "id": "oecd-glossary",
+            "section": "Entri Inputs (halaman PDF 41), Outcomes dan Outputs (halaman PDF 47)"
+          }
+        ],
+        "paragraph_sources": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas."
+      },
+      {
+        "title": "Serapan, efisiensi, dan efektivitas",
+        "body": "Serapan memberi gambaran tentang dana yang telah dibelanjakan. Penilaian kegiatan juga memerlukan informasi hasilnya. Dalam pedoman OECD, laporan pelaksanaan anggaran akhir tahun mencakup informasi keuangan dan laporan kinerja.\n\nEfisiensi berkaitan dengan penggunaan sumber daya untuk mencapai hasil secara ekonomis dan tepat waktu. Efektivitas melihat sejauh mana tujuan dan hasil kegiatan tercapai.",
+        "mode": "example",
+        "example": "Serapan 90% dan keluaran yang baru mencapai 55% perlu ditelusuri lebih lanjut. Pekerjaan mana yang tertahan? Kedua angka itu belum cukup untuk menyimpulkan penyebabnya atau menentukan perlunya tambahan belanja.",
+        "references": [
+          {
+            "publisher": "OECD",
+            "title": "OECD Good Practices for Performance Budgeting",
+            "year": "2019",
+            "url": "https://www.oecd.org/en/publications/oecd-good-practices-for-performance-budgeting_c90b0305-en/full-report/component-9.html",
+            "doi": "10.1787/c90b0305-en",
+            "verified_on": "2026-11-13",
+            "verification": "Publikasi dan bagian yang dirujuk dibaca pada situs resmi OECD.",
+            "id": "oecd-pb",
+            "section": "Good Practice 5 — pelaporan keuangan bersama laporan kinerja"
+          },
+          {
+            "publisher": "OECD",
+            "title": "Glossary of Key Terms in Evaluation and Results-Based Management for Sustainable Development, Second Edition",
+            "year": "2023",
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/06/glossary-of-key-terms-in-evaluation-and-results-based-management-for-sustainable-development-second-edition_2767e14e/632da462-en-fr-es.pdf#page=31",
+            "doi": "10.1787/632da462-en-fr-es",
+            "verified_on": "2026-11-13",
+            "verification": "PDF 64 halaman pada domain resmi OECD; entri dan halaman PDF dicocokkan.",
+            "id": "oecd-glossary",
+            "section": "Entri Effectiveness dan Efficiency (halaman PDF 31)"
+          }
+        ],
+        "paragraph_sources": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas."
+      },
+      {
+        "title": "Prioritas, kelayakan, dan risiko",
+        "body": "Prioritas belanja dihubungkan dengan tujuan dan arah kebijakan pemerintah. Usulan anggaran perlu mengacu pada rencana program serta prioritas yang sudah ditetapkan.\n\nSebelum keputusan pendanaan, penilaian usulan (appraisal) memeriksa relevansi, kelayakan, dan kemungkinan keberlanjutan rencana. Analisis risiko menelaah faktor yang dapat menghambat pencapaian tujuan serta konsekuensi yang tidak diinginkan.",
+        "mode": "check",
+        "prompt": "Server berhenti bekerja, sementara ruang rapat masih bisa dipakai. Pertanyaan mana yang paling membantu menentukan prioritas?",
+        "options": [
+          "Usulan mana yang paling cepat menghabiskan dana?",
+          "Pekerjaan apa yang terhenti jika perbaikannya ditunda?",
+          "Usulan mana yang tampil paling menarik?"
+        ],
+        "correct": 1,
+        "feedback": "Dampak pada pekerjaan membantu menentukan urgensi usulan. Kesiapan pelaksanaan dan kecukupan biayanya tetap perlu diperiksa.",
+        "example": "Server yang berhenti menghambat pengumpulan data. Ruang rapat masih bisa dipakai meskipun belum ditata ulang. Dampak penundaan kedua usulan ini berbeda, sehingga keduanya tidak harus mendapat prioritas yang sama.",
+        "references": [
+          {
+            "publisher": "OECD",
+            "title": "OECD Good Practices for Performance Budgeting",
+            "year": "2019",
+            "url": "https://www.oecd.org/en/publications/oecd-good-practices-for-performance-budgeting_c90b0305-en/full-report/component-6.html",
+            "doi": "10.1787/c90b0305-en",
+            "verified_on": "2026-11-13",
+            "verification": "Publikasi dan bagian yang dirujuk dibaca pada situs resmi OECD.",
+            "id": "oecd-pb",
+            "section": "Good Practice 2 — keselarasan usulan anggaran dengan prioritas"
+          },
+          {
+            "publisher": "OECD",
+            "title": "Glossary of Key Terms in Evaluation and Results-Based Management for Sustainable Development, Second Edition",
+            "year": "2023",
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/06/glossary-of-key-terms-in-evaluation-and-results-based-management-for-sustainable-development-second-edition_2767e14e/632da462-en-fr-es.pdf#page=21",
+            "doi": "10.1787/632da462-en-fr-es",
+            "verified_on": "2026-11-13",
+            "verification": "PDF 64 halaman pada domain resmi OECD; entri dan halaman PDF dicocokkan.",
+            "id": "oecd-glossary",
+            "section": "Entri Appraisal (halaman PDF 21) dan Risk analysis (halaman PDF 58)"
+          }
+        ],
+        "paragraph_sources": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas."
+      }
+    ],
+    "source": "https://www.oecd.org/en/publications/oecd-good-practices-for-performance-budgeting_c90b0305-en.html",
+    "verified_on": "2026-11-13"
+  },
+  "C12": {
+    "objective": "Memahami prinsip Sistem Statistik Nasional, pemenuhan kaidah Satu Data Indonesia, dan alur pengajuan rekomendasi kegiatan statistik melalui ROMANTIK BPS.",
+    "source": "https://peraturan.bpk.go.id/Details/45873/uu-no-16-tahun-1997",
+    "verified_on": "2026-11-14",
+    "lessons": [
+      {
+        "title": "Sistem Statistik Nasional dan Pembagian Peran",
+        "body": "Sistem Statistik Nasional (SSN) adalah tatanan terintegrasi yang menghimpun seluruh kegiatan statistik di Indonesia agar andal, efektif, dan efisien. Undang-Undang Nomor 16 Tahun 1997 membagi statistik menjadi tiga jenis: statistik dasar yang diselenggarakan oleh BPS untuk kebutuhan umum, statistik sektoral yang diselenggarakan oleh Kementerian, Lembaga, atau Pemerintah Daerah untuk tugas fungsinya, serta statistik khusus oleh masyarakat atau perguruan tinggi.\n\nDalam kerangka ini, BPS berperan sebagai Pembina Data Statistik yang menjalankan koordinasi, integrasi, sinkronisasi, dan standardisasi (KISS). Instansi pemerintah bertindak sebagai Produsen Data dan Walidata yang bertanggung jawab menyusun rencana pendataan, menerapkan standar, serta mengintegrasikan hasilnya ke dalam Satu Data Indonesia.",
+        "mode": "example",
+        "example": "Dinas Pertanian Kabupaten merancang pendataan berkala produksi jagung lokal untuk mengevaluasi program ketahanan pangan daerah. Kegiatan ini merupakan statistik sektoral karena diselenggarakan instansi daerah untuk mendukung tugas dan kebijakan sektoralnya.",
+        "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas.",
+        "references": [
+          {
+            "id": "uu-16-1997",
+            "publisher": "Republik Indonesia",
+            "title": "Undang-Undang Nomor 16 Tahun 1997 tentang Statistik",
+            "year": "1997",
+            "section": "Pasal 1, Pasal 5, dan Pasal 12 (Jenis Statistik dan Peran BPS)",
+            "url": "https://peraturan.bpk.go.id/Details/45873/uu-no-16-tahun-1997",
+            "verified_on": "2026-11-14",
+            "verification": "Definisi SSN, pembagian jenis statistik dasar, sektoral, khusus, dan peran pembinaan BPS dibaca pada teks resmi undang-undang."
+          },
+          {
+            "id": "modul-11-bps",
+            "publisher": "Badan Pusat Statistik",
+            "title": "Modul 11: Penguatan Statistik Sektoral Tahun 2026",
+            "year": "2026",
+            "section": "Bab 2: Sistem Statistik Nasional, hlm. 4-11",
+            "url": "https://pusdiklat.bps.go.id",
+            "verified_on": "2026-11-14",
+            "verification": "Tujuan SSN, komponen SSN, peran Walidata dan Produsen Data diverifikasi pada modul materi."
+          }
+        ],
+        "paragraph_sources": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "title": "Prinsip Satu Data Indonesia dan Standardisasi",
+        "body": "Peraturan Presiden Nomor 39 Tahun 2019 tentang Satu Data Indonesia menetapkan bahwa setiap data pemerintah harus akurat, mutakhir, terpadu, dan dapat dipertanggungjawabkan. Penyelenggaraan statistik sektoral wajib memenuhi empat prinsip Satu Data Indonesia, yaitu standar data, metadata statistik, interoperabilitas data, serta penggunaan kode referensi dan data induk.\n\nMetadata statistik memberikan penjelasan terstruktur mengenai konsep, definisi, metodologi, dan cakupan data. Sesuai Peraturan BPS Nomor 5 Tahun 2020, metadata memastikan data dapat dipahami dengan tepat oleh pengguna dan tidak disalahartikan saat diintegrasikan antar sistem pemerintah.",
+        "mode": "example",
+        "example": "Sebuah laporan menyajikan angka jumlah tenaga medis tanpa keterangan apakah angka tersebut mencakup perawat honorer atau hanya dokter berstatus PNS. Dengan melampirkan metadata statistik standar, definisi dan batasan variabel menjadi transparan bagi seluruh pihak.",
+        "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas.",
+        "references": [
+          {
+            "id": "perpres-39-2019",
+            "publisher": "Republik Indonesia",
+            "title": "Peraturan Presiden Nomor 39 Tahun 2019 tentang Satu Data Indonesia",
+            "year": "2019",
+            "section": "Pasal 5 (Prinsip Satu Data Indonesia)",
+            "url": "https://peraturan.bpk.go.id/Details/111818/perpres-no-39-tahun-2019",
+            "verified_on": "2026-11-14",
+            "verification": "Empat prinsip Satu Data Indonesia: standar data, metadata, interoperabilitas, dan kode referensi diverifikasi pada lembaran perpres."
+          },
+          {
+            "id": "perban-bps-5-2020",
+            "publisher": "Badan Pusat Statistik",
+            "title": "Peraturan BPS Nomor 5 Tahun 2020 tentang Metadata Statistik",
+            "year": "2020",
+            "section": "Pasal 3 dan Lampiran (Struktur Metadata Kegiatan, Variabel, dan Indikator)",
+            "url": "https://peraturan.bpk.go.id/Details/143521/peraturan-bps-no-5-tahun-2020",
+            "verified_on": "2026-11-14",
+            "verification": "Kewajiban penyusunan metadata statistik dan struktur informasi konsep dan metodologi diperiksa pada peraturan BPS."
+          }
+        ],
+        "paragraph_sources": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      {
+        "title": "Rekomendasi Kegiatan Statistik dan ROMANTIK",
+        "body": "Peraturan Pemerintah Nomor 51 Tahun 1999 mewajibkan instansi pemerintah untuk memberitahukan rencana penyelenggaraan kegiatan statistik sektoral kepada BPS dan mengikuti rekomendasi yang diberikan. Rekomendasi ini bertujuan untuk mencegah terjadinya duplikasi kegiatan antar instansi, menjamin kualitas metodologi pengumpulan data, serta meningkatkan efisiensi anggaran negara.\n\nPengajuan rekomendasi dilaksanakan secara daring melalui aplikasi ROMANTIK (Rekomendasi Kegiatan Statistik). Melalui sarana ini, BPS mengevaluasi rancangan survei, desain sampel, instrumen kuesioner, dan definisi operasional sebelum instansi memulai pengumpulan data di lapangan.",
+        "mode": "check",
+        "prompt": "Kapan instansi pemerintah wajib memberitahukan rancangan kegiatan statistik dan mengajukan rekomendasi melalui ROMANTIK?",
+        "options": [
+          "Pada tahap perencanaan sebelum pelaksanaan pengumpulan data",
+          "Setelah kegiatan pendataan selesai dan laporan dibukukan",
+          "Hanya saat ada permintaan khusus dari pimpinan daerah"
+        ],
+        "correct": 0,
+        "feedback": "Rekomendasi wajib diajukan pada tahap perencanaan sebelum pengumpulan data agar metodologi dapat ditelaah dan tidak terjadi duplikasi kegiatan.",
+        "example": "Dinas Sosial hendak melakukan pendataan kemiskinan ekstrem di wilayahnya. Sebelum mencetak kuesioner dan menerjunkan petugas, dinas mengajukan rancangan instrumen ke aplikasi ROMANTIK untuk memperoleh surat rekomendasi resmi dari BPS.",
+        "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas.",
+        "references": [
+          {
+            "id": "pp-51-1999",
+            "publisher": "Republik Indonesia",
+            "title": "Peraturan Pemerintah Nomor 51 Tahun 1999 tentang Penyelenggaraan Statistik",
+            "year": "1999",
+            "section": "Pasal 19 dan Pasal 20 (Tata Cara Rekomendasi Statistik Sektoral)",
+            "url": "https://peraturan.bpk.go.id/Details/52482/pp-no-51-tahun-1999",
+            "verified_on": "2026-11-14",
+            "verification": "Kewajiban pemberitahuan rencana survei statistik sektoral kepada BPS dicocokkan pada peraturan pemerintah."
+          },
+          {
+            "id": "perban-bps-4-2019",
+            "publisher": "Badan Pusat Statistik",
+            "title": "Peraturan BPS Nomor 4 Tahun 2019 tentang NSPK Penyelenggaraan Statistik Sektoral",
+            "year": "2019",
+            "section": "Bab III (Rekomendasi dan Mekanisme ROMANTIK)",
+            "url": "https://peraturan.bpk.go.id/Details/134440/peraturan-bps-no-4-tahun-2019",
+            "verified_on": "2026-11-14",
+            "verification": "Mekanisme permohonan rekomendasi melalui aplikasi ROMANTIK diverifikasi pada regulasi BPS."
+          }
+        ],
+        "paragraph_sources": [
+          [
+            1,
+            2
+          ],
+          [
+            2
+          ]
+        ]
+      }
+    ]
+  }
+}

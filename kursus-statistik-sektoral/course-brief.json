@@ -1,0 +1,608 @@
+{
+  "id": "C12",
+  "title": "Penguatan Statistik Sektoral",
+  "audience": "Aparatur Sipil Negara penyelenggara statistik sektoral di K/L/D",
+  "objective": "Memahami prinsip Sistem Statistik Nasional, pemenuhan kaidah Satu Data Indonesia, dan alur pengajuan rekomendasi kegiatan statistik melalui ROMANTIK BPS.",
+  "language": "id",
+  "tone": "Semi-formal, natural dan profesional",
+  "interaction_profile": "evidence-sequence",
+  "branding": {
+    "logo": "assets/branding/bps-corpu-transparent.png",
+    "placement": "top-left",
+    "preserve_original": true
+  },
+  "lessons": [
+    {
+      "title": "Sistem Statistik Nasional dan Pembagian Peran",
+      "body": "Sistem Statistik Nasional (SSN) adalah tatanan terintegrasi yang menghimpun seluruh kegiatan statistik di Indonesia agar andal, efektif, dan efisien. Undang-Undang Nomor 16 Tahun 1997 membagi statistik menjadi tiga jenis: statistik dasar yang diselenggarakan oleh BPS untuk kebutuhan umum, statistik sektoral yang diselenggarakan oleh Kementerian, Lembaga, atau Pemerintah Daerah untuk tugas fungsinya, serta statistik khusus oleh masyarakat atau perguruan tinggi.\n\nDalam kerangka ini, BPS berperan sebagai Pembina Data Statistik yang menjalankan koordinasi, integrasi, sinkronisasi, dan standardisasi (KISS). Instansi pemerintah bertindak sebagai Produsen Data dan Walidata yang bertanggung jawab menyusun rencana pendataan, menerapkan standar, serta mengintegrasikan hasilnya ke dalam Satu Data Indonesia.",
+      "mode": "example",
+      "example": "Dinas Pertanian Kabupaten merancang pendataan berkala produksi jagung lokal untuk mengevaluasi program ketahanan pangan daerah. Kegiatan ini merupakan statistik sektoral karena diselenggarakan instansi daerah untuk mendukung tugas dan kebijakan sektoralnya.",
+      "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas.",
+      "references": [
+        {
+          "id": "uu-16-1997",
+          "publisher": "Republik Indonesia",
+          "title": "Undang-Undang Nomor 16 Tahun 1997 tentang Statistik",
+          "year": "1997",
+          "section": "Pasal 1, Pasal 5, dan Pasal 12 (Jenis Statistik dan Peran BPS)",
+          "url": "https://peraturan.bpk.go.id/Details/45873/uu-no-16-tahun-1997",
+          "verified_on": "2026-11-14",
+          "verification": "Definisi SSN, pembagian jenis statistik dasar, sektoral, khusus, dan peran pembinaan BPS dibaca pada teks resmi undang-undang."
+        },
+        {
+          "id": "modul-11-bps",
+          "publisher": "Badan Pusat Statistik",
+          "title": "Modul 11: Penguatan Statistik Sektoral Tahun 2026",
+          "year": "2026",
+          "section": "Bab 2: Sistem Statistik Nasional, hlm. 4-11",
+          "url": "https://pusdiklat.bps.go.id",
+          "verified_on": "2026-11-14",
+          "verification": "Tujuan SSN, komponen SSN, peran Walidata dan Produsen Data diverifikasi pada modul materi."
+        }
+      ],
+      "paragraph_sources": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "title": "Prinsip Satu Data Indonesia dan Standardisasi",
+      "body": "Peraturan Presiden Nomor 39 Tahun 2019 tentang Satu Data Indonesia menetapkan bahwa setiap data pemerintah harus akurat, mutakhir, terpadu, dan dapat dipertanggungjawabkan. Penyelenggaraan statistik sektoral wajib memenuhi empat prinsip Satu Data Indonesia, yaitu standar data, metadata statistik, interoperabilitas data, serta penggunaan kode referensi dan data induk.\n\nMetadata statistik memberikan penjelasan terstruktur mengenai konsep, definisi, metodologi, dan cakupan data. Sesuai Peraturan BPS Nomor 5 Tahun 2020, metadata memastikan data dapat dipahami dengan tepat oleh pengguna dan tidak disalahartikan saat diintegrasikan antar sistem pemerintah.",
+      "mode": "example",
+      "example": "Sebuah laporan menyajikan angka jumlah tenaga medis tanpa keterangan apakah angka tersebut mencakup perawat honorer atau hanya dokter berstatus PNS. Dengan melampirkan metadata statistik standar, definisi dan batasan variabel menjadi transparan bagi seluruh pihak.",
+      "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas.",
+      "references": [
+        {
+          "id": "perpres-39-2019",
+          "publisher": "Republik Indonesia",
+          "title": "Peraturan Presiden Nomor 39 Tahun 2019 tentang Satu Data Indonesia",
+          "year": "2019",
+          "section": "Pasal 5 (Prinsip Satu Data Indonesia)",
+          "url": "https://peraturan.bpk.go.id/Details/111818/perpres-no-39-tahun-2019",
+          "verified_on": "2026-11-14",
+          "verification": "Empat prinsip Satu Data Indonesia: standar data, metadata, interoperabilitas, dan kode referensi diverifikasi pada lembaran perpres."
+        },
+        {
+          "id": "perban-bps-5-2020",
+          "publisher": "Badan Pusat Statistik",
+          "title": "Peraturan BPS Nomor 5 Tahun 2020 tentang Metadata Statistik",
+          "year": "2020",
+          "section": "Pasal 3 dan Lampiran (Struktur Metadata Kegiatan, Variabel, dan Indikator)",
+          "url": "https://peraturan.bpk.go.id/Details/143521/peraturan-bps-no-5-tahun-2020",
+          "verified_on": "2026-11-14",
+          "verification": "Kewajiban penyusunan metadata statistik dan struktur informasi konsep dan metodologi diperiksa pada peraturan BPS."
+        }
+      ],
+      "paragraph_sources": [
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "title": "Rekomendasi Kegiatan Statistik dan ROMANTIK",
+      "body": "Peraturan Pemerintah Nomor 51 Tahun 1999 mewajibkan instansi pemerintah untuk memberitahukan rencana penyelenggaraan kegiatan statistik sektoral kepada BPS dan mengikuti rekomendasi yang diberikan. Rekomendasi ini bertujuan untuk mencegah terjadinya duplikasi kegiatan antar instansi, menjamin kualitas metodologi pengumpulan data, serta meningkatkan efisiensi anggaran negara.\n\nPengajuan rekomendasi dilaksanakan secara daring melalui aplikasi ROMANTIK (Rekomendasi Kegiatan Statistik). Melalui sarana ini, BPS mengevaluasi rancangan survei, desain sampel, instrumen kuesioner, dan definisi operasional sebelum instansi memulai pengumpulan data di lapangan.",
+      "mode": "check",
+      "prompt": "Kapan instansi pemerintah wajib memberitahukan rancangan kegiatan statistik dan mengajukan rekomendasi melalui ROMANTIK?",
+      "options": [
+        "Pada tahap perencanaan sebelum pelaksanaan pengumpulan data",
+        "Setelah kegiatan pendataan selesai dan laporan dibukukan",
+        "Hanya saat ada permintaan khusus dari pimpinan daerah"
+      ],
+      "correct": 0,
+      "feedback": "Rekomendasi wajib diajukan pada tahap perencanaan sebelum pengumpulan data agar metodologi dapat ditelaah dan tidak terjadi duplikasi kegiatan.",
+      "example": "Dinas Sosial hendak melakukan pendataan kemiskinan ekstrem di wilayahnya. Sebelum mencetak kuesioner dan menerjunkan petugas, dinas mengajukan rancangan instrumen ke aplikasi ROMANTIK untuk memperoleh surat rekomendasi resmi dari BPS.",
+      "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas.",
+      "references": [
+        {
+          "id": "pp-51-1999",
+          "publisher": "Republik Indonesia",
+          "title": "Peraturan Pemerintah Nomor 51 Tahun 1999 tentang Penyelenggaraan Statistik",
+          "year": "1999",
+          "section": "Pasal 19 dan Pasal 20 (Tata Cara Rekomendasi Statistik Sektoral)",
+          "url": "https://peraturan.bpk.go.id/Details/52482/pp-no-51-tahun-1999",
+          "verified_on": "2026-11-14",
+          "verification": "Kewajiban pemberitahuan rencana survei statistik sektoral kepada BPS dicocokkan pada peraturan pemerintah."
+        },
+        {
+          "id": "perban-bps-4-2019",
+          "publisher": "Badan Pusat Statistik",
+          "title": "Peraturan BPS Nomor 4 Tahun 2019 tentang NSPK Penyelenggaraan Statistik Sektoral",
+          "year": "2019",
+          "section": "Bab III (Rekomendasi dan Mekanisme ROMANTIK)",
+          "url": "https://peraturan.bpk.go.id/Details/134440/peraturan-bps-no-4-tahun-2019",
+          "verified_on": "2026-11-14",
+          "verification": "Mekanisme permohonan rekomendasi melalui aplikasi ROMANTIK diverifikasi pada regulasi BPS."
+        }
+      ],
+      "paragraph_sources": [
+        [
+          1,
+          2
+        ],
+        [
+          2
+        ]
+      ]
+    }
+  ],
+  "situations": [
+    {
+      "title": "Survei Mendadak Menjelang Akhir Tahun Anggaran",
+      "body": "Pimpinan meminta tim Anda segera menyelenggarakan survei kepuasan layanan publik dalam waktu dua minggu agar serapan anggaran optimal. Namun, rancangan kuesioner belum dikonsultasikan dengan Walidata dan belum diajukan ke aplikasi ROMANTIK.",
+      "prompt": "Bagaimana langkah keputusan yang Anda ambil?",
+      "options": [
+        {
+          "label": "Ajukan rekomendasi",
+          "title": "Koordinasikan dengan Walidata dan ajukan permohonan ke ROMANTIK",
+          "body": "Melakukan penyesuaian instrumen dan mengajukan permohonan telaah rekomendasi ke BPS secara cepat.",
+          "good": true
+        },
+        {
+          "label": "Langsung ke lapangan",
+          "title": "Cetak kuesioner dan segera lakukan pencacahan",
+          "body": "Mengabaikan proses rekomendasi agar pengumpulan data selesai sebelum tahun anggaran berakhir.",
+          "good": false
+        }
+      ]
+    },
+    {
+      "title": "Publikasi Data Indikator Tanpa Dokumen Metadata",
+      "body": "Data hasil kompilasi administrasi sektoral telah siap disajikan ke publik. Bagian hubungan masyarakat mengusulkan agar tabel angka langsung diunggah ke website tanpa perlu menyusun dokumen metadata indikator karena dianggap merepotkan.",
+      "prompt": "Bagaimana tindakan Anda dalam situasi ini?",
+      "options": [
+        {
+          "label": "Lengkapi metadata",
+          "title": "Susun metadata statistik sebelum data dipublikasikan",
+          "body": "Memastikan konsep, definisi, dan metodologi terdokumentasi rapi sesuai standar Satu Data Indonesia.",
+          "good": true
+        },
+        {
+          "label": "Rilis angka saja",
+          "title": "Unggah tabel angka langsung tanpa dokumen metadata",
+          "body": "Mempublikasikan data hanya berupa tabel ringkas tanpa menyertakan keterangan metodologis.",
+          "good": false
+        }
+      ]
+    }
+  ],
+  "word_search": {
+    "grid": [
+      "EPSSXMCBYS",
+      "HGGFYECXYE",
+      "ROMANTIKQK",
+      "CWLBBACGGT",
+      "QWBQGDYXYO",
+      "QLGNWAHZBR",
+      "ZZFYLTJHFA",
+      "GZJCCALCJL",
+      "JWHZBYNQCL",
+      "SURVEICQHX"
+    ],
+    "words": [
+      {
+        "term": "ROMANTIK",
+        "clue": "Aplikasi berbasis web dari BPS untuk sarana pengajuan dan evaluasi rekomendasi.",
+        "meaning": "Aplikasi berbasis web untuk pengajuan dan evaluasi rekomendasi kegiatan statistik.",
+        "cells": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "term": "METADATA",
+        "clue": "Keterangan terstruktur mengenai konsep, definisi, cakupan, dan spesifikasi data.",
+        "meaning": "Informasi terstruktur yang mendeskripsikan konteks, metodologi, dan kualitas data.",
+        "cells": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            7,
+            5
+          ]
+        ]
+      },
+      {
+        "term": "SURVEI",
+        "clue": "Metode pengumpulan data dengan pencacahan sampel untuk menduga populasi.",
+        "meaning": "Cara pengumpulan data melalui pencacahan sampel untuk memperkirakan karakteristik populasi.",
+        "cells": [
+          [
+            9,
+            0
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            9,
+            5
+          ]
+        ]
+      },
+      {
+        "term": "EPSS",
+        "clue": "Evaluasi oleh BPS untuk mengukur kematangan penyelenggaraan kegiatan statistik.",
+        "meaning": "Evaluasi Penyelenggaraan Statistik Sektoral untuk mengukur kualitas pelaksanaan statistik.",
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      {
+        "term": "SEKTORAL",
+        "clue": "Jenis statistik yang diselenggarakan oleh instansi pemerintah sesuai tugas fungsinya.",
+        "meaning": "Statistik yang diselenggarakan oleh K/L/D sesuai tugas dan fungsinya.",
+        "cells": [
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ]
+        ]
+      }
+    ]
+  },
+  "drag_words": {
+    "words": [
+      {
+        "id": "romantik",
+        "label": "ROMANTIK"
+      },
+      {
+        "id": "standar",
+        "label": "standar data"
+      },
+      {
+        "id": "metadata",
+        "label": "metadata statistik"
+      },
+      {
+        "id": "bebas",
+        "label": "publikasi bebas"
+      }
+    ],
+    "gaps": [
+      {
+        "id": "g1",
+        "before": "Sebelum melaksanakan pengumpulan data di lapangan, instansi pemerintah mengajukan rancangan melalui aplikasi",
+        "after": "kepada BPS.",
+        "answer": "romantik",
+        "feedback": "Aplikasi ROMANTIK merupakan sarana resmi permohonan dan evaluasi rekomendasi kegiatan statistik sektoral."
+      },
+      {
+        "id": "g2",
+        "before": "Setiap penyelenggara kegiatan wajib menerapkan",
+        "after": "agar konsep, definisi, dan satuan ukuran selaras.",
+        "answer": "standar",
+        "feedback": "Standar data memastikan data yang dihasilkan konsisten dan dapat dibandingkan antar instansi."
+      },
+      {
+        "id": "g3",
+        "before": "Informasi mengenai definisi variabel dan metodologi didokumentasikan dalam bentuk",
+        "after": "sebelum data disebarluaskan.",
+        "answer": "metadata",
+        "feedback": "Metadata statistik memberikan konteks dan transparansi mengenai batas cakupan data."
+      }
+    ]
+  },
+  "sort_paragraphs": {
+    "title": "Tahapan Penyelenggaraan Statistik Sektoral",
+    "explanation": "Perencanaan dan cek duplikasi mendahului pengajuan ke ROMANTIK, pelaksanaan survei mengikuti rekomendasi BPS, dan penyusunan metadata menyertai integrasi data.",
+    "initial_order": [
+      "p3",
+      "p1",
+      "p4",
+      "p2"
+    ],
+    "correct_order": [
+      "p1",
+      "p2",
+      "p3",
+      "p4"
+    ],
+    "paragraphs": [
+      {
+        "id": "p1",
+        "text": "Dinas merencanakan kegiatan pendataan baru untuk memantau capaian program prioritas daerah. Tim menyusun rancangan instrumen dan mengecek agar tidak terjadi duplikasi kegiatan."
+      },
+      {
+        "id": "p2",
+        "text": "Rancangan dan dokumen pendukung tersebut kemudian diajukan kepada BPS melalui aplikasi ROMANTIK untuk mendapatkan telaah metodologis."
+      },
+      {
+        "id": "p3",
+        "text": "Setelah surat rekomendasi resmi diterbitkan oleh BPS, pengumpulan dan pengolahan data dilaksanakan di lapangan sesuai standar yang disetujui."
+      },
+      {
+        "id": "p4",
+        "text": "Hasil pengolahan dilengkapi dengan metadata statistik terstandar, lalu diintegrasikan ke portal Satu Data untuk mendukung evaluasi kebijakan."
+      }
+    ]
+  },
+  "practice": {
+    "steps": [
+      {
+        "title": "Pilah usulan kegiatan statistik di instansi.",
+        "intro": "Ada lima usulan kegiatan pendataan. Kelompokkan mana yang tergolong statistik sektoral wajib rekomendasi dan mana yang bukan kewenangan sektoral instansi.",
+        "kind": "sort",
+        "items": [
+          {
+            "id": "panen",
+            "label": "Survei Panen Komoditas Pertanian Daerah",
+            "detail": "Pendataan komoditas oleh dinas pertanian untuk evaluasi ketahanan pangan daerah."
+          },
+          {
+            "id": "sekolah",
+            "label": "Pendataan Sarana Belajar Sekolah Daerah",
+            "detail": "Pengumpulan data fasilitas pendidikan untuk perencanaan dinas pendidikan."
+          },
+          {
+            "id": "sensus",
+            "label": "Sensus Penduduk Seluruh Indonesia",
+            "detail": "Pencacahan seluruh populasi penduduk nasional yang merupakan kewenangan statistik dasar BPS."
+          },
+          {
+            "id": "pasar",
+            "label": "Survei Pengguna Retribusi Pasar Daerah",
+            "detail": "Pengumpulan data pelaku usaha pasar untuk kebutuhan kebijakan dinas perdagangan."
+          },
+          {
+            "id": "swasta",
+            "label": "Riset Selera Konsumen Produk Swasta",
+            "detail": "Survei pasar oleh korporasi bisnis untuk keperluan komersial internal perusahaan."
+          }
+        ],
+        "zones": [
+          {
+            "id": "sektoral",
+            "label": "Statistik Sektoral (Wajib Rekomendasi)",
+            "hint": "Kegiatan instansi untuk tugas fungsinya"
+          },
+          {
+            "id": "bukan_sektoral",
+            "label": "Bukan Sektoral Instansi",
+            "hint": "Kewenangan statistik dasar BPS atau khusus swasta"
+          }
+        ],
+        "solution": {
+          "panen": "sektoral",
+          "sekolah": "sektoral",
+          "pasar": "sektoral",
+          "sensus": "bukan_sektoral",
+          "swasta": "bukan_sektoral"
+        }
+      },
+      {
+        "title": "Susun alur pengajuan rekomendasi kegiatan statistik.",
+        "intro": "Letakkan tiga langkah yang tepat dan terkoordinasi pada urutan 1–3. Dua tindakan yang berisiko tidak perlu dipindahkan.",
+        "kind": "sequence",
+        "items": [
+          {
+            "id": "koordinasi",
+            "label": "Koordinasi awal dan cek duplikasi",
+            "detail": "Periksa metadata kegiatan pada Walidata dan BPS agar tidak terjadi tumpang tindih data."
+          },
+          {
+            "id": "romantik",
+            "label": "Ajukan rancangan melalui ROMANTIK",
+            "detail": "Unggah formulir permohonan rekomendasi dan dokumen pendukung ke aplikasi BPS."
+          },
+          {
+            "id": "tindaklanjut",
+            "label": "Tindak lanjuti telaah dan terbitkan izin",
+            "detail": "Sesuaikan metodologi jika ada catatan BPS hingga terbit surat rekomendasi resmi."
+          },
+          {
+            "id": "lapangan",
+            "label": "Langsung cacah responden di lapangan",
+            "detail": "Melaksanakan pengumpulan data tanpa telaah rekomendasi berisiko menyalahi aturan."
+          },
+          {
+            "id": "unggah",
+            "label": "Unggah data mentah tanpa metadata",
+            "detail": "Merilis angka tanpa definisi operasional melanggar prinsip Satu Data Indonesia."
+          }
+        ],
+        "zones": [
+          {
+            "id": "first",
+            "label": "1 - Persiapan dan Koordinasi",
+            "hint": "Langkah awal sebelum mengajukan permohonan"
+          },
+          {
+            "id": "second",
+            "label": "2 - Pengajuan Rekomendasi",
+            "hint": "Penyampaian rancangan ke sarana resmi BPS"
+          },
+          {
+            "id": "third",
+            "label": "3 - Penyempurnaan Metodologi",
+            "hint": "Tindak lanjut evaluasi sampai rekomendasi terbit"
+          }
+        ],
+        "solution": {
+          "koordinasi": "first",
+          "romantik": "second",
+          "tindaklanjut": "third",
+          "lapangan": "bank",
+          "unggah": "bank"
+        }
+      }
+    ]
+  },
+  "quizzes": [
+    {
+      "question": "Sebuah dinas berencana menyelenggarakan survei baru untuk memantau program daerah. Kapan permohonan rekomendasi harus diajukan ke BPS melalui ROMANTIK?",
+      "options": [
+        "A. Pada tahap perencanaan sebelum pengumpulan data dilaksanakan",
+        "B. Setelah seluruh kuesioner terkumpul dan diolah menjadi laporan",
+        "C. Hanya jika diminta oleh auditor eksternal saat pemeriksaan berkas"
+      ],
+      "answer_key": "A",
+      "feedback": "Sesuai regulasi penyelenggaraan statistik, pemberitahuan dan permohonan rekomendasi diajukan pada tahap perencanaan sebelum pelaksanaan pengumpulan data agar metodologi terjamin dan tidak terjadi duplikasi."
+    },
+    {
+      "question": "Dalam kerangka Satu Data Indonesia (Perpres No. 39 Tahun 2019), apa fungsi utama penyusunan metadata statistik oleh produsen data?",
+      "options": [
+        "A. Menggantikan proses pengumpulan data agar biaya kegiatan lebih hemat",
+        "B. Memberikan informasi terstruktur tentang konsep, metodologi, dan kualitas data",
+        "C. Mengunci format agar data tidak dapat diakses instansi pemerintah lain"
+      ],
+      "answer_key": "B",
+      "feedback": "Metadata statistik memberikan konteks, definisi, metodologi, dan batas cakupan data sehingga data dapat dipahami, dipertanggungjawabkan, dan digunakan secara terpadu lintas sektor."
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/scenes/C12.webp",
+      "role": "scene",
+      "provenance": "Generated editorial 3D matte illustration, Indonesian government data workstation, Monas view, petrol teal palette"
+    },
+    {
+      "file": "assets/scenes/C12-mail.webp",
+      "role": "object-1",
+      "provenance": "Generated editorial 3D matte digital tablet displaying statistical dashboard, alpha cutout"
+    },
+    {
+      "file": "assets/scenes/C12-lock.webp",
+      "role": "object-2",
+      "provenance": "Generated editorial 3D matte official recommendation folder with verified seal badge, alpha cutout"
+    },
+    {
+      "file": "assets/mission-reward.webp",
+      "role": "reward",
+      "provenance": "Reused shared baseline; original prompt in docs/asset_prompts.json"
+    }
+  ],
+  "scoring": {
+    "questions": 2,
+    "raw_scores": [
+      0,
+      50,
+      100
+    ],
+    "pass_score": 0,
+    "answered_status": "passed",
+    "unanswered_status": "incomplete"
+  }
+}

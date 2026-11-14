@@ -1,0 +1,51 @@
+{
+  "C01": {
+    "headline": "Anggaran terbatas. Mana yang Anda selamatkan?",
+    "mission": "Dua usulan menunggu persetujuan. Temukan dampaknya sebelum menentukan prioritas.",
+    "kind": "budget",
+    "targets": [
+      "Prioritas layanan",
+      "Dapat ditunda"
+    ],
+    "items": [
+      [
+        "Perbaikan sistem data",
+        0,
+        "Gangguan server menghambat pengumpulan dan pelaporan indikator nasional."
+      ],
+      [
+        "Dekorasi ruang rapat",
+        1,
+        "Penyegaran ruangan tidak langsung memengaruhi kesinambungan layanan."
+      ]
+    ],
+    "insight": "Dahulukan kesinambungan layanan dan manfaat yang dapat dibuktikan, bukan sekadar menghabiskan pagu."
+  },
+  "C12": {
+    "headline": "Penyelenggaraan Statistik Sektoral dan Rekomendasi ROMANTIK",
+    "mission": "Instansi pemerintah menyelenggarakan statistik sektoral untuk mendukung kebijakan. Pengajuan rekomendasi dan pemenuhan standar data memastikan data berkualitas dan bebas duplikasi.",
+    "items": [
+      [
+        "Survei Komoditas Pangan Daerah",
+        "sektoral",
+        "Statistik sektoral daerah untuk evaluasi kebijakan pangan."
+      ],
+      [
+        "Pendataan Sarana Belajar Sekolah",
+        "sektoral",
+        "Statistik sektoral daerah untuk perencanaan pendidikan."
+      ],
+      [
+        "Sensus Penduduk Nasional",
+        "bukan_sektoral",
+        "Kewenangan statistik dasar yang diselenggarakan oleh BPS."
+      ]
+    ],
+    "targets": [
+      "sektoral",
+      "bukan_sektoral"
+    ],
+    "insight": "Pemberitahuan rencana kegiatan statistik sektoral dan pemenuhan kaidah Satu Data Indonesia menjaga efisiensi anggaran dan akurasi data pembangunan.",
+    "takeaway": "Koordinasikan rencana pendataan dengan Walidata dan BPS melalui ROMANTIK, serta lengkapi hasil olahan dengan metadata statistik terstandar."
+  }
+}

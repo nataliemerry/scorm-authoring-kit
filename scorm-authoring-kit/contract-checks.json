@@ -1,0 +1,34 @@
+[
+  {
+    "case": "missing citation",
+    "rejected": true
+  },
+  {
+    "case": "unknown citation",
+    "rejected": true
+  },
+  {
+    "case": "unknown target",
+    "rejected": true
+  },
+  {
+    "case": "duplicate sequence placement",
+    "rejected": true
+  },
+  {
+    "case": "changed scoring",
+    "rejected": true
+  },
+  {
+    "case": "incorrect action count",
+    "rejected": true
+  },
+  {
+    "case": "credential URL",
+    "rejected": true
+  },
+  {
+    "case": "bootstrap refuses nonempty destination",
+    "rejected": true
+  }
+]

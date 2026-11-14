@@ -1,0 +1,14 @@
+[
+  {
+    "case": "unknown answer",
+    "rejected": true
+  },
+  {
+    "case": "reused answer",
+    "rejected": true
+  },
+  {
+    "case": "duplicate labels",
+    "rejected": true
+  }
+]

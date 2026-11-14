@@ -1,0 +1,88 @@
+{
+  "C01": {
+    "words": [
+      {
+        "id": "outcome",
+        "label": "outcome"
+      },
+      {
+        "id": "serapan",
+        "label": "serapan"
+      },
+      {
+        "id": "input",
+        "label": "input"
+      },
+      {
+        "id": "output",
+        "label": "output"
+      }
+    ],
+    "gaps": [
+      {
+        "id": "g1",
+        "before": "Dana, waktu, dan tenaga yang digunakan merupakan",
+        "after": ".",
+        "answer": "input",
+        "feedback": "Input adalah sumber daya yang dipakai untuk menjalankan kegiatan."
+      },
+      {
+        "id": "g2",
+        "before": "Server yang kembali berfungsi setelah perbaikan merupakan",
+        "after": ".",
+        "answer": "output",
+        "feedback": "Output adalah produk atau layanan yang langsung dihasilkan kegiatan."
+      },
+      {
+        "id": "g3",
+        "before": "Pengumpulan data yang dapat berjalan lagi adalah",
+        "after": "yang ingin dicapai dari perbaikan server.",
+        "answer": "outcome",
+        "feedback": "Outcome menjelaskan efek yang diharapkan dari keluaran kegiatan."
+      }
+    ]
+  },
+  "C12": {
+    "words": [
+      {
+        "id": "romantik",
+        "label": "ROMANTIK"
+      },
+      {
+        "id": "standar",
+        "label": "standar data"
+      },
+      {
+        "id": "metadata",
+        "label": "metadata statistik"
+      },
+      {
+        "id": "bebas",
+        "label": "publikasi bebas"
+      }
+    ],
+    "gaps": [
+      {
+        "id": "g1",
+        "before": "Sebelum melaksanakan pengumpulan data di lapangan, instansi pemerintah mengajukan rancangan melalui aplikasi",
+        "after": "kepada BPS.",
+        "answer": "romantik",
+        "feedback": "Aplikasi ROMANTIK merupakan sarana resmi permohonan dan evaluasi rekomendasi kegiatan statistik sektoral."
+      },
+      {
+        "id": "g2",
+        "before": "Setiap penyelenggara kegiatan wajib menerapkan",
+        "after": "agar konsep, definisi, dan satuan ukuran selaras.",
+        "answer": "standar",
+        "feedback": "Standar data memastikan data yang dihasilkan konsisten dan dapat dibandingkan antar instansi."
+      },
+      {
+        "id": "g3",
+        "before": "Informasi mengenai definisi variabel dan metodologi didokumentasikan dalam bentuk",
+        "after": "sebelum data disebarluaskan.",
+        "answer": "metadata",
+        "feedback": "Metadata statistik memberikan konteks dan transparansi mengenai batas cakupan data."
+      }
+    ]
+  }
+}

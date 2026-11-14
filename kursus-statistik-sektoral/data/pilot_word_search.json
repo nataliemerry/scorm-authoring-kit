@@ -1,0 +1,372 @@
+{
+  "C01": {
+    "grid": [
+      "RFLKJUMKUA",
+      "ILVMSAEKCY",
+      "SVOQFBFHBM",
+      "INOOEKIAQO",
+      "KMLUJQSCVU",
+      "OTGTZLIBJT",
+      "FSXPVJEHAC",
+      "INPUTDNYLO",
+      "XAWTATSUMM",
+      "DLHJMIIQOE"
+    ],
+    "words": [
+      {
+        "term": "INPUT",
+        "meaning": "Sumber daya yang digunakan.",
+        "cells": [
+          [
+            7,
+            0
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            4
+          ]
+        ],
+        "clue": "Sumber daya yang digunakan untuk menjalankan kegiatan."
+      },
+      {
+        "term": "OUTPUT",
+        "meaning": "Produk atau layanan yang dihasilkan.",
+        "cells": [
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            8,
+            3
+          ]
+        ],
+        "clue": "Produk atau layanan yang langsung dihasilkan suatu kegiatan."
+      },
+      {
+        "term": "OUTCOME",
+        "meaning": "Efek dari keluaran kegiatan.",
+        "cells": [
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "clue": "Efek jangka pendek atau menengah dari produk dan layanan yang dihasilkan."
+      },
+      {
+        "term": "EFISIENSI",
+        "meaning": "Penggunaan sumber daya secara ekonomis dan tepat waktu.",
+        "cells": [
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            9,
+            6
+          ]
+        ],
+        "clue": "Penggunaan sumber daya secara ekonomis dan tepat waktu."
+      },
+      {
+        "term": "RISIKO",
+        "meaning": "Faktor yang dapat menghambat pencapaian tujuan.",
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ]
+        ],
+        "clue": "Faktor yang dapat menghambat pencapaian tujuan."
+      }
+    ]
+  },
+  "C12": {
+    "grid": [
+      "EPSSXMCBYS",
+      "HGGFYECXYE",
+      "ROMANTIKQK",
+      "CWLBBACGGT",
+      "QWBQGDYXYO",
+      "QLGNWAHZBR",
+      "ZZFYLTJHFA",
+      "GZJCCALCJL",
+      "JWHZBYNQCL",
+      "SURVEICQHX"
+    ],
+    "words": [
+      {
+        "term": "ROMANTIK",
+        "clue": "Aplikasi berbasis web dari BPS untuk sarana pengajuan dan evaluasi rekomendasi.",
+        "meaning": "Aplikasi berbasis web untuk pengajuan dan evaluasi rekomendasi kegiatan statistik.",
+        "cells": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "term": "METADATA",
+        "clue": "Keterangan terstruktur mengenai konsep, definisi, cakupan, dan spesifikasi data.",
+        "meaning": "Informasi terstruktur yang mendeskripsikan konteks, metodologi, dan kualitas data.",
+        "cells": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            7,
+            5
+          ]
+        ]
+      },
+      {
+        "term": "SURVEI",
+        "clue": "Metode pengumpulan data dengan pencacahan sampel untuk menduga populasi.",
+        "meaning": "Cara pengumpulan data melalui pencacahan sampel untuk memperkirakan karakteristik populasi.",
+        "cells": [
+          [
+            9,
+            0
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            9,
+            5
+          ]
+        ]
+      },
+      {
+        "term": "EPSS",
+        "clue": "Evaluasi oleh BPS untuk mengukur kematangan penyelenggaraan kegiatan statistik.",
+        "meaning": "Evaluasi Penyelenggaraan Statistik Sektoral untuk mengukur kualitas pelaksanaan statistik.",
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      {
+        "term": "SEKTORAL",
+        "clue": "Jenis statistik yang diselenggarakan oleh instansi pemerintah sesuai tugas fungsinya.",
+        "meaning": "Statistik yang diselenggarakan oleh K/L/D sesuai tugas dan fungsinya.",
+        "cells": [
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ]
+        ]
+      }
+    ]
+  }
+}

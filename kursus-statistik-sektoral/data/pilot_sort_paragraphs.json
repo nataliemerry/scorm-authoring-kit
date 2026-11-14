@@ -1,0 +1,70 @@
+{
+  "C01": {
+    "initial_order": [
+      "p3",
+      "p1",
+      "p4",
+      "p2"
+    ],
+    "correct_order": [
+      "p1",
+      "p2",
+      "p3",
+      "p4"
+    ],
+    "title": "Dari laporan ke rencana tindak lanjut",
+    "explanation": "Laporan dibaca bersama hasil kerja, hambatan ditelusuri, lalu tindak lanjut disusun.",
+    "paragraphs": [
+      {
+        "id": "p1",
+        "text": "Unit menerima laporan akhir bulan. Dana yang telah dibelanjakan cukup besar, tetapi beberapa pekerjaan masih tertahan."
+      },
+      {
+        "id": "p2",
+        "text": "Untuk memahami laporan itu, tim membandingkan penggunaan dana dengan keluaran yang sudah dihasilkan. Perbandingan ini memperlihatkan bagian pekerjaan yang belum selesai."
+      },
+      {
+        "id": "p3",
+        "text": "Bagian yang belum selesai tersebut ditelusuri bersama pelaksana. Tim mencatat hambatan serta kebutuhan yang perlu ditangani agar pekerjaan dapat berjalan."
+      },
+      {
+        "id": "p4",
+        "text": "Catatan hasil penelusuran itu digunakan untuk menyusun tindak lanjut. Penanggung jawab dan waktu penyelesaiannya dibahas sebelum kebutuhan belanja berikutnya dinilai."
+      }
+    ]
+  },
+  "C12": {
+    "title": "Tahapan Penyelenggaraan Statistik Sektoral",
+    "explanation": "Perencanaan dan cek duplikasi mendahului pengajuan ke ROMANTIK, pelaksanaan survei mengikuti rekomendasi BPS, dan penyusunan metadata menyertai integrasi data.",
+    "initial_order": [
+      "p3",
+      "p1",
+      "p4",
+      "p2"
+    ],
+    "correct_order": [
+      "p1",
+      "p2",
+      "p3",
+      "p4"
+    ],
+    "paragraphs": [
+      {
+        "id": "p1",
+        "text": "Dinas merencanakan kegiatan pendataan baru untuk memantau capaian program prioritas daerah. Tim menyusun rancangan instrumen dan mengecek agar tidak terjadi duplikasi kegiatan."
+      },
+      {
+        "id": "p2",
+        "text": "Rancangan dan dokumen pendukung tersebut kemudian diajukan kepada BPS melalui aplikasi ROMANTIK untuk mendapatkan telaah metodologis."
+      },
+      {
+        "id": "p3",
+        "text": "Setelah surat rekomendasi resmi diterbitkan oleh BPS, pengumpulan dan pengolahan data dilaksanakan di lapangan sesuai standar yang disetujui."
+      },
+      {
+        "id": "p4",
+        "text": "Hasil pengolahan dilengkapi dengan metadata statistik terstandar, lalu diintegrasikan ke portal Satu Data untuk mendukung evaluasi kebijakan."
+      }
+    ]
+  }
+}

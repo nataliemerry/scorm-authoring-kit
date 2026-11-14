@@ -1,0 +1,13 @@
+{
+  "reference_file": "example-content-find-the-words-557697 (1).h5p",
+  "sha256": "2290b8e06ddfb4f4109bd864734189eca51f22e724309f24e858b7e9f6259fdb",
+  "inspected_on": "2026-11-14",
+  "main_library": "H5P.FindTheWords 1.4",
+  "observed_features": [
+    "8 orientations",
+    "visible vocabulary",
+    "show solution",
+    "retry"
+  ],
+  "implementation": "Independently implemented offline word search in native eXe Text/theme; original city vocabulary not reused; no H5P library files bundled."
+}
