@@ -1,3 +1,8 @@
+/* Ensure hidden data elements and screen-reader captions never leak visually */
+.js-hidden, .form-Data, .game-evaluation-ids, .sr-av {
+    display: none !important;
+}
+
 /* Form iDevice (export CSS) */
 
 .form-IDevice .inline {

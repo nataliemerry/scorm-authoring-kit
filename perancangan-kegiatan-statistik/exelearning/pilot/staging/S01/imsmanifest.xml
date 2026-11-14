@@ -5,8 +5,8 @@
     <schema>ADL SCORM</schema>
     <schemaversion>1.2</schemaversion>
   </metadata>
-  <organizations default="BPS_CorpU_Org">
-    <organization identifier="BPS_CorpU_Org">
+  <organizations default="BPS_CorpU">
+    <organization identifier="BPS_CorpU">
       <title>S01 Persiapan Penyelenggaraan Kegiatan Statistik</title>
       <item identifier="ITEM-S01" identifierref="RES-S01">
         <title>S01 Persiapan Penyelenggaraan Kegiatan Statistik</title>
@@ -17,6 +17,8 @@
     <resource identifier="RES-S01" type="webcontent" adlcp:scormtype="sco" href="index.html">
       <file href="content.dtd"/>
       <file href="content.xml"/>
+      <file href="content/css/base.css"/>
+      <file href="content/img/exe_powered_logo.png"/>
       <file href="content/resources/branding/bps-corpu-transparent.png"/>
       <file href="content/resources/lcm-exe.css"/>
       <file href="content/resources/lcm-pacing.js"/>

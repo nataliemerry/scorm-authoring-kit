@@ -1,7 +1,7 @@
 [
   {
     "course": "C01",
-    "bytes": 1618951,
+    "bytes": 1619314,
     "sco_count": 1,
     "manifest_files_valid": true,
     "bundled_fonts": 2,
@@ -11,7 +11,7 @@
   },
   {
     "course": "C12",
-    "bytes": 1403144,
+    "bytes": 1403507,
     "sco_count": 1,
     "manifest_files_valid": true,
     "bundled_fonts": 2,
@@ -21,7 +21,7 @@
   },
   {
     "course": "S01",
-    "bytes": 1644775,
+    "bytes": 1651435,
     "sco_count": 1,
     "manifest_files_valid": true,
     "bundled_fonts": 2,

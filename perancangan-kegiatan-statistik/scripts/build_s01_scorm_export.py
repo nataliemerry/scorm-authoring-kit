@@ -30,13 +30,19 @@ def build_export():
         if (c12_preview / f).exists():
             shutil.copy(c12_preview / f, export_staging / f)
             
-    # 2. Extract theme and content/resources from the S01 .elpx
+    # 2. Extract theme and content from the S01 .elpx
     for name in source_z.namelist():
-        if name.startswith(("theme/", "content/resources/")):
+        if name.startswith(("theme/", "content/")):
             dest = export_staging / name
             dest.parent.mkdir(parents=True, exist_ok=True)
             dest.write_bytes(source_z.read(name))
             
+    # Fallback copy for content/css and content/img if not in .elpx
+    if (c12_preview / "content/css").exists() and not (export_staging / "content/css").exists():
+        shutil.copytree(c12_preview / "content/css", export_staging / "content/css", dirs_exist_ok=True)
+    if (c12_preview / "content/img").exists() and not (export_staging / "content/img").exists():
+        shutil.copytree(c12_preview / "content/img", export_staging / "content/img", dirs_exist_ok=True)
+
     # Also save content.xml into package
     (export_staging / "content.xml").write_bytes(source_z.read("content.xml"))
     
@@ -102,6 +108,10 @@ def build_export():
         form_main["data-id"] = form_iid
         form_main["id"] = f"frmMainContainer-{form_iid}"
         
+    # Ensure all hidden form data elements and screen-reader captions are strictly hidden
+    for fd in html_soup.select(".form-Data, .game-evaluation-ids, .sr-av"):
+        fd["style"] = "display:none !important;"
+        
     # Save index.html
     (export_staging / "index.html").write_text(str(html_soup), encoding="utf-8")
     
@@ -121,8 +131,8 @@ def build_export():
         '    <schema>ADL SCORM</schema>',
         '    <schemaversion>1.2</schemaversion>',
         '  </metadata>',
-        '  <organizations default="BPS_CorpU_Org">',
-        '    <organization identifier="BPS_CorpU_Org">',
+        '  <organizations default="BPS_CorpU">',
+        '    <organization identifier="BPS_CorpU">',
         f'      <title>{COURSE_TITLE}</title>',
         f'      <item identifier="ITEM-S01" identifierref="RES-S01">',
         f'        <title>{COURSE_TITLE}</title>',
@@ -130,35 +140,37 @@ def build_export():
         '    </organization>',
         '  </organizations>',
         '  <resources>',
-        f'    <resource identifier="RES-S01" type="webcontent" adlcp:scormtype="sco" href="index.html">'
+        '    <resource identifier="RES-S01" type="webcontent" adlcp:scormtype="sco" href="index.html">',
     ]
-    for rel_path in sorted(all_files):
-        manifest_lines.append(f'      <file href="{rel_path}"/>')
+    
+    for f in sorted(all_files):
+        manifest_lines.append(f'      <file href="{f}"/>')
+        
     manifest_lines.extend([
         '    </resource>',
         '  </resources>',
-        '</manifest>'
+        '</manifest>',
+        ''
     ])
-    (export_staging / "imsmanifest.xml").write_text('\n'.join(manifest_lines), encoding="utf-8")
     
-    # 6. Create the official SCORM 1.2 ZIP package
-    scorm_zip_path = OUT / "dist_scorm" / f"{CID}_Persiapan_Penyelenggaraan_Kegiatan_Statistik_SCORM12.zip"
-    scorm_zip_path.parent.mkdir(parents=True, exist_ok=True)
-    with ZipFile(scorm_zip_path, "w", ZIP_DEFLATED) as z_out:
+    (export_staging / "imsmanifest.xml").write_text("\n".join(manifest_lines), encoding="utf-8")
+    
+    # 6. Package into SCORM 1.2 ZIP
+    zip_dest = OUT / "dist_scorm" / f"{CID}_Persiapan_Penyelenggaraan_Kegiatan_Statistik_SCORM12.zip"
+    with ZipFile(zip_dest, "w", ZIP_DEFLATED) as z:
         for root, dirs, files in os.walk(export_staging):
             for f in sorted(files):
                 full_path = os.path.join(root, f)
                 rel_path = os.path.relpath(full_path, export_staging).replace("\\", "/")
-                z_out.write(full_path, rel_path)
-    print(f"Created SCORM 1.2 package: {scorm_zip_path} ({scorm_zip_path.stat().st_size} bytes)")
+                z.write(full_path, rel_path)
+                
+    print(f"Created SCORM 1.2 package: {zip_dest} ({os.path.getsize(zip_dest)} bytes)")
     
-    # 7. Extract the package into preview/S01 so preview matches export byte-for-byte
+    # 7. Mirror identical files to preview/S01
     preview_s01 = OUT / "preview" / CID
     if preview_s01.exists():
         shutil.rmtree(preview_s01)
-    preview_s01.mkdir(parents=True, exist_ok=True)
-    with ZipFile(scorm_zip_path) as z_in:
-        z_in.extractall(preview_s01)
+    shutil.copytree(export_staging, preview_s01)
     print(f"Extracted matching preview into {preview_s01}")
 
 if __name__ == "__main__":
