@@ -1,0 +1,20 @@
+[
+  {
+    "project": "authoring/baseline",
+    "source": "C01_Smart_Budgeting.elpx",
+    "output": "C01_Smart_Budgeting_SCORM12.zip",
+    "suggestedName": "c01-smart-budgeting_scorm.zip",
+    "application": "http://127.0.0.1:8876/",
+    "platform": "Official eXeLearning 4.0.6 static browser UI",
+    "date": "2026-11-15T09:26:29.546Z"
+  },
+  {
+    "project": "authoring/baseline",
+    "source": "C12_Cybersecurity_Challenge.elpx",
+    "output": "C12_Cybersecurity_Challenge_SCORM12.zip",
+    "suggestedName": "c12-cybersecurity-challenge_scorm.zip",
+    "application": "http://127.0.0.1:8876/",
+    "platform": "Official eXeLearning 4.0.6 static browser UI",
+    "date": "2026-11-15T09:26:36.558Z"
+  }
+]

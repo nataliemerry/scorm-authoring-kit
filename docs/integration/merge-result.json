@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-15",
+  "base": "3bb2d70fd2e48331b9de2b6a3d859809f5ad87a5",
+  "inventory_rows": 2004,
+  "features": 30,
+  "unresolved": 0,
+  "dispositions": {
+    "preserved-identical": 1604,
+    "merged": 80,
+    "regenerated": 209,
+    "preserved-relocated": 1,
+    "historical-only": 110
+  },
+  "original_media_unchanged": 868,
+  "lfs_objects": [
+    {
+      "path": "pengelolaan-data/content/resources/video/pengelolaan-data.mp4",
+      "sha256": "0784bd305f3e9764c2caa79ed1a931bfe3784677042cfc97bb6fceb44a9c9a50",
+      "bytes": 231079280
+    }
+  ],
+  "limits": [
+    "No live GOJAGS deployment tested",
+    "No editable Pengelolaan Data .elpx supplied",
+    "Source citations/provenance retained with their original verification dates; F15 verified against current course content, not arbitrary HTML input"
+  ]
+}

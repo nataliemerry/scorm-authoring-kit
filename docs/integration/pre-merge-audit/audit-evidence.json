@@ -1,0 +1,303 @@
+{
+  "audit_date": "2026-11-15",
+  "head": "3bb2d70fd2e48331b9de2b6a3d859809f5ad87a5",
+  "status_before_and_after": "",
+  "timeline": [
+    {
+      "commit": "b99d6123a773086fd84638abd8224e75559cc9d0",
+      "subject": "feat: tambahkan skill scorm-exe-scenes, kit authoring, dan kursus statistik sektoral",
+      "zip_sha256": "118998a9f7e474e0aef58b3064a7e2690ce2f81bbca3c21a7c6982fc5b044dc2",
+      "file_count": 351,
+      "changed": [],
+      "added": [],
+      "removed": [],
+      "reverted_to_earlier_identical_content": [],
+      "features": {
+        "seed_scene_initializers": 0,
+        "author_solution_button": false,
+        "export_solution_button": false,
+        "author_review_user_status": false,
+        "export_review_user_status": false,
+        "seed_html_unescape": false,
+        "smoke_report_sha256": "3a8de26a349f925bef7e809424ea52b4389022ac8f557460d8e03f5883fe4601"
+      }
+    },
+    {
+      "commit": "3687d2c8bb9e83a0ec501b58c726325e8dc338fc",
+      "subject": "feat: tambahkan tombol Tampilkan jawaban pada interaksi drag-and-drop dan perbarui starter kit",
+      "zip_sha256": "54f26b4ec780a62ded1e451876b801cce63670688308c8ccc1c10c393c04f6e1",
+      "file_count": 351,
+      "changed": [
+        "exelearning/pilot/challenge.humanized.js"
+      ],
+      "added": [],
+      "removed": [],
+      "reverted_to_earlier_identical_content": [],
+      "features": {
+        "seed_scene_initializers": 0,
+        "author_solution_button": true,
+        "export_solution_button": false,
+        "author_review_user_status": false,
+        "export_review_user_status": false,
+        "seed_html_unescape": false,
+        "smoke_report_sha256": "3a8de26a349f925bef7e809424ea52b4389022ac8f557460d8e03f5883fe4601"
+      }
+    },
+    {
+      "commit": "dc1e23460819e84be7ef167bda3b1348eb50cb2d",
+      "subject": "fix: pastikan tidak ada tag html mentah bocor ke tampilan user dan perbarui template kit",
+      "zip_sha256": "3d239313918f11ea64380627df852c2ec0c6f26931d7b24436b200647c236fdd",
+      "file_count": 351,
+      "changed": [
+        "exelearning/pilot/dist_scorm/C01_Smart_Budgeting_SCORM12.zip",
+        "exelearning/pilot/dist_scorm/C12_Cybersecurity_Challenge_SCORM12.zip",
+        "exelearning/pilot/preview/C01/idevices/form/form.js",
+        "exelearning/pilot/preview/C12/idevices/form/form.js"
+      ],
+      "added": [],
+      "removed": [],
+      "reverted_to_earlier_identical_content": [],
+      "features": {
+        "seed_scene_initializers": 0,
+        "author_solution_button": true,
+        "export_solution_button": false,
+        "author_review_user_status": false,
+        "export_review_user_status": false,
+        "seed_html_unescape": false,
+        "smoke_report_sha256": "3a8de26a349f925bef7e809424ea52b4389022ac8f557460d8e03f5883fe4601"
+      }
+    },
+    {
+      "commit": "4cc1e0986ce9779d54356d3ccb68f52ce7b2512c",
+      "subject": "feat: tambahkan modul kursus SCORM S01 Persiapan Penyelenggaraan Kegiatan Statistik",
+      "zip_sha256": "3d239313918f11ea64380627df852c2ec0c6f26931d7b24436b200647c236fdd",
+      "file_count": 351,
+      "changed": [],
+      "added": [],
+      "removed": [],
+      "reverted_to_earlier_identical_content": [],
+      "features": {
+        "seed_scene_initializers": 0,
+        "author_solution_button": true,
+        "export_solution_button": false,
+        "author_review_user_status": false,
+        "export_review_user_status": false,
+        "seed_html_unescape": false,
+        "smoke_report_sha256": "3a8de26a349f925bef7e809424ea52b4389022ac8f557460d8e03f5883fe4601"
+      }
+    },
+    {
+      "commit": "8199d5340127481e116dffc75c76425178a12f47",
+      "subject": "feat: perbarui S01 menyesuaikan template kit terbaru (fitur tampilkan jawaban DnD dan perbaikan unescape tag HTML)",
+      "zip_sha256": "3d239313918f11ea64380627df852c2ec0c6f26931d7b24436b200647c236fdd",
+      "file_count": 351,
+      "changed": [],
+      "added": [],
+      "removed": [],
+      "reverted_to_earlier_identical_content": [],
+      "features": {
+        "seed_scene_initializers": 0,
+        "author_solution_button": true,
+        "export_solution_button": false,
+        "author_review_user_status": false,
+        "export_review_user_status": false,
+        "seed_html_unescape": false,
+        "smoke_report_sha256": "3a8de26a349f925bef7e809424ea52b4389022ac8f557460d8e03f5883fe4601"
+      }
+    },
+    {
+      "commit": "0d43f620fbc74235cb0f9f977620cf5491719e6c",
+      "subject": "fix: sembunyikan elemen form-Data/js-hidden kuis dan perbarui starter kit",
+      "zip_sha256": "298981e093f8bcfa622e6eb5b5eee20af953f8435b5896a8f44fbe0d2da22c53",
+      "file_count": 351,
+      "changed": [
+        "exelearning/lcm-exe.css",
+        "exelearning/pilot/LCM_Scenes_Theme.zip",
+        "exelearning/pilot/dist_scorm/C01_Smart_Budgeting_SCORM12.zip",
+        "exelearning/pilot/dist_scorm/C12_Cybersecurity_Challenge_SCORM12.zip",
+        "exelearning/pilot/preview/C01/content/resources/lcm-exe.css",
+        "exelearning/pilot/preview/C01/idevices/form/form.css",
+        "exelearning/pilot/preview/C01/idevices/form/form.js",
+        "exelearning/pilot/preview/C01/theme/style.css",
+        "exelearning/pilot/preview/C12/content/resources/lcm-exe.css",
+        "exelearning/pilot/preview/C12/idevices/form/form.css",
+        "exelearning/pilot/preview/C12/idevices/form/form.js",
+        "exelearning/pilot/preview/C12/theme/style.css",
+        "exelearning/pilot/sources/C01_Smart_Budgeting.elpx",
+        "exelearning/pilot/sources/C12_Cybersecurity_Challenge.elpx",
+        "exelearning/seed/components.elpx",
+        "exelearning/seed/native-seed.elpx",
+        "scripts/qa/simple-experience-check.cjs"
+      ],
+      "added": [],
+      "removed": [],
+      "reverted_to_earlier_identical_content": [],
+      "features": {
+        "seed_scene_initializers": 0,
+        "author_solution_button": true,
+        "export_solution_button": false,
+        "author_review_user_status": false,
+        "export_review_user_status": false,
+        "seed_html_unescape": true,
+        "smoke_report_sha256": "3a8de26a349f925bef7e809424ea52b4389022ac8f557460d8e03f5883fe4601"
+      }
+    },
+    {
+      "commit": "d271f48cfaf392a143d85c03d2b4bffe6a73e048",
+      "subject": "feat: tampilkan status jawaban user, kunci jawaban benar, dan pembahasan pada review kuis",
+      "zip_sha256": "b89012c7afb5b39fc52f909e68c836581f819837ebc809efbc98383988a9e6d9",
+      "file_count": 351,
+      "changed": [
+        "exelearning/pilot/LCM_Scenes_Theme.zip",
+        "exelearning/pilot/dist_scorm/C01_Smart_Budgeting_SCORM12.zip",
+        "exelearning/pilot/dist_scorm/C12_Cybersecurity_Challenge_SCORM12.zip",
+        "exelearning/pilot/preview/C01/theme/style.css",
+        "exelearning/pilot/preview/C01/theme/style.js",
+        "exelearning/pilot/preview/C12/theme/style.css",
+        "exelearning/pilot/preview/C12/theme/style.js",
+        "exelearning/pilot/sources/C01_Smart_Budgeting.elpx",
+        "exelearning/pilot/sources/C12_Cybersecurity_Challenge.elpx",
+        "exelearning/seed/components.elpx",
+        "exelearning/seed/native-seed.elpx"
+      ],
+      "added": [],
+      "removed": [],
+      "reverted_to_earlier_identical_content": [],
+      "features": {
+        "seed_scene_initializers": 1,
+        "author_solution_button": true,
+        "export_solution_button": true,
+        "author_review_user_status": false,
+        "export_review_user_status": true,
+        "seed_html_unescape": true,
+        "smoke_report_sha256": "3a8de26a349f925bef7e809424ea52b4389022ac8f557460d8e03f5883fe4601"
+      }
+    },
+    {
+      "commit": "3bb2d70fd2e48331b9de2b6a3d859809f5ad87a5",
+      "subject": "feat: add pengelolaan data scorm",
+      "zip_sha256": "b89012c7afb5b39fc52f909e68c836581f819837ebc809efbc98383988a9e6d9",
+      "file_count": 351,
+      "changed": [],
+      "added": [],
+      "removed": [],
+      "reverted_to_earlier_identical_content": [],
+      "features": {
+        "seed_scene_initializers": 1,
+        "author_solution_button": true,
+        "export_solution_button": true,
+        "author_review_user_status": false,
+        "export_review_user_status": true,
+        "seed_html_unescape": true,
+        "smoke_report_sha256": "3a8de26a349f925bef7e809424ea52b4389022ac8f557460d8e03f5883fe4601"
+      }
+    }
+  ],
+  "copies": {
+    "repository_kit": {
+      "path": "D:\\Pusdiklat\\Falana\\LCM\\scorm-authoring-kit-repo\\scorm-authoring-kit\\scorm-exe-scenes",
+      "file_count": 22,
+      "starter_sha256": "b89012c7afb5b39fc52f909e68c836581f819837ebc809efbc98383988a9e6d9",
+      "semantically_different_from_repository_kit": [],
+      "missing_from_repository_kit_file_set": []
+    },
+    "repository_agent_skill": {
+      "path": "D:\\Pusdiklat\\Falana\\LCM\\scorm-authoring-kit-repo\\.agents\\skills\\scorm-exe-scenes",
+      "file_count": 19,
+      "starter_sha256": "b89012c7afb5b39fc52f909e68c836581f819837ebc809efbc98383988a9e6d9",
+      "semantically_different_from_repository_kit": [],
+      "missing_from_repository_kit_file_set": [
+        "assets/enhanced-interactions/enhanced-interactions.css",
+        "assets/enhanced-interactions/enhanced-interactions.example.json",
+        "assets/enhanced-interactions/enhanced-interactions.js"
+      ]
+    },
+    "local_original_kit": {
+      "path": "D:\\Pusdiklat\\Falana\\LCM\\scorm-authoring-kit\\scorm-exe-scenes",
+      "file_count": 19,
+      "starter_sha256": "118998a9f7e474e0aef58b3064a7e2690ce2f81bbca3c21a7c6982fc5b044dc2",
+      "semantically_different_from_repository_kit": [
+        "assets/starter-manifest.json",
+        "assets/starter.zip"
+      ],
+      "missing_from_repository_kit_file_set": [
+        "assets/enhanced-interactions/enhanced-interactions.css",
+        "assets/enhanced-interactions/enhanced-interactions.example.json",
+        "assets/enhanced-interactions/enhanced-interactions.js"
+      ]
+    },
+    "installed_codex_skill": {
+      "path": "C:\\Users\\Pusdiklat\\.codex\\skills\\scorm-exe-scenes",
+      "file_count": 19,
+      "starter_sha256": "118998a9f7e474e0aef58b3064a7e2690ce2f81bbca3c21a7c6982fc5b044dc2",
+      "semantically_different_from_repository_kit": [
+        "assets/starter-manifest.json",
+        "assets/starter.zip"
+      ],
+      "missing_from_repository_kit_file_set": [
+        "assets/enhanced-interactions/enhanced-interactions.css",
+        "assets/enhanced-interactions/enhanced-interactions.example.json",
+        "assets/enhanced-interactions/enhanced-interactions.js"
+      ]
+    }
+  },
+  "starter_checks": {
+    "catalog_ids": [
+      "C01",
+      "C12"
+    ],
+    "s01_files": [],
+    "actual_export_bytes": {
+      "C01": 1516739,
+      "C12": 1302947
+    },
+    "stored_structure_report": [
+      {
+        "course": "C01",
+        "bytes": 1526801,
+        "sco_count": 1,
+        "manifest_files_valid": true,
+        "bundled_fonts": 2,
+        "generated_images": 4,
+        "official_logo": 1,
+        "preview_matches_export": true
+      },
+      {
+        "course": "C12",
+        "bytes": 1313026,
+        "sco_count": 1,
+        "manifest_files_valid": true,
+        "bundled_fonts": 2,
+        "generated_images": 4,
+        "official_logo": 1,
+        "preview_matches_export": true
+      }
+    ]
+  },
+  "rebuild": {
+    "C01": {
+      "scene_initializers": 2,
+      "challenge_initializers": 2,
+      "word_initializers": 2
+    },
+    "C12": {
+      "scene_initializers": 2,
+      "challenge_initializers": 2,
+      "word_initializers": 2
+    }
+  },
+  "browser_rebuild_C12": {
+    "headers": 2,
+    "footers": 2,
+    "word_configs": 1,
+    "hint_buttons": 5,
+    "javascript_errors": []
+  },
+  "limitation": "Browser reproduction inspected the development preview built from a fresh bootstrap. It does not assert that the historical delivered exports currently show duplicate headers.",
+  "rebuild_original_qa": {
+    "command": "node scripts/qa/simple-experience-check.cjs --dev",
+    "exit_code": 1,
+    "failure": "strict mode violation: locator('.scene-chrome') resolved to 2 elements"
+  },
+  "outer_distribution_starter_sha256": "118998a9f7e474e0aef58b3064a7e2690ce2f81bbca3c21a7c6982fc5b044dc2"
+}

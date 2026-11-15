@@ -1,0 +1,31 @@
+﻿id,feature,origin,preserve_or_merge,acceptance,status
+F01,Fondasi eXe dan native assessment,b99d612,"Satu SCO, lima fase, lima Text dan satu Form pada profil baseline","Header/footer tunggal, semua fase, manifest dan score 0/50/100",pending
+F02,Identitas dan tipografi,baseline + instruksi pengguna,"Logo asli transparan, nama institusi/kursus, fullscreen, font lokal dan lisensi","Desktop/mobile, logo identik, teks isi >=16px dan keterangan >=14px",pending
+F03,Sampul dan narasi,local kit + IT Enterprise,"Judul/deskripsi sesuai topik, catatan simulasi di contoh materi",Sampul IT Enterprise tepat dan catatan sampul yang sudah dihapus tidak kembali,pending
+F04,Teori dan sumber,baseline + tiap kursus,"Tiga teori, pemetaan sitasi, referensi primer dan tanggal verifikasi sebenarnya","Sitasi per paragraf, URL, halaman modul dan sumber offline bila ada",pending
+F05,Cek pemahaman,baseline,"Pilihan kosong/salah tidak membuka latihan, benar membuka",Blank/wrong/correct dan back/next,pending
+F06,Simulasi keputusan,baseline + data topik,"Dua situasi, dua tindakan dan konsekuensi, pilihan bertahan","Pilihan, konsekuensi, back, lanjut",pending
+F07,Find the Words arah,word-hints,"Kanan dan bawah, istilah tersembunyi hingga ditemukan/diminta","Tolak terbalik/diagonal, drag/touch/endpoints/keyboard",pending
+F08,Find the Words hint,word-hints,"Petunjuk makna, panjang, tombol awal tiap kata, bantuan terpisah","Tidak bocor jawaban, sorot satu kotak, ulangi menghapus bantuan",pending
+F09,Find the Words layout,word-crossings,"Jarak filler dan perpotongan interior tegak lurus, satu kemunculan target","Validator positif/negatif, ARSITEKTUR dan KEBIJAKAN berjarak di ITE",pending
+F10,Drag the Words,baseline,"Tiga rumpang, empat pilihan, satu pengecoh, bantuan dan undo","Mouse/touch/keyboard, replacement/remove/reset dan tidak menambah nilai",pending
+F11,Sort the Paragraphs,baseline,"Empat paragraf, drag/tombol/keyboard, Esc/undo dan bantuan","Urutan, sambungan, cancel, hint/reset dan lanjut opsional",pending
+F12,Kasus budgeting,C01,"Klasifikasi, 70/30, revisi 90/10 dan keputusan bertahap","Total token, undo/reset, salah/benar dan gate",pending
+F13,Kasus evidence/sequence dan variasi topik,C12 + S01 + ITE,"Solusi semua item, distractor bank dan gate sesuai kursus",Klasifikasi/urutan mouse/touch/keyboard dan wajib selesai sebelum kuis,pending
+F14,Tampilkan jawaban kasus,3687d2c,Pertahankan applySolution dan perilaku lanjut baseline terbaru; tulis aturan bantuan,"Semua jenis tahap, pengecoh, reset/undo dan gate kuis",pending
+F15,Decoder HTML Form,dc1e234 + 0d43f62,Pertahankan decoding pada jalur Form native tanpa perubahan konten soal,"Tag paragraf dirender, ampersand/less-than literal, teks Indonesia dan feedback",pending
+F16,Sembunyikan data internal Form,0d43f62,Patch CSS/runtime/seed yang sesuai dan format data tetap tersedia bagi engine,Tidak ada JSON/form-Data/js-hidden terlihat pada semua fase,pending
+F17,Review lengkap,d271f48,"Pilihan peserta, status, kunci, pembahasan pada source JS/CSS","0/50/100, soal terlewat, pindah fase, ulangi dan tidak ada tag mentah",pending
+F18,Timer dan preservasi pekerjaan,baseline,"Untimed default, opsional 120 detik setelah teori, tidak submit kuis kosong","Time expiry, posisi tahap/jawaban dan status incomplete",pending
+F19,Rebuild dan seed,audit d271f48,Seed native berisi patch Form yang perlu; engine scene ditambahkan sekali,"Bootstrap kosong -> build -> dev -> QA, dua kali build tidak melipat engine",pending
+F20,QA scope dan bukti,audit 0d43f62,"Baseline C01/C12 mandiri, QA tiap kursus cocok ketersediaan dan keluaran","Tidak ada akses S01 hilang, laporan terikat hash paket terbaru",pending
+F21,Video interaktif,3bb2d70,"Pertahankan aset/sumber, timestamp pertanyaan, kontrol dan kelanjutan sesuai profil","Playback offline, marker, tengah video, seek, keyboard, pertanyaan dan continue",pending
+F22,Image hotspot,3bb2d70,"Pertahankan region, fallback tombol dan umpan balik","Benar/salah, jumlah required valid, retry dan mobile",pending
+F23,Question set tambahan,3bb2d70,Dokumentasikan profil terpisah dengan kontrak SCORM dan satu pemilik grading,"Semua jawaban, raw 0/50/100 bila dua soal, registry/policy, retry dan commit",pending
+F24,Aset dan media kursus,semua proyek,"PNG master/WebP alpha, prompt/asalan, MP4 asli, poster/subtitle yang tersedia, OFL","Semua file terpakai lokal/manifest, hash media LFS dan playback",pending
+F25,S01 dan Statistik Sektoral,4cc1e09 + 8199d53 + d271f48,Pertahankan semua konten/aset/jawaban spesifik kursus dan versi rilis lama,"Source-to-export, alur, review dan scoring sesuai profil",pending
+F26,Pengelolaan Data,3bb2d70,Pertahankan struktur/renderer/MP4 spesifik yang sudah ada,"Video/hotspot/kuis, offline, LMS mock dan media lokal",pending
+F27,IT Enterprise,"workspace lokal, 179 file","Masukkan proyek ITE terpisah, pertahankan materi, aset asli GPT Images dan puzzle terbaru","Judul, sumber, alur lengkap, tiga perpotongan, skor, touch dan layout",pending
+F28,Discovery lintas agent,repo + local + installed,"Skill canonical dan mirror .agents, AGENTS/GEMINI/Claude/Antigravity konsisten","Path/reference resolve, semua aset enhanced ditemukan tanpa file hilang",pending
+F29,Packaging dan provenance,semua salinan,"Builder/releaser repo-relative, manifest dinamis, laporan versi/hash, checksum distribusi","Set dan bytes archive/preview/mirror, bootstrap offline dan integritas",pending
+F30,Riwayat dan rollback,delapan commit + audit,"Simpan snapshot/input dan matriks keputusan, minimalkan perubahan per tahap",Setiap entri inventory mempunyai hasil akhir dan tidak ada kehilangan tanpa alasan tertulis,pending

@@ -1,0 +1,7 @@
+{
+  "checks": [
+    "Desktop extension: real video metadata, keyboard seek/volume and four marker questions, hotspot keyboard and retry, blank guard, score 0/50/100 and registry reset",
+    "Mobile extension: real video metadata, keyboard seek/volume and four marker questions, hotspot keyboard and retry, blank guard, score 0/50/100 and registry reset",
+    "Inactive LMS shows the result without claiming a successful save"
+  ]
+}

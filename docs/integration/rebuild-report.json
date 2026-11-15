@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "builds": 2,
+  "source_engines": {
+    "C01": "9fcc90bfe48f6f5f4669cb77df0ff3c9cf57269cf4192a225431f77d64af4d0d",
+    "C12": "9fcc90bfe48f6f5f4669cb77df0ff3c9cf57269cf4192a225431f77d64af4d0d"
+  },
+  "one_initializer_per_engine": true,
+  "engines_match_native_exports": true
+}

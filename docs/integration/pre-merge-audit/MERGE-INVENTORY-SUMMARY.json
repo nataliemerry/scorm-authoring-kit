@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-15",
+  "base_commit": "3bb2d70fd2e48331b9de2b6a3d859809f5ad87a5",
+  "counts": {
+    "IT-Enterprise-current": 179,
+    "installed-skill": 19,
+    "local-kit": 32,
+    "original-workspace": 12,
+    "repo@3bb2d70": 1762
+  },
+  "total_rows": 2004,
+  "note": "Inventory identities pinned before merge. Pending status is intentional. Starter internals and historical changes are additionally covered by audit-evidence.json."
+}
