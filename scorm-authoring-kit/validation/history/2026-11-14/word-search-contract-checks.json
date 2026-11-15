@@ -1,0 +1,55 @@
+[
+  {
+    "case": "C01 bundled board",
+    "accepted": true
+  },
+  {
+    "case": "C12 bundled board",
+    "accepted": true
+  },
+  {
+    "case": "reverse",
+    "rejected": true,
+    "reason": "Word-search direction must be rightward or downward"
+  },
+  {
+    "case": "diagonal",
+    "rejected": true,
+    "reason": "Word-search direction must be rightward or downward"
+  },
+  {
+    "case": "bent path",
+    "rejected": true,
+    "reason": "Word-search path must be straight"
+  },
+  {
+    "case": "wrong letters",
+    "rejected": true,
+    "reason": "Word-search letters do not match the term"
+  },
+  {
+    "case": "out of bounds",
+    "rejected": true,
+    "reason": "Invalid word-search coordinates"
+  },
+  {
+    "case": "endpoint crossing",
+    "rejected": true,
+    "reason": "Word-search crossings must be inside both words"
+  },
+  {
+    "case": "parallel contact",
+    "rejected": true,
+    "reason": "Separate word-search paths with at least one filler cell outside crossings"
+  },
+  {
+    "case": "end to end contact",
+    "rejected": true,
+    "reason": "Separate word-search paths with at least one filler cell outside crossings"
+  },
+  {
+    "case": "no crossings",
+    "rejected": true,
+    "reason": "Include at least one interior word-search crossing"
+  }
+]

@@ -40,6 +40,9 @@ with ZipFile(archive) as payload:
     puzzles = json.loads(payload.read('data/pilot_word_search.json'))
     for puzzle in puzzles.values():
         validate_word_search(puzzle)
+    for filename in ('enhanced-interactions.js', 'enhanced-interactions.css', 'enhanced-interactions.example.json'):
+        assert payload.read('exelearning/pilot/'+filename) == (skill/'assets/enhanced-interactions'/filename).read_bytes()
+    assert b",{cid:'S01',zero:false}" not in payload.read('scripts/qa/simple-experience-check.cjs')
     report = json.loads(payload.read('exelearning/pilot/qa/simple-experience-report.json'))
     assert not report.get('failure'), report.get('failure')
     checks = '\n'.join(report['checks'])
@@ -59,13 +62,21 @@ with ZipFile(archive) as payload:
             export_path = next(n for n in payload.namelist() if n.startswith('exelearning/pilot/dist_scorm/'+cid) and n.endswith('.zip'))
             with ZipFile(BytesIO(payload.read(source_path))) as source, ZipFile(BytesIO(payload.read(export_path))) as exported:
                 assert exported.testzip() is None
+                for seed_name in ('native-seed.elpx', 'components.elpx'):
+                    with ZipFile(BytesIO(payload.read('exelearning/seed/'+seed_name))) as seed:
+                        assert b"const chrome=document.createElement('div')" not in seed.read('theme/style.js'), 'Scene engine embedded in native seed'
+                assert theme_js.count(b"const chrome=document.createElement('div')") == 1
+                assert b'function review()' in payload.read('exelearning/pilot/scene.humanized.js')
+                assert b'.scene-review-badge' in payload.read('exelearning/pilot/scene.css')
+                assert b'data-dnd-action="solution"' in payload.read('exelearning/pilot/challenge.humanized.js')
+
                 for document in (source.read('content.xml'), exported.read('index.html')):
                     embedded = re.findall(rb'<script\b[^>]*class="word-config"[^>]*>(.*?)</script>', document, re.S)
                     assert embedded and all(json.loads(config) == puzzles[cid] for config in embedded), (cid, 'word-search config mismatch')
                 for marker in [b'word-config', b'dt-config', b'sp-config', b'data-brand-logo']:
                     assert marker in source.read('content.xml') and marker in exported.read('index.html'), (cid, marker)
-                assert b'LCM Scenes Sort Paragraphs Forward' in source.read('theme/config.xml')
-                assert b'LCM Scenes Sort Paragraphs Forward' in exported.read('theme/config.xml')
+                assert b'LCM Scenes Unified' in source.read('theme/config.xml')
+                assert b'LCM Scenes Unified' in exported.read('theme/config.xml')
                 assert source.read('theme/style.js') == theme_js == exported.read('theme/style.js'), cid+' theme cache mismatch'
                 assert exported.read('content/resources/branding/bps-corpu-transparent.png') == logo
                 manifest_xml = ET.fromstring(exported.read('imsmanifest.xml'))

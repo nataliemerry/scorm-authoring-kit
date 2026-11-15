@@ -11,3 +11,7 @@ Pertahankan logo resmi transparan di kiri atas, nama institusi/kursus, fullscree
 Adaptasi cabang kode khusus topik sesuai implementation-map; brief bukan input build otomatis. Ekspor aktual melalui eXeLearning Online, kemudian uji ZIP asli. Jika tool browser/gambar tidak tersedia, laporkan langkah yang belum dapat dilakukan. Jangan menimpa instruksi proyek lain atau mengklaim ekspor/LMS/aset yang tidak dilakukan.
 
 Pisahkan jalur kata dengan huruf pengisi. Buat setidaknya satu perpotongan tegak lurus pada satu huruf yang sama di tengah kedua kata. Hindari jalur yang bersentuhan di ujung atau menempel sejajar.
+
+Sumber authoring baseline berada di authoring/baseline. Skill canonical berada di scorm-authoring-kit/scorm-exe-scenes dan mirror discovery di .agents/skills/scorm-exe-scenes. Gunakan scripts/release_scorm_kit.py untuk memperbarui starter/mirror dari sumber repo. Seed native harus bebas engine scene. Pertahankan form-compat.js, data Form tersembunyi dan review jawaban saat rebuild.
+
+Untuk video interaktif, image hotspot dan question set, baca references/enhanced-interactions.md pada skill. Pilih satu renderer penilaian per profil. Proyek ITE ada di it-enterprise. Statistik Sektoral, S01 dan Pengelolaan Data mempertahankan sumber/konten masing-masing.

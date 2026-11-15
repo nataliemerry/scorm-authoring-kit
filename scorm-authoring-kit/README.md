@@ -1,6 +1,6 @@
 # SCORM LCM — template dan skill lintas agent
 
-Versi acuan: **14 November 2026 · Sort the Paragraphs**. Template mandiri ini memakai dua pilot yang sudah disetujui: C01 Smart Budgeting dan C12 Cybersecurity Challenge. Tema aktif: **LCM Scenes Sort Paragraphs Forward**. Paket memuat implementasi, aset, sumber editabel, ekspor asli eXeLearning dan bukti pengujian.
+Versi acuan: **14 November 2026 · Sort the Paragraphs**. Template mandiri ini memakai dua pilot yang sudah disetujui: C01 Smart Budgeting dan C12 Cybersecurity Challenge. Tema aktif: **LCM Scenes Unified baseline**. Paket memuat implementasi, aset, sumber editabel, ekspor asli eXeLearning dan bukti pengujian.
 
 ## Alur yang harus dipertahankan
 
@@ -99,3 +99,5 @@ Template memiliki dua profil kasus konkret. Ia **bukan generator semua topik dar
 Kode/font/aset yang disertakan menjaga identitas baseline. Gambar yang digenerasikan ulang dapat berbeda; prompt tidak menjamin piksel identik. Contoh H5P dipakai untuk pola interaksi, bukan disertakan sebagai runtime H5P. Native Form dan runtime SCORM tetap bawaan eXeLearning. Komponen pihak ketiga beserta lisensi font tetap mengikuti ketentuannya.
 
 QA menggunakan browser terisolasi dan LMS tiruan. Peluncuran langsung di GOJAGS, XP/Trophy, resume lintas sesi, dan discovery otomatis di semua agent tidak diklaim sudah teruji. Daftar cakupan dan batas pengujian ada pada VALIDATION.md.
+
+Sumber release berada di authoring/baseline pada repo. Jalankan scripts/release_scorm_kit.py dari repo untuk membangun starter/mirror. Profil video, hotspot dan question set tersedia melalui scorm-exe-scenes/references/enhanced-interactions.md. Laporan release 15 November berada di validation/; laporan sebelumnya disimpan di validation/history/.

@@ -20,7 +20,7 @@ The builder writes only the two `.elpx` sources. Preview prep copies a known nat
 
 ## UI import/export
 
-1. Open eXeLearning Online. Styles → Imported → upload theme ZIP. Select its matching unique title. Baseline title: **LCM Scenes Sort Paragraphs Forward**. Do not overwrite a user's unrelated project; preserve its source before switching if needed.
+1. Open eXeLearning Online. Styles → Imported → upload theme ZIP. Select its matching unique title. Baseline title: **LCM Scenes Unified baseline**. Do not overwrite a user's unrelated project; preserve its source before switching if needed.
 2. File → Open → choose the newly generated `.elpx`. If asked whether to save the current project, evaluate whether it is a recoverable template or unrelated unsaved user work; do not discard unknown changes.
 3. Wait for import to finish and check course title, one page “Misi”, native Form and selected theme. Open Preview and verify the rendered course, not just XML.
 4. File → Export as → SCORM 1.2. Wait for export success, then locate the actual downloaded ZIP. Do not take a stale similarly named download. Check title/theme/source content inside the ZIP before copying it to `dist_scorm`.
@@ -40,3 +40,5 @@ python -m http.server 8874 --bind 127.0.0.1 --directory exelearning/pilot/previe
 Then open `http://127.0.0.1:8874/C01/index.html` or C12. The server is local and can be stopped after review. Preview does not send learner data to GOJAGS. Test real LMS separately when authorized and available.
 
 If UI export is unavailable, deliver the ready source/theme and label the actual export pending. A native export included in the baseline bundle is a reference artifact, not a newly exported new-topic course.
+
+Repository release workflow uses scripts/export_exelearning_ui.cjs and scripts/verify_projects.py. Official eXeLearning 4.0.6 may replace iDevice runtime files on export. form-compat.js carries the retained Form text-decoding fix in the authored theme, and scene.css hides internal Form data. Check both on the actual export. Native seed theme files must contain zero scene initializers.

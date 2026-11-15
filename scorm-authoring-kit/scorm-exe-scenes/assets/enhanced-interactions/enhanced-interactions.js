@@ -88,6 +88,7 @@
 
     function complete() {
       if (answered.size !== items.length) return;
+      video.pause();
       root.dataset.complete = 'true';
       root.dispatchEvent(new CustomEvent(cfg.completeEvent || 'lcm-video-finish', { bubbles: true }));
       if (next) { root.hidden = true; next.hidden = false; next.querySelector('button,[tabindex]')?.focus({ preventScroll: true }); }
@@ -165,7 +166,15 @@
       app.innerHTML = `<div class="quiz-set-scroll"><header class="quiz-set-head"><div><span class="scene-eyebrow">KUIS INTERAKTIF</span><h2>${esc(cfg.title)}</h2><p>${esc(cfg.intro)}</p></div><div class="quiz-count">Soal ${current + 1} dari ${cfg.questions.length}</div></header><section class="quiz-card"><fieldset><legend>${esc(question.question)}</legend>${question.options.map((option, index) => `<label class="quiz-option ${answers[current] === index ? 'is-selected' : ''}"><input type="radio" name="quiz-${esc(question.id)}" value="${index}" ${answers[current] === index ? 'checked' : ''}><span>${String.fromCharCode(65 + index)}. ${esc(option)}</span></label>`).join('')}</fieldset></section><footer class="quiz-actions"><button type="button" class="quiz-prev" ${current === 0 ? 'disabled' : ''}>Sebelumnya</button><span>${answers.filter((answer) => answer !== null).length} dari ${cfg.questions.length} dijawab</span><button type="button" class="quiz-next">${current === cfg.questions.length - 1 ? 'Selesaikan kuis' : 'Berikutnya'}</button></footer><p class="quiz-alert" role="status"></p></div>`;
     }
     app.addEventListener('change', (event) => { const input = event.target.closest('input[type="radio"]'); if (!input) return; answers[current] = Number(input.value); render(); });
-    app.addEventListener('click', (event) => { if (event.target.closest('.quiz-prev')) { current = Math.max(0, current - 1); render(); return; } if (event.target.closest('.quiz-next')) { if (current < cfg.questions.length - 1) { current += 1; render(); return; } if (answers.some((answer) => answer === null)) { app.querySelector('.quiz-alert').textContent = 'Jawab seluruh pertanyaan sebelum menyelesaikan kuis.'; return; } const value = score(); root.dataset.score = String(value); root.dataset.complete = 'true'; root.dataset.scormSaved = persist(value) ? 'true' : 'false'; finished = true; render(); root.dispatchEvent(new CustomEvent(cfg.completeEvent || 'lcm-quiz-complete', { bubbles: true, detail: { score: value } })); return; } if (event.target.closest('.quiz-retry')) { answers.fill(null); current = 0; finished = false; root.dataset.complete = 'false'; root.dataset.score = ''; render(); } });
+    app.addEventListener('click', (event) => { if (event.target.closest('.quiz-prev')) { current = Math.max(0, current - 1); render(); return; } if (event.target.closest('.quiz-next')) { if (current < cfg.questions.length - 1) { current += 1; render(); return; } if (answers.some((answer) => answer === null)) { app.querySelector('.quiz-alert').textContent = 'Jawab seluruh pertanyaan sebelum menyelesaikan kuis.'; return; } const value = score(); root.dataset.score = String(value); root.dataset.complete = 'true'; root.dataset.scormSaved = persist(value) ? 'true' : 'false'; finished = true; render(); root.dispatchEvent(new CustomEvent(cfg.completeEvent || 'lcm-quiz-complete', { bubbles: true, detail: { score: value } })); return; } if (event.target.closest('.quiz-retry')) {
+      answers.fill(null); current = 0; finished = false;
+      root.dataset.complete = 'false'; root.dataset.score = ''; root.dataset.scormSaved = 'false';
+      registry?.update(activityId, { evaluable: true, completionRequired: true, completed: false, answered: 0, total: cfg.questions.length, score: null, minimumScore: 0, maximumScore: 100, weight: 1, successThreshold: 0 });
+      if (client?.isActive?.() && policy) {
+        policy.reconcilePendingActivities?.(); policy.persistActivities(); client.commit();
+      }
+      render();
+    } });
     render();
   }
 

@@ -1,94 +1,146 @@
 {
-  "audit_date": "2026-11-14",
+  "audit_date": "2026-11-15",
   "status": "passed",
-  "scope": [
-    "C01 Smart Budgeting",
-    "C12 Cybersecurity Challenge"
-  ],
-  "theme": "lcm-scenes-sort-paragraphs-forward",
+  "version": "LCM-2026-11-15-unified",
+  "base_commit": "3bb2d70fd2e48331b9de2b6a3d859809f5ad87a5",
   "starter": {
-    "files": 351,
-    "sha256": "118998a9f7e474e0aef58b3064a7e2690ce2f81bbca3c21a7c6982fc5b044dc2",
-    "fresh_bootstrap_and_source_build": "passed"
+    "files": 311,
+    "sha256": "443463628d9c7a296ff4dcc9678f97e03559ef0a7c90467efcfc7834e9081bb0",
+    "fresh_bootstrap_builds": 2
   },
-  "documentation": {
-    "reference_guides": 11,
-    "updated": [
-      "complete course flow",
-      "content schema and answer indexing",
-      "game assistance and reset rules",
-      "source citations and verification dates",
-      "image generation and provenance",
-      "original transparent logo and header",
-      "readability and local font licenses",
-      "native assessment and export workflow",
-      "Codex / Claude Code / Antigravity adapters",
-      "acceptance tests and explicit evidence limits"
-    ]
-  },
-  "interactions": [
-    "Find the words: clues only before finding or explicit assistance",
-    "Drag the Words: gaps with distractor and accessible alternatives",
-    "Sort the Paragraphs: drag, buttons, keyboard, undo and assistance",
-    "Original required multi-stage case drag-and-drop"
-  ],
-  "checks": {
-    "skill_quick_validate": "passed",
-    "deep_bundle_integrity": "passed",
-    "sources_and_native_exports": 2,
-    "theme_source_export_byte_match": "passed",
-    "preview_export_byte_match": "passed",
-    "original_logo_rgba": "passed",
-    "local_fonts_with_OFL": 2,
-    "generated_master_pngs_with_webp": 7,
-    "desktop_short_viewport_mobile_input": "passed",
-    "native_assessment": [
+  "reference_guides": 12,
+  "native_exports": {
+    "authoring/baseline": [
       {
         "course": "C01",
-        "raw": 100,
-        "status": "passed"
+        "archive": "C01_Smart_Budgeting_SCORM12.zip",
+        "bytes": 1537440,
+        "sha256": "ea308b88de9512f8d07b3d3a1c77d04bf13abb95ab12057072d791f2c538b122",
+        "sco_count": 1,
+        "manifest_files_valid": true,
+        "bundled_fonts": 2,
+        "generated_images": 4,
+        "official_logo": 1,
+        "source_matches_export": true,
+        "preview_matches_export": true
       },
       {
         "course": "C12",
-        "raw": 0,
-        "status": "passed",
-        "attempt": "fresh"
-      },
-      {
-        "course": "C12",
-        "raw": 50,
-        "status": "passed",
-        "attempt": "fresh"
-      },
-      {
-        "unanswered": 1,
-        "status": "incomplete",
-        "submission": "blocked"
+        "archive": "C12_Cybersecurity_Challenge_SCORM12.zip",
+        "bytes": 1323661,
+        "sha256": "dbc0aab5e119b5734abc82729fb136c6ff83232cd6c0736668ad89000e98490c",
+        "sco_count": 1,
+        "manifest_files_valid": true,
+        "bundled_fonts": 2,
+        "generated_images": 4,
+        "official_logo": 1,
+        "source_matches_export": true,
+        "preview_matches_export": true
       }
     ],
-    "timeout_unanswered_quiz": "not submitted",
-    "runtime_javascript_errors": 0,
-    "cover_note_removed": "checked in both eXeLearning 4.0.6 exports and bootstrapped authoring source",
-    "word_search": "Forward paths only, per-item first-letter hint, no answer disclosure, assisted accounting and reset verified in browser",
-    "word_search_layout": "Both sample layouts validated from starter data and matched against embedded configs in editable projects and native exports. Eleven contract checks passed."
+    "kursus-statistik-sektoral": [
+      {
+        "course": "C01",
+        "archive": "C01_Smart_Budgeting_SCORM12.zip",
+        "bytes": 1529971,
+        "sha256": "4aa938429a0a1a50991b6e3c58c8b494e2e468858477be9ed6b609b57ffa7be9",
+        "sco_count": 1,
+        "manifest_files_valid": true,
+        "bundled_fonts": 2,
+        "generated_images": 4,
+        "official_logo": 1,
+        "source_matches_export": true,
+        "preview_matches_export": true
+      },
+      {
+        "course": "C12",
+        "archive": "C12_Penguatan_Statistik_Sektoral_SCORM12.zip",
+        "bytes": 1428894,
+        "sha256": "332196745448a92996d6d43d72be9d4ecf230a872bee2f0c5cfb98721688e82b",
+        "sco_count": 1,
+        "manifest_files_valid": true,
+        "bundled_fonts": 2,
+        "generated_images": 4,
+        "official_logo": 1,
+        "source_matches_export": true,
+        "preview_matches_export": true
+      }
+    ],
+    "perancangan-kegiatan-statistik": [
+      {
+        "course": "C01",
+        "archive": "C01_Smart_Budgeting_SCORM12.zip",
+        "bytes": 1531098,
+        "sha256": "8083cf185b1c4e69b10d0d0e5f2b9b9d7b6e34dfadfdd01336de8b60b24be15a",
+        "sco_count": 1,
+        "manifest_files_valid": true,
+        "bundled_fonts": 2,
+        "generated_images": 4,
+        "official_logo": 1,
+        "source_matches_export": true,
+        "preview_matches_export": true
+      },
+      {
+        "course": "C12",
+        "archive": "C12_Cybersecurity_Challenge_SCORM12.zip",
+        "bytes": 1317336,
+        "sha256": "9138eb88156940721470073b0f77f9af57b8a2ae0f6c9d2268f14eda481848e8",
+        "sco_count": 1,
+        "manifest_files_valid": true,
+        "bundled_fonts": 2,
+        "generated_images": 4,
+        "official_logo": 1,
+        "source_matches_export": true,
+        "preview_matches_export": true
+      },
+      {
+        "course": "S01",
+        "archive": "S01_Persiapan_Penyelenggaraan_Kegiatan_Statistik_SCORM12.zip",
+        "bytes": 1564175,
+        "sha256": "0930c83638283148a332676244abe11193f4135f4f030ec03a56573b8c84a039",
+        "sco_count": 1,
+        "manifest_files_valid": true,
+        "bundled_fonts": 2,
+        "generated_images": 4,
+        "official_logo": 1,
+        "source_matches_export": true,
+        "preview_matches_export": true
+      }
+    ],
+    "it-enterprise": [
+      {
+        "course": "ITE",
+        "archive": "IT_Enterprise_SCORM12.zip",
+        "bytes": 1179618,
+        "sha256": "38c862bb00131a7113eb67cf0baacd381c68f77ddd9822d41c572bb8762fcdca",
+        "sco_count": 1,
+        "manifest_files_valid": true,
+        "bundled_fonts": 2,
+        "generated_images": 4,
+        "official_logo": 1,
+        "source_matches_export": true,
+        "preview_matches_export": true
+      }
+    ]
   },
-  "release_checks": [
-    "Installed skill is checked byte-for-byte against canonical skill",
-    "Outer ZIP member set and every file are checked byte-for-byte against canonical kit",
-    "Distribution checksum is in sibling .sha256 file"
-  ],
-  "limitations": [
-    "No direct GOJAGS, XP or Trophy verification",
-    "No cross-session suspend/resume verification",
-    "No claim of exhaustive accessibility or all-browser coverage",
-    "Primary reference verification date remains 2026-11-13",
-    "New topics require explicit adaptation of documented topic-specific code; brief is not a generic build API",
-    "Cross-agent instructions are portable; tool execution in every agent environment is not verified"
+  "actual_native_exports": 8,
+  "optional_profiles": [
+    "interactive video",
+    "image hotspot",
+    "question set"
   ],
   "evidence": [
     "template-smoke-report.json",
     "template-structure-report.json",
     "standalone-build-report.json",
-    "../VALIDATION.md"
+    "enhanced-report.json",
+    "pengelolaan-data-report.json",
+    "contract-report.json",
+    "export-provenance.json"
+  ],
+  "limits": [
+    "LMS tested using SCORM API mocks, not a live GOJAGS deployment.",
+    "Pengelolaan Data preserved as supplied flat export; no course-specific editable .elpx was supplied.",
+    "Existing content citations and image provenance retained; no new research or image generation claimed."
   ]
 }

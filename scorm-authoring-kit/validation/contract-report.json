@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "checks": [
+    "C01: forward paths, hints data, spacing and interior crossings valid",
+    "C12: forward paths, hints data, spacing and interior crossings valid",
+    "ITE: forward paths, hints data, spacing and interior crossings valid",
+    "Rejected unreachable hotspot required",
+    "Rejected hotspot outside image",
+    "Rejected invalid answer index",
+    "Rejected negative video time"
+  ]
+}

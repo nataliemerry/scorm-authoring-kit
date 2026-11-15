@@ -60,3 +60,5 @@ Find the words: `data/pilot_word_search.json`, `exelearning/pilot/word-search.js
 Drag the Words: `data/pilot_drag_words.json`, `exelearning/pilot/drag-words.js` and `.css`, embedded by `pilot_experiences.humanized.py`. See [drag-words.md](drag-words.md). Word search now continues to `.dt-root`; Drag the Words continues to Sort the Paragraphs; that activity continues to the case DnD. Keep a single visible activity and all native quiz gates.
 
 Sort the Paragraphs: `data/pilot_sort_paragraphs.json`, `exelearning/pilot/sort-paragraphs.js` and `.css`, plus native Text shell in pilot_experiences. See [sort-paragraphs.md](sort-paragraphs.md). Drag the Words now reveals `.sp-root`; the paragraph activity continues to the existing case DnD.
+
+Repository source baseline is authoring/baseline. Update its authoring JS/CSS and keep scene engines out of native seed theme files. scripts/release_scorm_kit.py creates the starter and repository mirror. Optional extensions are documented in [enhanced-interactions.md](enhanced-interactions.md).

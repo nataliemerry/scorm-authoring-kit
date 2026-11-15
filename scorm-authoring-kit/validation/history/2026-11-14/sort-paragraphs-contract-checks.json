@@ -1,0 +1,14 @@
+[
+  {
+    "case": "missing paragraph",
+    "rejected": true
+  },
+  {
+    "case": "duplicate text",
+    "rejected": true
+  },
+  {
+    "case": "unshuffled start",
+    "rejected": true
+  }
+]

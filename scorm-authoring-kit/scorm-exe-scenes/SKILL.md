@@ -1,6 +1,6 @@
 ---
 name: scorm-exe-scenes
-description: Create or adapt SCORM courses using the approved LCM eXeLearning scene template, with sourced theory, simple decision situations, word search, sentence-gap Drag the Words, Sort the Paragraphs, accessible drag-and-drop, generated illustration assets and native assessment. Use when asked for this course style or a course based on this template.
+description: Create or adapt SCORM courses using the approved LCM eXeLearning scene template, with sourced theory, simple decision situations, word search, sentence-gap Drag the Words, Sort the Paragraphs, accessible drag-and-drop, generated illustration assets, native assessment and optional video/hotspot/question-set profiles. Use when asked for this course style or a course based on this template.
 ---
 
 # SCORM eXe Scenes
@@ -34,6 +34,8 @@ For the vocabulary reinforcement between situations and case practice, read [Fin
 For sentence completion after the word search, read [Drag the Words](references/drag-words.md). Keep the word bank, explicit checking and reversible placements, and keep assisted answers separate from independent completion.
 
 For paragraph ordering after Drag the Words, read [Sort the Paragraphs](references/sort-paragraphs.md). Preserve drag, movement buttons, keyboard cancellation, assistance accounting and optional continuation.
+
+For video, image hotspot and the optional question-set profile, read [enhanced interactions](references/enhanced-interactions.md). The baseline retains native Form scoring. Select and test the renderer for each new course.
 
 ## Build and handoff
 

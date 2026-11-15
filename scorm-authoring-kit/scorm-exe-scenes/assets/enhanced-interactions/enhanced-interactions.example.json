@@ -9,10 +9,54 @@
     "nextSelector": ".sim-root",
     "hideNextUntilComplete": true,
     "interactions": [
-      { "at": 60, "timeLabel": "Sekitar menit 1", "question": "Pertanyaan pertama?", "options": ["Pilihan A", "Pilihan B", "Pilihan C"], "correct": 1, "feedback": "Jelaskan konsep dan alasan jawaban." },
-      { "at": "middle", "timeLabel": "Bagian tengah", "question": "Pertanyaan kedua?", "options": ["Pilihan A", "Pilihan B", "Pilihan C"], "correct": 0, "feedback": "Jelaskan konsep dan alasan jawaban." },
-      { "at": 330, "timeLabel": "Sekitar menit 5:30", "question": "Pertanyaan ketiga?", "options": ["Pilihan A", "Pilihan B", "Pilihan C"], "correct": 2, "feedback": "Jelaskan konsep dan alasan jawaban." },
-      { "at": 420, "timeLabel": "Sekitar menit 7", "question": "Pertanyaan keempat?", "options": ["Pilihan A", "Pilihan B", "Pilihan C"], "correct": 1, "feedback": "Jelaskan konsep dan alasan jawaban." }
+      {
+        "at": 60,
+        "timeLabel": "Sekitar menit 1",
+        "question": "Pertanyaan pertama?",
+        "options": [
+          "Pilihan A",
+          "Pilihan B",
+          "Pilihan C"
+        ],
+        "correct": 1,
+        "feedback": "Jelaskan konsep dan alasan jawaban."
+      },
+      {
+        "at": "middle",
+        "timeLabel": "Bagian tengah",
+        "question": "Pertanyaan kedua?",
+        "options": [
+          "Pilihan A",
+          "Pilihan B",
+          "Pilihan C"
+        ],
+        "correct": 0,
+        "feedback": "Jelaskan konsep dan alasan jawaban."
+      },
+      {
+        "at": 330,
+        "timeLabel": "Sekitar menit 5:30",
+        "question": "Pertanyaan ketiga?",
+        "options": [
+          "Pilihan A",
+          "Pilihan B",
+          "Pilihan C"
+        ],
+        "correct": 2,
+        "feedback": "Jelaskan konsep dan alasan jawaban."
+      },
+      {
+        "at": 420,
+        "timeLabel": "Sekitar menit 7",
+        "question": "Pertanyaan keempat?",
+        "options": [
+          "Pilihan A",
+          "Pilihan B",
+          "Pilihan C"
+        ],
+        "correct": 1,
+        "feedback": "Jelaskan konsep dan alasan jawaban."
+      }
     ]
   },
   "image_hotspot": {
@@ -20,10 +64,28 @@
     "instruction": "Pilih objek yang sesuai dengan pertanyaan.",
     "background": "content/resources/scenes/course-hotspot.webp",
     "alt": "Deskripsi lengkap ilustrasi dan seluruh objek penting.",
-    "required": 3,
+    "required": 1,
     "regions": [
-      { "id": "area-1", "x": 10, "y": 10, "width": 25, "height": 30, "correct": true, "label": "Nama objek", "feedback": "Tepat. Jelaskan kaitannya dengan materi." },
-      { "id": "area-2", "x": 55, "y": 20, "width": 20, "height": 25, "correct": false, "label": "Nama pengecoh", "feedback": "Objek ini belum sesuai dengan kriteria pada pertanyaan." }
+      {
+        "id": "area-1",
+        "x": 10,
+        "y": 10,
+        "width": 25,
+        "height": 30,
+        "correct": true,
+        "label": "Nama objek",
+        "feedback": "Tepat. Jelaskan kaitannya dengan materi."
+      },
+      {
+        "id": "area-2",
+        "x": 55,
+        "y": 20,
+        "width": 20,
+        "height": 25,
+        "correct": false,
+        "label": "Nama pengecoh",
+        "feedback": "Objek ini belum sesuai dengan kriteria pada pertanyaan."
+      }
     ]
   },
   "question_set": {
@@ -32,8 +94,28 @@
     "title": "Evaluasi",
     "intro": "Jawab dua pertanyaan. Skor akhir dikirim melalui SCORM 1.2.",
     "questions": [
-      { "id": "q1", "question": "Pertanyaan pertama?", "options": ["Pilihan A", "Pilihan B", "Pilihan C"], "correct": 1, "feedback": "Pembahasan pertanyaan pertama." },
-      { "id": "q2", "question": "Pertanyaan kedua?", "options": ["Pilihan A", "Pilihan B", "Pilihan C"], "correct": 2, "feedback": "Pembahasan pertanyaan kedua." }
+      {
+        "id": "q1",
+        "question": "Pertanyaan pertama?",
+        "options": [
+          "Pilihan A",
+          "Pilihan B",
+          "Pilihan C"
+        ],
+        "correct": 1,
+        "feedback": "Pembahasan pertanyaan pertama."
+      },
+      {
+        "id": "q2",
+        "question": "Pertanyaan kedua?",
+        "options": [
+          "Pilihan A",
+          "Pilihan B",
+          "Pilihan C"
+        ],
+        "correct": 2,
+        "feedback": "Pembahasan pertanyaan kedua."
+      }
     ]
   }
 }
