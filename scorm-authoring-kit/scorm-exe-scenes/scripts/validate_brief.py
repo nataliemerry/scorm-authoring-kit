@@ -119,7 +119,9 @@ def validate(b):
         require(len(quiz['options']) == 3 and quiz['answer_key'] in 'ABC' and len(quiz['answer_key']) == 1, 'Quiz requires three options and key A/B/C')
         require(all(o.startswith(letter+'. ') and len(o) > 3 for letter, o in zip('ABC', quiz['options'])), 'Quiz options must be labeled A., B., C.')
     roles = [a['role'] for a in b['assets']]
-    require(sorted(roles) == sorted(['scene', 'object-1', 'object-2', 'reward']), 'Need scene, two objects and shared reward')
+    require(all(roles.count(role) == 1 for role in ['scene', 'object-1', 'object-2', 'reward']),
+            'Need exactly one scene, two primary objects and shared reward; additional assets may have unique roles')
+    require(len(set(roles)) == len(roles), 'Asset roles must be unique')
     for asset in b['assets']:
         nonblank(asset, ['file', 'role', 'provenance'], 'asset')
         path = PurePosixPath(asset['file'])

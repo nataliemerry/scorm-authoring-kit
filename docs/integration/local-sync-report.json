@@ -3,7 +3,7 @@
   "copies": [
     {
       "target": "D:\\Pusdiklat\\Falana\\LCM\\scorm-authoring-kit",
-      "files": 49,
+      "files": 52,
       "byte_match": true
     },
     {
@@ -12,5 +12,5 @@
       "byte_match": true
     }
   ],
-  "distribution_sha256": "526ff296213d4d5d2863ff14557baac96813add806b475a502677042e1acc352"
+  "distribution_sha256": "f1d95f16dcc69f9d1ed5e64ab19950accc7afc3c679abe48215e51bf5452aeb3"
 }

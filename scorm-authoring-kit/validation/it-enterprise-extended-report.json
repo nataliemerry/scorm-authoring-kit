@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "alignment": {
+    "status": "passed",
+    "checked_on": "2026-11-16",
+    "template_version": "LCM-2026-11-15-unified",
+    "template_commit": "e6e4ab6b84d8e0858c15fbfb8dca2e4048afa5f9",
+    "shared_components": {
+      "scene.css": "74b7850b05ca9bdf910b2998de5f7dd6b9f048e9664832be63e2dc8aabf97688",
+      "form-compat.js": "389c1dcbe7c61ea839e41cb9ac8ea81894928a257157f4424c940f71fec3e483",
+      "word-search.js": "562589ebe0196f1863e97ee77a7600e5fd06d3b524609e6003a0893e16063f46",
+      "drag-words.js": "372afed38faf0b2021d8cb39f5d5695a7a8658c339224636b5c6521cd91a9c2a",
+      "sort-paragraphs.js": "fb695df815302a5b51bd7965e5bbb67a6a5aa5379dd7c6a64e9eb4330c2d254a"
+    },
+    "review_matches_baseline": true,
+    "original_logo_and_fonts_match": true,
+    "native_export_sha256": "3d7ef862b101c98a1d998bae21b420967ce8705d5e883e643f29b89c2e69cfb6",
+    "actual_export_and_preview_verified": true,
+    "qa_report": "simple-experience-report.json",
+    "profile": "LCM baseline + IT Enterprise video/hotspot/ungraded question-set extension; native Form final grading",
+    "topic_adaptations": [
+      "IT Enterprise title and objective",
+      "sourced IT Enterprise lessons and situations",
+      "IT Enterprise illustrations and case/quiz keys"
+    ],
+    "legacy_copy": "D:\\Pusdiklat\\Falana\\LCM\\exelearning\\it-enterprise",
+    "lms_limit": "Mock API only; live GOJAGS not tested.",
+    "extensions": {
+      "video_questions": 4,
+      "video_duration_seconds": 48,
+      "hotspot_regions": 4,
+      "hotspot_required": 3,
+      "ungraded_concept_questions": 3,
+      "illustrated_case_cards": 10
+    },
+    "theme": "lcm-scenes-it-enterprise-enhanced-20261116",
+    "media_provenance": "media-provenance.json"
+  },
+  "structure": {
+    "status": "passed",
+    "platform": "eXeLearning 4.0.6, official static browser distribution",
+    "size": 3301998,
+    "sha256": "3d7ef862b101c98a1d998bae21b420967ce8705d5e883e643f29b89c2e69cfb6",
+    "sco_count": 1,
+    "illustrations": 15,
+    "illustrated_case_cards": 10,
+    "video_questions": 4,
+    "hotspot_correct_regions": 3,
+    "ungraded_concept_questions": 3,
+    "fonts": 2,
+    "preview_matches_export": true,
+    "theme_matches_editable_source": true
+  },
+  "media": {
+    "date": "2026-11-16",
+    "video": {
+      "file": "assets/video/ITE-service-plan.mp4",
+      "sha256": "4dd97b6739794b88a7ddc3eb60f980f6786b45614756e0e3ba7b6ffd98afd4cc",
+      "bytes": 919140,
+      "duration_seconds": 48,
+      "audio": false,
+      "method": "Local FFmpeg visual lesson, four generated-art scenes, BPS local fonts",
+      "generator": "scripts/build_learning_video.py",
+      "script": "data/enhanced_interactions.json:video_scenes",
+      "transcript": "Baca isi video in the course"
+    },
+    "new_generated_raster_assets": 11,
+    "case_card_illustrations": 10,
+    "source_tool": "Codex built-in image_gen; model identifier not exposed",
+    "reused_original_logo": true
+  },
+  "actual_export_checks": [
+    "One unanswered native quiz question blocks submission and keeps incomplete",
+    "ITE raw 100: verified primary-source citations on all three theory pages, simulated examples labeled, study-first prerequisite, example reveal, standard radio check, two-choice consequence, back preserves selection, clue-only word search, answers hidden until found/revealed and hidden again on retry, mouse/keyboard, forward selection and per-item hints, help/retry do not inflate found count, optional continue, Drag the Words mouse/touch/keyboard, empty/wrong/correct checks, replacement/undo/remove/reset, assisted solution never counts as independent, no LMS score changes, Sort the Paragraphs mouse/touch/button/keyboard reordering, Escape/undo restoration, correct positions/transitions, assisted reveal/reset, optional continue, simulation gate, real pointer drag, keyboard placement, undo, prerequisite gate, wrong-plan feedback, all stages complete, native LMS score; review matches participant choice, key and correct status",
+    "Both wrong native answers produce raw 0 and passed under passScore=0 in a fresh attempt",
+    "ITE raw 0: verified primary-source citations on all three theory pages, simulated examples labeled, study-first prerequisite, example reveal, standard radio check, two-choice consequence, back preserves selection, clue-only word search, answers hidden until found/revealed and hidden again on retry, mouse/keyboard, forward selection and per-item hints, help/retry do not inflate found count, optional continue, Drag the Words mouse/touch/keyboard, empty/wrong/correct checks, replacement/undo/remove/reset, assisted solution never counts as independent, no LMS score changes, Sort the Paragraphs mouse/touch/button/keyboard reordering, Escape/undo restoration, correct positions/transitions, assisted reveal/reset, optional continue, simulation gate, real pointer drag, keyboard placement, undo, prerequisite gate, wrong-plan feedback, all stages complete, native LMS score; review matches participant choice, key and correct status",
+    "ITE raw 50: verified primary-source citations on all three theory pages, simulated examples labeled, study-first prerequisite, example reveal, standard radio check, two-choice consequence, back preserves selection, clue-only word search, answers hidden until found/revealed and hidden again on retry, mouse/keyboard, forward selection and per-item hints, help/retry do not inflate found count, optional continue, Drag the Words mouse/touch/keyboard, empty/wrong/correct checks, replacement/undo/remove/reset, assisted solution never counts as independent, no LMS score changes, Sort the Paragraphs mouse/touch/button/keyboard reordering, Escape/undo restoration, correct positions/transitions, assisted reveal/reset, optional continue, simulation gate, real pointer drag, keyboard placement, undo, prerequisite gate, wrong-plan feedback, all stages complete, native LMS score; review matches participant choice, key and correct status",
+    "Short desktop: board fits scroll area, vertical word reachable, keyboard focus does not scroll outer page",
+    "120-second challenge keeps unfinished work and never submits unanswered quiz",
+    "390px real touch drag plus select-and-place; all photographed text >=14px",
+    "Four-marker visual video playback and keyboard seek, no audio controls for silent media, hotspot wrong/correct/retry, three-question checkpoint blank/wrong/correct/retry, no final LMS score mutation, and all ten case cards have loaded topic-specific illustrations",
+    "Official transparent BPS CorpU logo loads without header overlap on desktop/mobile; no JavaScript page errors"
+  ]
+}

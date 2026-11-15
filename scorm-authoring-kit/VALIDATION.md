@@ -17,3 +17,9 @@ Tanggal: **15 November 2026**. Versi: **LCM-2026-11-15-unified**. Sumber rilis: 
 Laporan 14 November disimpan di `validation/history/2026-11-14`; laporan kontrak lama di sana merupakan bukti historis. Kontrak terbaru dan pengujian penolakan input tidak valid ada pada `contract-report.json`. Ekspor terakhir dan hash paket tercatat pada `export-provenance.json` dan laporan struktur tiap proyek. Paket hanya dapat dirilis bila hash ekspor sama dengan yang diuji.
 
 Batas bukti: pengujian LMS menggunakan mock API, belum pada GOJAGS langsung. Pengelolaan Data tersedia sebagai hasil ekspor datar; tidak ada `.elpx` khusus kursus yang diberikan, sehingga tidak diklaim dibangun ulang melalui UI. Referensi materi dan provenance gambar yang sudah ada dipertahankan dengan tanggal aslinya.
+
+## Pembaruan IT Enterprise — 16 November 2026
+
+Sepuluh kartu kasus kini memakai sepuluh ilustrasi yang relevan. Ditambahkan video visual 48 detik/empat pertanyaan, hotspot tiga komponen dari empat area, serta latihan konsep tiga pertanyaan tanpa nilai LMS. Ekspor asli terbaru, aset/manifest, mouse/sentuh/keyboard, jalur lengkap desktop/mobile, timer, incomplete dan skor native 0/50/100 lulus. Bukti terikat hash paket ada di validation/it-enterprise-extended-report.json. Baseline starter C01/C12 tetap memakai hasil validasi 15 November.
+
+Validator brief kini menerima aset tambahan dengan role unik sambil tetap mewajibkan empat aset primer. Uji menerima sebelas aset tambahan dan menolak scene hilang/role ganda tercatat pada asset-role-contract-report.json. Implementasi ungraded question set adalah fork lokal proyek IT Enterprise, bukan perilaku tersirat dari renderer generic kit.

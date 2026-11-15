@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "date": "2026-11-16",
+  "checks": [
+    "Accepted four primary assets plus eleven uniquely named card/hotspot assets",
+    "Rejected missing scene",
+    "Rejected duplicate primary role",
+    "Rejected duplicate additional role"
+  ]
+}

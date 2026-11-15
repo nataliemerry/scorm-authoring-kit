@@ -31,3 +31,7 @@ Choose placement and navigation explicitly for the new course. Configure nextSel
 Run the profile validator and scripts/qa/enhanced-check.cjs in the repository. Test the actual course and its exported package. Record media hash, poster, duration, timestamps, keyboard/touch, feedback, completion and LMS evidence. A working example config does not establish a completed new course.
 
 Keep all media offline, preserve original provenance, and document which renderer owns the final score. A plain existing exported course remains a supported input when its editable authoring project has not been supplied.
+
+Additional media and illustrated answer cards may extend the four primary brief assets. Keep scene, object-1, object-2 and reward exactly once; give each additional asset a unique role and actual provenance. Validate that every case-card image is registered, bundled and loaded on both desktop and mobile.
+
+The repository IT Enterprise example adapts these families while retaining native Form scoring. Its course-local enhanced-interactions.js supports an ungraded question set (scored:false), which skips activity registration and LMS writes. The generic scored renderer in this kit does not implement that switch: deliberately port and test the ungraded fork when combining a practice question set with native Form. Never assume that a JSON flag alone disables grading in another renderer.
