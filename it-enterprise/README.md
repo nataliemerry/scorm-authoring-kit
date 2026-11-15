@@ -24,3 +24,7 @@ Paket diekspor melalui **File → Export as → SCORM 1.2** di antarmuka resmi e
 Untuk mengedit melalui eXeLearning buka .elpx. Untuk mengubah template di tingkat sumber, sesuaikan data ITE dan skrip terkait, jalankan `python scripts/build_exelearning_pilots.py`, lalu ekspor ulang melalui eXeLearning. Brief merupakan catatan editorial. Builder membaca berkas di data/ dan modul authoring. Jalankan `python scripts/validate_it_enterprise.py` untuk memeriksa paket dan preview. QA browser memakai Playwright dan Chrome. Jalankan `npm ci --prefix scripts/qa` lalu `node scripts/qa/simple-experience-check.cjs`.
 
 Pengujian nilai menggunakan LMS tiruan. Dua soal terjawab mencatat skor 0, 50, atau 100 dan status passed sesuai ambang nol pada kit. Satu soal kosong mempertahankan status incomplete. Integrasi langsung dengan GOJAGS belum diuji.
+
+## Kesesuaian template terbaru
+
+Diperiksa ulang pada 15 November 2026 terhadap **LCM-2026-11-15-unified**. CSS, logo, font lokal, tiga permainan, kompatibilitas Form dan review mengikuti baseline terbaru; materi, ilustrasi, kasus dan kunci tetap khusus IT Enterprise. Pengujian aktual desktop/mobile, mouse/sentuh/keyboard, timer, incomplete dan skor 0/50/100 lulus. Bukti: [template-alignment-report.json](exelearning/pilot/qa/template-alignment-report.json). Salinan pada folder kerja lama juga diselaraskan dengan proyek repo ini.

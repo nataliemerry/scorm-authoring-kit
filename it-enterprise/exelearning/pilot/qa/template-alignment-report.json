@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checked_on": "2026-11-15",
+  "template_version": "LCM-2026-11-15-unified",
+  "template_commit": "e6e4ab6b84d8e0858c15fbfb8dca2e4048afa5f9",
+  "shared_components": {
+    "scene.css": "74b7850b05ca9bdf910b2998de5f7dd6b9f048e9664832be63e2dc8aabf97688",
+    "form-compat.js": "389c1dcbe7c61ea839e41cb9ac8ea81894928a257157f4424c940f71fec3e483",
+    "word-search.js": "562589ebe0196f1863e97ee77a7600e5fd06d3b524609e6003a0893e16063f46",
+    "drag-words.js": "372afed38faf0b2021d8cb39f5d5695a7a8658c339224636b5c6521cd91a9c2a",
+    "sort-paragraphs.js": "fb695df815302a5b51bd7965e5bbb67a6a5aa5379dd7c6a64e9eb4330c2d254a"
+  },
+  "review_matches_baseline": true,
+  "original_logo_and_fonts_match": true,
+  "native_export_sha256": "38c862bb00131a7113eb67cf0baacd381c68f77ddd9822d41c572bb8762fcdca",
+  "actual_export_and_preview_verified": true,
+  "qa_report": "simple-experience-report.json",
+  "profile": "native Form; optional vocabulary games; required case drag-and-drop",
+  "topic_adaptations": [
+    "IT Enterprise title and objective",
+    "sourced IT Enterprise lessons and situations",
+    "IT Enterprise illustrations and case/quiz keys"
+  ],
+  "legacy_copy": "D:\\Pusdiklat\\Falana\\LCM\\exelearning\\it-enterprise",
+  "lms_limit": "Mock API only; live GOJAGS not tested."
+}
