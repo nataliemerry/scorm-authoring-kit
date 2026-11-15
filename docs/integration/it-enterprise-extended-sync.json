@@ -6,5 +6,6 @@
   "source_and_target_bytes_identical": true,
   "preview_matches_native_export": true,
   "backup": "D:\\Pusdiklat\\Falana\\LCM\\docs\\audits\\it-enterprise-template-2026-11-16\\before-extended-sync-011119.zip",
-  "package_sha256": "3d7ef862b101c98a1d998bae21b420967ce8705d5e883e643f29b89c2e69cfb6"
+  "package_sha256": "71c1c4f5a9f2b2681102f838fb7ed1c0c9f95962e7f42c7d8477ca8430ec7782",
+  "encoding_fix_verified": true
 }

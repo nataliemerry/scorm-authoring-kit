@@ -1,8 +1,8 @@
 {
   "status": "passed",
   "platform": "eXeLearning 4.0.6, official static browser distribution",
-  "size": 3301998,
-  "sha256": "3d7ef862b101c98a1d998bae21b420967ce8705d5e883e643f29b89c2e69cfb6",
+  "size": 3301942,
+  "sha256": "71c1c4f5a9f2b2681102f838fb7ed1c0c9f95962e7f42c7d8477ca8430ec7782",
   "sco_count": 1,
   "illustrations": 15,
   "illustrated_case_cards": 10,

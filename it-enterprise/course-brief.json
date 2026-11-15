@@ -513,7 +513,7 @@
         "kind": "sequence",
         "title": "Susun rencana uji sebelum memperluas layanan",
         "intro": "Rencana harus berangkat dari aturan nomor dan akses, diteruskan dengan uji pada dua unit, lalu dinilai berdasarkan catatan waktu. Sisakan dua kartu yang tidak mendukung urutan ini.",
-        "instruction": "Letakkan tiga tindakan pada urutan 1â€“3. Biarkan dua pilihan lain di tempat asal.",
+        "instruction": "Letakkan tiga tindakan pada urutan 1 sampai 3. Biarkan dua pilihan lain di tempat asal.",
         "feedback": "Uji pertukaran memerlukan aturan yang sudah disepakati. Uji dilakukan sebelum tim bisa menilai manfaatnya.",
         "items": [
           {
@@ -550,17 +550,17 @@
         "zones": [
           {
             "id": "first",
-            "label": "1 Â· Siapkan aturan",
+            "label": "1. Siapkan aturan",
             "hint": "Syarat sebelum menguji"
           },
           {
             "id": "second",
-            "label": "2 Â· Jalankan uji coba",
+            "label": "2. Jalankan uji coba",
             "hint": "Batasi pada dua unit"
           },
           {
             "id": "third",
-            "label": "3 Â· Tinjau hasil",
+            "label": "3. Tinjau hasil",
             "hint": "Gunakan sasaran layanan"
           }
         ],
