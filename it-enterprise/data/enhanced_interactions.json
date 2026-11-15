@@ -1,0 +1,181 @@
+{
+  "interactive_video": {
+    "title": "Dari hambatan layanan ke rencana TI",
+    "instruction": "Ikuti video visual ini. Pada empat penanda, video berhenti untuk satu pertanyaan. Anda juga bisa memilih penandanya langsung.",
+    "durationLabel": "48 detik · video visual",
+    "source": "content/resources/video/ITE-service-plan.mp4",
+    "mime": "video/mp4",
+    "poster": "content/resources/video/ITE-service-plan-poster.webp",
+    "nextSelector": ".sim-root",
+    "hideNextUntilComplete": true,
+    "interactions": [
+      {
+        "at": 10,
+        "timeLabel": "0:10",
+        "question": "Nomor permintaan berubah setiap berpindah unit. Apa yang perlu diperbaiki?",
+        "options": [
+          "Warna beranda aplikasi",
+          "Pengenal bersama lintas unit",
+          "Jumlah ikon menu"
+        ],
+        "correct": 1,
+        "feedback": "Pengenal bersama membuat satu permintaan tetap bisa ditelusuri saat berpindah unit."
+      },
+      {
+        "at": 22,
+        "timeLabel": "0:22",
+        "question": "Pemohon cukup melihat permintaannya sendiri. Aturan akses mana yang sesuai?",
+        "options": [
+          "Semua orang melihat semua berkas",
+          "Gunakan satu akun bersama",
+          "Batasi akses berdasarkan peran dan kepemilikan"
+        ],
+        "correct": 2,
+        "feedback": "Akses perlu mengikuti peran dan kebutuhan, termasuk permintaan yang memang menjadi hak pemohon."
+      },
+      {
+        "at": 34,
+        "timeLabel": "0:34",
+        "question": "Aturan nomor dan akses sudah disepakati. Apa langkah berikutnya?",
+        "options": [
+          "Uji pertukaran pada dua unit",
+          "Perluas langsung ke semua unit",
+          "Hitung jumlah aplikasi yang terpasang"
+        ],
+        "correct": 0,
+        "feedback": "Uji terbatas memeriksa apakah aturan benar-benar dijalankan sebelum cakupannya diperluas."
+      },
+      {
+        "at": 46,
+        "timeLabel": "0:46",
+        "question": "Apa ukuran yang langsung menunjukkan pemohon menunggu lebih singkat?",
+        "options": [
+          "Jumlah aplikasi",
+          "Median waktu dari permintaan diterima sampai tabel dikirim",
+          "Jumlah akun petugas"
+        ],
+        "correct": 1,
+        "feedback": "Waktu penyelesaian mengukur lamanya pemohon menunggu; jumlah aplikasi tidak menjawab pertanyaan itu."
+      }
+    ],
+    "hasAudio": false
+  },
+  "image_hotspot": {
+    "title": "Temukan tiga komponen penelusuran",
+    "instruction": "Pilih tiga objek yang diperlukan agar satu permintaan bisa dilacak lintas unit. Baca umpan balik setiap pilihan.",
+    "background": "content/resources/scenes/ITE-hotspot.webp",
+    "alt": "Empat kelompok objek: dokumen lintas unit, perisai akses, jurnal serah terima, serta tanaman dan cangkir.",
+    "required": 3,
+    "regions": [
+      {
+        "id": "identifier",
+        "label": "Pengenal lintas unit",
+        "x": 5,
+        "y": 5,
+        "width": 43,
+        "height": 43,
+        "correct": true,
+        "feedback": "Satu pengenal yang dipertahankan lintas unit membantu petugas menelusuri permintaan yang sama."
+      },
+      {
+        "id": "access",
+        "label": "Aturan akses",
+        "x": 52,
+        "y": 5,
+        "width": 43,
+        "height": 43,
+        "correct": true,
+        "feedback": "Aturan akses menentukan siapa yang boleh melihat dan memperbarui status. Pemohon tidak otomatis dapat melihat permintaan orang lain."
+      },
+      {
+        "id": "history",
+        "label": "Riwayat perpindahan",
+        "x": 5,
+        "y": 52,
+        "width": 43,
+        "height": 43,
+        "correct": true,
+        "feedback": "Riwayat serah terima menunjukkan kapan permintaan berpindah dan unit mana yang menanganinya."
+      },
+      {
+        "id": "decoration",
+        "label": "Dekorasi meja",
+        "x": 52,
+        "y": 52,
+        "width": 43,
+        "height": 43,
+        "correct": false,
+        "feedback": "Tanaman dan cangkir tidak menyimpan identitas, hak akses, atau riwayat layanan. Cari komponen yang membantu penelusuran permintaan."
+      }
+    ]
+  },
+  "question_set": {
+    "renderer": "lcm-question-set",
+    "scored": false,
+    "activityId": "ite-concept-practice",
+    "title": "Periksa hubungan antarkonsep",
+    "intro": "Tiga pertanyaan singkat sebelum menyusun kasus. Latihan ini tidak mengubah nilai akhir.",
+    "questions": [
+      {
+        "id": "concept-1",
+        "question": "Usulan TI mana yang paling jelas berangkat dari kebutuhan layanan?",
+        "options": [
+          "Membeli aplikasi karena unit lain memilikinya",
+          "Memperbaiki pengenal karena permintaan sulit ditelusuri",
+          "Menambah menu tanpa memeriksa proses"
+        ],
+        "correct": 1,
+        "feedback": "Hambatan yang teramati memberi alasan yang bisa diperiksa untuk memilih pekerjaan TI."
+      },
+      {
+        "id": "concept-2",
+        "question": "Apa peran peta arsitektur dalam kasus ini?",
+        "options": [
+          "Menunjukkan hubungan proses, data, aplikasi dan infrastruktur",
+          "Menggantikan keputusan pemilik layanan",
+          "Menetapkan satu merek aplikasi untuk semua kebutuhan"
+        ],
+        "correct": 0,
+        "feedback": "Hubungan antarkomponen perlu dipahami agar perbaikan pada satu unit tidak memutus alur di unit lain."
+      },
+      {
+        "id": "concept-3",
+        "question": "Aplikasi tersedia hampir sepanjang bulan. Apakah itu membuktikan tabel diterima lebih cepat?",
+        "options": [
+          "Ya, ketersediaan sama dengan waktu layanan",
+          "Ya, bila jumlah aplikasinya bertambah",
+          "Belum; periksa juga waktu penyelesaian permintaan"
+        ],
+        "correct": 2,
+        "feedback": "Ketersediaan dan waktu penyelesaian menjawab pertanyaan yang berbeda. Periksa ukuran yang sesuai dengan sasaran layanan."
+      }
+    ]
+  },
+  "video_scenes": [
+    {
+      "title": "Mulai dari hambatan layanan",
+      "body": "Nomor berubah saat berkas berpindah unit. Akibatnya, petugas sulit menelusuri satu permintaan sampai tabel dikirim.",
+      "image": "cards/ITE-duplicate.webp"
+    },
+    {
+      "title": "Sepakati nomor dan akses",
+      "body": "Gunakan pengenal yang sama lintas unit. Tentukan siapa yang boleh melihat dan memperbarui status permintaan.",
+      "image": "cards/ITE-agree.webp"
+    },
+    {
+      "title": "Uji pada lingkup kecil",
+      "body": "Coba pertukaran pada dua unit. Pastikan nomor tetap sama dan status hanya terlihat oleh pihak yang berwenang.",
+      "image": "cards/ITE-test.webp"
+    },
+    {
+      "title": "Nilai dari sisi pemohon",
+      "body": "Bandingkan waktu penyelesaian sebelum dan sesudah uji. Periksa juga apakah jenis dan beban permintaannya sebanding.",
+      "image": "cards/ITE-review.webp"
+    }
+  ],
+  "resource_files": [
+    "scenes/ITE-hotspot.webp",
+    "video/ITE-service-plan.mp4",
+    "video/ITE-service-plan-poster.webp"
+  ]
+}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest identifier="eXe-MANIFEST-20261115161900RCO9PO"
+<manifest identifier="eXe-MANIFEST-202611160102345SE2A9"
   xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
   xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
   xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_v1p2">
@@ -8,19 +8,19 @@
     <schemaversion>1.2</schemaversion>
     <adlcp:location>imslrm.xml</adlcp:location>
   </metadata>
-  <organizations default="eXe-20261115161900RCO9PO">
-    <organization identifier="eXe-20261115161900RCO9PO" structure="hierarchical">
+  <organizations default="eXe-202611160102345SE2A9">
+    <organization identifier="eXe-202611160102345SE2A9" structure="hierarchical">
       <title>ITE IT Enterprise</title>
-      <item identifier="ITEM-ROOT-20261115161900RCO9PO" isvisible="true">
+      <item identifier="ITEM-ROOT-202611160102345SE2A9" isvisible="true">
         <title>ITE IT Enterprise</title>
-        <item identifier="ITEM-20261115161900A3W3D7" identifierref="RES-20261115161900A3W3D7" isvisible="true">
+        <item identifier="ITEM-202611160102346212OP" identifierref="RES-202611160102346212OP" isvisible="true">
           <title>Misi</title>
         </item>
       </item>
     </organization>
   </organizations>
   <resources>
-    <resource identifier="RES-20261115161900A3W3D7" type="webcontent" adlcp:scormtype="sco" href="index.html">
+    <resource identifier="RES-202611160102346212OP" type="webcontent" adlcp:scormtype="sco" href="index.html">
       <file href="index.html"/>
       <dependency identifierref="COMMON_FILES"/>
     </resource>
@@ -30,12 +30,25 @@
       <file href="content/css/base.css"/>
       <file href="content/img/exe_powered_logo.png"/>
       <file href="content/resources/branding/bps-corpu-transparent.png"/>
+      <file href="content/resources/cards/ITE-access.webp"/>
+      <file href="content/resources/cards/ITE-agree.webp"/>
+      <file href="content/resources/cards/ITE-count.webp"/>
+      <file href="content/resources/cards/ITE-duplicate.webp"/>
+      <file href="content/resources/cards/ITE-log.webp"/>
+      <file href="content/resources/cards/ITE-manual.webp"/>
+      <file href="content/resources/cards/ITE-review.webp"/>
+      <file href="content/resources/cards/ITE-rollout.webp"/>
+      <file href="content/resources/cards/ITE-shared.webp"/>
+      <file href="content/resources/cards/ITE-test.webp"/>
       <file href="content/resources/lcm-exe.css"/>
       <file href="content/resources/lcm-pacing.js"/>
       <file href="content/resources/mission-reward.webp"/>
       <file href="content/resources/scenes/ITE-blueprint.webp"/>
+      <file href="content/resources/scenes/ITE-hotspot.webp"/>
       <file href="content/resources/scenes/ITE-operations.webp"/>
       <file href="content/resources/scenes/ITE.webp"/>
+      <file href="content/resources/video/ITE-service-plan-poster.webp"/>
+      <file href="content/resources/video/ITE-service-plan.mp4"/>
       <file href="idevices/form/exequexthits.svg"/>
       <file href="idevices/form/exequextrerrors.svg"/>
       <file href="idevices/form/exequextsq.svg"/>

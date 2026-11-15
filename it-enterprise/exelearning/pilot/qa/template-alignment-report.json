@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "checked_on": "2026-11-15",
+  "checked_on": "2026-11-16",
   "template_version": "LCM-2026-11-15-unified",
   "template_commit": "e6e4ab6b84d8e0858c15fbfb8dca2e4048afa5f9",
   "shared_components": {
@@ -12,15 +12,25 @@
   },
   "review_matches_baseline": true,
   "original_logo_and_fonts_match": true,
-  "native_export_sha256": "38c862bb00131a7113eb67cf0baacd381c68f77ddd9822d41c572bb8762fcdca",
+  "native_export_sha256": "3d7ef862b101c98a1d998bae21b420967ce8705d5e883e643f29b89c2e69cfb6",
   "actual_export_and_preview_verified": true,
   "qa_report": "simple-experience-report.json",
-  "profile": "native Form; optional vocabulary games; required case drag-and-drop",
+  "profile": "LCM baseline + IT Enterprise video/hotspot/ungraded question-set extension; native Form final grading",
   "topic_adaptations": [
     "IT Enterprise title and objective",
     "sourced IT Enterprise lessons and situations",
     "IT Enterprise illustrations and case/quiz keys"
   ],
   "legacy_copy": "D:\\Pusdiklat\\Falana\\LCM\\exelearning\\it-enterprise",
-  "lms_limit": "Mock API only; live GOJAGS not tested."
+  "lms_limit": "Mock API only; live GOJAGS not tested.",
+  "extensions": {
+    "video_questions": 4,
+    "video_duration_seconds": 48,
+    "hotspot_regions": 4,
+    "hotspot_required": 3,
+    "ungraded_concept_questions": 3,
+    "illustrated_case_cards": 10
+  },
+  "theme": "lcm-scenes-it-enterprise-enhanced-20261116",
+  "media_provenance": "media-provenance.json"
 }

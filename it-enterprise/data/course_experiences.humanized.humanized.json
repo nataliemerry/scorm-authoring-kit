@@ -9,6 +9,46 @@
       {
         "label": "Operasi layanan",
         "image": "scenes/ITE-operations.webp"
+      },
+      {
+        "label": "Satu nomor lintas unit",
+        "image": "cards/ITE-shared.webp"
+      },
+      {
+        "label": "Nomor berbeda",
+        "image": "cards/ITE-duplicate.webp"
+      },
+      {
+        "label": "Hak akses sesuai peran",
+        "image": "cards/ITE-access.webp"
+      },
+      {
+        "label": "Pencocokan lewat telepon",
+        "image": "cards/ITE-manual.webp"
+      },
+      {
+        "label": "Riwayat perpindahan",
+        "image": "cards/ITE-log.webp"
+      },
+      {
+        "label": "Bandingkan waktu penyelesaian",
+        "image": "cards/ITE-review.webp"
+      },
+      {
+        "label": "Perluas ke semua unit sekarang",
+        "image": "cards/ITE-rollout.webp"
+      },
+      {
+        "label": "Sepakati aturan nomor dan akses",
+        "image": "cards/ITE-agree.webp"
+      },
+      {
+        "label": "Hitung jumlah aplikasi",
+        "image": "cards/ITE-count.webp"
+      },
+      {
+        "label": "Uji pertukaran pada dua unit",
+        "image": "cards/ITE-test.webp"
       }
     ],
     "quizzes": [

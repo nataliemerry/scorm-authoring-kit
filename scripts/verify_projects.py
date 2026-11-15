@@ -66,7 +66,7 @@ def verify_project(project, extract=False):
                             bytes=archive_path.stat().st_size,
                             sha256=hashlib.sha256(archive_path.read_bytes()).hexdigest(),
                             sco_count=1, manifest_files_valid=True, bundled_fonts=2,
-                            generated_images=4, official_logo=1,
+                            bundled_webp_images=sum(n.startswith("content/resources/") and n.endswith(".webp") for n in members), official_logo=1,
                             source_matches_export=True, preview_matches_export=True))
     (folder / 'qa/structure-report.json').write_text(json.dumps(reports, indent=2) + '\n',
                                                     encoding='utf-8')

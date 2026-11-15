@@ -8,32 +8,40 @@
     "Short desktop: board fits scroll area, vertical word reachable, keyboard focus does not scroll outer page",
     "120-second challenge keeps unfinished work and never submits unanswered quiz",
     "390px real touch drag plus select-and-place; all photographed text >=14px",
+    "Four-marker visual video playback and keyboard seek, no audio controls for silent media, hotspot wrong/correct/retry, three-question checkpoint blank/wrong/correct/retry, no final LMS score mutation, and all ten case cards have loaded topic-specific illustrations",
     "Official transparent BPS CorpU logo loads without header overlap on desktop/mobile; no JavaScript page errors"
   ],
   "screenshots": [
     "ITE-cover.png",
     "ITE-simple-material-1.png",
     "ITE-simple-material-2.png",
+    "ITE-interactive-video.png",
+    "ITE-video-question.png",
     "ITE-simple-situation-1.png",
     "ITE-simple-situation-2.png",
     "ITE-word-search.png",
     "ITE-drag-words.png",
     "ITE-sort-paragraphs.png",
+    "ITE-hotspot.png",
+    "ITE-question-set.png",
     "ITE-challenge-start.png",
     "ITE-challenge-complete.png",
     "ITE-review.png",
     "ITE-result-100.png",
     "ITE-result-0.png",
     "ITE-result-50.png",
+    "ITE-video-question-mobile.png",
     "ITE-word-search-short.png",
     "ITE-simple-mobile.png",
     "ITE-word-search-mobile.png",
     "ITE-drag-words-mobile.png",
     "ITE-sort-paragraphs-mobile.png",
+    "ITE-hotspot-mobile.png",
+    "ITE-question-set-mobile.png",
     "ITE-challenge-mobile.png"
   ],
   "mode": "actual-eXeLearning-export",
   "tested_artifacts": {
-    "IT_Enterprise_SCORM12.zip": "38c862bb00131a7113eb67cf0baacd381c68f77ddd9822d41c572bb8762fcdca"
+    "IT_Enterprise_SCORM12.zip": "3d7ef862b101c98a1d998bae21b420967ce8705d5e883e643f29b89c2e69cfb6"
   }
 }

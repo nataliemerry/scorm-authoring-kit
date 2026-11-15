@@ -142,8 +142,8 @@ def main(course_ids=None):
         prop(root,'odeProperties','odeProperty','pp_theme','lcm-interactive')
         prop(root,'userPreferences','userPreference','theme','lcm-interactive')
         if PILOT:
-            prop(root,'odeProperties','odeProperty','pp_theme','lcm-scenes-unified-it-enterprise-20261115')
-            prop(root,'userPreferences','userPreference','theme','lcm-scenes-unified-it-enterprise-20261115')
+            prop(root,'odeProperties','odeProperty','pp_theme','lcm-scenes-it-enterprise-enhanced-20261116')
+            prop(root,'userPreferences','userPreference','theme','lcm-scenes-it-enterprise-enhanced-20261116')
         prop(root,'odeProperties','odeProperty','pp_extraHeadContent','')
         prop(root,'odeProperties','odeProperty','pp_addPagination','false')
         # Context paths are required for the importer to register image references.
@@ -169,15 +169,19 @@ def main(course_ids=None):
         files['theme/style.css']+=b'\n'+(BASE/'exelearning/lcm-exe.css').read_bytes()
         files['theme/style.js']+=b'\nwindow.addEventListener("DOMContentLoaded",function(){'+(BASE/'exelearning/lcm-pacing.js').read_bytes()+b'});\n'
         if PILOT:
-            files['theme/config.xml']=config.replace('lcm-interactive','lcm-scenes-unified-it-enterprise-20261115').replace('LCM Interactive','LCM Scenes Unified it-enterprise').encode('utf-8')
+            files['theme/config.xml']=config.replace('lcm-interactive','lcm-scenes-it-enterprise-enhanced-20261116').replace('LCM Interactive','LCM Scenes IT Enterprise Enhanced').encode('utf-8')
             for font in (BASE/'assets/fonts').glob('*'):
                 if font.suffix=='.woff2' or font.name.endswith('-OFL.txt'):files['theme/fonts/'+font.name]=font.read_bytes()
-            files['theme/style.css']=z2.read('theme/style.css')+b'\n'+(BASE/'exelearning/pilot/scene.css').read_bytes()+(BASE/'exelearning/pilot/challenge.css').read_bytes()+(BASE/'exelearning/pilot/experience.humanized.css').read_bytes()+(BASE/'exelearning/pilot/word-search.css').read_bytes()+(BASE/'exelearning/pilot/drag-words.css').read_bytes()+(BASE/'exelearning/pilot/sort-paragraphs.css').read_bytes()
-            files['theme/style.js']=z2.read('theme/style.js')+b'\n'+(BASE/'exelearning/pilot/form-compat.js').read_bytes()+b'\nwindow.addEventListener("DOMContentLoaded",function(){'+(BASE/'exelearning/pilot/scene.humanized.js').read_bytes()+(BASE/'exelearning/pilot/challenge.humanized.js').read_bytes()+(BASE/'exelearning/pilot/experience.humanized.js').read_bytes()+(BASE/'exelearning/pilot/word-search.js').read_bytes()+(BASE/'exelearning/pilot/drag-words.js').read_bytes()+(BASE/'exelearning/pilot/sort-paragraphs.js').read_bytes()+b'});\n'
+            files['theme/style.css']=z2.read('theme/style.css')+b'\n'+(BASE/'exelearning/pilot/scene.css').read_bytes()+(BASE/'exelearning/pilot/challenge.css').read_bytes()+(BASE/'exelearning/pilot/experience.humanized.css').read_bytes()+(BASE/'exelearning/pilot/word-search.css').read_bytes()+(BASE/'exelearning/pilot/drag-words.css').read_bytes()+(BASE/'exelearning/pilot/sort-paragraphs.css').read_bytes()+(BASE/'exelearning/pilot/enhanced-interactions.css').read_bytes()+(BASE/'exelearning/pilot/ite-enhanced.css').read_bytes()
+            files['theme/style.js']=z2.read('theme/style.js')+b'\n'+(BASE/'exelearning/pilot/form-compat.js').read_bytes()+b'\nwindow.addEventListener("DOMContentLoaded",function(){'+(BASE/'exelearning/pilot/scene.humanized.js').read_bytes()+(BASE/'exelearning/pilot/challenge.humanized.js').read_bytes()+(BASE/'exelearning/pilot/experience.humanized.js').read_bytes()+(BASE/'exelearning/pilot/word-search.js').read_bytes()+(BASE/'exelearning/pilot/drag-words.js').read_bytes()+(BASE/'exelearning/pilot/sort-paragraphs.js').read_bytes()+(BASE/'exelearning/pilot/ite-enhanced-flow.js').read_bytes()+b'});\n'+(BASE/'exelearning/pilot/enhanced-interactions.js').read_bytes()
         for file in [art,'mission-reward.webp']:files['content/resources/'+file]=(BASE/'assets'/file).read_bytes()
         if PILOT:
             files['content/resources/branding/bps-corpu-transparent.png']=(BASE/'assets/branding/bps-corpu-transparent.png').read_bytes()
             for card in narrative[cid]['cards']:files['content/resources/'+card['image']]=(BASE/'assets'/card['image']).read_bytes()
+        if PILOT:
+            media=json.loads((BASE/'data/enhanced_interactions.json').read_text(encoding='utf-8'))
+            for name in media['resource_files']:
+                files['content/resources/'+name]=(BASE/'assets'/name).read_bytes()
         files['content/resources/lcm-exe.css']=(BASE/'exelearning/lcm-exe.css').read_bytes()
         files['content/resources/lcm-pacing.js']=(BASE/'exelearning/lcm-pacing.js').read_bytes()
         filename=f"{cid}_{course['original_title'].replace(' ','_')}.elpx"

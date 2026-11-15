@@ -87,5 +87,244 @@
       0,
       254
     ]
+  },
+  {
+    "file": "assets/cards/ITE-shared.webp",
+    "master": "assets/cards/ITE-shared.png",
+    "generated_on": "2026-11-15",
+    "tool": "Codex built-in image_gen",
+    "purpose": "Satu nomor lintas unit",
+    "prompt_subject": "Satu nomor lintas unit",
+    "style": "Tactile isometric editorial miniature; ivory, petrol teal, sage, brass. No text or logo.",
+    "source": "C:\\Users\\Pusdiklat\\.codex\\generated_images\\01a1d3e7-9c8c-78e1-8d22-fc134ee308e0\\exec-9ba67b42-0246-4eeb-8e73-4db7101382a2.png",
+    "prompt": "One premium 3D editorial miniature illustration for an Indonesian IT Enterprise e-learning draggable card. Isometric slight front view, tactile matte ivory paper, dark petrol teal, muted sage and restrained brass accents, soft studio lighting, coherent isolated object centered, generous padding. Clear silhouette readable at 100px. No text, no letters, no numbers, no people, no watermark. Truly transparent background. Subject: a single document identification token carried unchanged through three connected small departmental trays, connected with a thin continuous teal path. The document has the exact same simple gold circular seal in all trays, showing a shared identifier across units.",
+    "model": "Identifier not exposed",
+    "date": "2026-11-15",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "distribution_dimensions": [
+      1200,
+      400
+    ],
+    "transparent_background_verified": true
+  },
+  {
+    "file": "assets/cards/ITE-duplicate.webp",
+    "master": "assets/cards/ITE-duplicate.png",
+    "generated_on": "2026-11-15",
+    "tool": "Codex built-in image_gen",
+    "purpose": "Nomor berbeda",
+    "prompt_subject": "Nomor berbeda",
+    "style": "Tactile isometric editorial miniature; ivory, petrol teal, sage, brass. No text or logo.",
+    "source": "C:\\Users\\Pusdiklat\\.codex\\generated_images\\01a1d3e7-9c8c-78e1-8d22-fc134ee308e0\\exec-c4447ead-504b-4794-aa5b-6e2a9b628cb0.png",
+    "prompt": "One premium 3D editorial miniature illustration for an Indonesian IT Enterprise e-learning draggable card. Isometric slight front view, tactile matte ivory paper, dark petrol teal, muted sage and restrained brass accents, soft studio lighting, coherent isolated object centered, generous padding. Clear silhouette readable at 100px. No text, no letters, no numbers, no people, no watermark. Truly transparent background. Subject: two matching request documents side by side, each stamped with a DIFFERENT geometric seal (one circle, one triangle), confused crossing routing strings between them; clearly two inconsistent identifiers for the same request.",
+    "model": "Identifier not exposed",
+    "date": "2026-11-15",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "distribution_dimensions": [
+      1200,
+      800
+    ],
+    "transparent_background_verified": true
+  },
+  {
+    "file": "assets/cards/ITE-access.webp",
+    "master": "assets/cards/ITE-access.png",
+    "generated_on": "2026-11-15",
+    "tool": "Codex built-in image_gen",
+    "purpose": "Hak akses sesuai peran",
+    "prompt_subject": "Hak akses sesuai peran",
+    "style": "Tactile isometric editorial miniature; ivory, petrol teal, sage, brass. No text or logo.",
+    "source": "C:\\Users\\Pusdiklat\\.codex\\generated_images\\01a1d3e7-9c8c-78e1-8d22-fc134ee308e0\\exec-b8a1bd19-db74-4e29-b8f8-aeb85e2f8cfc.png",
+    "prompt": "One premium 3D editorial miniature illustration for an Indonesian IT Enterprise e-learning draggable card. Isometric slight front view, tactile matte ivory paper, dark petrol teal, muted sage and restrained brass accents, soft studio lighting, coherent isolated object centered, generous padding. Clear silhouette readable at 100px. No text, no letters, no numbers, no people, no watermark. Truly transparent background. Subject: a dark teal security shield and brass key beside three small profile tokens, with only one profile connected to its own private document folder, representing access according to role.",
+    "model": "Identifier not exposed",
+    "date": "2026-11-15",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "distribution_dimensions": [
+      1200,
+      800
+    ],
+    "transparent_background_verified": true
+  },
+  {
+    "file": "assets/cards/ITE-manual.webp",
+    "master": "assets/cards/ITE-manual.png",
+    "generated_on": "2026-11-15",
+    "tool": "Codex built-in image_gen",
+    "purpose": "Pencocokan lewat telepon",
+    "prompt_subject": "Pencocokan lewat telepon",
+    "style": "Tactile isometric editorial miniature; ivory, petrol teal, sage, brass. No text or logo.",
+    "source": "C:\\Users\\Pusdiklat\\.codex\\generated_images\\01a1d3e7-9c8c-78e1-8d22-fc134ee308e0\\exec-02e59dbb-198a-4f4a-be23-08c152d4ba88.png",
+    "prompt": "One premium 3D editorial miniature illustration for an Indonesian IT Enterprise e-learning draggable card. Isometric slight front view, tactile matte ivory paper, dark petrol teal, muted sage and restrained brass accents, soft studio lighting, coherent isolated object centered, generous padding. Clear silhouette readable at 100px. No text, no letters, no numbers, no people, no watermark. Truly transparent background. Subject: a classic dark teal desk telephone handset resting beside two paper request folders connected by a loose coiled phone cord, representing manually calling another unit to match a file.",
+    "model": "Identifier not exposed",
+    "date": "2026-11-15",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "distribution_dimensions": [
+      1200,
+      800
+    ],
+    "transparent_background_verified": true
+  },
+  {
+    "file": "assets/cards/ITE-log.webp",
+    "master": "assets/cards/ITE-log.png",
+    "generated_on": "2026-11-15",
+    "tool": "Codex built-in image_gen",
+    "purpose": "Riwayat perpindahan",
+    "prompt_subject": "Riwayat perpindahan",
+    "style": "Tactile isometric editorial miniature; ivory, petrol teal, sage, brass. No text or logo.",
+    "source": "C:\\Users\\Pusdiklat\\.codex\\generated_images\\01a1d3e7-9c8c-78e1-8d22-fc134ee308e0\\exec-d82c5f60-b0d3-4e14-bf9f-570675c022fb.png",
+    "prompt": "One premium 3D editorial miniature illustration for an Indonesian IT Enterprise e-learning draggable card. Isometric slight front view, tactile matte ivory paper, dark petrol teal, muted sage and restrained brass accents, soft studio lighting, coherent isolated object centered, generous padding. Clear silhouette readable at 100px. No text, no letters, no numbers, no people, no watermark. Truly transparent background. Subject: a short chronological chain of three document transfer receipts connected by a clean curved teal line, tiny clock and brass check stamps, representing a visible record of document handovers.",
+    "model": "Identifier not exposed",
+    "date": "2026-11-15",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "distribution_dimensions": [
+      1200,
+      400
+    ],
+    "transparent_background_verified": true
+  },
+  {
+    "file": "assets/cards/ITE-review.webp",
+    "master": "assets/cards/ITE-review.png",
+    "generated_on": "2026-11-15",
+    "tool": "Codex built-in image_gen",
+    "purpose": "Bandingkan waktu penyelesaian",
+    "prompt_subject": "Bandingkan waktu penyelesaian",
+    "style": "Tactile isometric editorial miniature; ivory, petrol teal, sage, brass. No text or logo.",
+    "source": "C:\\Users\\Pusdiklat\\.codex\\generated_images\\01a1d3e7-9c8c-78e1-8d22-fc134ee308e0\\exec-00e927c0-4385-471f-96f8-09263122accc.png",
+    "prompt": "One premium 3D editorial miniature illustration for an Indonesian IT Enterprise e-learning draggable card. Isometric slight front view, tactile matte ivory paper, dark petrol teal, muted sage and restrained brass accents, soft studio lighting, coherent isolated object centered, generous padding. Clear silhouette readable at 100px. No text, no letters, no numbers, no people, no watermark. Truly transparent background. Subject: two small analog stopwatches beside a neatly stacked pair of paper service requests, one with long teal clock hand and one with short brass clock hand, connected by a comparison arrow; measuring service turnaround before and after a pilot.",
+    "model": "Identifier not exposed",
+    "date": "2026-11-15",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "distribution_dimensions": [
+      1200,
+      800
+    ],
+    "transparent_background_verified": true
+  },
+  {
+    "file": "assets/cards/ITE-rollout.webp",
+    "master": "assets/cards/ITE-rollout.png",
+    "generated_on": "2026-11-15",
+    "tool": "Codex built-in image_gen",
+    "purpose": "Perluas ke semua unit sekarang",
+    "prompt_subject": "Perluas ke semua unit sekarang",
+    "style": "Tactile isometric editorial miniature; ivory, petrol teal, sage, brass. No text or logo.",
+    "source": "C:\\Users\\Pusdiklat\\.codex\\generated_images\\01a1d3e7-9c8c-78e1-8d22-fc134ee308e0\\exec-518452ef-e5f5-470f-beb5-8be1a0e27ff7.png",
+    "prompt": "One premium 3D editorial miniature illustration for an Indonesian IT Enterprise e-learning draggable card. Isometric slight front view, tactile matte ivory paper, dark petrol teal, muted sage and restrained brass accents, soft studio lighting, coherent isolated object centered, generous padding. Clear silhouette readable at 100px. No text, no letters, no numbers, no people, no watermark. Truly transparent background. Subject: a central teal application cube rapidly connected to six small department buildings all at once, a small amber warning triangle in front; premature large-scale rollout before testing.",
+    "model": "Identifier not exposed",
+    "date": "2026-11-15",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "distribution_dimensions": [
+      1200,
+      800
+    ],
+    "transparent_background_verified": true
+  },
+  {
+    "file": "assets/cards/ITE-agree.webp",
+    "master": "assets/cards/ITE-agree.png",
+    "generated_on": "2026-11-15",
+    "tool": "Codex built-in image_gen",
+    "purpose": "Sepakati aturan nomor dan akses",
+    "prompt_subject": "Sepakati aturan nomor dan akses",
+    "style": "Tactile isometric editorial miniature; ivory, petrol teal, sage, brass. No text or logo.",
+    "source": "C:\\Users\\Pusdiklat\\.codex\\generated_images\\01a1d3e7-9c8c-78e1-8d22-fc134ee308e0\\exec-a1593660-f5d7-4846-9e0b-a344f3c29685.png",
+    "prompt": "One premium 3D editorial miniature illustration for an Indonesian IT Enterprise e-learning draggable card. Isometric slight front view, tactile matte ivory paper, dark petrol teal, muted sage and restrained brass accents, soft studio lighting, coherent isolated object centered, generous padding. Clear silhouette readable at 100px. No text, no letters, no numbers, no people, no watermark. Truly transparent background. Subject: a formal ivory policy document with a brass approval seal, a small shared identity token and a small key placed neatly together on a teal document clipboard; agreeing identifier and access rules before a test.",
+    "model": "Identifier not exposed",
+    "date": "2026-11-15",
+    "dimensions": [
+      1448,
+      1086
+    ],
+    "distribution_dimensions": [
+      1200,
+      900
+    ],
+    "transparent_background_verified": true
+  },
+  {
+    "file": "assets/cards/ITE-count.webp",
+    "master": "assets/cards/ITE-count.png",
+    "generated_on": "2026-11-15",
+    "tool": "Codex built-in image_gen",
+    "purpose": "Hitung jumlah aplikasi",
+    "prompt_subject": "Hitung jumlah aplikasi",
+    "style": "Tactile isometric editorial miniature; ivory, petrol teal, sage, brass. No text or logo.",
+    "source": "C:\\Users\\Pusdiklat\\.codex\\generated_images\\01a1d3e7-9c8c-78e1-8d22-fc134ee308e0\\exec-405781f5-bfca-4c9c-bf74-ba4374187042.png",
+    "prompt": "One premium 3D editorial miniature illustration for an Indonesian IT Enterprise e-learning draggable card. Isometric slight front view, tactile matte ivory paper, dark petrol teal, muted sage and restrained brass accents, soft studio lighting, coherent isolated object centered, generous padding. Clear silhouette readable at 100px. No text, no letters, no numbers, no people, no watermark. Truly transparent background. Subject: a neat group of four small teal application windows on an ivory display stand, with a brass abacus bead rail; counting apps rather than measuring service time, no warning symbols.",
+    "model": "Identifier not exposed",
+    "date": "2026-11-15",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "distribution_dimensions": [
+      1200,
+      800
+    ],
+    "transparent_background_verified": true
+  },
+  {
+    "file": "assets/cards/ITE-test.webp",
+    "master": "assets/cards/ITE-test.png",
+    "generated_on": "2026-11-15",
+    "tool": "Codex built-in image_gen",
+    "purpose": "Uji pertukaran pada dua unit",
+    "prompt_subject": "Uji pertukaran pada dua unit",
+    "style": "Tactile isometric editorial miniature; ivory, petrol teal, sage, brass. No text or logo.",
+    "source": "C:\\Users\\Pusdiklat\\.codex\\generated_images\\01a1d3e7-9c8c-78e1-8d22-fc134ee308e0\\exec-f2bc1946-f5e2-4175-b5a8-9a7800e4f45e.png",
+    "prompt": "One premium 3D editorial miniature illustration for an Indonesian IT Enterprise e-learning draggable card. Isometric slight front view, tactile matte ivory paper, dark petrol teal, muted sage and restrained brass accents, soft studio lighting, coherent isolated object centered, generous padding. Clear silhouette readable at 100px. No text, no letters, no numbers, no people, no watermark. Truly transparent background. Subject: two small departmental computers connected by a short teal data cable, the same ivory request card visible on both displays and a brass verification tick between them; limited two-unit integration test.",
+    "model": "Identifier not exposed",
+    "date": "2026-11-15",
+    "dimensions": [
+      1774,
+      887
+    ],
+    "distribution_dimensions": [
+      1200,
+      600
+    ],
+    "transparent_background_verified": true
+  },
+  {
+    "file": "assets/scenes/ITE-hotspot.webp",
+    "master": "assets/scenes/ITE-hotspot.png",
+    "generated_on": "2026-11-15",
+    "tool": "Codex built-in image_gen",
+    "purpose": "Four-object IT Enterprise image hotspot",
+    "prompt_subject": "Shared request identifier; role-based access; handover journal; decorative plant and mug",
+    "style": "Tactile isometric editorial miniature; ivory, petrol teal, sage, brass. No text or logo.",
+    "source": "C:\\Users\\Pusdiklat\\.codex\\generated_images\\01a1d3e7-9c8c-78e1-8d22-fc134ee308e0\\exec-655c2c2f-1ce8-4fbd-8e88-9ccc77e1a012.png",
+    "prompt": "A polished wide 16:9 editorial 3D tabletop illustration for an IT Enterprise learning image-hotspot. Four clearly separated objects arranged in a tidy two by two composition, no overlaps, enough space for clickable rectangles. TOP LEFT quadrant: a single paper request token connected by teal path through two small department trays, same gold seal. TOP RIGHT quadrant: a dark teal security shield and key beside profile tokens and a private folder. BOTTOM LEFT quadrant: an open ivory chronological handover journal with small clock and routed document receipts. BOTTOM RIGHT quadrant: an attractive potted plant and ceramic coffee mug, an irrelevant decorative object. Composition bounds for each grouping approximately x=8-44% or 56-92%, y=8-43% or 55-91%. Camera overhead at gentle oblique angle. Matte ivory, dark petrol teal, muted sage, subtle brass accent materials, soft natural afternoon light, calm ivory tabletop background. Premium tactile crafted miniature aesthetic matching BPS IT Enterprise learning illustrations. No text, letters, numbers, arrows, interface elements, watermark, people or logos. Objects large and clearly recognizable. Landscape.",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "distribution_dimensions": [
+      1200,
+      675
+    ]
   }
 ]

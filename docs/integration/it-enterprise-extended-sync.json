@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "date": "2026-11-16",
+  "canonical_files": 241,
+  "copied_to": "D:\\Pusdiklat\\Falana\\LCM\\exelearning\\it-enterprise",
+  "source_and_target_bytes_identical": true,
+  "preview_matches_native_export": true,
+  "backup": "D:\\Pusdiklat\\Falana\\LCM\\docs\\audits\\it-enterprise-template-2026-11-16\\before-extended-sync-011119.zip",
+  "package_sha256": "3d7ef862b101c98a1d998bae21b420967ce8705d5e883e643f29b89c2e69cfb6"
+}

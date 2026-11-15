@@ -16,28 +16,31 @@
             "id": "shared",
             "label": "Satu nomor lintas unit",
             "detail": "Nomor yang sama akan dibawa sampai pengiriman tabel.",
-            "image": "scenes/ITE-blueprint.webp"
+            "image": "cards/ITE-shared.webp"
           },
           {
             "id": "duplicate",
             "label": "Nomor berbeda",
-            "detail": "Petugas melihat dua nomor untuk satu permintaan."
+            "detail": "Petugas melihat dua nomor untuk satu permintaan.",
+            "image": "cards/ITE-duplicate.webp"
           },
           {
             "id": "access",
             "label": "Hak akses sesuai peran",
-            "detail": "Pemohon akan melihat status miliknya sendiri."
+            "detail": "Pemohon akan melihat status miliknya sendiri.",
+            "image": "cards/ITE-access.webp"
           },
           {
             "id": "manual",
             "label": "Pencocokan lewat telepon",
             "detail": "Saat ini petugas harus menelepon unit lain untuk menemukan berkas.",
-            "image": "scenes/ITE-operations.webp"
+            "image": "cards/ITE-manual.webp"
           },
           {
             "id": "log",
             "label": "Riwayat perpindahan",
-            "detail": "Targetnya petugas dapat melihat kapan berkas berpindah unit."
+            "detail": "Targetnya petugas dapat melihat kapan berkas berpindah unit.",
+            "image": "cards/ITE-log.webp"
           }
         ],
         "zones": [
@@ -64,49 +67,54 @@
         "kind": "sequence",
         "title": "Susun rencana uji sebelum memperluas layanan",
         "intro": "Rencana harus berangkat dari aturan nomor dan akses, diteruskan dengan uji pada dua unit, lalu dinilai berdasarkan catatan waktu. Sisakan dua kartu yang tidak mendukung urutan ini.",
-        "instruction": "Letakkan tiga tindakan pada urutan 1–3. Biarkan dua pilihan lain di tempat asal.",
+        "instruction": "Letakkan tiga tindakan pada urutan 1â€“3. Biarkan dua pilihan lain di tempat asal.",
         "feedback": "Uji pertukaran memerlukan aturan yang sudah disepakati. Uji dilakukan sebelum tim bisa menilai manfaatnya.",
         "items": [
           {
             "id": "review",
             "label": "Bandingkan waktu penyelesaian",
-            "detail": "Tinjau data sebelum dan sesudah uji coba."
+            "detail": "Tinjau data sebelum dan sesudah uji coba.",
+            "image": "cards/ITE-review.webp"
           },
           {
             "id": "rollout",
             "label": "Perluas ke semua unit sekarang",
-            "detail": "Terapkan sebelum aturan dan pertukaran diperiksa."
+            "detail": "Terapkan sebelum aturan dan pertukaran diperiksa.",
+            "image": "cards/ITE-rollout.webp"
           },
           {
             "id": "agree",
             "label": "Sepakati aturan nomor dan akses",
-            "detail": "Libatkan pemilik layanan dan pengelola data."
+            "detail": "Libatkan pemilik layanan dan pengelola data.",
+            "image": "cards/ITE-agree.webp"
           },
           {
             "id": "count",
             "label": "Hitung jumlah aplikasi",
-            "detail": "Gunakan jumlah aplikasi sebagai ukuran kecepatan layanan."
+            "detail": "Gunakan jumlah aplikasi sebagai ukuran kecepatan layanan.",
+            "image": "cards/ITE-count.webp"
           },
           {
             "id": "test",
             "label": "Uji pertukaran pada dua unit",
-            "detail": "Cocokkan nomor dan periksa siapa yang dapat melihat status."
+            "detail": "Cocokkan nomor dan periksa siapa yang dapat melihat status.",
+            "image": "cards/ITE-test.webp"
           }
         ],
         "zones": [
           {
             "id": "first",
-            "label": "1 · Siapkan aturan",
+            "label": "1 Â· Siapkan aturan",
             "hint": "Syarat sebelum menguji"
           },
           {
             "id": "second",
-            "label": "2 · Jalankan uji coba",
+            "label": "2 Â· Jalankan uji coba",
             "hint": "Batasi pada dua unit"
           },
           {
             "id": "third",
-            "label": "3 · Tinjau hasil",
+            "label": "3 Â· Tinjau hasil",
             "hint": "Gunakan sasaran layanan"
           }
         ],

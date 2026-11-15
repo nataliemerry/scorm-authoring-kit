@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-16",
+  "video": {
+    "file": "assets/video/ITE-service-plan.mp4",
+    "sha256": "4dd97b6739794b88a7ddc3eb60f980f6786b45614756e0e3ba7b6ffd98afd4cc",
+    "bytes": 919140,
+    "duration_seconds": 48,
+    "audio": false,
+    "method": "Local FFmpeg visual lesson, four generated-art scenes, BPS local fonts",
+    "generator": "scripts/build_learning_video.py",
+    "script": "data/enhanced_interactions.json:video_scenes",
+    "transcript": "Baca isi video in the course"
+  },
+  "new_generated_raster_assets": 11,
+  "case_card_illustrations": 10,
+  "source_tool": "Codex built-in image_gen; model identifier not exposed",
+  "reused_original_logo": true
+}

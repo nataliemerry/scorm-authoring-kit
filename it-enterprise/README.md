@@ -13,9 +13,9 @@ Kursus mikro untuk Pranata Komputer kategori keahlian dan pengelola layanan digi
 
 ## Alur
 
-Sampul, tiga bagian teori dengan sumber dan contoh, cek pemahaman, dua situasi dengan konsekuensi, Find the Words dengan arah kiri ke kanan atau atas ke bawah dan petunjuk huruf awal per soal, Drag the Words, Sort the Paragraphs, kasus drag-and-drop dua tahap, dua soal Form native, pembahasan, dan hasil. Ketiga latihan kata/paragraf opsional. Kasus harus selesai sebelum kuis. Timer dua menit bersifat opsional dan tidak mengirim kuis secara otomatis.
+Sampul, tiga bagian teori dengan sumber dan contoh, cek pemahaman, video visual interaktif 48 detik dengan empat pertanyaan, dua situasi dengan konsekuensi, Find the Words dengan arah kiri ke kanan atau atas ke bawah dan petunjuk huruf awal per soal, Drag the Words, Sort the Paragraphs, image hotspot tiga komponen, question set tiga pertanyaan latihan, kasus drag-and-drop dua tahap, dua soal Form native, pembahasan, dan hasil. Ketiga latihan kata/paragraf opsional. Kasus harus selesai sebelum kuis. Timer dua menit bersifat opsional dan tidak mengirim kuis secara otomatis.
 
-Keempat ilustrasi baru dibuat melalui ImageGen dan dipaketkan secara lokal. Logo asli BPS CorpU serta font Bricolage Grotesque dan Source Sans 3 mengikuti kit.
+Empat ilustrasi awal dipertahankan. Sebelas aset tambahan dibuat melalui image_gen: sepuluh kartu kasus dan satu gambar hotspot. Seluruhnya dipaketkan secara lokal bersama master PNG dan WebP. Logo asli BPS CorpU serta font Bricolage Grotesque dan Source Sans 3 mengikuti kit.
 
 ## Ekspor dan pemeliharaan
 
@@ -27,4 +27,12 @@ Pengujian nilai menggunakan LMS tiruan. Dua soal terjawab mencatat skor 0, 50, a
 
 ## Kesesuaian template terbaru
 
-Diperiksa ulang pada 15 November 2026 terhadap **LCM-2026-11-15-unified**. CSS, logo, font lokal, tiga permainan, kompatibilitas Form dan review mengikuti baseline terbaru; materi, ilustrasi, kasus dan kunci tetap khusus IT Enterprise. Pengujian aktual desktop/mobile, mouse/sentuh/keyboard, timer, incomplete dan skor 0/50/100 lulus. Bukti: [template-alignment-report.json](exelearning/pilot/qa/template-alignment-report.json). Salinan pada folder kerja lama juga diselaraskan dengan proyek repo ini.
+Diperiksa ulang pada 16 November 2026 terhadap **LCM-2026-11-15-unified**. CSS, logo, font lokal, tiga permainan, kompatibilitas Form dan review mengikuti baseline terbaru; materi, ilustrasi, kasus dan kunci tetap khusus IT Enterprise. Pengujian aktual desktop/mobile, mouse/sentuh/keyboard, timer, incomplete dan skor 0/50/100 lulus. Bukti: [template-alignment-report.json](exelearning/pilot/qa/template-alignment-report.json). Salinan pada folder kerja lama juga diselaraskan dengan proyek repo ini.
+
+## Interaksi tambahan IT Enterprise
+
+Video, image hotspot dan question set diadaptasi dari profil Pengelolaan Data dengan materi serta gambar khusus IT Enterprise. Video merupakan pelajaran visual empat adegan tanpa narasi audio; isi lengkap tersedia melalui tombol **Baca isi video**. MP4, poster dan semua gambar dibundel offline. Video mempunyai empat penanda pertanyaan dan harus diselesaikan sebelum situasi. Hotspot dan latihan konsep hadir setelah Sort the Paragraphs dan sebelum kasus.
+
+Question set merupakan latihan tanpa nilai akhir (`scored: false` pada fork lokal `enhanced-interactions.js`); tidak mendaftarkan aktivitas bernilai atau menulis skor LMS. Dua soal Form native tetap menjadi satu-satunya sumber nilai akhir. Skor lokal latihan hanya dipakai untuk umpan balik dan tidak ditampilkan sebagai nilai LMS.
+
+Sumber pengaturan: `data/enhanced_interactions.json`; alur tambahan: `ite-enhanced-flow.js`; generator video: `scripts/build_learning_video.py`. Aset tidak mengambil isi video Pengelolaan Data. Kartu dan hotspot baru dihasilkan melalui built-in image_gen. Prompt dan asal aset ada pada `asset-prompts.json`; tidak ada logo pengganti yang digenerate.

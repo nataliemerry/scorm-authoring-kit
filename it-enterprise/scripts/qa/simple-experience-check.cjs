@@ -4,7 +4,7 @@ const fs=require('fs'),path=require('path'),http=require('http'),assert=require(
 const root=path.resolve(__dirname,'../../exelearning/pilot',process.argv.includes('--dev')?'dev-preview':'preview');
 const out=path.resolve(__dirname,'../../exelearning/pilot/qa');fs.mkdirSync(out,{recursive:true});
 const narrative=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../data/course_experiences.humanized.humanized.json'),'utf8'));
-const server=http.createServer((req,res)=>{const file=path.resolve(root,'.'+decodeURIComponent(req.url.split('?')[0]));if(!file.startsWith(root+path.sep)){res.writeHead(403).end();return;}fs.readFile(file,(err,b)=>{if(err){res.writeHead(404).end();return;}res.setHeader('Content-Type',({'.html':'text/html; charset=utf-8','.js':'application/javascript','.css':'text/css','.webp':'image/webp','.svg':'image/svg+xml','.png':'image/png'})[path.extname(file)]||'application/octet-stream');res.end(b);});});
+const server=require('./local-server.cjs')(root);
 let browser;const report={checks:[],screenshots:[]};
 function mock(){window.lms={values:{'cmi.core.lesson_status':'not attempted'},calls:[]};window.API={LMSInitialize:()=> 'true',LMSGetValue:k=>window.lms.values[k]||(k.endsWith('_count')?'0':''),LMSSetValue:(k,v)=>{window.lms.values[k]=v;window.lms.calls.push([k,v]);return 'true';},LMSCommit:()=> 'true',LMSFinish:()=> 'true',LMSGetLastError:()=> '0',LMSGetErrorString:()=>'',LMSGetDiagnostic:()=>''};}
 async function shot(p,n){
@@ -23,6 +23,54 @@ async function shot(p,n){
  assert.deepEqual(small,[],n+': text below 14px');
  await p.screenshot({path:path.join(out,n),animations:'disabled'});if(!report.screenshots.includes(n))report.screenshots.push(n);
 }
+async function videoActivity(p,cid,shots){
+ assert(await p.locator('.iv-root').isVisible());assert.equal(await p.locator('.sim-root').isVisible(),false);
+ const before=await p.evaluate(()=>window.lms?.values?.['cmi.core.score.raw']||null);
+ await p.waitForFunction(()=>document.querySelector('.iv-video').duration>=47);
+ assert.equal(await p.locator('.iv-marker').count(),4);
+ await p.locator('.iv-play').click();await p.waitForFunction(()=>document.querySelector('.iv-video').currentTime>0.05);
+ await p.locator('.iv-play').click();
+ await p.locator('.iv-timeline').press('Home');await p.locator('.iv-timeline').press('ArrowRight');
+ assert(await p.locator('.iv-video').evaluate(e=>e.currentTime>=4));
+ assert.equal(await p.locator('.iv-mute').isVisible(),false);
+ const cfg=await p.locator('.iv-config').evaluate(e=>JSON.parse(e.textContent));
+ if(shots)await shot(p,'ITE-interactive-video.png');
+ for(let i=0;i<4;i++){
+  await p.locator('[data-iv-marker="'+i+'"]').click();assert(await p.locator('.iv-question').isVisible());
+  await p.locator('input[name="iv-answer"]').nth(i===0?(cfg.interactions[i].correct+1)%3:cfg.interactions[i].correct).check();
+  await p.locator('.iv-check').click();assert((await p.locator('.iv-feedback').innerText()).includes(i===0?'belum tepat':'tepat'));
+  if(i===1)await shot(p,shots?'ITE-video-question.png':'ITE-video-question-mobile.png');
+  await p.locator('.iv-resume').click();
+ }
+ await p.locator('.iv-finish').click();assert(await p.locator('.sim-root').isVisible());
+ assert(await p.locator('.iv-video').evaluate(e=>e.paused));
+ assert.equal(await p.evaluate(()=>window.lms?.values?.['cmi.core.score.raw']||null),before);
+}
+async function newActivities(p,cid,shots){
+ const before=await p.evaluate(()=>window.lms?.values?.['cmi.core.score.raw']||null);
+ assert(await p.locator('.hotspot-root').isVisible());assert(await p.locator('[data-ite-next="checkpoint"]').isDisabled());
+ await p.locator('.hotspot-list [data-hotspot="decoration"]').press('Enter');assert.equal(await p.locator('.hotspot-root').getAttribute('data-complete'),'false');
+ const region=p.locator('.hotspot-marker[data-hotspot="identifier"]');if(await p.evaluate(()=>matchMedia('(pointer:coarse)').matches))await region.tap();else await region.click();await p.locator('.hotspot-retry').click();
+ assert((await p.locator('.hotspot-progress').innerText()).includes('0 dari 3'));
+ for(const id of ['identifier','access','history'])await p.locator('.hotspot-list [data-hotspot="'+id+'"]').press('Enter');
+ assert.equal(await p.locator('.hotspot-root').getAttribute('data-complete'),'true');
+ await shot(p,shots?'ITE-hotspot.png':'ITE-hotspot-mobile.png');await p.locator('[data-ite-next="checkpoint"]').click();
+ assert(await p.locator('.quiz-set-root').isVisible());assert(await p.locator('[data-ite-next="case"]').isDisabled());
+ await p.locator('.quiz-next').click();await p.locator('.quiz-next').click();await p.locator('.quiz-next').click();
+ assert((await p.locator('.quiz-alert').innerText()).includes('Jawab seluruh'));
+ await p.locator('.quiz-prev').click();await p.locator('.quiz-prev').click();
+ const cfg=await p.locator('.quiz-set-config').evaluate(e=>JSON.parse(e.textContent));
+ for(let i=0;i<cfg.questions.length;i++){await p.locator('.quiz-card input').nth(i===0?(cfg.questions[i].correct+1)%3:cfg.questions[i].correct).check();await p.locator('.quiz-next').click();}
+ assert.equal(await p.locator('.quiz-set-root').getAttribute('data-complete'),'true');
+ assert.equal(await p.locator('.quiz-set-root').getAttribute('data-scorm-saved'),'false');
+ await shot(p,shots?'ITE-question-set.png':'ITE-question-set-mobile.png');
+ await p.locator('.quiz-retry').click();assert(await p.locator('[data-ite-next="case"]').isDisabled());
+ for(let i=0;i<cfg.questions.length;i++){await p.locator('.quiz-card input').nth(cfg.questions[i].correct).check();await p.locator('.quiz-next').click();}
+ assert.equal(await p.evaluate(()=>window.lms?.values?.['cmi.core.score.raw']||null),before);
+ assert.equal(await p.locator('.quiz-set-root').getAttribute('data-score'),'100');
+ await p.locator('[data-ite-next="case"]').click();
+}
+
 async function answer(p,cid,index,correct=true){const key=narrative[cid].quizzes[index].answer_key;const option=correct?'ABC'.indexOf(key):('ABC'.indexOf(key)+1)%3;await p.locator(`.FRMP-SlideshowSlide[data-slide="${index}"] input[type=radio]`).nth(option).check();}
 
 async function place(p,id,zone,drag=false){
@@ -34,10 +82,14 @@ async function place(p,id,zone,drag=false){
 async function check(p){await p.locator('[data-dnd-action=check]').click();}
 async function complete(p,cid){
  const {steps}=await p.locator('.dnd-config').evaluate(e=>JSON.parse(e.textContent));
+ for(const step of steps)assert(step.items.every(item=>item.image?.startsWith('cards/ITE-')));
+ assert.equal(await p.locator('.dnd-card').count(),await p.locator('.dnd-card img').count());
+ assert(await p.locator('.dnd-card img').evaluateAll(es=>es.every(e=>e.complete&&e.naturalWidth>0)));
  for(const [id,zone] of Object.entries(steps[0].solution)) await place(p,id,zone,id==='shared');
  await check(p);
  assert.equal(await p.locator('.dnd-status.is-error').count(),0);
  await check(p);
+ await p.waitForFunction(()=>[...document.querySelectorAll('.dnd-card img')].every(e=>e.complete&&e.naturalWidth>0));assert.equal(await p.locator('.dnd-card').count(),await p.locator('.dnd-card img').count());
  await place(p,'rollout','first');
  await place(p,'test','second');
  await place(p,'review','third');
@@ -58,7 +110,7 @@ async function sourceCheck(p){
 async function learn(p,cid,timed=false,shots=true){
  assert.equal(await p.locator('.sim-root').isVisible(),false);await p.locator('.lesson-open').click();
  for(let i=0;i<2;i++){await sourceCheck(p);await p.locator('[data-simple-example]').click();assert((await p.locator('#lesson-example').innerText()).includes('Contoh simulasi'));assert.equal(await p.locator('[data-simple-example]').getAttribute('aria-expanded'),'true');assert(await p.locator('#lesson-example').isVisible());if(shots)await shot(p,cid+'-simple-material-'+(i+1)+'.png');await p.locator('[data-lesson-action=next]').click();}
- await sourceCheck(p);await p.locator('.simple-check-button').click();assert((await p.locator('.simple-check-feedback').innerText()).includes('Pilih satu'));await p.locator('input[name=lesson-answer][value="0"]').check();await p.locator('.simple-check-button').click();assert(await p.locator('.scene-free').isDisabled());await p.locator('input[name=lesson-answer][value="2"]').check();await p.locator('.simple-check-button').click();assert(await p.locator('.scene-free').isEnabled());if(timed)await p.locator('#simple-timer').check();await p.locator('.scene-free').click();assert.equal(await p.getAttribute('body','data-scene-phase'),'1');assert.equal(await p.locator('.lesson-root').getAttribute('data-complete'),'true');
+ await sourceCheck(p);await p.locator('.simple-check-button').click();assert((await p.locator('.simple-check-feedback').innerText()).includes('Pilih satu'));await p.locator('input[name=lesson-answer][value="0"]').check();await p.locator('.simple-check-button').click();assert(await p.locator('.scene-free').isDisabled());await p.locator('input[name=lesson-answer][value="2"]').check();await p.locator('.simple-check-button').click();assert(await p.locator('.scene-free').isEnabled());if(timed)await p.locator('#simple-timer').check();await p.locator('.scene-free').click();await videoActivity(p,cid,shots);assert.equal(await p.getAttribute('body','data-scene-phase'),'1');assert.equal(await p.locator('.lesson-root').getAttribute('data-complete'),'true');
 }
 async function sortParagraphs(p,cid,shots){
  assert(await p.locator('.sp-root').isVisible());assert.equal(await p.locator('.dnd-challenge').isVisible(),false);
@@ -76,7 +128,7 @@ async function sortParagraphs(p,cid,shots){
  await p.locator('[data-sp-action=check]').click();assert.equal(await p.locator('.sp-root').getAttribute('data-correct'),'4');assert.equal(await p.locator('.sp-root').getAttribute('data-connections'),'3');assert.equal(await p.locator('.sp-root').getAttribute('data-complete'),'true');await shot(p,cid+(shots?'-sort-paragraphs.png':'-sort-paragraphs-mobile.png'));
  await p.locator('[data-sp-action=retry]').click();assert.deepEqual(await list(),cfg.initial_order);assert.equal(await p.locator('.sp-root').getAttribute('data-complete'),'false');await p.locator('[data-sp-action=solution]').click();assert.deepEqual(await list(),cfg.correct_order);assert.equal(await p.locator('.sp-root').getAttribute('data-assisted'),'true');await p.locator('[data-sp-action=check]').click();assert.equal(await p.locator('.sp-root').getAttribute('data-complete'),'false');
  await p.locator('[data-sp-action=undo]').click();assert.deepEqual(await list(),cfg.initial_order);assert.equal(await p.locator('.sp-root').getAttribute('data-assisted'),'true');assert.equal(await p.evaluate(()=>window.lms?.values['cmi.core.score.raw']||null),initialScore);
- await p.locator('[data-sp-action=continue]').click();assert(await p.locator('.dnd-challenge').isVisible());
+ await p.locator('[data-sp-action=continue]').click();await newActivities(p,cid,shots);assert(await p.locator('.dnd-challenge').isVisible());
 }
 async function dragWords(p,cid,shots){
  assert(await p.locator('.dt-root').isVisible());assert.equal(await p.locator('.dnd-challenge').isVisible(),false);
@@ -180,5 +232,5 @@ async function lab(p,cid,shots=true){
  }
  const mobileContext=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true});const mobile=await mobileContext.newPage();mobile.on("pageerror",e=>errors.push(e.message));
  for(const cid of ['ITE']){await mobile.goto(base+'/'+cid+'/index.html');await learn(mobile,cid,false,false);await shot(mobile,cid+'-simple-mobile.png');await lab(mobile,cid,false);await shot(mobile,cid+'-challenge-mobile.png');assert(await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));const id='shared',zone='target';const source=mobile.locator(`[data-drag="${id}"]`),target=mobile.locator(`[data-mobile-target="${zone}"]`);await source.scrollIntoViewIfNeeded();const a=await source.boundingBox(),b=await target.boundingBox();const cdp=await mobileContext.newCDPSession(mobile);await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:a.x+a.width/2,y:a.y+a.height/2}]});for(let i=1;i<=18;i++)await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:a.x+a.width/2+(b.x+b.width/2-a.x-a.width/2)*i/18,y:a.y+a.height/2+(b.y+b.height/2-a.y-a.height/2)*i/18}]});await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await mobile.waitForTimeout(450);assert.equal(await mobile.locator(`[data-drag="${id}"]`).evaluate(e=>e.closest('[data-drop]').dataset.drop),zone);await mobile.locator('[data-dnd-action=undo]').click();await mobile.locator(`[data-drag="${id}"]`).tap();await target.tap();assert.equal(await mobile.locator(`[data-drag="${id}"]`).evaluate(e=>e.closest('[data-drop]').dataset.drop),zone);}
- report.checks.push('390px real touch drag plus select-and-place; all photographed text >=14px');assert.deepEqual(errors,[]);report.checks.push('Official transparent BPS CorpU logo loads without header overlap on desktop/mobile; no JavaScript page errors');console.log(JSON.stringify(report,null,2));
+ report.checks.push('390px real touch drag plus select-and-place; all photographed text >=14px');assert.deepEqual(errors,[]);report.checks.push('Four-marker visual video playback and keyboard seek, no audio controls for silent media, hotspot wrong/correct/retry, three-question checkpoint blank/wrong/correct/retry, no final LMS score mutation, and all ten case cards have loaded topic-specific illustrations');report.checks.push('Official transparent BPS CorpU logo loads without header overlap on desktop/mobile; no JavaScript page errors');console.log(JSON.stringify(report,null,2));
 })().catch(e=>{report.failure=e.stack;console.error(e);process.exitCode=1;}).finally(async()=>{fs.writeFileSync(path.join(out,'simple-experience-report.json'),JSON.stringify(report,null,2));if(browser)await browser.close();server.close();});
