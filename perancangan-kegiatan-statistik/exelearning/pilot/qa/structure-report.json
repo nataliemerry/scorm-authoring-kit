@@ -1,32 +1,41 @@
 [
   {
     "course": "C01",
-    "bytes": 1621339,
+    "archive": "C01_Smart_Budgeting_SCORM12.zip",
+    "bytes": 1531098,
+    "sha256": "8083cf185b1c4e69b10d0d0e5f2b9b9d7b6e34dfadfdd01336de8b60b24be15a",
     "sco_count": 1,
     "manifest_files_valid": true,
     "bundled_fonts": 2,
     "generated_images": 4,
     "official_logo": 1,
+    "source_matches_export": true,
     "preview_matches_export": true
   },
   {
     "course": "C12",
-    "bytes": 1405532,
+    "archive": "C12_Cybersecurity_Challenge_SCORM12.zip",
+    "bytes": 1317336,
+    "sha256": "9138eb88156940721470073b0f77f9af57b8a2ae0f6c9d2268f14eda481848e8",
     "sco_count": 1,
     "manifest_files_valid": true,
     "bundled_fonts": 2,
     "generated_images": 4,
     "official_logo": 1,
+    "source_matches_export": true,
     "preview_matches_export": true
   },
   {
     "course": "S01",
-    "bytes": 1652715,
+    "archive": "S01_Persiapan_Penyelenggaraan_Kegiatan_Statistik_SCORM12.zip",
+    "bytes": 1564175,
+    "sha256": "0930c83638283148a332676244abe11193f4135f4f030ec03a56573b8c84a039",
     "sco_count": 1,
     "manifest_files_valid": true,
     "bundled_fonts": 2,
     "generated_images": 4,
     "official_logo": 1,
+    "source_matches_export": true,
     "preview_matches_export": true
   }
 ]

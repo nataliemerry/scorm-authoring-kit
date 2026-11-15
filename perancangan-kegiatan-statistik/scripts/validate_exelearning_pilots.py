@@ -35,7 +35,7 @@ for cid in ('C01','C12','S01'):
         for font in ('bricolage-grotesque','source-sans-3'):
             assert archive.read('theme/fonts/'+font+'.woff2')[:4]==b'wOF2'
             assert 'theme/fonts/'+font+'-OFL.txt' in names
-        assert b'LCM Scenes Sort Paragraphs Forward' in archive.read('theme/config.xml')
+        assert b'LCM Scenes Unified' in archive.read('theme/config.xml')
         assert archive.read('content/resources/branding/bps-corpu-transparent.png')==(BASE/'assets/branding/bps-corpu-transparent.png').read_bytes()
         assert b'data-brand-logo' in archive.read('index.html')
         assert b'scene-brand-logo' in archive.read('theme/style.js')

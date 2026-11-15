@@ -1,0 +1,91 @@
+[
+  {
+    "file": "assets/scenes/ITE.webp",
+    "master": "assets/scenes/ITE.png",
+    "role": "scene",
+    "prompt": "Wide landscape 16:9 immersive full-screen scene, no UI. Contemporary Indonesian public statistics office in Jakarta, Indonesian analysts softly out of focus on the far right, central-right matte walnut worktable with layered ivory architecture plans, a small sage server rack model, muted amber binder. Soft daylight through high windows, subtle tropical vegetation, deep dark petrol teal quiet left third for text. Premium tactile editorial 3D/photoreal blend, adult professional, natural depth and materials. No visible text, glyphs, logos, diagrams with letters, watermark or screens aimed at camera.",
+    "tool": "Codex ImageGen / GPT Images",
+    "model": "Identifier not exposed",
+    "date": "2026-11-14",
+    "references": [],
+    "dimensions": [
+      1672,
+      941
+    ],
+    "distribution_dimensions": [
+      1672,
+      941
+    ],
+    "transparent_requested": false,
+    "alpha_range": null
+  },
+  {
+    "file": "assets/scenes/ITE-blueprint.webp",
+    "master": "assets/scenes/ITE-blueprint.png",
+    "role": "blueprint",
+    "prompt": "Single isolated sculptural architectural blueprint of a government digital service: three distinct slightly offset flat ivory and sage blueprint sheets with simple abstract block geometry etched without glyphs, held by one muted amber architectural scale, matte tactile materials, elevated three-quarter view, premium editorial 3D, petrol teal accents, softly lit, complete coherent silhouette centered with generous margin on true alpha transparent background. No text, numbers, letters, logo, diagram labels or watermark.",
+    "tool": "Codex ImageGen / GPT Images",
+    "model": "Identifier not exposed",
+    "date": "2026-11-14",
+    "references": [],
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "distribution_dimensions": [
+      820,
+      547
+    ],
+    "transparent_requested": true,
+    "alpha_range": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "assets/scenes/ITE-operations.webp",
+    "master": "assets/scenes/ITE-operations.png",
+    "role": "operations",
+    "prompt": "Single isolated sculptural object for government IT operations: compact dark petrol teal server stack with three tidy matte drawers, understated amber indicators, and one slim ivory analog measurement dial mounted in front, needle and simple ticks without numerals. Elevated three-quarter view, gracious margin, premium tactile editorial 3D matching sage, teal, ivory and amber, soft natural warm studio light. True alpha transparent background. No text, letters, numbers, logos or watermark.",
+    "tool": "Codex ImageGen / GPT Images",
+    "model": "Identifier not exposed",
+    "date": "2026-11-14",
+    "references": [],
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "distribution_dimensions": [
+      820,
+      547
+    ],
+    "transparent_requested": true,
+    "alpha_range": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "assets/mission-reward.webp",
+    "master": "assets/mission-reward.png",
+    "role": "reward",
+    "prompt": "Single isolated premium editorial 3D completion collectible for an adult professional IT Enterprise course: a palm-sized matte petrol teal architectural keystone with embossed flowing path ending in a simple checkmark, fine brushed amber rim, and ivory base. Elevated three-quarter view, realistic soft light, tidy silhouette centered and generous transparent margins, real alpha. No ribbons, brand, letters, text, watermark or childish decorations.",
+    "tool": "Codex ImageGen / GPT Images",
+    "model": "Identifier not exposed",
+    "date": "2026-11-14",
+    "references": [],
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "distribution_dimensions": [
+      820,
+      547
+    ],
+    "transparent_requested": true,
+    "alpha_range": [
+      0,
+      254
+    ]
+  }
+]

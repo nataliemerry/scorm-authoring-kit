@@ -1,0 +1,39 @@
+{
+  "checks": [
+    "One unanswered native quiz question blocks submission and keeps incomplete",
+    "ITE raw 100: verified primary-source citations on all three theory pages, simulated examples labeled, study-first prerequisite, example reveal, standard radio check, two-choice consequence, back preserves selection, clue-only word search, answers hidden until found/revealed and hidden again on retry, mouse/keyboard, forward selection and per-item hints, help/retry do not inflate found count, optional continue, Drag the Words mouse/touch/keyboard, empty/wrong/correct checks, replacement/undo/remove/reset, assisted solution never counts as independent, no LMS score changes, Sort the Paragraphs mouse/touch/button/keyboard reordering, Escape/undo restoration, correct positions/transitions, assisted reveal/reset, optional continue, simulation gate, real pointer drag, keyboard placement, undo, prerequisite gate, wrong-plan feedback, all stages complete, native LMS score; review matches participant choice, key and correct status",
+    "Both wrong native answers produce raw 0 and passed under passScore=0 in a fresh attempt",
+    "ITE raw 0: verified primary-source citations on all three theory pages, simulated examples labeled, study-first prerequisite, example reveal, standard radio check, two-choice consequence, back preserves selection, clue-only word search, answers hidden until found/revealed and hidden again on retry, mouse/keyboard, forward selection and per-item hints, help/retry do not inflate found count, optional continue, Drag the Words mouse/touch/keyboard, empty/wrong/correct checks, replacement/undo/remove/reset, assisted solution never counts as independent, no LMS score changes, Sort the Paragraphs mouse/touch/button/keyboard reordering, Escape/undo restoration, correct positions/transitions, assisted reveal/reset, optional continue, simulation gate, real pointer drag, keyboard placement, undo, prerequisite gate, wrong-plan feedback, all stages complete, native LMS score; review matches participant choice, key and correct status",
+    "ITE raw 50: verified primary-source citations on all three theory pages, simulated examples labeled, study-first prerequisite, example reveal, standard radio check, two-choice consequence, back preserves selection, clue-only word search, answers hidden until found/revealed and hidden again on retry, mouse/keyboard, forward selection and per-item hints, help/retry do not inflate found count, optional continue, Drag the Words mouse/touch/keyboard, empty/wrong/correct checks, replacement/undo/remove/reset, assisted solution never counts as independent, no LMS score changes, Sort the Paragraphs mouse/touch/button/keyboard reordering, Escape/undo restoration, correct positions/transitions, assisted reveal/reset, optional continue, simulation gate, real pointer drag, keyboard placement, undo, prerequisite gate, wrong-plan feedback, all stages complete, native LMS score; review matches participant choice, key and correct status",
+    "Short desktop: board fits scroll area, vertical word reachable, keyboard focus does not scroll outer page",
+    "120-second challenge keeps unfinished work and never submits unanswered quiz",
+    "390px real touch drag plus select-and-place; all photographed text >=14px",
+    "Official transparent BPS CorpU logo loads without header overlap on desktop/mobile; no JavaScript page errors"
+  ],
+  "screenshots": [
+    "ITE-cover.png",
+    "ITE-simple-material-1.png",
+    "ITE-simple-material-2.png",
+    "ITE-simple-situation-1.png",
+    "ITE-simple-situation-2.png",
+    "ITE-word-search.png",
+    "ITE-drag-words.png",
+    "ITE-sort-paragraphs.png",
+    "ITE-challenge-start.png",
+    "ITE-challenge-complete.png",
+    "ITE-review.png",
+    "ITE-result-100.png",
+    "ITE-result-0.png",
+    "ITE-result-50.png",
+    "ITE-word-search-short.png",
+    "ITE-simple-mobile.png",
+    "ITE-word-search-mobile.png",
+    "ITE-drag-words-mobile.png",
+    "ITE-sort-paragraphs-mobile.png",
+    "ITE-challenge-mobile.png"
+  ],
+  "mode": "actual-eXeLearning-export",
+  "tested_artifacts": {
+    "IT_Enterprise_SCORM12.zip": "38c862bb00131a7113eb67cf0baacd381c68f77ddd9822d41c572bb8762fcdca"
+  }
+}

@@ -1,0 +1,629 @@
+{
+  "id": "ITE",
+  "title": "IT Enterprise",
+  "audience": "Pranata Komputer kategori keahlian dan pengelola layanan digital instansi",
+  "objective": "Pelajari cara menyelaraskan strategi, tata kelola, dan arsitektur TI dengan kebutuhan organisasi. Lewat kasus layanan statistik, susun prioritas pembiayaan dan tentukan cara mengukur kinerja layanan.",
+  "language": "id",
+  "tone": "Semi-formal, natural dan profesional",
+  "interaction_profile": "evidence-sequence",
+  "lessons": [
+    {
+      "title": "Tujuan layanan dan tata kelola",
+      "body": "Strategi TI menerjemahkan sasaran organisasi menjadi prioritas yang bisa dikerjakan tim. Bila sasaran unit adalah mempercepat layanan, cari dulu bagian proses yang membuat pengguna menunggu. Temuan itu menjadi dasar untuk memilih perubahan yang perlu dibiayai.\n\nTata kelola menetapkan siapa yang mengambil keputusan, siapa yang menjalankan pekerjaan, dan bagaimana hasilnya ditinjau. Kebijakan memberi batas yang dipakai bersama. Misalnya, kebijakan bisa menetapkan siapa yang berwenang menyetujui perubahan akses pada sebuah layanan.",
+      "references": [
+        {
+          "publisher": "Pemerintah Republik Indonesia",
+          "title": "Peraturan Presiden Nomor 95 Tahun 2018 tentang SPBE",
+          "year": "2018",
+          "url": "https://peraturan.bpk.go.id/Download/87472/Perpres%20Nomor%2095%20Tahun%202018.pdf",
+          "verified_on": "2026-11-14",
+          "verification": "Naskah resmi diperiksa di JDIH BPK.",
+          "section": "Pasal 4 dan 59–61, unsur tata kelola dan koordinasi SPBE"
+        }
+      ],
+      "paragraph_sources": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "module_pages": "3–19",
+      "example": "Permintaan tabel statistik sering tertahan saat berpindah unit. Pemilik layanan mencatat titik antrean, lalu menyepakati penanggung jawab dan batas waktu serah terima. Tim TI memakai temuan itu untuk menentukan perubahan yang perlu dibuat.",
+      "example_note": "Situasi dan angka dalam contoh ini dibuat untuk latihan.",
+      "mode": "example",
+      "image": "scenes/ITE-blueprint.webp",
+      "module_reference": "Badan Pusat Statistik (2025), Modul IT Enterprise, katalog 1303158, hlm. 3–19."
+    },
+    {
+      "title": "Arsitektur dan kondisi target",
+      "body": "Arsitektur enterprise menggambarkan hubungan antara proses bisnis, data dan informasi, aplikasi, infrastruktur, keamanan, dan layanan. Dalam kerangka SPBE, enam domain itu membantu tim menelusuri dampak perubahan. Menggabungkan dua aplikasi, misalnya, juga bisa mengubah cara data dipertukarkan dan siapa yang boleh mengaksesnya.\n\nMulailah dengan memetakan kondisi saat ini, lalu tulis kondisi target yang bisa diperiksa. Selisih keduanya menunjukkan pekerjaan yang belum tertangani. Jika targetnya pelacakan permintaan lintas unit, tiap unit perlu memakai pengenal yang bisa dicocokkan saat permintaan berpindah.",
+      "references": [
+        {
+          "publisher": "Pemerintah Republik Indonesia",
+          "title": "Peraturan Presiden Nomor 95 Tahun 2018 tentang SPBE",
+          "year": "2018",
+          "url": "https://peraturan.bpk.go.id/Download/87472/Perpres%20Nomor%2095%20Tahun%202018.pdf",
+          "verified_on": "2026-11-14",
+          "verification": "Naskah resmi diperiksa di JDIH BPK.",
+          "section": "Pasal 7 dan 11, domain arsitektur dan penyelarasan dengan rencana strategis"
+        }
+      ],
+      "paragraph_sources": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "module_pages": "21–34",
+      "example": "Saat ini satu permintaan mendapat nomor berbeda di dua unit. Targetnya satu nomor yang tetap terbaca sampai tabel dikirim. Tim perlu menyepakati aturan penomoran dan menguji apakah kedua aplikasi dapat mempertahankan nomor itu.",
+      "example_note": "Situasi dan angka dalam contoh ini dibuat untuk latihan.",
+      "mode": "example",
+      "image": "scenes/ITE-blueprint.webp",
+      "module_reference": "Badan Pusat Statistik (2025), Modul IT Enterprise, katalog 1303158, hlm. 21–34."
+    },
+    {
+      "title": "Dari peta rencana ke evaluasi",
+      "body": "Peta rencana mengubah kebutuhan arsitektur menjadi pekerjaan bertahap. Periksa dependensi sebelum menetapkan anggaran. Jika pelacakan lintas unit memerlukan nomor bersama, biayai kesepakatan data dan uji pertukaran lebih dulu. Perkirakan juga biaya operasi, seperti dukungan pengguna dan pemeliharaan integrasi.\n\nPemantauan mencatat keadaan layanan secara berkala. Evaluasi memakai catatan itu untuk menilai apakah perubahan mencapai sasaran dan apa yang harus diperbaiki. Jika sasarannya mempercepat pemberian tabel, ukur waktu dari permintaan diterima sampai tabel dikirim. Jumlah permintaan dapat memberi konteks ketika beban berubah.",
+      "references": [
+        {
+          "publisher": "Pemerintah Republik Indonesia",
+          "title": "Peraturan Presiden Nomor 95 Tahun 2018 tentang SPBE",
+          "year": "2018",
+          "url": "https://peraturan.bpk.go.id/Download/87472/Perpres%20Nomor%2095%20Tahun%202018.pdf",
+          "verified_on": "2026-11-14",
+          "verification": "Naskah resmi diperiksa di JDIH BPK.",
+          "section": "Pasal 18 dan 20, peta rencana serta anggaran. Pasal 70, tujuan pemantauan dan evaluasi."
+        }
+      ],
+      "paragraph_sources": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "module_pages": "35–50",
+      "example": "Sebelum uji coba, median waktu penyelesaian adalah empat hari. Setelah dua unit memakai nomor yang sama, median menjadi dua hari. Tim memeriksa jumlah permintaan dan jenisnya pada kedua periode sebelum menilai hasil uji.",
+      "example_note": "Situasi dan angka dalam contoh ini dibuat untuk latihan.",
+      "mode": "check",
+      "prompt": "Tim ingin mengetahui apakah nomor permintaan bersama mempercepat layanan. Data mana yang paling tepat disiapkan sebelum uji coba?",
+      "options": [
+        "Jumlah aplikasi yang dimiliki setiap unit",
+        "Harga pengadaan perangkat pada tahun lalu",
+        "Waktu permintaan diterima dan selesai dikirim pada setiap transaksi"
+      ],
+      "correct": 2,
+      "feedback": "Dengan dua cap waktu itu, tim bisa menghitung waktu penyelesaian sebelum dan sesudah uji coba.",
+      "image": "scenes/ITE-operations.webp",
+      "module_reference": "Badan Pusat Statistik (2025), Modul IT Enterprise, katalog 1303158, hlm. 35–50."
+    }
+  ],
+  "situations": [
+    {
+      "title": "Dua unit mengusulkan aplikasi baru",
+      "body": "Pengguna mengeluhkan permintaan tabel yang sulit dilacak. Dua unit menawarkan aplikasi masing-masing. Keduanya belum menunjukkan di mana permintaan biasanya tertahan.",
+      "image": "scenes/ITE-blueprint.webp",
+      "prompt": "Apa yang Anda bawa ke rapat keputusan?",
+      "options": [
+        {
+          "label": "Petakan perjalanan satu permintaan bersama kedua unit",
+          "good": true,
+          "title": "Titik serah terima mulai terlihat",
+          "body": "Kedua unit menemukan bahwa nomor berubah saat berkas diteruskan. Temuan itu memberi dasar untuk menilai kebutuhan integrasi."
+        },
+        {
+          "label": "Ajukan pembelian aplikasi dari kedua unit",
+          "good": false,
+          "title": "Penyebab antrean belum diketahui",
+          "body": "Jika tiap aplikasi memberi nomor sendiri, petugas masih harus mencocokkan permintaan secara manual."
+        }
+      ]
+    },
+    {
+      "title": "Sistem aktif, antrean masih panjang",
+      "body": "Dalam laporan uji coba, aplikasi hampir selalu bisa diakses. Pengguna masih menghubungi petugas untuk menanyakan tabel yang belum dikirim.",
+      "image": "scenes/ITE-operations.webp",
+      "prompt": "Apa yang Anda periksa terlebih dahulu?",
+      "options": [
+        {
+          "label": "Tutup evaluasi karena aplikasi dapat diakses",
+          "good": false,
+          "title": "Laporan hanya menjawab soal ketersediaan",
+          "body": "Aplikasi bisa aktif saat permintaan masih tertahan. Tim belum tahu apakah waktu layanan membaik."
+        },
+        {
+          "label": "Telusuri waktu penyelesaian dan titik antreannya",
+          "good": true,
+          "title": "Tim bisa memeriksa hambatan layanan",
+          "body": "Catatan waktu menunjukkan sebagian permintaan menunggu persetujuan. Tim bisa membahas proses itu bersama penanggung jawabnya."
+        }
+      ]
+    }
+  ],
+  "word_search": {
+    "grid": [
+      "QVTHUFAFII",
+      "TWYLVYNUPM",
+      "STRATEGIKQ",
+      "LOEYFUGMXW",
+      "QEVALUASIJ",
+      "GBFYOSRLQI",
+      "BKEBIJAKAN",
+      "UXILDQNEGF",
+      "PIEFGIAEMV",
+      "ARSITEKTUR"
+    ],
+    "words": [
+      {
+        "term": "STRATEGI",
+        "clue": "Arah pilihan TI yang berangkat dari sasaran organisasi.",
+        "meaning": "Prioritas investasi dibangun dari kebutuhan layanan.",
+        "cells": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "term": "KEBIJAKAN",
+        "clue": "Pedoman formal yang menjadi pegangan saat menetapkan tindakan.",
+        "meaning": "Aturan akses membantu unit menerapkan ketentuan yang sama.",
+        "cells": [
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "term": "ARSITEKTUR",
+        "clue": "Gambaran hubungan proses, data, aplikasi, infrastruktur, keamanan, dan layanan.",
+        "meaning": "Peta hubungan antardomain membantu menemukan dampak perubahan.",
+        "cells": [
+          [
+            9,
+            0
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ]
+      },
+      {
+        "term": "ANGGARAN",
+        "clue": "Dana yang disiapkan untuk menjalankan dan memelihara pekerjaan.",
+        "meaning": "Biaya integrasi dan dukungan dipertimbangkan sejak tahap perencanaan.",
+        "cells": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ]
+        ]
+      },
+      {
+        "term": "EVALUASI",
+        "clue": "Penilaian atas hasil perubahan untuk memilih tindak lanjut.",
+        "meaning": "Hasil pengukuran dibandingkan dengan sasaran layanan.",
+        "cells": [
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      }
+    ]
+  },
+  "drag_words": {
+    "words": [
+      {
+        "id": "invoice",
+        "label": "nilai kontrak"
+      },
+      {
+        "id": "target",
+        "label": "kondisi target"
+      },
+      {
+        "id": "monitor",
+        "label": "waktu penyelesaian"
+      },
+      {
+        "id": "owner",
+        "label": "pemilik layanan"
+      }
+    ],
+    "gaps": [
+      {
+        "id": "g1",
+        "before": "Tetapkan",
+        "after": "yang bisa diuji, misalnya satu nomor untuk permintaan yang berpindah unit.",
+        "answer": "target",
+        "feedback": "Rancangan tujuan memberi dasar untuk menemukan jarak dari kondisi sekarang."
+      },
+      {
+        "id": "g2",
+        "before": "Keputusan tentang alur persetujuan dibahas bersama",
+        "after": "yang bertanggung jawab atas proses tersebut.",
+        "answer": "owner",
+        "feedback": "Perubahan alur kerja memerlukan keputusan dari pihak yang bertanggung jawab atas layanan."
+      },
+      {
+        "id": "g3",
+        "before": "Untuk menilai apakah tabel lebih cepat diterima, bandingkan",
+        "after": "sebelum dan sesudah uji coba.",
+        "answer": "monitor",
+        "feedback": "Indikator ini mengukur pengalaman pemohon dari awal sampai tabel dikirim."
+      }
+    ]
+  },
+  "sort_paragraphs": {
+    "title": "Dari antrean ke rencana kerja",
+    "initial_order": [
+      "p3",
+      "p1",
+      "p4",
+      "p2"
+    ],
+    "correct_order": [
+      "p1",
+      "p2",
+      "p3",
+      "p4"
+    ],
+    "explanation": "Temuan lapangan memberi arah pada target. Target menunjukkan pekerjaan yang perlu disiapkan sebelum manfaatnya diukur.",
+    "paragraphs": [
+      {
+        "id": "p1",
+        "text": "Petugas dari dua unit menelusuri satu permintaan. Mereka menemukan bahwa nomor permintaan berganti saat tabel diteruskan."
+      },
+      {
+        "id": "p2",
+        "text": "Berdasarkan temuan itu, kedua unit menetapkan satu nomor yang tetap dipakai sampai tabel dikirim. Mereka menentukan siapa yang boleh melihat status permintaan."
+      },
+      {
+        "id": "p3",
+        "text": "Setelah aturan nomor dan akses disepakati, tim menganggarkan pekerjaan integrasi dan menyiapkan uji coba pada dua unit."
+      },
+      {
+        "id": "p4",
+        "text": "Pada akhir uji coba, pemilik layanan membandingkan waktu penyelesaian dengan catatan sebelum perubahan. Hasilnya dipakai untuk memutuskan apakah cakupan diperluas."
+      }
+    ]
+  },
+  "practice": {
+    "course": "ITE",
+    "label": "KASUS LAYANAN STATISTIK",
+    "art": "scenes/ITE-blueprint.webp",
+    "success": "Rencana siap diuji. Nomor dan aturan akses disepakati, pertukaran diuji, lalu hasil layanan ditinjau.",
+    "steps": [
+      {
+        "kind": "sort",
+        "title": "Bedakan temuan dan kondisi yang dituju",
+        "intro": "Tim akan merencanakan pelacakan permintaan tabel lintas unit. Tempatkan lima kartu sesuai perannya dalam rancangan.",
+        "instruction": "Kelompokkan setiap kartu sebagai temuan saat ini atau kondisi target.",
+        "feedback": "Cari penanda waktunya. Temuan menjelaskan keadaan yang sudah diamati. Target menjelaskan keadaan yang ingin diwujudkan.",
+        "items": [
+          {
+            "id": "shared",
+            "label": "Satu nomor lintas unit",
+            "detail": "Nomor yang sama akan dibawa sampai pengiriman tabel.",
+            "image": "scenes/ITE-blueprint.webp"
+          },
+          {
+            "id": "duplicate",
+            "label": "Nomor berbeda",
+            "detail": "Petugas melihat dua nomor untuk satu permintaan."
+          },
+          {
+            "id": "access",
+            "label": "Hak akses sesuai peran",
+            "detail": "Pemohon akan melihat status miliknya sendiri."
+          },
+          {
+            "id": "manual",
+            "label": "Pencocokan lewat telepon",
+            "detail": "Saat ini petugas harus menelepon unit lain untuk menemukan berkas.",
+            "image": "scenes/ITE-operations.webp"
+          },
+          {
+            "id": "log",
+            "label": "Riwayat perpindahan",
+            "detail": "Targetnya petugas dapat melihat kapan berkas berpindah unit."
+          }
+        ],
+        "zones": [
+          {
+            "id": "current",
+            "label": "Kondisi saat ini",
+            "hint": "Yang sudah diamati"
+          },
+          {
+            "id": "target",
+            "label": "Kondisi target",
+            "hint": "Yang akan diwujudkan"
+          }
+        ],
+        "solution": {
+          "shared": "target",
+          "duplicate": "current",
+          "access": "target",
+          "manual": "current",
+          "log": "target"
+        }
+      },
+      {
+        "kind": "sequence",
+        "title": "Susun rencana uji sebelum memperluas layanan",
+        "intro": "Rencana harus berangkat dari aturan nomor dan akses, diteruskan dengan uji pada dua unit, lalu dinilai berdasarkan catatan waktu. Sisakan dua kartu yang tidak mendukung urutan ini.",
+        "instruction": "Letakkan tiga tindakan pada urutan 1–3. Biarkan dua pilihan lain di tempat asal.",
+        "feedback": "Uji pertukaran memerlukan aturan yang sudah disepakati. Uji dilakukan sebelum tim bisa menilai manfaatnya.",
+        "items": [
+          {
+            "id": "review",
+            "label": "Bandingkan waktu penyelesaian",
+            "detail": "Tinjau data sebelum dan sesudah uji coba."
+          },
+          {
+            "id": "rollout",
+            "label": "Perluas ke semua unit sekarang",
+            "detail": "Terapkan sebelum aturan dan pertukaran diperiksa."
+          },
+          {
+            "id": "agree",
+            "label": "Sepakati aturan nomor dan akses",
+            "detail": "Libatkan pemilik layanan dan pengelola data."
+          },
+          {
+            "id": "count",
+            "label": "Hitung jumlah aplikasi",
+            "detail": "Gunakan jumlah aplikasi sebagai ukuran kecepatan layanan."
+          },
+          {
+            "id": "test",
+            "label": "Uji pertukaran pada dua unit",
+            "detail": "Cocokkan nomor dan periksa siapa yang dapat melihat status."
+          }
+        ],
+        "zones": [
+          {
+            "id": "first",
+            "label": "1 · Siapkan aturan",
+            "hint": "Syarat sebelum menguji"
+          },
+          {
+            "id": "second",
+            "label": "2 · Jalankan uji coba",
+            "hint": "Batasi pada dua unit"
+          },
+          {
+            "id": "third",
+            "label": "3 · Tinjau hasil",
+            "hint": "Gunakan sasaran layanan"
+          }
+        ],
+        "solution": {
+          "agree": "first",
+          "test": "second",
+          "review": "third",
+          "rollout": "bank",
+          "count": "bank"
+        }
+      }
+    ]
+  },
+  "quizzes": [
+    {
+      "question": "Peta saat ini menunjukkan nomor permintaan berubah setiap kali berkas berpindah unit. Tim menargetkan satu nomor sampai tabel dikirim. Pekerjaan apa yang langsung menutup selisih itu?",
+      "options": [
+        "A. Menambah jumlah akun petugas di setiap unit",
+        "B. Menyepakati pengenal bersama dan menguji pertukarannya",
+        "C. Mengubah tampilan beranda kedua aplikasi"
+      ],
+      "answer_key": "B",
+      "feedback": "Sepakati aturan nomor, lalu uji apakah kedua aplikasi mempertahankan nomor yang sama saat satu permintaan berpindah."
+    },
+    {
+      "question": "Setelah uji coba, aplikasi tersedia hampir sepanjang bulan. Pimpinan ingin tahu apakah pemohon menerima tabel lebih cepat. Ukuran mana yang menjawab pertanyaan tersebut?",
+      "options": [
+        "A. Median waktu dari permintaan diterima sampai tabel dikirim",
+        "B. Persentase waktu aplikasi dapat diakses",
+        "C. Jumlah petugas yang mengikuti sosialisasi"
+      ],
+      "answer_key": "A",
+      "feedback": "Median waktu penyelesaian langsung mengukur lamanya pemohon menunggu. Bandingkan periode dan periksa apakah beban serta jenis permintaannya sebanding."
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/scenes/ITE.webp",
+      "role": "scene",
+      "provenance": "GPT Images melalui Codex. Lihat asset-prompts.json."
+    },
+    {
+      "file": "assets/scenes/ITE-blueprint.webp",
+      "role": "object-1",
+      "provenance": "GPT Images melalui Codex. Lihat asset-prompts.json."
+    },
+    {
+      "file": "assets/scenes/ITE-operations.webp",
+      "role": "object-2",
+      "provenance": "GPT Images melalui Codex. Lihat asset-prompts.json."
+    },
+    {
+      "file": "assets/mission-reward.webp",
+      "role": "reward",
+      "provenance": "GPT Images melalui Codex. Lihat asset-prompts.json."
+    }
+  ],
+  "branding": {
+    "logo": "assets/branding/bps-corpu-transparent.png",
+    "placement": "top-left",
+    "preserve_original": true
+  },
+  "scoring": {
+    "questions": 2,
+    "raw_scores": [
+      0,
+      50,
+      100
+    ],
+    "pass_score": 0,
+    "answered_status": "passed",
+    "unanswered_status": "incomplete"
+  }
+}

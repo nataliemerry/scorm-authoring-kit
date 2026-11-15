@@ -1,0 +1,145 @@
+{
+  "ITE": {
+    "objective": "Pelajari cara menyelaraskan strategi, tata kelola, dan arsitektur TI dengan kebutuhan organisasi. Lewat kasus layanan statistik, susun prioritas pembiayaan dan tentukan cara mengukur kinerja layanan.",
+    "lessons": [
+      {
+        "title": "Tujuan layanan dan tata kelola",
+        "body": "Strategi TI menerjemahkan sasaran organisasi menjadi prioritas yang bisa dikerjakan tim. Bila sasaran unit adalah mempercepat layanan, cari dulu bagian proses yang membuat pengguna menunggu. Temuan itu menjadi dasar untuk memilih perubahan yang perlu dibiayai.\n\nTata kelola menetapkan siapa yang mengambil keputusan, siapa yang menjalankan pekerjaan, dan bagaimana hasilnya ditinjau. Kebijakan memberi batas yang dipakai bersama. Misalnya, kebijakan bisa menetapkan siapa yang berwenang menyetujui perubahan akses pada sebuah layanan.",
+        "references": [
+          {
+            "publisher": "Pemerintah Republik Indonesia",
+            "title": "Peraturan Presiden Nomor 95 Tahun 2018 tentang SPBE",
+            "year": "2018",
+            "url": "https://peraturan.bpk.go.id/Download/87472/Perpres%20Nomor%2095%20Tahun%202018.pdf",
+            "verified_on": "2026-11-14",
+            "verification": "Naskah resmi diperiksa di JDIH BPK.",
+            "section": "Pasal 4 dan 59–61, unsur tata kelola dan koordinasi SPBE"
+          }
+        ],
+        "paragraph_sources": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "module_pages": "3–19",
+        "example": "Permintaan tabel statistik sering tertahan saat berpindah unit. Pemilik layanan mencatat titik antrean, lalu menyepakati penanggung jawab dan batas waktu serah terima. Tim TI memakai temuan itu untuk menentukan perubahan yang perlu dibuat.",
+        "example_note": "Situasi dan angka dalam contoh ini dibuat untuk latihan.",
+        "mode": "example",
+        "image": "scenes/ITE-blueprint.webp",
+        "module_reference": "Badan Pusat Statistik (2025), Modul IT Enterprise, katalog 1303158, hlm. 3–19."
+      },
+      {
+        "title": "Arsitektur dan kondisi target",
+        "body": "Arsitektur enterprise menggambarkan hubungan antara proses bisnis, data dan informasi, aplikasi, infrastruktur, keamanan, dan layanan. Dalam kerangka SPBE, enam domain itu membantu tim menelusuri dampak perubahan. Menggabungkan dua aplikasi, misalnya, juga bisa mengubah cara data dipertukarkan dan siapa yang boleh mengaksesnya.\n\nMulailah dengan memetakan kondisi saat ini, lalu tulis kondisi target yang bisa diperiksa. Selisih keduanya menunjukkan pekerjaan yang belum tertangani. Jika targetnya pelacakan permintaan lintas unit, tiap unit perlu memakai pengenal yang bisa dicocokkan saat permintaan berpindah.",
+        "references": [
+          {
+            "publisher": "Pemerintah Republik Indonesia",
+            "title": "Peraturan Presiden Nomor 95 Tahun 2018 tentang SPBE",
+            "year": "2018",
+            "url": "https://peraturan.bpk.go.id/Download/87472/Perpres%20Nomor%2095%20Tahun%202018.pdf",
+            "verified_on": "2026-11-14",
+            "verification": "Naskah resmi diperiksa di JDIH BPK.",
+            "section": "Pasal 7 dan 11, domain arsitektur dan penyelarasan dengan rencana strategis"
+          }
+        ],
+        "paragraph_sources": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "module_pages": "21–34",
+        "example": "Saat ini satu permintaan mendapat nomor berbeda di dua unit. Targetnya satu nomor yang tetap terbaca sampai tabel dikirim. Tim perlu menyepakati aturan penomoran dan menguji apakah kedua aplikasi dapat mempertahankan nomor itu.",
+        "example_note": "Situasi dan angka dalam contoh ini dibuat untuk latihan.",
+        "mode": "example",
+        "image": "scenes/ITE-blueprint.webp",
+        "module_reference": "Badan Pusat Statistik (2025), Modul IT Enterprise, katalog 1303158, hlm. 21–34."
+      },
+      {
+        "title": "Dari peta rencana ke evaluasi",
+        "body": "Peta rencana mengubah kebutuhan arsitektur menjadi pekerjaan bertahap. Periksa dependensi sebelum menetapkan anggaran. Jika pelacakan lintas unit memerlukan nomor bersama, biayai kesepakatan data dan uji pertukaran lebih dulu. Perkirakan juga biaya operasi, seperti dukungan pengguna dan pemeliharaan integrasi.\n\nPemantauan mencatat keadaan layanan secara berkala. Evaluasi memakai catatan itu untuk menilai apakah perubahan mencapai sasaran dan apa yang harus diperbaiki. Jika sasarannya mempercepat pemberian tabel, ukur waktu dari permintaan diterima sampai tabel dikirim. Jumlah permintaan dapat memberi konteks ketika beban berubah.",
+        "references": [
+          {
+            "publisher": "Pemerintah Republik Indonesia",
+            "title": "Peraturan Presiden Nomor 95 Tahun 2018 tentang SPBE",
+            "year": "2018",
+            "url": "https://peraturan.bpk.go.id/Download/87472/Perpres%20Nomor%2095%20Tahun%202018.pdf",
+            "verified_on": "2026-11-14",
+            "verification": "Naskah resmi diperiksa di JDIH BPK.",
+            "section": "Pasal 18 dan 20, peta rencana serta anggaran. Pasal 70, tujuan pemantauan dan evaluasi."
+          }
+        ],
+        "paragraph_sources": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "module_pages": "35–50",
+        "example": "Sebelum uji coba, median waktu penyelesaian adalah empat hari. Setelah dua unit memakai nomor yang sama, median menjadi dua hari. Tim memeriksa jumlah permintaan dan jenisnya pada kedua periode sebelum menilai hasil uji.",
+        "example_note": "Situasi dan angka dalam contoh ini dibuat untuk latihan.",
+        "mode": "check",
+        "prompt": "Tim ingin mengetahui apakah nomor permintaan bersama mempercepat layanan. Data mana yang paling tepat disiapkan sebelum uji coba?",
+        "options": [
+          "Jumlah aplikasi yang dimiliki setiap unit",
+          "Harga pengadaan perangkat pada tahun lalu",
+          "Waktu permintaan diterima dan selesai dikirim pada setiap transaksi"
+        ],
+        "correct": 2,
+        "feedback": "Dengan dua cap waktu itu, tim bisa menghitung waktu penyelesaian sebelum dan sesudah uji coba.",
+        "image": "scenes/ITE-operations.webp",
+        "module_reference": "Badan Pusat Statistik (2025), Modul IT Enterprise, katalog 1303158, hlm. 35–50."
+      }
+    ],
+    "situations": [
+      {
+        "title": "Dua unit mengusulkan aplikasi baru",
+        "body": "Pengguna mengeluhkan permintaan tabel yang sulit dilacak. Dua unit menawarkan aplikasi masing-masing. Keduanya belum menunjukkan di mana permintaan biasanya tertahan.",
+        "image": "scenes/ITE-blueprint.webp",
+        "prompt": "Apa yang Anda bawa ke rapat keputusan?",
+        "options": [
+          {
+            "label": "Petakan perjalanan satu permintaan bersama kedua unit",
+            "good": true,
+            "title": "Titik serah terima mulai terlihat",
+            "body": "Kedua unit menemukan bahwa nomor berubah saat berkas diteruskan. Temuan itu memberi dasar untuk menilai kebutuhan integrasi."
+          },
+          {
+            "label": "Ajukan pembelian aplikasi dari kedua unit",
+            "good": false,
+            "title": "Penyebab antrean belum diketahui",
+            "body": "Jika tiap aplikasi memberi nomor sendiri, petugas masih harus mencocokkan permintaan secara manual."
+          }
+        ]
+      },
+      {
+        "title": "Sistem aktif, antrean masih panjang",
+        "body": "Dalam laporan uji coba, aplikasi hampir selalu bisa diakses. Pengguna masih menghubungi petugas untuk menanyakan tabel yang belum dikirim.",
+        "image": "scenes/ITE-operations.webp",
+        "prompt": "Apa yang Anda periksa terlebih dahulu?",
+        "options": [
+          {
+            "label": "Tutup evaluasi karena aplikasi dapat diakses",
+            "good": false,
+            "title": "Laporan hanya menjawab soal ketersediaan",
+            "body": "Aplikasi bisa aktif saat permintaan masih tertahan. Tim belum tahu apakah waktu layanan membaik."
+          },
+          {
+            "label": "Telusuri waktu penyelesaian dan titik antreannya",
+            "good": true,
+            "title": "Tim bisa memeriksa hambatan layanan",
+            "body": "Catatan waktu menunjukkan sebagian permintaan menunggu persetujuan. Tim bisa membahas proses itu bersama penanggung jawabnya."
+          }
+        ]
+      }
+    ],
+    "source_checked": "14 November 2026"
+  }
+}

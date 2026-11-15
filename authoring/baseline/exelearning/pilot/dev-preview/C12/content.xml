@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ode SYSTEM "content.dtd">
+<ode xmlns="http://www.intef.es/xsd/ode" version="2.0">
+<userPreferences>
+  <userPreference>
+    <key>theme</key>
+    <value>lcm-scenes-unified-baseline-20261115</value>
+  </userPreference>
+</userPreferences>
+<odeResources>
+  <odeResource>
+    <key>odeId</key>
+    <value>20261115162613IZQZ4V</value>
+  </odeResource>
+  <odeResource>
+    <key>odeVersionId</key>
+    <value>20261115162613H6WTI5</value>
+  </odeResource>
+  <odeResource>
+    <key>exe_version</key>
+    <value>4.0.6</value>
+  </odeResource>
+</odeResources>
+<odeProperties>
+  <odeProperty>
+    <key>pp_title</key>
+    <value>C12 Cybersecurity Challenge</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_author</key>
+    <value>BPS Corporate University</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_description</key>
+    <value>Sebuah email meminta Anda segera login agar akun tidak diblokir. Pengirimnya mengaku sebagai administrator. Permintaan seperti ini perlu diperiksa sebelum ditindaklanjuti.</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_lang</key>
+    <value>id</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_license</key>
+    <value>propietary license</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_theme</key>
+    <value>lcm-scenes-unified-baseline-20261115</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_exelearning_version</key>
+    <value>v4.0.6</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_modified</key>
+    <value>1794734794558</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_addExeLink</key>
+    <value>true</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_addPagination</key>
+    <value>false</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_addSearchBox</key>
+    <value>false</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_addAccessibilityToolbar</key>
+    <value>false</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_addMathJax</key>
+    <value>false</value>
+  </odeProperty>
+  <odeProperty>
+    <key>exportSource</key>
+    <value>true</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_globalFont</key>
+    <value>default</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_passScore</key>
+    <value>0</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_passScoreEveryActivity</key>
+    <value>false</value>
+  </odeProperty>
+</odeProperties>
+<odeNavStructures>
+<odeNavStructure>
+  <odePageId>20261115162613VST5ZM</odePageId>
+  <odeParentPageId></odeParentPageId>
+  <pageName>Misi</pageName>
+  <odeNavStructureOrder>0</odeNavStructureOrder>
+  <odeNavStructureProperties>
+    <odeNavStructureProperty>
+      <key>titlePage</key>
+      <value>Misi</value>
+    </odeNavStructureProperty>
+    <odeNavStructureProperty>
+      <key>visibility</key>
+      <value>true</value>
+    </odeNavStructureProperty>
+    <odeNavStructureProperty>
+      <key>highlight</key>
+      <value>false</value>
+    </odeNavStructureProperty>
+    <odeNavStructureProperty>
+      <key>hidePageTitle</key>
+      <value>false</value>
+    </odeNavStructureProperty>
+    <odeNavStructureProperty>
+      <key>editableInPage</key>
+      <value>false</value>
+    </odeNavStructureProperty>
+    <odeNavStructureProperty>
+      <key>titlePage</key>
+      <value>Misi</value>
+    </odeNavStructureProperty>
+    <odeNavStructureProperty>
+      <key>titleNode</key>
+      <value></value>
+    </odeNavStructureProperty>
+  </odeNavStructureProperties>
+  <odePagStructures>
+    <odePagStructure>
+      <odePageId>20261115162613VST5ZM</odePageId>
+      <odeBlockId>20261115162613YT66ZH</odeBlockId>
+      <blockName>Tantangan Anda</blockName>
+      <iconName></iconName>
+      <odePagStructureOrder>0</odePagStructureOrder>
+      <odePagStructureProperties>
+        <odePagStructureProperty>
+          <key>visibility</key>
+          <value>true</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>teacherOnly</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>allowToggle</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>minimized</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>cssClass</key>
+          <value></value>
+        </odePagStructureProperty>
+      </odePagStructureProperties>
+      <odeComponents>
+        <odeComponent>
+          <odePageId>20261115162613VST5ZM</odePageId>
+          <odeBlockId>20261115162613YT66ZH</odeBlockId>
+          <odeIdeviceId>20261115162613OW1J2Z</odeIdeviceId>
+          <odeIdeviceTypeName>text</odeIdeviceTypeName>
+          <htmlView><![CDATA[<div class="exe-text-template"><div class="lcm-stage" data-lcm-phase="0" data-course="C12"></div><img data-scene-image src="asset://8471776d-29fe-d2b0-ef8a-c99b2a0d27d5.webp" alt="Ilustrasi situasi Cybersecurity Challenge" hidden><img data-card-label="admin@bpss-portal-update.com" src="asset://93427aca-a5dc-3a3e-73e0-cd7db9661789.webp" alt="" hidden><img data-card-label="Akun diblokir dalam 1 jam!" src="asset://b4789284-4579-ae2d-872e-b9550baa6ecc.webp" alt="" hidden><img data-card-label="bit.ly/login-update-bps" src="asset://93427aca-a5dc-3a3e-73e0-cd7db9661789.webp" alt="" hidden><img data-brand-logo src="asset://60bc03cb-cad1-ba54-4edd-9240e6b7c43e.png" alt="" hidden><script class="lesson-config" type="application/json">{"objective": "Mengenali cara kerja phishing dan memahami alasan di balik pemeriksaan pesan serta perlindungan akun.", "lessons": [{"title": "Phishing dan rekayasa sosial", "body": "Phishing adalah penipuan melalui pesan yang menyamar sebagai pihak tepercaya. Pelaku berusaha membuat penerima menyerahkan informasi, membuka tautan berbahaya, atau melakukan tindakan yang memberi akses ke akun.\n\nCara ini memanfaatkan kepercayaan dan reaksi penerima. Nama instansi atau logo membuat pesan terlihat resmi. Ancaman pemblokiran mendorong orang bertindak sebelum sempat memeriksa permintaannya.", "mode": "example", "example": "Nama tampilan menyebut “Administrator BPS”, tetapi alamatnya admin@bpss-portal-update.example. Tampilan tersebut belum membuktikan siapa pengirimnya. Alamat pengirim dan alasan permintaannya masih perlu diperiksa.", "references": [{"publisher": "NIST", "title": "Phishing — Small Business Cybersecurity Corner", "year": "pembaruan 2026", "updated_on": "2026-10-16", "url": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/phishing", "verified_on": "2026-11-13", "verification": "Definisi, tanda pesan, verifikasi melalui kontak dikenal, dan tanggal pembaruan dibaca pada halaman resmi NIST.", "id": "nist-phishing", "section": "What is Phishing?; How to Spot a Phish"}], "paragraph_sources": [[1], [1]], "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas."}, {"title": "Identitas pengirim dan tujuan tautan", "body": "Alamat email bisa dibuat menyerupai alamat resmi melalui perubahan huruf atau tambahan angka. Kemiripan nama belum membuktikan hubungan dengan instansi tersebut. Pada tautan, teks yang terlihat juga bisa berbeda dari alamat tujuan sebenarnya.\n\nJika permintaan meragukan, konfirmasikan melalui kontak yang sudah dikenal atau alamat resmi yang diperoleh secara terpisah. Jangan mengandalkan informasi kontak dari pesan yang sedang diragukan.", "mode": "example", "example": "Email meminta Anda segera login. Untuk memeriksa permintaannya, buka layanan melalui alamat yang biasa digunakan atau hubungi TI lewat kontak yang sudah tersimpan. Anda tidak perlu mencoba tautan dalam email itu.", "references": [{"publisher": "Microsoft Learn", "title": "How to protect against phishing attacks — Microsoft Defender for Endpoint", "year": "pembaruan 2026", "updated_on": "2026-07-14", "url": "https://learn.microsoft.com/en-us/defender-endpoint/malware/phishing", "verified_on": "2026-11-13", "verification": "Halaman resmi Microsoft; bagian Learn the signs of a phishing scam dan tanggal pembaruan dicocokkan.", "id": "microsoft-phishing", "section": "Learn the signs of a phishing scam"}, {"publisher": "NIST", "title": "Phishing — Small Business Cybersecurity Corner", "year": "pembaruan 2026", "updated_on": "2026-10-16", "url": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/phishing", "verified_on": "2026-11-13", "verification": "Definisi, tanda pesan, verifikasi melalui kontak dikenal, dan tanggal pembaruan dibaca pada halaman resmi NIST.", "id": "nist-phishing", "section": "How to Spot a Phish — verifikasi melalui kontak yang dikenal"}], "paragraph_sources": [[1], [2]], "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas."}, {"title": "Autentikasi dan MFA", "body": "MFA, atau autentikasi multifaktor, memeriksa identitas dengan dua atau lebih jenis faktor. Misalnya, kata sandi dipadukan dengan faktor kepemilikan seperti kunci keamanan. Pemeriksaan tambahan ini menjadi hambatan jika kata sandi bocor.\n\nTidak semua bentuk MFA tahan phishing. Kode sekali pakai dan kode SMS masih dapat menjadi sasaran penipuan. Kode verifikasi tetap perlu dijaga, meskipun akun sudah menggunakan MFA.", "mode": "check", "prompt": "Seseorang mengaku petugas TI dan meminta kode verifikasi melalui telepon. Apa tindakan Anda?", "options": ["Bacakan kode agar pekerjaannya cepat selesai", "Tolak membagikan kode dan hubungi TI lewat kontak yang dikenal", "Kirim kode ke grup agar rekan ikut memeriksa"], "correct": 1, "feedback": "Kode verifikasi tidak perlu dibagikan kepada penelepon. Hubungi TI melalui kontak yang sudah dikenal untuk memastikan permintaannya.", "example": "Penelepon mengaku petugas TI dan meminta kode verifikasi. Jangan membacakan kodenya. Akhiri percakapan, lalu hubungi TI melalui kontak yang sudah Anda kenal untuk memeriksa permintaan tersebut.", "references": [{"publisher": "NIST", "title": "Multi-Factor Authentication — Small Business Cybersecurity Corner", "year": "pembaruan 2026", "updated_on": "2026-01-05", "url": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/multi-factor-authentication", "verified_on": "2026-11-13", "verification": "Definisi faktor, manfaat MFA dan keterbatasan OTP dibaca pada halaman resmi NIST.", "id": "nist-mfa", "section": "What is Multi-Factor Authentication (MFA)?; How does MFA Protect My Business From this Threat?; Taking MFA to the Next Level"}], "paragraph_sources": [[1], [1]], "example_note": "Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas."}], "source": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/phishing", "verified_on": "2026-11-13"}</script>
+<section class="lesson-root" data-complete="false" aria-label="Materi awal">
+ <div class="lesson-cover scene-intro"><div class="scene-copy"><span class="scene-eyebrow">MATERI DAN LATIHAN</span><h2>Mengenali phishing</h2><p>Mengenali cara kerja phishing dan memahami alasan di balik pemeriksaan pesan serta perlindungan akun.</p><p class="lesson-objective">Materi → Contoh situasi → Praktik</p><button type="button" class="lesson-open">Mulai belajar →</button></div></div>
+ <div class="lesson-study" hidden><header class="lesson-study-header"><span class="lesson-count"></span><span>MATERI AWAL</span></header><div class="lesson-content"></div><footer class="lesson-controls"><button type="button" data-lesson-action="prev">← Sebelumnya</button><button type="button" data-lesson-action="next">Materi berikutnya →</button><div class="lesson-launch" hidden><label class="simple-timer"><input type="checkbox" id="simple-timer"> Gunakan timer 2 menit</label><button type="button" class="scene-free" disabled>Coba situasinya →</button></div></footer></div>
+</section></div>]]></htmlView>
+          <jsonProperties><![CDATA[{"ideviceId":"20261115162613OW1J2Z","textInfoDurationInput":"","textInfoDurationTextInput":"Duration","textInfoParticipantsInput":"","textInfoParticipantsTextInput":"Grouping","textTextarea":"<div class=\"lcm-stage\" data-lcm-phase=\"0\" data-course=\"C12\"></div><img data-scene-image src=\"asset://8471776d-29fe-d2b0-ef8a-c99b2a0d27d5.webp\" alt=\"Ilustrasi situasi Cybersecurity Challenge\" hidden><img data-card-label=\"admin@bpss-portal-update.com\" src=\"asset://93427aca-a5dc-3a3e-73e0-cd7db9661789.webp\" alt=\"\" hidden><img data-card-label=\"Akun diblokir dalam 1 jam!\" src=\"asset://b4789284-4579-ae2d-872e-b9550baa6ecc.webp\" alt=\"\" hidden><img data-card-label=\"bit.ly/login-update-bps\" src=\"asset://93427aca-a5dc-3a3e-73e0-cd7db9661789.webp\" alt=\"\" hidden><img data-brand-logo src=\"asset://60bc03cb-cad1-ba54-4edd-9240e6b7c43e.png\" alt=\"\" hidden><script class=\"lesson-config\" type=\"application/json\">{\"objective\": \"Mengenali cara kerja phishing dan memahami alasan di balik pemeriksaan pesan serta perlindungan akun.\", \"lessons\": [{\"title\": \"Phishing dan rekayasa sosial\", \"body\": \"Phishing adalah penipuan melalui pesan yang menyamar sebagai pihak tepercaya. Pelaku berusaha membuat penerima menyerahkan informasi, membuka tautan berbahaya, atau melakukan tindakan yang memberi akses ke akun.\\n\\nCara ini memanfaatkan kepercayaan dan reaksi penerima. Nama instansi atau logo membuat pesan terlihat resmi. Ancaman pemblokiran mendorong orang bertindak sebelum sempat memeriksa permintaannya.\", \"mode\": \"example\", \"example\": \"Nama tampilan menyebut “Administrator BPS”, tetapi alamatnya admin@bpss-portal-update.example. Tampilan tersebut belum membuktikan siapa pengirimnya. Alamat pengirim dan alasan permintaannya masih perlu diperiksa.\", \"references\": [{\"publisher\": \"NIST\", \"title\": \"Phishing — Small Business Cybersecurity Corner\", \"year\": \"pembaruan 2026\", \"updated_on\": \"2026-10-16\", \"url\": \"https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/phishing\", \"verified_on\": \"2026-11-13\", \"verification\": \"Definisi, tanda pesan, verifikasi melalui kontak dikenal, dan tanggal pembaruan dibaca pada halaman resmi NIST.\", \"id\": \"nist-phishing\", \"section\": \"What is Phishing?; How to Spot a Phish\"}], \"paragraph_sources\": [[1], [1]], \"example_note\": \"Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas.\"}, {\"title\": \"Identitas pengirim dan tujuan tautan\", \"body\": \"Alamat email bisa dibuat menyerupai alamat resmi melalui perubahan huruf atau tambahan angka. Kemiripan nama belum membuktikan hubungan dengan instansi tersebut. Pada tautan, teks yang terlihat juga bisa berbeda dari alamat tujuan sebenarnya.\\n\\nJika permintaan meragukan, konfirmasikan melalui kontak yang sudah dikenal atau alamat resmi yang diperoleh secara terpisah. Jangan mengandalkan informasi kontak dari pesan yang sedang diragukan.\", \"mode\": \"example\", \"example\": \"Email meminta Anda segera login. Untuk memeriksa permintaannya, buka layanan melalui alamat yang biasa digunakan atau hubungi TI lewat kontak yang sudah tersimpan. Anda tidak perlu mencoba tautan dalam email itu.\", \"references\": [{\"publisher\": \"Microsoft Learn\", \"title\": \"How to protect against phishing attacks — Microsoft Defender for Endpoint\", \"year\": \"pembaruan 2026\", \"updated_on\": \"2026-07-14\", \"url\": \"https://learn.microsoft.com/en-us/defender-endpoint/malware/phishing\", \"verified_on\": \"2026-11-13\", \"verification\": \"Halaman resmi Microsoft; bagian Learn the signs of a phishing scam dan tanggal pembaruan dicocokkan.\", \"id\": \"microsoft-phishing\", \"section\": \"Learn the signs of a phishing scam\"}, {\"publisher\": \"NIST\", \"title\": \"Phishing — Small Business Cybersecurity Corner\", \"year\": \"pembaruan 2026\", \"updated_on\": \"2026-10-16\", \"url\": \"https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/phishing\", \"verified_on\": \"2026-11-13\", \"verification\": \"Definisi, tanda pesan, verifikasi melalui kontak dikenal, dan tanggal pembaruan dibaca pada halaman resmi NIST.\", \"id\": \"nist-phishing\", \"section\": \"How to Spot a Phish — verifikasi melalui kontak yang dikenal\"}], \"paragraph_sources\": [[1], [2]], \"example_note\": \"Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas.\"}, {\"title\": \"Autentikasi dan MFA\", \"body\": \"MFA, atau autentikasi multifaktor, memeriksa identitas dengan dua atau lebih jenis faktor. Misalnya, kata sandi dipadukan dengan faktor kepemilikan seperti kunci keamanan. Pemeriksaan tambahan ini menjadi hambatan jika kata sandi bocor.\\n\\nTidak semua bentuk MFA tahan phishing. Kode sekali pakai dan kode SMS masih dapat menjadi sasaran penipuan. Kode verifikasi tetap perlu dijaga, meskipun akun sudah menggunakan MFA.\", \"mode\": \"check\", \"prompt\": \"Seseorang mengaku petugas TI dan meminta kode verifikasi melalui telepon. Apa tindakan Anda?\", \"options\": [\"Bacakan kode agar pekerjaannya cepat selesai\", \"Tolak membagikan kode dan hubungi TI lewat kontak yang dikenal\", \"Kirim kode ke grup agar rekan ikut memeriksa\"], \"correct\": 1, \"feedback\": \"Kode verifikasi tidak perlu dibagikan kepada penelepon. Hubungi TI melalui kontak yang sudah dikenal untuk memastikan permintaannya.\", \"example\": \"Penelepon mengaku petugas TI dan meminta kode verifikasi. Jangan membacakan kodenya. Akhiri percakapan, lalu hubungi TI melalui kontak yang sudah Anda kenal untuk memeriksa permintaan tersebut.\", \"references\": [{\"publisher\": \"NIST\", \"title\": \"Multi-Factor Authentication — Small Business Cybersecurity Corner\", \"year\": \"pembaruan 2026\", \"updated_on\": \"2026-01-05\", \"url\": \"https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/multi-factor-authentication\", \"verified_on\": \"2026-11-13\", \"verification\": \"Definisi faktor, manfaat MFA dan keterbatasan OTP dibaca pada halaman resmi NIST.\", \"id\": \"nist-mfa\", \"section\": \"What is Multi-Factor Authentication (MFA)?; How does MFA Protect My Business From this Threat?; Taking MFA to the Next Level\"}], \"paragraph_sources\": [[1], [1]], \"example_note\": \"Contoh simulasi yang disusun untuk latihan; bukan kasus atau data dari sumber di atas.\"}], \"source\": \"https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/phishing\", \"verified_on\": \"2026-11-13\"}</script>\n<section class=\"lesson-root\" data-complete=\"false\" aria-label=\"Materi awal\">\n <div class=\"lesson-cover scene-intro\"><div class=\"scene-copy\"><span class=\"scene-eyebrow\">MATERI DAN LATIHAN</span><h2>Mengenali phishing</h2><p>Mengenali cara kerja phishing dan memahami alasan di balik pemeriksaan pesan serta perlindungan akun.</p><p class=\"lesson-objective\">Materi → Contoh situasi → Praktik</p><button type=\"button\" class=\"lesson-open\">Mulai belajar →</button></div></div>\n <div class=\"lesson-study\" hidden><header class=\"lesson-study-header\"><span class=\"lesson-count\"></span><span>MATERI AWAL</span></header><div class=\"lesson-content\"></div><footer class=\"lesson-controls\"><button type=\"button\" data-lesson-action=\"prev\">← Sebelumnya</button><button type=\"button\" data-lesson-action=\"next\">Materi berikutnya →</button><div class=\"lesson-launch\" hidden><label class=\"simple-timer\"><input type=\"checkbox\" id=\"simple-timer\"> Gunakan timer 2 menit</label><button type=\"button\" class=\"scene-free\" disabled>Coba situasinya →</button></div></footer></div>\n</section>","textFeedbackInput":"Show Feedback","textFeedbackTextarea":""}]]></jsonProperties>
+          <odeComponentsOrder>0</odeComponentsOrder>
+          <odeComponentsProperties>
+            <odeComponentsProperty>
+              <key>visibility</key>
+              <value>true</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>teacherOnly</key>
+              <value>false</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>cssClass</key>
+              <value></value>
+            </odeComponentsProperty>
+          </odeComponentsProperties>
+        </odeComponent>
+      </odeComponents>
+    </odePagStructure>
+    <odePagStructure>
+      <odePageId>20261115162613VST5ZM</odePageId>
+      <odeBlockId>20261115162613B3Z3TT</odeBlockId>
+      <blockName>Berkas misi</blockName>
+      <iconName></iconName>
+      <odePagStructureOrder>1</odePagStructureOrder>
+      <odePagStructureProperties>
+        <odePagStructureProperty>
+          <key>visibility</key>
+          <value>true</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>teacherOnly</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>allowToggle</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>minimized</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>cssClass</key>
+          <value></value>
+        </odePagStructureProperty>
+      </odePagStructureProperties>
+      <odeComponents>
+        <odeComponent>
+          <odePageId>20261115162613VST5ZM</odePageId>
+          <odeBlockId>20261115162613B3Z3TT</odeBlockId>
+          <odeIdeviceId>2026111516261388OTWQ</odeIdeviceId>
+          <odeIdeviceTypeName>text</odeIdeviceTypeName>
+          <htmlView><![CDATA[<div class="exe-text-template"><div class="lcm-stage" data-lcm-phase="1" data-course="C12"></div><section class="sim-root" data-course="C12" data-complete="false" aria-label="Simulasi keputusan"><div class="sim-scroll"><div class="sim-content"></div></div><footer class="sim-controls"><button type="button" data-simple-sim="back" disabled>← Sebelumnya</button><button type="button" class="sim-next" data-simple-sim="next" disabled>Lanjut →</button></footer></section><script class="word-config" type="application/json">{"grid": ["RPOEPIZRPS", "TMLKODEXHX", "ARAVOEEYIL", "UOZBPNORSB", "TEPXGTNCHY", "APJNFIDKIX", "NWZVTTKXNF", "MZGSCAGOGC", "ADASHSCNGB", "HWMFAZESON"], "words": [{"term": "PHISHING", "meaning": "Pesan penipuan yang menyamar sebagai pihak tepercaya.", "cells": [[0, 8], [1, 8], [2, 8], [3, 8], [4, 8], [5, 8], [6, 8], [7, 8]], "clue": "Penipuan melalui pesan yang menyamar sebagai pihak tepercaya."}, {"term": "MFA", "meaning": "Pemeriksaan identitas dengan dua atau lebih jenis faktor.", "cells": [[9, 2], [9, 3], [9, 4]], "clue": "Cara masuk akun yang memerlukan dua atau lebih jenis faktor pemeriksaan."}, {"term": "IDENTITAS", "meaning": "Identitas pengirim perlu diperiksa, bukan hanya nama tampilannya.", "cells": [[0, 5], [1, 5], [2, 5], [3, 5], [4, 5], [5, 5], [6, 5], [7, 5], [8, 5]], "clue": "Informasi tentang siapa pengirim sebenarnya, yang perlu diperiksa terpisah dari nama tampilannya."}, {"term": "TAUTAN", "meaning": "Teks yang terlihat dapat berbeda dari alamat tujuannya.", "cells": [[1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0]], "clue": "Bagian pesan yang mengarahkan Anda ke alamat lain saat dipilih."}, {"term": "KODE", "meaning": "Kode verifikasi tetap perlu dijaga.", "cells": [[1, 3], [1, 4], [1, 5], [1, 6]], "clue": "Rangkaian angka atau karakter untuk verifikasi akses yang tidak boleh dibagikan."}]}</script><section class="word-root" data-complete="false" data-found="0" aria-label="Find the words" hidden></section><script class="dt-config" type="application/json">{"words": [{"id": "code", "label": "kode verifikasi"}, {"id": "logo", "label": "logo pengirim"}, {"id": "link", "label": "tautan"}, {"id": "contact", "label": "kontak resmi"}], "gaps": [{"id": "g1", "before": "Saat menerima email login yang mencurigakan, jangan langsung membuka", "after": "di dalamnya.", "answer": "link", "feedback": "Tautan dalam pesan yang meragukan dapat mengarah ke halaman palsu."}, {"id": "g2", "before": "Pastikan permintaan melalui", "after": "yang sudah dikenal, di luar pesan tersebut.", "answer": "contact", "feedback": "Jalur yang dikenal memberi pemeriksaan terpisah dari pesan pengirim."}, {"id": "g3", "before": "Jangan membacakan", "after": "kepada penelepon yang mengaku petugas TI.", "answer": "code", "feedback": "Pengakuan sebagai petugas belum membuktikan siapa penelepon tersebut."}]}</script><section class="dt-root" data-complete="false" data-correct="0" data-assisted="false" aria-label="Drag the Words" hidden></section><script class="sp-config" type="application/json">{"initial_order": ["p3", "p1", "p4", "p2"], "correct_order": ["p1", "p2", "p3", "p4"], "title": "Dari email mencurigakan ke penanganan", "explanation": "Interaksi dengan pesan dihentikan, permintaan diperiksa melalui kontak yang dikenal, lalu bukti diserahkan untuk penanganan.", "paragraphs": [{"id": "p1", "text": "Sebuah email meminta pegawai segera masuk ke akun melalui sebuah tautan. Pesan itu mengancam pemblokiran akun dalam satu jam."}, {"id": "p2", "text": "Ancaman dalam email tersebut membuat pegawai ragu. Ia menghentikan interaksi dengan pesan dan menghubungi petugas TI melalui kontak resmi yang sudah dikenal."}, {"id": "p3", "text": "Petugas yang dihubungi lewat kontak itu memastikan bahwa tidak ada permintaan masuk akun dari layanan resmi. Tautan dalam pesan pun tidak digunakan."}, {"id": "p4", "text": "Konfirmasi petugas itu disertakan saat pegawai menyerahkan bukti email melalui kanal pelaporan instansi. Pesan mencurigakan dapat ditangani lebih lanjut."}]}</script><section class="sp-root" data-complete="false" data-correct="0" data-assisted="false" aria-label="Sort the Paragraphs" hidden></section><script type="application/json" class="dnd-config">{"course": "C12", "steps": [{"title": "Periksa bukti pada pesan ini.", "intro": "Ada lima potongan informasi dari pesan tadi. Tentukan mana yang menguatkan dugaan phishing dan mana yang belum cukup sebagai bukti.", "kind": "sort", "items": [{"id": "domain", "label": "admin@bpss-portal-update.example", "detail": "Nama domain menyerupai BPS, tetapi bukan alamat layanan yang dikenal."}, {"id": "logo", "label": "Pesan memakai logo BPS", "detail": "Logo tampak rapi dan sesuai warna instansi."}, {"id": "deadline", "label": "Akun diblokir dalam 1 jam!", "detail": "Penerima diminta segera login agar akunnya tidak diblokir."}, {"id": "greeting", "label": "“Kepada pengguna layanan”", "detail": "Salam tidak menyebut nama penerima."}, {"id": "url", "label": "http://bit.ly/login-update-bps", "detail": "Alamat singkat ini tidak memperlihatkan tujuan login secara langsung."}], "zones": [{"id": "strong", "label": "Indikasi phishing", "hint": "Alasan kuat untuk menghentikan tindakan"}, {"id": "weak", "label": "Belum cukup bukti", "hint": "Tidak membuktikan pesan aman atau berbahaya"}], "solution": {"domain": "strong", "deadline": "strong", "url": "strong", "logo": "weak", "greeting": "weak"}}, {"title": "Susun urutan penanganan pesan.", "intro": "Letakkan tiga tindakan yang aman pada urutan 1–3. Dua tindakan yang berisiko tidak perlu dipindahkan.", "kind": "sequence", "items": [{"id": "report", "label": "Laporkan melalui kanal TI resmi", "detail": "Sertakan bukti pesan sesuai prosedur instansi."}, {"id": "try", "label": "Coba login untuk memastikan", "detail": "Buka tautan dalam email dan masukkan akun."}, {"id": "stop", "label": "Hentikan interaksi dengan pesan", "detail": "Jangan buka tautan, balas, atau kirim data akun."}, {"id": "forward", "label": "Teruskan email ke grup kerja", "detail": "Minta rekan mencoba tautan yang sama."}, {"id": "verify", "label": "Verifikasi lewat kontak yang dikenal", "detail": "Gunakan alamat layanan atau kontak resmi di luar email ini."}], "zones": [{"id": "first", "label": "1 · Hentikan risiko", "hint": "Apa tindakan pertama Anda?"}, {"id": "second", "label": "2 · Pastikan melalui kanal lain", "hint": "Jangan memakai alamat dari email"}, {"id": "third", "label": "3 · Tindak lanjuti temuan", "hint": "Bantu tim menangani pesan"}], "solution": {"stop": "first", "verify": "second", "report": "third", "try": "bank", "forward": "bank"}}]}</script><img class="dnd-image-ref" data-dnd-art="scenes/C12-mail.webp" src="asset://93427aca-a5dc-3a3e-73e0-cd7db9661789.webp" alt="" hidden><img class="dnd-image-ref" data-dnd-art="scenes/C12-lock.webp" src="asset://b4789284-4579-ae2d-872e-b9550baa6ecc.webp" alt="" hidden><section class="dnd-challenge" hidden aria-label="Tantangan kasus bertahap"><div class="dnd-workspace"></div><div class="dnd-status" role="status" aria-live="polite"></div></section></div>]]></htmlView>
+          <jsonProperties><![CDATA[{"ideviceId":"2026111516261388OTWQ","textInfoDurationInput":"","textInfoDurationTextInput":"Duration","textInfoParticipantsInput":"","textInfoParticipantsTextInput":"Grouping","textTextarea":"<div class=\"lcm-stage\" data-lcm-phase=\"1\" data-course=\"C12\"></div><section class=\"sim-root\" data-course=\"C12\" data-complete=\"false\" aria-label=\"Simulasi keputusan\"><div class=\"sim-scroll\"><div class=\"sim-content\"></div></div><footer class=\"sim-controls\"><button type=\"button\" data-simple-sim=\"back\" disabled>← Sebelumnya</button><button type=\"button\" class=\"sim-next\" data-simple-sim=\"next\" disabled>Lanjut →</button></footer></section><script class=\"word-config\" type=\"application/json\">{\"grid\": [\"RPOEPIZRPS\", \"TMLKODEXHX\", \"ARAVOEEYIL\", \"UOZBPNORSB\", \"TEPXGTNCHY\", \"APJNFIDKIX\", \"NWZVTTKXNF\", \"MZGSCAGOGC\", \"ADASHSCNGB\", \"HWMFAZESON\"], \"words\": [{\"term\": \"PHISHING\", \"meaning\": \"Pesan penipuan yang menyamar sebagai pihak tepercaya.\", \"cells\": [[0, 8], [1, 8], [2, 8], [3, 8], [4, 8], [5, 8], [6, 8], [7, 8]], \"clue\": \"Penipuan melalui pesan yang menyamar sebagai pihak tepercaya.\"}, {\"term\": \"MFA\", \"meaning\": \"Pemeriksaan identitas dengan dua atau lebih jenis faktor.\", \"cells\": [[9, 2], [9, 3], [9, 4]], \"clue\": \"Cara masuk akun yang memerlukan dua atau lebih jenis faktor pemeriksaan.\"}, {\"term\": \"IDENTITAS\", \"meaning\": \"Identitas pengirim perlu diperiksa, bukan hanya nama tampilannya.\", \"cells\": [[0, 5], [1, 5], [2, 5], [3, 5], [4, 5], [5, 5], [6, 5], [7, 5], [8, 5]], \"clue\": \"Informasi tentang siapa pengirim sebenarnya, yang perlu diperiksa terpisah dari nama tampilannya.\"}, {\"term\": \"TAUTAN\", \"meaning\": \"Teks yang terlihat dapat berbeda dari alamat tujuannya.\", \"cells\": [[1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0]], \"clue\": \"Bagian pesan yang mengarahkan Anda ke alamat lain saat dipilih.\"}, {\"term\": \"KODE\", \"meaning\": \"Kode verifikasi tetap perlu dijaga.\", \"cells\": [[1, 3], [1, 4], [1, 5], [1, 6]], \"clue\": \"Rangkaian angka atau karakter untuk verifikasi akses yang tidak boleh dibagikan.\"}]}</script><section class=\"word-root\" data-complete=\"false\" data-found=\"0\" aria-label=\"Find the words\" hidden></section><script class=\"dt-config\" type=\"application/json\">{\"words\": [{\"id\": \"code\", \"label\": \"kode verifikasi\"}, {\"id\": \"logo\", \"label\": \"logo pengirim\"}, {\"id\": \"link\", \"label\": \"tautan\"}, {\"id\": \"contact\", \"label\": \"kontak resmi\"}], \"gaps\": [{\"id\": \"g1\", \"before\": \"Saat menerima email login yang mencurigakan, jangan langsung membuka\", \"after\": \"di dalamnya.\", \"answer\": \"link\", \"feedback\": \"Tautan dalam pesan yang meragukan dapat mengarah ke halaman palsu.\"}, {\"id\": \"g2\", \"before\": \"Pastikan permintaan melalui\", \"after\": \"yang sudah dikenal, di luar pesan tersebut.\", \"answer\": \"contact\", \"feedback\": \"Jalur yang dikenal memberi pemeriksaan terpisah dari pesan pengirim.\"}, {\"id\": \"g3\", \"before\": \"Jangan membacakan\", \"after\": \"kepada penelepon yang mengaku petugas TI.\", \"answer\": \"code\", \"feedback\": \"Pengakuan sebagai petugas belum membuktikan siapa penelepon tersebut.\"}]}</script><section class=\"dt-root\" data-complete=\"false\" data-correct=\"0\" data-assisted=\"false\" aria-label=\"Drag the Words\" hidden></section><script class=\"sp-config\" type=\"application/json\">{\"initial_order\": [\"p3\", \"p1\", \"p4\", \"p2\"], \"correct_order\": [\"p1\", \"p2\", \"p3\", \"p4\"], \"title\": \"Dari email mencurigakan ke penanganan\", \"explanation\": \"Interaksi dengan pesan dihentikan, permintaan diperiksa melalui kontak yang dikenal, lalu bukti diserahkan untuk penanganan.\", \"paragraphs\": [{\"id\": \"p1\", \"text\": \"Sebuah email meminta pegawai segera masuk ke akun melalui sebuah tautan. Pesan itu mengancam pemblokiran akun dalam satu jam.\"}, {\"id\": \"p2\", \"text\": \"Ancaman dalam email tersebut membuat pegawai ragu. Ia menghentikan interaksi dengan pesan dan menghubungi petugas TI melalui kontak resmi yang sudah dikenal.\"}, {\"id\": \"p3\", \"text\": \"Petugas yang dihubungi lewat kontak itu memastikan bahwa tidak ada permintaan masuk akun dari layanan resmi. Tautan dalam pesan pun tidak digunakan.\"}, {\"id\": \"p4\", \"text\": \"Konfirmasi petugas itu disertakan saat pegawai menyerahkan bukti email melalui kanal pelaporan instansi. Pesan mencurigakan dapat ditangani lebih lanjut.\"}]}</script><section class=\"sp-root\" data-complete=\"false\" data-correct=\"0\" data-assisted=\"false\" aria-label=\"Sort the Paragraphs\" hidden></section><script type=\"application/json\" class=\"dnd-config\">{\"course\": \"C12\", \"steps\": [{\"title\": \"Periksa bukti pada pesan ini.\", \"intro\": \"Ada lima potongan informasi dari pesan tadi. Tentukan mana yang menguatkan dugaan phishing dan mana yang belum cukup sebagai bukti.\", \"kind\": \"sort\", \"items\": [{\"id\": \"domain\", \"label\": \"admin@bpss-portal-update.example\", \"detail\": \"Nama domain menyerupai BPS, tetapi bukan alamat layanan yang dikenal.\"}, {\"id\": \"logo\", \"label\": \"Pesan memakai logo BPS\", \"detail\": \"Logo tampak rapi dan sesuai warna instansi.\"}, {\"id\": \"deadline\", \"label\": \"Akun diblokir dalam 1 jam!\", \"detail\": \"Penerima diminta segera login agar akunnya tidak diblokir.\"}, {\"id\": \"greeting\", \"label\": \"“Kepada pengguna layanan”\", \"detail\": \"Salam tidak menyebut nama penerima.\"}, {\"id\": \"url\", \"label\": \"http://bit.ly/login-update-bps\", \"detail\": \"Alamat singkat ini tidak memperlihatkan tujuan login secara langsung.\"}], \"zones\": [{\"id\": \"strong\", \"label\": \"Indikasi phishing\", \"hint\": \"Alasan kuat untuk menghentikan tindakan\"}, {\"id\": \"weak\", \"label\": \"Belum cukup bukti\", \"hint\": \"Tidak membuktikan pesan aman atau berbahaya\"}], \"solution\": {\"domain\": \"strong\", \"deadline\": \"strong\", \"url\": \"strong\", \"logo\": \"weak\", \"greeting\": \"weak\"}}, {\"title\": \"Susun urutan penanganan pesan.\", \"intro\": \"Letakkan tiga tindakan yang aman pada urutan 1–3. Dua tindakan yang berisiko tidak perlu dipindahkan.\", \"kind\": \"sequence\", \"items\": [{\"id\": \"report\", \"label\": \"Laporkan melalui kanal TI resmi\", \"detail\": \"Sertakan bukti pesan sesuai prosedur instansi.\"}, {\"id\": \"try\", \"label\": \"Coba login untuk memastikan\", \"detail\": \"Buka tautan dalam email dan masukkan akun.\"}, {\"id\": \"stop\", \"label\": \"Hentikan interaksi dengan pesan\", \"detail\": \"Jangan buka tautan, balas, atau kirim data akun.\"}, {\"id\": \"forward\", \"label\": \"Teruskan email ke grup kerja\", \"detail\": \"Minta rekan mencoba tautan yang sama.\"}, {\"id\": \"verify\", \"label\": \"Verifikasi lewat kontak yang dikenal\", \"detail\": \"Gunakan alamat layanan atau kontak resmi di luar email ini.\"}], \"zones\": [{\"id\": \"first\", \"label\": \"1 · Hentikan risiko\", \"hint\": \"Apa tindakan pertama Anda?\"}, {\"id\": \"second\", \"label\": \"2 · Pastikan melalui kanal lain\", \"hint\": \"Jangan memakai alamat dari email\"}, {\"id\": \"third\", \"label\": \"3 · Tindak lanjuti temuan\", \"hint\": \"Bantu tim menangani pesan\"}], \"solution\": {\"stop\": \"first\", \"verify\": \"second\", \"report\": \"third\", \"try\": \"bank\", \"forward\": \"bank\"}}]}</script><img class=\"dnd-image-ref\" data-dnd-art=\"scenes/C12-mail.webp\" src=\"asset://93427aca-a5dc-3a3e-73e0-cd7db9661789.webp\" alt=\"\" hidden><img class=\"dnd-image-ref\" data-dnd-art=\"scenes/C12-lock.webp\" src=\"asset://b4789284-4579-ae2d-872e-b9550baa6ecc.webp\" alt=\"\" hidden><section class=\"dnd-challenge\" hidden aria-label=\"Tantangan kasus bertahap\"><div class=\"dnd-workspace\"></div><div class=\"dnd-status\" role=\"status\" aria-live=\"polite\"></div></section>","textFeedbackInput":"Show Feedback","textFeedbackTextarea":""}]]></jsonProperties>
+          <odeComponentsOrder>0</odeComponentsOrder>
+          <odeComponentsProperties>
+            <odeComponentsProperty>
+              <key>visibility</key>
+              <value>true</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>teacherOnly</key>
+              <value>false</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>cssClass</key>
+              <value></value>
+            </odeComponentsProperty>
+          </odeComponentsProperties>
+        </odeComponent>
+      </odeComponents>
+    </odePagStructure>
+    <odePagStructure>
+      <odePageId>20261115162613VST5ZM</odePageId>
+      <odeBlockId>20261115162613RFCYPZ</odeBlockId>
+      <blockName>Dua keputusan</blockName>
+      <iconName></iconName>
+      <odePagStructureOrder>2</odePagStructureOrder>
+      <odePagStructureProperties>
+        <odePagStructureProperty>
+          <key>visibility</key>
+          <value>true</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>teacherOnly</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>allowToggle</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>minimized</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>cssClass</key>
+          <value></value>
+        </odePagStructureProperty>
+      </odePagStructureProperties>
+      <odeComponents>
+        <odeComponent>
+          <odePageId>20261115162613VST5ZM</odePageId>
+          <odeBlockId>20261115162613RFCYPZ</odeBlockId>
+          <odeIdeviceId>20261115162613ZA5YVT</odeIdeviceId>
+          <odeIdeviceTypeName>text</odeIdeviceTypeName>
+          <htmlView><![CDATA[<div class="exe-text-template"><div class="lcm-stage" data-lcm-phase="2" data-course="C12"></div><div class="scene-quiz-note"><span class="scene-eyebrow">CEK PEMAHAMAN</span><p>Jawab kedua pertanyaan berikut berdasarkan materi dan latihan tadi.</p></div></div>]]></htmlView>
+          <jsonProperties><![CDATA[{"ideviceId":"20261115162613ZA5YVT","textInfoDurationInput":"","textInfoDurationTextInput":"Duration","textInfoParticipantsInput":"","textInfoParticipantsTextInput":"Grouping","textTextarea":"<div class=\"lcm-stage\" data-lcm-phase=\"2\" data-course=\"C12\"></div><div class=\"scene-quiz-note\"><span class=\"scene-eyebrow\">CEK PEMAHAMAN</span><p>Jawab kedua pertanyaan berikut berdasarkan materi dan latihan tadi.</p></div>","textFeedbackInput":"Show Feedback","textFeedbackTextarea":""}]]></jsonProperties>
+          <odeComponentsOrder>0</odeComponentsOrder>
+          <odeComponentsProperties>
+            <odeComponentsProperty>
+              <key>visibility</key>
+              <value>true</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>teacherOnly</key>
+              <value>false</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>cssClass</key>
+              <value></value>
+            </odeComponentsProperty>
+          </odeComponentsProperties>
+        </odeComponent>
+      </odeComponents>
+    </odePagStructure>
+    <odePagStructure>
+      <odePageId>20261115162613VST5ZM</odePageId>
+      <odeBlockId>20261115162613YJHZTG</odeBlockId>
+      <blockName>Uji pemahaman</blockName>
+      <iconName></iconName>
+      <odePagStructureOrder>3</odePagStructureOrder>
+      <odePagStructureProperties>
+        <odePagStructureProperty>
+          <key>visibility</key>
+          <value>true</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>teacherOnly</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>allowToggle</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>minimized</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>cssClass</key>
+          <value></value>
+        </odePagStructureProperty>
+      </odePagStructureProperties>
+      <odeComponents>
+        <odeComponent>
+          <odePageId>20261115162613VST5ZM</odePageId>
+          <odeBlockId>20261115162613YJHZTG</odeBlockId>
+          <odeIdeviceId>20261115162613T8D15Z</odeIdeviceId>
+          <odeIdeviceTypeName>form</odeIdeviceTypeName>
+          <htmlView><![CDATA[<div class="exe-form-container">
+  <div class="game-evaluation-ids js-hidden" data-id="20261115162613T8D15Z" data-evaluationb="false" data-evaluationid="b10a9d21-4fb8-4d35-9490-8246f1ce0413"></div>
+            <div id="frmMainContainer-20261115162613T8D15Z" class="form-IDevice" data-id="20261115162613T8D15Z">
+                <div class="form-Data js-hidden">{}</div>
+                <div class="form-instructions"><p>Dua keputusan untuk Anda</p></div>
+                <div class="FRMP-GameScoreBoard" style="display:none;">
+                    <div>
+                        <strong><span class="sr-av">Time per question:</span></strong>
+                        <span id="frmPTime-20261115162613T8D15Z">00:00</span>
+                    </div>
+                </div>
+                <div class="FRMP-StartGame" id="frmStartGameDiv-20261115162613T8D15Z" style="display:none;">
+                      <button  id="frmStartGame-20261115162613T8D15Z" type="button" class="btn btn-primary">Click here to start</button>
+                </div>
+                <div class="form-body" id="frmBody-20261115162613T8D15Z" style="display:block;">
+                    <div class="FRMP-Questions">
+                        <div id="form-questions-20261115162613T8D15Z" > </div>
+                        <div id="frmCover-20261115162613T8D15Z" class="FRMP-Cover"> </div>
+                    </div>
+                    <div id="resultsContainer-20261115162613T8D15Z" class="form-results-container inline">
+                        <div id="form-score-20261115162613T8D15Z" class="score-text">Score.</div>
+                        <div id="form-result-test-20261115162613T8D15Z" class="score-text phrase-score"></div>
+                    </div>
+                    <div class="form-buttons-container inline">
+                        <input id="form-button-check-20261115162613T8D15Z" class="btn btn-primary" type="button" value="Periksa jawaban"
+                            data-id="20261115162613T8D15Z" />
+                        <input id="form-button-reset-20261115162613T8D15Z" type="button" value="Reset"
+                            data-id="20261115162613T8D15Z" class="btn btn-primary"  style="display:none" />
+                        <input id="form-button-show-answers-20261115162613T8D15Z" class="btn btn-primary" type="button" value="Lihat pembahasan"
+                            data-id="20261115162613T8D15Z" style="display: " />
+
+                    </div>
+                </div>
+                <div class="Games-BottonContainer d-flex align-items-center justify-content-end mx-auto p-0 w-100"><div class="Games-GetScore d-flex align-items-center justify-content-center w-100 mt-3"><span class="Games-RepeatActivity"></span></div></div>
+                
+            </div>
+            <div class="questionsMedia" style="display:none"></div>
+            
+</div>]]></htmlView>
+          <jsonProperties><![CDATA[{"ideviceId":"20261115162613T8D15Z","evaluation":false,"evaluationID":"20261115162613081KVW","passScoreMode":"global","passScoreCustom":5,"repeatActivity":true,"isScorm":1,"textButtonScorm":"Periksa jawaban","weighted":100,"msgs":{"msgScoreScorm":"Preview: nilai belum dikirim ke LMS.","msgYouScore":"Skor Anda","msgEndGameScore":"Please start the game before saving your score.","msgScore":"Skor","msgWeight":"Weight","msgYouLastScore":"Nilai terakhir tersimpan","msgOnlySaveScore":"You can only save the score once!","msgOnlySave":"You can only save once","msgOnlySaveAuto":"Your score will be saved after each question. You can only play once.","msgSaveAuto":"Nilai dikirim otomatis ke LMS.","msgSeveralScore":"You can save the score as many times as you want","msgPlaySeveralTimes":"You can do this activity as many times as you want","msgActityComply":"You have already done this activity.","msgUncompletedActivity":"Incomplete activity","msgSuccessfulActivity":"Activity: Passed. Score: %s","msgUnsuccessfulActivity":"Activity: Not passed. Score: %s","msgPassScore":"Minimum score needed to pass this activity: %s","msgTypeGame":"Tantangan","msgStartGame":"Click here to start","msgTime":"Time per question","msgSaveScore":"Simpan nilai","msgResult":"Result","msgCheck":"Periksa jawaban","msgReset":"Ulangi","msgShowAnswers":"Lihat pembahasan","msgTestResultPass":"Misi selesai. Bawa pelajarannya ke pekerjaan.","msgTestResultNotPass":"Misi selesai. Tinjau lagi bukti dan pembahasannya.","msgTrueFalseHelp":"Select whether the statement is true or false","msgDropdownHelp":"Choose the correct answer among the options proposed","msgFillHelp":"Fill in the blanks with the appropriate word","msgSingleSelectionHelp":"Pilih satu jawaban yang paling tepat.","msgMultipleSelectionHelp":"Multiple choice with multiple corrects answers","msgPlayStart":"Mulai tantangan","msgTrue":"True","msgFalse":"False","msgNext":"Berikutnya","msgPrevious":"Sebelumnya","msgSuggestion":"Suggestion","msgOk":"Tepat","msgKO":"Perlu ditinjau","msgHide":"Hide","msgSubmit":"Periksa","msgPlayAgain":"Coba lagi","msgHits":"Tepat","msgErrors":"Perlu ditinjau","msgNumQuestions":"Jumlah kartu","msgFullScreen":"Layar penuh","msgExitFullScreen":"Keluar layar penuh","msgMinimize":"Perkecil","msgMaximize":"Perbesar","mgsGameStart":"Tantangan dimulai. Seret kartu ke kategori yang sesuai.","msgContinue":"Lanjutkan","msgTimeOver":"Waktu habis. Mari pelajari pembahasannya.","msgTestPassed":"Keputusan Anda tepat.","msgTestFailed":"Pelajari kembali alasan di balik jawaban yang tepat.","msgAllCorrect":"Semua kartu sudah tepat.","msgRebootGame":"Ulangi tantangan ini?"},"id":"20261115162613T8D15Z","questionsRandom":false,"percentageQuestions":"100","time":"0","eXeFormInstructions":"<p>Dua keputusan. Pilih satu jawaban pada setiap soal, lalu tekan Periksa jawaban. Skor: 0, 50, atau 100.</p>","questionsData":[{"id":"20261115162613YCOVWA","activityType":"selection","baseText":"<p>Email tadi meminta Anda segera login. Tindakan mana yang Anda pilih?</p>","feedbackRight":"Tidak perlu mencoba tautannya untuk memastikan pesan itu benar. Periksa permintaan dan laporkan temuan melalui kontak resmi yang Anda peroleh secara terpisah.","feedbackWrong":"Tidak perlu mencoba tautannya untuk memastikan pesan itu benar. Periksa permintaan dan laporkan temuan melalui kontak resmi yang Anda peroleh secara terpisah.","suggestion":"","wrongAnswersValue":"","selectionType":"single","answers":[[false,"Membuka tautannya untuk memastikan"],[true,"Menghindari tautan dan melapor melalui kanal resmi"],[false,"Meneruskannya agar rekan mencoba"]],"answer":"2","capitalization":false,"strict":false,"order":0,"customScore":1,"time":0},{"id":"20261115162613R1MS47","activityType":"selection","baseText":"<p>Apa yang membantu melindungi akun dari pengambilalihan?</p>","feedbackRight":"Kata sandi yang kuat melindungi akses awal. MFA meminta faktor pemeriksaan tambahan saat login. Kode maupun persetujuan login tetap harus dijaga.","feedbackWrong":"Kata sandi yang kuat melindungi akses awal. MFA meminta faktor pemeriksaan tambahan saat login. Kode maupun persetujuan login tetap harus dijaga.","suggestion":"","wrongAnswersValue":"","selectionType":"single","answers":[[true,"Menggunakan MFA dan kata sandi yang kuat"],[false,"Memakai satu kata sandi untuk semua layanan"],[false,"Membagikan kata sandi kepada tim"]],"answer":"1","capitalization":false,"strict":false,"order":1,"customScore":1,"time":0}],"addBtnAnswers":true,"eXeIdeviceTextAfter":"","showSlider":true}]]></jsonProperties>
+          <odeComponentsOrder>0</odeComponentsOrder>
+          <odeComponentsProperties>
+            <odeComponentsProperty>
+              <key>visibility</key>
+              <value>true</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>teacherOnly</key>
+              <value>false</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>cssClass</key>
+              <value></value>
+            </odeComponentsProperty>
+          </odeComponentsProperties>
+        </odeComponent>
+      </odeComponents>
+    </odePagStructure>
+    <odePagStructure>
+      <odePageId>20261115162613VST5ZM</odePageId>
+      <odeBlockId>20261115162613F49LD3</odeBlockId>
+      <blockName>Bawa ke pekerjaan</blockName>
+      <iconName></iconName>
+      <odePagStructureOrder>4</odePagStructureOrder>
+      <odePagStructureProperties>
+        <odePagStructureProperty>
+          <key>visibility</key>
+          <value>true</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>teacherOnly</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>allowToggle</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>minimized</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>cssClass</key>
+          <value></value>
+        </odePagStructureProperty>
+      </odePagStructureProperties>
+      <odeComponents>
+        <odeComponent>
+          <odePageId>20261115162613VST5ZM</odePageId>
+          <odeBlockId>20261115162613F49LD3</odeBlockId>
+          <odeIdeviceId>2026111516261316OA3Z</odeIdeviceId>
+          <odeIdeviceTypeName>text</odeIdeviceTypeName>
+          <htmlView><![CDATA[<div class="exe-text-template"><div class="lcm-stage" data-lcm-phase="3" data-course="C12"></div><section class="scene-review"><span class="scene-eyebrow">PEMBAHASAN</span><h2>Menilai pesan dan menjaga akses akun</h2><p class="scene-review-lead">Ada alasan untuk menahan diri pada pesan ini: alamat pengirim menyerupai layanan resmi, penerima didesak segera login, dan tujuan tautannya tidak terlihat langsung. Logo dan sapaan umum tidak cukup untuk memastikan identitas pengirim.</p><div class="scene-review-points"><article><span>1</span><div><h3>Email tadi meminta Anda segera login. Tindakan mana yang Anda pilih?</h3><p>Tidak perlu mencoba tautannya untuk memastikan pesan itu benar. Periksa permintaan dan laporkan temuan melalui kontak resmi yang Anda peroleh secara terpisah.</p></div></article><article><span>2</span><div><h3>Apa yang membantu melindungi akun dari pengambilalihan?</h3><p>Kata sandi yang kuat melindungi akses awal. MFA meminta faktor pemeriksaan tambahan saat login. Kode maupun persetujuan login tetap harus dijaga.</p></div></article></div></section></div>]]></htmlView>
+          <jsonProperties><![CDATA[{"ideviceId":"2026111516261316OA3Z","textInfoDurationInput":"","textInfoDurationTextInput":"Duration","textInfoParticipantsInput":"","textInfoParticipantsTextInput":"Grouping","textTextarea":"<div class=\"lcm-stage\" data-lcm-phase=\"3\" data-course=\"C12\"></div><section class=\"scene-review\"><span class=\"scene-eyebrow\">PEMBAHASAN</span><h2>Menilai pesan dan menjaga akses akun</h2><p class=\"scene-review-lead\">Ada alasan untuk menahan diri pada pesan ini: alamat pengirim menyerupai layanan resmi, penerima didesak segera login, dan tujuan tautannya tidak terlihat langsung. Logo dan sapaan umum tidak cukup untuk memastikan identitas pengirim.</p><div class=\"scene-review-points\"><article><span>1</span><div><h3>Email tadi meminta Anda segera login. Tindakan mana yang Anda pilih?</h3><p>Tidak perlu mencoba tautannya untuk memastikan pesan itu benar. Periksa permintaan dan laporkan temuan melalui kontak resmi yang Anda peroleh secara terpisah.</p></div></article><article><span>2</span><div><h3>Apa yang membantu melindungi akun dari pengambilalihan?</h3><p>Kata sandi yang kuat melindungi akses awal. MFA meminta faktor pemeriksaan tambahan saat login. Kode maupun persetujuan login tetap harus dijaga.</p></div></article></div></section>","textFeedbackInput":"Show Feedback","textFeedbackTextarea":""}]]></jsonProperties>
+          <odeComponentsOrder>0</odeComponentsOrder>
+          <odeComponentsProperties>
+            <odeComponentsProperty>
+              <key>visibility</key>
+              <value>true</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>teacherOnly</key>
+              <value>false</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>cssClass</key>
+              <value></value>
+            </odeComponentsProperty>
+          </odeComponentsProperties>
+        </odeComponent>
+      </odeComponents>
+    </odePagStructure>
+    <odePagStructure>
+      <odePageId>20261115162613VST5ZM</odePageId>
+      <odeBlockId>20261115162613S5K0NM</odeBlockId>
+      <blockName>Misi selesai</blockName>
+      <iconName></iconName>
+      <odePagStructureOrder>5</odePagStructureOrder>
+      <odePagStructureProperties>
+        <odePagStructureProperty>
+          <key>visibility</key>
+          <value>true</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>teacherOnly</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>allowToggle</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>minimized</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>cssClass</key>
+          <value></value>
+        </odePagStructureProperty>
+      </odePagStructureProperties>
+      <odeComponents>
+        <odeComponent>
+          <odePageId>20261115162613VST5ZM</odePageId>
+          <odeBlockId>20261115162613S5K0NM</odeBlockId>
+          <odeIdeviceId>202611151626133IQBG9</odeIdeviceId>
+          <odeIdeviceTypeName>text</odeIdeviceTypeName>
+          <htmlView><![CDATA[<div class="exe-text-template"><div class="lcm-stage" data-lcm-phase="4" data-course="C12"></div><section class="scene-ending"><img src="asset://1a03f11a-5e83-8663-98cd-6dd9c4174f26.webp" alt="Lencana penyelesaian latihan"><div><span class="scene-eyebrow">HASIL LATIHAN</span><h2>Hasil latihan</h2><p class="scene-final-score" role="status"></p><p>Untuk urusan akun, gunakan alamat layanan atau kontak TI yang sudah Anda kenal. Pesan yang mencurigakan dapat dilaporkan melalui prosedur instansi.</p><p class="scene-footnote">XP dan Trophy mengikuti aturan GOJAGS Classroom.</p><button type="button" class="scene-confirm" data-scene-action="restart">Ulangi latihan</button></div></section></div>]]></htmlView>
+          <jsonProperties><![CDATA[{"ideviceId":"202611151626133IQBG9","textInfoDurationInput":"","textInfoDurationTextInput":"Duration","textInfoParticipantsInput":"","textInfoParticipantsTextInput":"Grouping","textTextarea":"<div class=\"lcm-stage\" data-lcm-phase=\"4\" data-course=\"C12\"></div><section class=\"scene-ending\"><img src=\"asset://1a03f11a-5e83-8663-98cd-6dd9c4174f26.webp\" alt=\"Lencana penyelesaian latihan\"><div><span class=\"scene-eyebrow\">HASIL LATIHAN</span><h2>Hasil latihan</h2><p class=\"scene-final-score\" role=\"status\"></p><p>Untuk urusan akun, gunakan alamat layanan atau kontak TI yang sudah Anda kenal. Pesan yang mencurigakan dapat dilaporkan melalui prosedur instansi.</p><p class=\"scene-footnote\">XP dan Trophy mengikuti aturan GOJAGS Classroom.</p><button type=\"button\" class=\"scene-confirm\" data-scene-action=\"restart\">Ulangi latihan</button></div></section>","textFeedbackInput":"Show Feedback","textFeedbackTextarea":""}]]></jsonProperties>
+          <odeComponentsOrder>0</odeComponentsOrder>
+          <odeComponentsProperties>
+            <odeComponentsProperty>
+              <key>visibility</key>
+              <value>true</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>teacherOnly</key>
+              <value>false</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>cssClass</key>
+              <value></value>
+            </odeComponentsProperty>
+          </odeComponentsProperties>
+        </odeComponent>
+      </odeComponents>
+    </odePagStructure>
+  </odePagStructures>
+</odeNavStructure>
+</odeNavStructures>
+</ode>

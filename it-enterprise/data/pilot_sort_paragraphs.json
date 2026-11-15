@@ -1,0 +1,36 @@
+{
+  "ITE": {
+    "title": "Dari antrean ke rencana kerja",
+    "initial_order": [
+      "p3",
+      "p1",
+      "p4",
+      "p2"
+    ],
+    "correct_order": [
+      "p1",
+      "p2",
+      "p3",
+      "p4"
+    ],
+    "explanation": "Temuan lapangan memberi arah pada target. Target menunjukkan pekerjaan yang perlu disiapkan sebelum manfaatnya diukur.",
+    "paragraphs": [
+      {
+        "id": "p1",
+        "text": "Petugas dari dua unit menelusuri satu permintaan. Mereka menemukan bahwa nomor permintaan berganti saat tabel diteruskan."
+      },
+      {
+        "id": "p2",
+        "text": "Berdasarkan temuan itu, kedua unit menetapkan satu nomor yang tetap dipakai sampai tabel dikirim. Mereka menentukan siapa yang boleh melihat status permintaan."
+      },
+      {
+        "id": "p3",
+        "text": "Setelah aturan nomor dan akses disepakati, tim menganggarkan pekerjaan integrasi dan menyiapkan uji coba pada dua unit."
+      },
+      {
+        "id": "p4",
+        "text": "Pada akhir uji coba, pemilik layanan membandingkan waktu penyelesaian dengan catatan sebelum perubahan. Hasilnya dipakai untuk memutuskan apakah cakupan diperluas."
+      }
+    ]
+  }
+}

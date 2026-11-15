@@ -1,0 +1,98 @@
+{
+  "C01": {
+    "headline": "Dua usulan masuk. Dananya hanya cukup untuk satu.",
+    "intro": "Server pengumpulan data mengalami gangguan, sementara usulan penataan ruang rapat juga menunggu. Dana yang tersedia perlu diarahkan ke kebutuhan yang paling mendesak.",
+    "start": "Lihat kedua usulan",
+    "practice_title": "Bagaimana Anda membagi anggarannya?",
+    "practice_note": "Ketuk gambar untuk memeriksa kebutuhannya. Setelah itu, geser alokasi dan lihat apa yang berubah.",
+    "cards": [
+      {
+        "label": "Perbaikan sistem data",
+        "image": "scenes/C01-server.webp",
+        "title": "Server sedang bermasalah",
+        "body": "Pengumpulan data terganggu. Jika perbaikan ditunda, pelaporan juga bisa terlambat."
+      },
+      {
+        "label": "Dekorasi ruang rapat",
+        "image": "scenes/C01-meeting.webp",
+        "title": "Penataan ruang rapat",
+        "body": "Usulan ini memperbaiki tampilan ruangan. Penundaannya tidak langsung menghambat layanan data."
+      }
+    ],
+    "reflection": "Perbaikan server berkaitan langsung dengan kelangsungan pengumpulan data. Penataan ruang rapat masih bisa menunggu karena ruangan tetap dapat digunakan. Saat biaya perbaikan naik, lingkup dan tahapan pekerjaan perlu dibahas lagi agar alokasinya tetap cukup.",
+    "takeaway": "Saat menelaah usulan belanja berikutnya, periksa pekerjaan yang akan tertahan bila usulan itu ditunda.",
+    "quizzes": [
+      {
+        "question": "Jika dana hanya cukup untuk satu usulan, mana yang Anda dahulukan?",
+        "options": [
+          "A. Memperbaiki sistem pengumpulan data",
+          "B. Menata ulang ruang rapat",
+          "C. Membagi dana sama rata"
+        ],
+        "answer_key": "A",
+        "feedback": "Sistem yang terganggu sudah menahan pekerjaan. Perbaikannya perlu mendapat dana yang cukup; pembagian sama rata bisa membuat kebutuhan itu tidak terpenuhi."
+      },
+      {
+        "question": "Anggaran sudah terpakai, tetapi hasil kerja belum tercapai. Apa yang Anda periksa lebih dahulu?",
+        "options": [
+          "A. Peluang menambah belanja",
+          "B. Hambatan yang membuat hasil kerja belum tercapai",
+          "C. Pilihan untuk menunda evaluasi"
+        ],
+        "answer_key": "B",
+        "feedback": "Cari pekerjaan yang belum selesai dan penyebabnya. Dari situ baru dapat dinilai apakah masalahnya ada pada pelaksanaan, kebutuhan biaya, atau hal lain."
+      }
+    ]
+  },
+  "C12": {
+    "headline": "Email ini meminta Anda segera login. Apa yang terasa janggal?",
+    "intro": "Sebuah email meminta Anda segera login agar akun tidak diblokir. Pengirimnya mengaku sebagai administrator. Permintaan seperti ini perlu diperiksa sebelum ditindaklanjuti.",
+    "start": "Periksa emailnya",
+    "practice_title": "Bagian mana yang membuat Anda ragu?",
+    "practice_note": "Ketuk bagian yang mencurigakan. Anda tidak akan membuka tautan sungguhan.",
+    "cards": [
+      {
+        "label": "admin@bpss-portal-update.com",
+        "image": "scenes/C12-mail.webp",
+        "title": "Alamatnya mirip, tetapi berbeda",
+        "body": "Nama pengirim bisa dibuat seolah-olah resmi. Cocokkan domainnya melalui kanal yang sudah Anda kenal."
+      },
+      {
+        "label": "Akun diblokir dalam 1 jam!",
+        "image": "scenes/C12-lock.webp",
+        "title": "Anda didesak bertindak cepat",
+        "body": "Ancaman pemblokiran membuat penerima terburu-buru. Desakan ini justru alasan untuk berhenti dan memeriksa."
+      },
+      {
+        "label": "bit.ly/login-update-bps",
+        "image": "scenes/C12-mail.webp",
+        "title": "Tujuan tautannya disembunyikan",
+        "body": "Tautan pendek tidak memperlihatkan alamat tujuan. Jangan masukkan kata sandi lewat tautan pada pesan ini."
+      }
+    ],
+    "reflection": "Ada alasan untuk menahan diri pada pesan ini: alamat pengirim menyerupai layanan resmi, penerima didesak segera login, dan tujuan tautannya tidak terlihat langsung. Logo dan sapaan umum tidak cukup untuk memastikan identitas pengirim.",
+    "takeaway": "Untuk urusan akun, gunakan alamat layanan atau kontak TI yang sudah Anda kenal. Pesan yang mencurigakan dapat dilaporkan melalui prosedur instansi.",
+    "quizzes": [
+      {
+        "question": "Email tadi meminta Anda segera login. Tindakan mana yang Anda pilih?",
+        "options": [
+          "A. Membuka tautannya untuk memastikan",
+          "B. Menghindari tautan dan melapor melalui kanal resmi",
+          "C. Meneruskannya agar rekan mencoba"
+        ],
+        "answer_key": "B",
+        "feedback": "Tidak perlu mencoba tautannya untuk memastikan pesan itu benar. Periksa permintaan dan laporkan temuan melalui kontak resmi yang Anda peroleh secara terpisah."
+      },
+      {
+        "question": "Apa yang membantu melindungi akun dari pengambilalihan?",
+        "options": [
+          "A. Menggunakan MFA dan kata sandi yang kuat",
+          "B. Memakai satu kata sandi untuk semua layanan",
+          "C. Membagikan kata sandi kepada tim"
+        ],
+        "answer_key": "A",
+        "feedback": "Kata sandi yang kuat melindungi akses awal. MFA meminta faktor pemeriksaan tambahan saat login. Kode maupun persetujuan login tetap harus dijaga."
+      }
+    ]
+  }
+}

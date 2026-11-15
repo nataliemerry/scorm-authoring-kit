@@ -1,0 +1,1 @@
+Untuk proyek IT Enterprise, gunakan data dan sumber di folder ini. ID kursus yang dibangun adalah ITE. Baca START-HERE.md dan skill canonical di ../scorm-authoring-kit/scorm-exe-scenes/SKILL.md. Pertahankan konten, aset, kunci dan profil kursus ini saat memadukan perubahan bersama.

@@ -1,0 +1,123 @@
+{
+  "ITE": {
+    "course": "ITE",
+    "label": "KASUS LAYANAN STATISTIK",
+    "art": "scenes/ITE-blueprint.webp",
+    "success": "Rencana siap diuji. Nomor dan aturan akses disepakati, pertukaran diuji, lalu hasil layanan ditinjau.",
+    "steps": [
+      {
+        "kind": "sort",
+        "title": "Bedakan temuan dan kondisi yang dituju",
+        "intro": "Tim akan merencanakan pelacakan permintaan tabel lintas unit. Tempatkan lima kartu sesuai perannya dalam rancangan.",
+        "instruction": "Kelompokkan setiap kartu sebagai temuan saat ini atau kondisi target.",
+        "feedback": "Cari penanda waktunya. Temuan menjelaskan keadaan yang sudah diamati. Target menjelaskan keadaan yang ingin diwujudkan.",
+        "items": [
+          {
+            "id": "shared",
+            "label": "Satu nomor lintas unit",
+            "detail": "Nomor yang sama akan dibawa sampai pengiriman tabel.",
+            "image": "scenes/ITE-blueprint.webp"
+          },
+          {
+            "id": "duplicate",
+            "label": "Nomor berbeda",
+            "detail": "Petugas melihat dua nomor untuk satu permintaan."
+          },
+          {
+            "id": "access",
+            "label": "Hak akses sesuai peran",
+            "detail": "Pemohon akan melihat status miliknya sendiri."
+          },
+          {
+            "id": "manual",
+            "label": "Pencocokan lewat telepon",
+            "detail": "Saat ini petugas harus menelepon unit lain untuk menemukan berkas.",
+            "image": "scenes/ITE-operations.webp"
+          },
+          {
+            "id": "log",
+            "label": "Riwayat perpindahan",
+            "detail": "Targetnya petugas dapat melihat kapan berkas berpindah unit."
+          }
+        ],
+        "zones": [
+          {
+            "id": "current",
+            "label": "Kondisi saat ini",
+            "hint": "Yang sudah diamati"
+          },
+          {
+            "id": "target",
+            "label": "Kondisi target",
+            "hint": "Yang akan diwujudkan"
+          }
+        ],
+        "solution": {
+          "shared": "target",
+          "duplicate": "current",
+          "access": "target",
+          "manual": "current",
+          "log": "target"
+        }
+      },
+      {
+        "kind": "sequence",
+        "title": "Susun rencana uji sebelum memperluas layanan",
+        "intro": "Rencana harus berangkat dari aturan nomor dan akses, diteruskan dengan uji pada dua unit, lalu dinilai berdasarkan catatan waktu. Sisakan dua kartu yang tidak mendukung urutan ini.",
+        "instruction": "Letakkan tiga tindakan pada urutan 1–3. Biarkan dua pilihan lain di tempat asal.",
+        "feedback": "Uji pertukaran memerlukan aturan yang sudah disepakati. Uji dilakukan sebelum tim bisa menilai manfaatnya.",
+        "items": [
+          {
+            "id": "review",
+            "label": "Bandingkan waktu penyelesaian",
+            "detail": "Tinjau data sebelum dan sesudah uji coba."
+          },
+          {
+            "id": "rollout",
+            "label": "Perluas ke semua unit sekarang",
+            "detail": "Terapkan sebelum aturan dan pertukaran diperiksa."
+          },
+          {
+            "id": "agree",
+            "label": "Sepakati aturan nomor dan akses",
+            "detail": "Libatkan pemilik layanan dan pengelola data."
+          },
+          {
+            "id": "count",
+            "label": "Hitung jumlah aplikasi",
+            "detail": "Gunakan jumlah aplikasi sebagai ukuran kecepatan layanan."
+          },
+          {
+            "id": "test",
+            "label": "Uji pertukaran pada dua unit",
+            "detail": "Cocokkan nomor dan periksa siapa yang dapat melihat status."
+          }
+        ],
+        "zones": [
+          {
+            "id": "first",
+            "label": "1 · Siapkan aturan",
+            "hint": "Syarat sebelum menguji"
+          },
+          {
+            "id": "second",
+            "label": "2 · Jalankan uji coba",
+            "hint": "Batasi pada dua unit"
+          },
+          {
+            "id": "third",
+            "label": "3 · Tinjau hasil",
+            "hint": "Gunakan sasaran layanan"
+          }
+        ],
+        "solution": {
+          "agree": "first",
+          "test": "second",
+          "review": "third",
+          "rollout": "bank",
+          "count": "bank"
+        }
+      }
+    ]
+  }
+}

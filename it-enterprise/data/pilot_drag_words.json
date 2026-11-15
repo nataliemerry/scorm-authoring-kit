@@ -1,0 +1,45 @@
+{
+  "ITE": {
+    "words": [
+      {
+        "id": "invoice",
+        "label": "nilai kontrak"
+      },
+      {
+        "id": "target",
+        "label": "kondisi target"
+      },
+      {
+        "id": "monitor",
+        "label": "waktu penyelesaian"
+      },
+      {
+        "id": "owner",
+        "label": "pemilik layanan"
+      }
+    ],
+    "gaps": [
+      {
+        "id": "g1",
+        "before": "Tetapkan",
+        "after": "yang bisa diuji, misalnya satu nomor untuk permintaan yang berpindah unit.",
+        "answer": "target",
+        "feedback": "Rancangan tujuan memberi dasar untuk menemukan jarak dari kondisi sekarang."
+      },
+      {
+        "id": "g2",
+        "before": "Keputusan tentang alur persetujuan dibahas bersama",
+        "after": "yang bertanggung jawab atas proses tersebut.",
+        "answer": "owner",
+        "feedback": "Perubahan alur kerja memerlukan keputusan dari pihak yang bertanggung jawab atas layanan."
+      },
+      {
+        "id": "g3",
+        "before": "Untuk menilai apakah tabel lebih cepat diterima, bandingkan",
+        "after": "sebelum dan sesudah uji coba.",
+        "answer": "monitor",
+        "feedback": "Indikator ini mengukur pengalaman pemohon dari awal sampai tabel dikirim."
+      }
+    ]
+  }
+}

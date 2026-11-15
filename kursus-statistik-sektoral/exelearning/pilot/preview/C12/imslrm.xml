@@ -3,14 +3,14 @@
   <general uniqueElementName="general">
     <identifier>
       <catalog uniqueElementName="catalog">none</catalog>
-      <entry uniqueElementName="entry">ODE-20261114143321SFMU5A</entry>
+      <entry uniqueElementName="entry">ODE-20261115163458JMX2ZG</entry>
     </identifier>
     <title>
       <string language="id">C12 Penguatan Statistik Sektoral</string>
     </title>
     <language>id</language>
     <description>
-      <string language="id">Sebuah email meminta Anda segera login agar akun tidak diblokir. Pengirimnya mengaku sebagai administrator. Permintaan seperti ini perlu diperiksa sebelum ditindaklanjuti.</string>
+      <string language="id">Instansi pemerintah merencanakan kegiatan statistik sektoral untuk mendukung perumusan kebijakan. Agar data yang dihasilkan sahih dan diakui secara nasional, rancangan kegiatan perlu dikoordinasikan dan diajukan rekomendasinya kepada BPS.</string>
     </description>
     <aggregationLevel uniqueElementName="aggregationLevel">
       <source uniqueElementName="source">LOM-ESv1.0</source>
@@ -25,7 +25,7 @@
       </role>
       <entity>BEGIN:VCARD VERSION:3.0 FN:BPS Corporate University EMAIL;TYPE=INTERNET: ORG: END:VCARD</entity>
       <date>
-        <dateTime uniqueElementName="dateTime">2026-11-14T14:33:57.00+07:00</dateTime>
+        <dateTime uniqueElementName="dateTime">2026-11-15T16:35:45.00+07:00</dateTime>
         <description>
           <string language="id">Metadata creation date</string>
         </description>
@@ -40,7 +40,7 @@
       </role>
       <entity>BEGIN:VCARD VERSION:3.0 FN:BPS Corporate University EMAIL;TYPE=INTERNET: ORG: END:VCARD</entity>
       <date>
-        <dateTime uniqueElementName="dateTime">2026-11-14T14:33:57.00+07:00</dateTime>
+        <dateTime uniqueElementName="dateTime">2026-11-15T16:35:45.00+07:00</dateTime>
         <description>
           <string language="id">Metadata creation date</string>
         </description>

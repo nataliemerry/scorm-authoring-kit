@@ -1,0 +1,16 @@
+{
+  "reference_file": "example-content-sort-paragraphs-1209169.h5p",
+  "sha256": "6b8ce300dc3ba6d9bab2949d3a8baf5832e83057ebb3053c253a90025c3017d0",
+  "inspected_on": "2026-11-14",
+  "main_library": "H5P.SortParagraphs 0.11",
+  "observed_features": [
+    "paragraph ordering",
+    "drag and up/down buttons",
+    "keyboard grab/move/drop/cancel",
+    "explicit check",
+    "retry",
+    "solution",
+    "transition feedback"
+  ],
+  "implementation": "Independent offline eXe Text/theme activity; no H5P library code or original morning-routine text copied; practice counts do not affect LMS score."
+}

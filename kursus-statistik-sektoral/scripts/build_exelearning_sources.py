@@ -142,8 +142,8 @@ def main(course_ids=None):
         prop(root,'odeProperties','odeProperty','pp_theme','lcm-interactive')
         prop(root,'userPreferences','userPreference','theme','lcm-interactive')
         if PILOT:
-            prop(root,'odeProperties','odeProperty','pp_theme','lcm-scenes-sort-paragraphs-forward')
-            prop(root,'userPreferences','userPreference','theme','lcm-scenes-sort-paragraphs-forward')
+            prop(root,'odeProperties','odeProperty','pp_theme','lcm-scenes-unified-kursus-statistik-sektoral-20261115')
+            prop(root,'userPreferences','userPreference','theme','lcm-scenes-unified-kursus-statistik-sektoral-20261115')
         prop(root,'odeProperties','odeProperty','pp_extraHeadContent','')
         prop(root,'odeProperties','odeProperty','pp_addPagination','false')
         # Context paths are required for the importer to register image references.
@@ -169,11 +169,11 @@ def main(course_ids=None):
         files['theme/style.css']+=b'\n'+(BASE/'exelearning/lcm-exe.css').read_bytes()
         files['theme/style.js']+=b'\nwindow.addEventListener("DOMContentLoaded",function(){'+(BASE/'exelearning/lcm-pacing.js').read_bytes()+b'});\n'
         if PILOT:
-            files['theme/config.xml']=config.replace('lcm-interactive','lcm-scenes-sort-paragraphs-forward').replace('LCM Interactive','LCM Scenes Sort Paragraphs Forward').encode('utf-8')
+            files['theme/config.xml']=config.replace('lcm-interactive','lcm-scenes-unified-kursus-statistik-sektoral-20261115').replace('LCM Interactive','LCM Scenes Unified kursus-statistik-sektoral').encode('utf-8')
             for font in (BASE/'assets/fonts').glob('*'):
                 if font.suffix=='.woff2' or font.name.endswith('-OFL.txt'):files['theme/fonts/'+font.name]=font.read_bytes()
             files['theme/style.css']=z2.read('theme/style.css')+b'\n'+(BASE/'exelearning/pilot/scene.css').read_bytes()+(BASE/'exelearning/pilot/challenge.css').read_bytes()+(BASE/'exelearning/pilot/experience.humanized.css').read_bytes()+(BASE/'exelearning/pilot/word-search.css').read_bytes()+(BASE/'exelearning/pilot/drag-words.css').read_bytes()+(BASE/'exelearning/pilot/sort-paragraphs.css').read_bytes()
-            files['theme/style.js']=z2.read('theme/style.js')+b'\nwindow.addEventListener("DOMContentLoaded",function(){'+(BASE/'exelearning/pilot/scene.humanized.js').read_bytes()+(BASE/'exelearning/pilot/challenge.humanized.js').read_bytes()+(BASE/'exelearning/pilot/experience.humanized.js').read_bytes()+(BASE/'exelearning/pilot/word-search.js').read_bytes()+(BASE/'exelearning/pilot/drag-words.js').read_bytes()+(BASE/'exelearning/pilot/sort-paragraphs.js').read_bytes()+b'});\n'
+            files['theme/style.js']=z2.read('theme/style.js')+b'\n'+(BASE/'exelearning/pilot/form-compat.js').read_bytes()+b'\nwindow.addEventListener("DOMContentLoaded",function(){'+(BASE/'exelearning/pilot/scene.humanized.js').read_bytes()+(BASE/'exelearning/pilot/challenge.humanized.js').read_bytes()+(BASE/'exelearning/pilot/experience.humanized.js').read_bytes()+(BASE/'exelearning/pilot/word-search.js').read_bytes()+(BASE/'exelearning/pilot/drag-words.js').read_bytes()+(BASE/'exelearning/pilot/sort-paragraphs.js').read_bytes()+b'});\n'
         for file in [art,'mission-reward.webp']:files['content/resources/'+file]=(BASE/'assets'/file).read_bytes()
         if PILOT:
             files['content/resources/branding/bps-corpu-transparent.png']=(BASE/'assets/branding/bps-corpu-transparent.png').read_bytes()

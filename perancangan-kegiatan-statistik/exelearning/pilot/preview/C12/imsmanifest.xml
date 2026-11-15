@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest identifier="eXe-MANIFEST-20261114143321SFMU5A"
+<manifest identifier="eXe-MANIFEST-20261115163504C110D4"
   xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
   xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
   xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_v1p2">
@@ -8,19 +8,19 @@
     <schemaversion>1.2</schemaversion>
     <adlcp:location>imslrm.xml</adlcp:location>
   </metadata>
-  <organizations default="eXe-20261114143321SFMU5A">
-    <organization identifier="eXe-20261114143321SFMU5A" structure="hierarchical">
+  <organizations default="eXe-20261115163504C110D4">
+    <organization identifier="eXe-20261115163504C110D4" structure="hierarchical">
       <title>C12 Cybersecurity Challenge</title>
-      <item identifier="ITEM-ROOT-20261114143321SFMU5A" isvisible="true">
+      <item identifier="ITEM-ROOT-20261115163504C110D4" isvisible="true">
         <title>C12 Cybersecurity Challenge</title>
-        <item identifier="ITEM-20261114143321B776E8" identifierref="RES-20261114143321B776E8" isvisible="true">
+        <item identifier="ITEM-20261115163504KZYSFV" identifierref="RES-20261115163504KZYSFV" isvisible="true">
           <title>Misi</title>
         </item>
       </item>
     </organization>
   </organizations>
   <resources>
-    <resource identifier="RES-20261114143321B776E8" type="webcontent" adlcp:scormtype="sco" href="index.html">
+    <resource identifier="RES-20261115163504KZYSFV" type="webcontent" adlcp:scormtype="sco" href="index.html">
       <file href="index.html"/>
       <dependency identifierref="COMMON_FILES"/>
     </resource>

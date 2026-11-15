@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "platform": "eXeLearning 4.0.6, official static browser distribution",
+  "size": 1179618,
+  "sha256": "38c862bb00131a7113eb67cf0baacd381c68f77ddd9822d41c572bb8762fcdca",
+  "sco_count": 1,
+  "illustrations": 4,
+  "fonts": 2,
+  "preview_matches_export": true,
+  "theme_matches_editable_source": true
+}

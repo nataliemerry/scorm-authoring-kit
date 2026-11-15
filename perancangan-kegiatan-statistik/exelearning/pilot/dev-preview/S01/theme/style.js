@@ -143,6 +143,22 @@ $.fn.isInViewport = function () {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
+/* Preserve native Form text decoding across eXeLearning platform exports. */
+(() => {
+  'use strict';
+  const form = window.$form;
+  if (!form || form.lcmTextCompatibility) return;
+  const original = form.getProcessTextSelectionQuestion;
+  if (typeof original !== 'function') return;
+  form.getProcessTextSelectionQuestion = function (baseText, ...args) {
+    if (typeof baseText === 'string') {
+      baseText = baseText.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+    }
+    return original.call(this, baseText, ...args);
+  };
+  form.lcmTextCompatibility = true;
+})();
+
 window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and visual practice. eXe Form and Classify own assessment logic. */
 (()=>{'use strict';
  if(!document.body.classList.contains('exe-export'))return;
@@ -171,7 +187,8 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
    const formNode=document.querySelector('.idevice_node.form[data-idevice-json-data]');
    if(formNode){try{const d=JSON.parse(formNode.getAttribute('data-idevice-json-data'));if(d&&Array.isArray(d.questionsData))qDataList=d.questionsData;}catch(e){}}
    if(!qDataList.length&&window.$form?.instances){const inst=Object.values(window.$form.instances)[0];if(inst?.questionsData)qDataList=inst.questionsData;}
-   const slides=document.querySelectorAll('.exe-form-container .FRMP-SlideshowSlide, .exe-form-container .FormView_question');
+   const slideNodes=document.querySelectorAll('.exe-form-container .FRMP-SlideshowSlide');
+   const slides=slideNodes.length?slideNodes:document.querySelectorAll('.exe-form-container .FormView_question');
    const articles=container.querySelectorAll('article');
    articles.forEach((art,idx)=>{
      const slide=slides[idx],qData=qDataList[idx];
@@ -220,7 +237,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
      art.innerHTML=`<span class="scene-review-num">${safe(numText)}</span><div class="scene-review-body"><h3>${safe(questionTitle)}</h3>${userBlock}${keyBlock}${expBlock}</div>`;
    });
  }
- function show(next,focus=true){phase=next;arena=false;document.body.dataset.scenePhase=phase;
+ function show(next,focus=true){if(next!==phase){clearTimeout(toastTimer);document.querySelector(".scene-announcement")?.remove();}phase=next;arena=false;document.body.dataset.scenePhase=phase;
    articles.forEach(a=>{a.hidden=Number(a.dataset.scenePanel)!==phase||a.classList.contains('scene-native-arena');});back.hidden=true;
    bottom.querySelectorAll('button[data-scene-phase]').forEach((b,i)=>{b.disabled=false;b.setAttribute('aria-current',i===phase?'step':'false');});
    bottom.querySelector('.scene-progress-label').textContent=names[phase];

@@ -3,7 +3,7 @@
   <general uniqueElementName="general">
     <identifier>
       <catalog uniqueElementName="catalog">none</catalog>
-      <entry uniqueElementName="entry">ODE-202611141433217AKE74</entry>
+      <entry uniqueElementName="entry">ODE-202611151618479LX528</entry>
     </identifier>
     <title>
       <string language="id">C01 Smart Budgeting</string>
@@ -25,7 +25,7 @@
       </role>
       <entity>BEGIN:VCARD VERSION:3.0 FN:BPS Corporate University EMAIL;TYPE=INTERNET: ORG: END:VCARD</entity>
       <date>
-        <dateTime uniqueElementName="dateTime">2026-11-14T14:33:46.00+07:00</dateTime>
+        <dateTime uniqueElementName="dateTime">2026-11-15T16:19:25.00+07:00</dateTime>
         <description>
           <string language="id">Metadata creation date</string>
         </description>
@@ -40,7 +40,7 @@
       </role>
       <entity>BEGIN:VCARD VERSION:3.0 FN:BPS Corporate University EMAIL;TYPE=INTERNET: ORG: END:VCARD</entity>
       <date>
-        <dateTime uniqueElementName="dateTime">2026-11-14T14:33:46.00+07:00</dateTime>
+        <dateTime uniqueElementName="dateTime">2026-11-15T16:19:25.00+07:00</dateTime>
         <description>
           <string language="id">Metadata creation date</string>
         </description>

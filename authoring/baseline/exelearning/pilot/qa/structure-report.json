@@ -1,0 +1,28 @@
+[
+  {
+    "course": "C01",
+    "archive": "C01_Smart_Budgeting_SCORM12.zip",
+    "bytes": 1537440,
+    "sha256": "ea308b88de9512f8d07b3d3a1c77d04bf13abb95ab12057072d791f2c538b122",
+    "sco_count": 1,
+    "manifest_files_valid": true,
+    "bundled_fonts": 2,
+    "generated_images": 4,
+    "official_logo": 1,
+    "source_matches_export": true,
+    "preview_matches_export": true
+  },
+  {
+    "course": "C12",
+    "archive": "C12_Cybersecurity_Challenge_SCORM12.zip",
+    "bytes": 1323661,
+    "sha256": "dbc0aab5e119b5734abc82729fb136c6ff83232cd6c0736668ad89000e98490c",
+    "sco_count": 1,
+    "manifest_files_valid": true,
+    "bundled_fonts": 2,
+    "generated_images": 4,
+    "official_logo": 1,
+    "source_matches_export": true,
+    "preview_matches_export": true
+  }
+]

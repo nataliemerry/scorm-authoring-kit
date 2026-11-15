@@ -94,9 +94,9 @@ var $form = {
         const timedisplay = ldata.time > 0 ? 'flex' : 'none';
         const timebody = ldata.time > 0 ? 'none' : 'block';
         const time = this.formatTime(ldata.time * 60);
-        const htmlContent = `<div class="game-evaluation-ids js-hidden" style="display:none !important;" data-id="${ldata.id}" data-evaluationb="${ldata.evaluation}" data-evaluationid="${ldata.evaluationID}"></div>
+        const htmlContent = `<div class="game-evaluation-ids js-hidden" data-id="${ldata.id}" data-evaluationb="${ldata.evaluation}" data-evaluationid="${ldata.evaluationID}"></div>
             <div id="frmMainContainer-${ldata.id}" class="form-IDevice" data-id="${ldata.id}">
-                <div class="form-Data js-hidden" style="display:none !important;">${json}</div>
+                <div class="form-Data js-hidden">${json}</div>
                 ${ldata.eXeFormInstructions ? `<div class="form-instructions">${ldata.eXeFormInstructions}</div>` : ''}
                 <div class="FRMP-GameScoreBoard" style="display:${timedisplay};">
                     <div>

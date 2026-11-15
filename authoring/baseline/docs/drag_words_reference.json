@@ -1,0 +1,15 @@
+{
+  "reference_file": "drag-the-words-1399.h5p",
+  "sha256": "ce5adedcdfbee9ed9c9ad6f93317ca54a6b0275a16528541dd1e90a18d776e91",
+  "inspected_on": "2026-11-14",
+  "main_library": "H5P.DragText 1.10",
+  "observed_features": [
+    "3 sentence gaps",
+    "word bank with distractor",
+    "explicit check",
+    "retry",
+    "show solution",
+    "per-gap feedback"
+  ],
+  "implementation": "Independent offline eXe Text/theme activity; no H5P libraries or original berry exercise copied."
+}

@@ -1,0 +1,42 @@
+{
+  "scope": [
+    "C01",
+    "C12"
+  ],
+  "assets": [
+    {
+      "file": "assets/scenes/C01.png",
+      "prompt": "Use case: illustration-story. Asset: immersive full-screen background for an adult professional Indonesian BPS learning simulation, course C01. Scene: A senior public-sector budgeting desk. Two competing needs shown physically: a small malfunctioning statistics server rack with an amber warning light on the right, and neat boardroom decoration samples, a flower vase and meeting material lower right. Budget ledger and calculator foreground. Indonesian institutional office, no people. Style: premium cinematic editorial 3D illustration, sophisticated tactile matte materials, rich spatial depth, warm natural daylight, deep petrol teal, sage, muted amber and ivory palette, detailed but uncluttered. Landscape 16:9 composition; principal identifiable objects in center-right 65 percent, left third darker and quieter for live UI text overlays. Render an actual environment, not a web page, interface, card grid, slide mockup or infographic. No words, no letters, no numerals, no logos, no watermark. Distinctive tasteful art direction suitable for senior public-sector leaders, no childish game aesthetic.",
+      "mode": "Codex built-in image_gen"
+    },
+    {
+      "file": "assets/scenes/C12.png",
+      "prompt": "Use case: illustration-story. Asset: immersive full-screen background for an adult professional Indonesian BPS learning simulation, course C12. Scene: A cybersecurity investigation workstation in an Indonesian office: laptop with a large abstract suspicious envelope, three physical amber warning markers beside sender identity badge, a tiny urgency clock and a concealed-link chain symbol. Locked credential token beside the laptop. Tactile objects and cinematic lighting, no readable email text. Premium cinematic editorial 3D illustration, sophisticated tactile matte materials and realistic adult proportions, deep spatial depth, natural daylight with petrol teal, sage, muted amber and ivory palette. Landscape 16:9, main identifiable objects in center-right 65 percent, left third darker and quieter for live UI copy. Actual environment, not a web page, card grid, screenshot, infographic or interface mockup. No words, no letters, no numerals, no logos, no watermark. Tasteful professional art direction, no childish gaming aesthetic.",
+      "mode": "Codex built-in image_gen"
+    },
+    {
+      "file": "assets/scenes/C01-server.png",
+      "prompt": "Use case: stylized-concept. Asset: transparent-background interactive object cutout for a professional Indonesian workplace learning simulation. A compact enterprise data server rack with three visible front panels, one tiny amber status light, a neatly coiled network cable and a small paper survey sheet beside it. Three-quarter view, isolated complete object, no surroundings. Premium tactile editorial 3D, matte petrol teal, sage and ivory materials, restrained amber detail, realistic coherent shapes, refined studio illumination and subtle ambient contact shadow only. No words, no brand, no watermark, no frame. Centered, generous transparent margin around entire silhouette. Sophisticated adult aesthetic matching cinematic office illustrations. Genuinely transparent background.",
+      "mode": "Codex built-in image_gen",
+      "transparent_requested": true
+    },
+    {
+      "file": "assets/scenes/C01-meeting.png",
+      "prompt": "Use case: stylized-concept. Asset: transparent-background interactive object cutout for a professional Indonesian workplace learning simulation. A tasteful conference-room vignette as a compact isolated object: two modern meeting chairs, a small round meeting table, vase of flowers and a neatly rolled decoration sample. Three-quarter view, complete objects, no room background. Premium tactile editorial 3D, matte petrol teal, sage and ivory materials, restrained amber detail, realistic coherent shapes, refined studio illumination and subtle ambient contact shadow only. No words, no brand, no watermark, no frame. Centered, generous transparent margin around entire silhouette. Sophisticated adult aesthetic matching cinematic office illustrations. Genuinely transparent background.",
+      "mode": "Codex built-in image_gen",
+      "transparent_requested": true
+    },
+    {
+      "file": "assets/scenes/C12-mail.png",
+      "prompt": "Use case: stylized-concept. Asset: transparent-background interactive object cutout for a professional Indonesian workplace learning simulation. A premium sculptural email envelope partly open, with an amber triangular warning seal containing an exclamation mark. A small folded paper message protrudes without any letters. Three-quarter view, isolated complete object. Premium tactile editorial 3D, matte petrol teal, sage and ivory materials, restrained amber detail, realistic coherent shapes, refined studio illumination and subtle ambient contact shadow only. No words, no brand, no watermark, no frame. Centered, generous transparent margin around entire silhouette. Sophisticated adult aesthetic matching cinematic office illustrations. Genuinely transparent background.",
+      "mode": "Codex built-in image_gen",
+      "transparent_requested": true
+    },
+    {
+      "file": "assets/scenes/C12-lock.png",
+      "prompt": "Use case: stylized-concept. Asset: transparent-background interactive object cutout for a professional Indonesian workplace learning simulation. A sturdy teal security padlock beside a small ivory access card with a fingerprint-shaped embossed swirl and a small amber authentication token. Three-quarter view, isolated complete objects, no letters. Premium tactile editorial 3D, matte petrol teal, sage and ivory materials, restrained amber detail, realistic coherent shapes, refined studio illumination and subtle ambient contact shadow only. No words, no brand, no watermark, no frame. Centered, generous transparent margin around entire silhouette. Sophisticated adult aesthetic matching cinematic office illustrations. Genuinely transparent background.",
+      "mode": "Codex built-in image_gen",
+      "transparent_requested": true
+    }
+  ]
+}

@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ode SYSTEM "content.dtd">
+<ode xmlns="http://www.intef.es/xsd/ode" version="2.0">
+<userPreferences>
+  <userPreference>
+    <key>theme</key>
+    <value>lcm-scenes-unified-it-enterprise-20261115</value>
+  </userPreference>
+</userPreferences>
+<odeResources>
+  <odeResource>
+    <key>odeId</key>
+    <value>20261115163510KAGGVT</value>
+  </odeResource>
+  <odeResource>
+    <key>odeVersionId</key>
+    <value>20261115163510MOR8QS</value>
+  </odeResource>
+  <odeResource>
+    <key>exe_version</key>
+    <value>4.0.6</value>
+  </odeResource>
+</odeResources>
+<odeProperties>
+  <odeProperty>
+    <key>pp_title</key>
+    <value>ITE IT Enterprise</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_author</key>
+    <value>BPS Corporate University</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_description</key>
+    <value>Pelajari cara menyelaraskan strategi, tata kelola, dan arsitektur TI dengan kebutuhan organisasi. Lewat kasus layanan statistik, susun prioritas pembiayaan dan tentukan cara mengukur kinerja layanan.</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_lang</key>
+    <value>id</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_license</key>
+    <value>propietary license</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_theme</key>
+    <value>lcm-scenes-unified-it-enterprise-20261115</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_exelearning_version</key>
+    <value>v4.0.6</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_modified</key>
+    <value>1794735372405</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_addExeLink</key>
+    <value>true</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_addPagination</key>
+    <value>false</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_addSearchBox</key>
+    <value>false</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_addAccessibilityToolbar</key>
+    <value>false</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_addMathJax</key>
+    <value>false</value>
+  </odeProperty>
+  <odeProperty>
+    <key>exportSource</key>
+    <value>true</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_globalFont</key>
+    <value>default</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_passScore</key>
+    <value>0</value>
+  </odeProperty>
+  <odeProperty>
+    <key>pp_passScoreEveryActivity</key>
+    <value>false</value>
+  </odeProperty>
+</odeProperties>
+<odeNavStructures>
+<odeNavStructure>
+  <odePageId>20261115163510LRIM8U</odePageId>
+  <odeParentPageId></odeParentPageId>
+  <pageName>Misi</pageName>
+  <odeNavStructureOrder>0</odeNavStructureOrder>
+  <odeNavStructureProperties>
+    <odeNavStructureProperty>
+      <key>titlePage</key>
+      <value>Misi</value>
+    </odeNavStructureProperty>
+    <odeNavStructureProperty>
+      <key>visibility</key>
+      <value>true</value>
+    </odeNavStructureProperty>
+    <odeNavStructureProperty>
+      <key>highlight</key>
+      <value>false</value>
+    </odeNavStructureProperty>
+    <odeNavStructureProperty>
+      <key>hidePageTitle</key>
+      <value>false</value>
+    </odeNavStructureProperty>
+    <odeNavStructureProperty>
+      <key>editableInPage</key>
+      <value>false</value>
+    </odeNavStructureProperty>
+    <odeNavStructureProperty>
+      <key>titlePage</key>
+      <value>Misi</value>
+    </odeNavStructureProperty>
+    <odeNavStructureProperty>
+      <key>titleNode</key>
+      <value></value>
+    </odeNavStructureProperty>
+  </odeNavStructureProperties>
+  <odePagStructures>
+    <odePagStructure>
+      <odePageId>20261115163510LRIM8U</odePageId>
+      <odeBlockId>20261115163510ZPJOMY</odeBlockId>
+      <blockName>Tantangan Anda</blockName>
+      <iconName></iconName>
+      <odePagStructureOrder>0</odePagStructureOrder>
+      <odePagStructureProperties>
+        <odePagStructureProperty>
+          <key>visibility</key>
+          <value>true</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>teacherOnly</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>allowToggle</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>minimized</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>cssClass</key>
+          <value></value>
+        </odePagStructureProperty>
+      </odePagStructureProperties>
+      <odeComponents>
+        <odeComponent>
+          <odePageId>20261115163510LRIM8U</odePageId>
+          <odeBlockId>20261115163510ZPJOMY</odeBlockId>
+          <odeIdeviceId>202611151635101Z31IN</odeIdeviceId>
+          <odeIdeviceTypeName>text</odeIdeviceTypeName>
+          <htmlView><![CDATA[<div class="exe-text-template"><div class="lcm-stage" data-lcm-phase="0" data-course="ITE"></div><img data-scene-image src="asset://18c5ed71-e117-04ad-5f51-dc8f86add3dc.webp" alt="Ilustrasi situasi IT Enterprise" hidden><img data-card-label="Peta arsitektur" src="asset://b9939726-4ade-1313-0bc7-51b4a65c55ba.webp" alt="" hidden><img data-card-label="Operasi layanan" src="asset://d8e1e1b0-ffee-b1c6-93e6-abc167b001a5.webp" alt="" hidden><img data-brand-logo src="asset://60bc03cb-cad1-ba54-4edd-9240e6b7c43e.png" alt="" hidden><script class="lesson-config" type="application/json">{"objective": "Pelajari cara menyelaraskan strategi, tata kelola, dan arsitektur TI dengan kebutuhan organisasi. Lewat kasus layanan statistik, susun prioritas pembiayaan dan tentukan cara mengukur kinerja layanan.", "lessons": [{"title": "Tujuan layanan dan tata kelola", "body": "Strategi TI menerjemahkan sasaran organisasi menjadi prioritas yang bisa dikerjakan tim. Bila sasaran unit adalah mempercepat layanan, cari dulu bagian proses yang membuat pengguna menunggu. Temuan itu menjadi dasar untuk memilih perubahan yang perlu dibiayai.\n\nTata kelola menetapkan siapa yang mengambil keputusan, siapa yang menjalankan pekerjaan, dan bagaimana hasilnya ditinjau. Kebijakan memberi batas yang dipakai bersama. Misalnya, kebijakan bisa menetapkan siapa yang berwenang menyetujui perubahan akses pada sebuah layanan.", "references": [{"publisher": "Pemerintah Republik Indonesia", "title": "Peraturan Presiden Nomor 95 Tahun 2018 tentang SPBE", "year": "2018", "url": "https://peraturan.bpk.go.id/Download/87472/Perpres%20Nomor%2095%20Tahun%202018.pdf", "verified_on": "2026-11-14", "verification": "Naskah resmi diperiksa di JDIH BPK.", "section": "Pasal 4 dan 59–61, unsur tata kelola dan koordinasi SPBE"}], "paragraph_sources": [[1], [1]], "module_pages": "3–19", "example": "Permintaan tabel statistik sering tertahan saat berpindah unit. Pemilik layanan mencatat titik antrean, lalu menyepakati penanggung jawab dan batas waktu serah terima. Tim TI memakai temuan itu untuk menentukan perubahan yang perlu dibuat.", "example_note": "Situasi dan angka dalam contoh ini dibuat untuk latihan.", "mode": "example", "image": "scenes/ITE-blueprint.webp", "module_reference": "Badan Pusat Statistik (2025), Modul IT Enterprise, katalog 1303158, hlm. 3–19."}, {"title": "Arsitektur dan kondisi target", "body": "Arsitektur enterprise menggambarkan hubungan antara proses bisnis, data dan informasi, aplikasi, infrastruktur, keamanan, dan layanan. Dalam kerangka SPBE, enam domain itu membantu tim menelusuri dampak perubahan. Menggabungkan dua aplikasi, misalnya, juga bisa mengubah cara data dipertukarkan dan siapa yang boleh mengaksesnya.\n\nMulailah dengan memetakan kondisi saat ini, lalu tulis kondisi target yang bisa diperiksa. Selisih keduanya menunjukkan pekerjaan yang belum tertangani. Jika targetnya pelacakan permintaan lintas unit, tiap unit perlu memakai pengenal yang bisa dicocokkan saat permintaan berpindah.", "references": [{"publisher": "Pemerintah Republik Indonesia", "title": "Peraturan Presiden Nomor 95 Tahun 2018 tentang SPBE", "year": "2018", "url": "https://peraturan.bpk.go.id/Download/87472/Perpres%20Nomor%2095%20Tahun%202018.pdf", "verified_on": "2026-11-14", "verification": "Naskah resmi diperiksa di JDIH BPK.", "section": "Pasal 7 dan 11, domain arsitektur dan penyelarasan dengan rencana strategis"}], "paragraph_sources": [[1], [1]], "module_pages": "21–34", "example": "Saat ini satu permintaan mendapat nomor berbeda di dua unit. Targetnya satu nomor yang tetap terbaca sampai tabel dikirim. Tim perlu menyepakati aturan penomoran dan menguji apakah kedua aplikasi dapat mempertahankan nomor itu.", "example_note": "Situasi dan angka dalam contoh ini dibuat untuk latihan.", "mode": "example", "image": "scenes/ITE-blueprint.webp", "module_reference": "Badan Pusat Statistik (2025), Modul IT Enterprise, katalog 1303158, hlm. 21–34."}, {"title": "Dari peta rencana ke evaluasi", "body": "Peta rencana mengubah kebutuhan arsitektur menjadi pekerjaan bertahap. Periksa dependensi sebelum menetapkan anggaran. Jika pelacakan lintas unit memerlukan nomor bersama, biayai kesepakatan data dan uji pertukaran lebih dulu. Perkirakan juga biaya operasi, seperti dukungan pengguna dan pemeliharaan integrasi.\n\nPemantauan mencatat keadaan layanan secara berkala. Evaluasi memakai catatan itu untuk menilai apakah perubahan mencapai sasaran dan apa yang harus diperbaiki. Jika sasarannya mempercepat pemberian tabel, ukur waktu dari permintaan diterima sampai tabel dikirim. Jumlah permintaan dapat memberi konteks ketika beban berubah.", "references": [{"publisher": "Pemerintah Republik Indonesia", "title": "Peraturan Presiden Nomor 95 Tahun 2018 tentang SPBE", "year": "2018", "url": "https://peraturan.bpk.go.id/Download/87472/Perpres%20Nomor%2095%20Tahun%202018.pdf", "verified_on": "2026-11-14", "verification": "Naskah resmi diperiksa di JDIH BPK.", "section": "Pasal 18 dan 20, peta rencana serta anggaran. Pasal 70, tujuan pemantauan dan evaluasi."}], "paragraph_sources": [[1], [1]], "module_pages": "35–50", "example": "Sebelum uji coba, median waktu penyelesaian adalah empat hari. Setelah dua unit memakai nomor yang sama, median menjadi dua hari. Tim memeriksa jumlah permintaan dan jenisnya pada kedua periode sebelum menilai hasil uji.", "example_note": "Situasi dan angka dalam contoh ini dibuat untuk latihan.", "mode": "check", "prompt": "Tim ingin mengetahui apakah nomor permintaan bersama mempercepat layanan. Data mana yang paling tepat disiapkan sebelum uji coba?", "options": ["Jumlah aplikasi yang dimiliki setiap unit", "Harga pengadaan perangkat pada tahun lalu", "Waktu permintaan diterima dan selesai dikirim pada setiap transaksi"], "correct": 2, "feedback": "Dengan dua cap waktu itu, tim bisa menghitung waktu penyelesaian sebelum dan sesudah uji coba.", "image": "scenes/ITE-operations.webp", "module_reference": "Badan Pusat Statistik (2025), Modul IT Enterprise, katalog 1303158, hlm. 35–50."}], "situations": [{"title": "Dua unit mengusulkan aplikasi baru", "body": "Pengguna mengeluhkan permintaan tabel yang sulit dilacak. Dua unit menawarkan aplikasi masing-masing. Keduanya belum menunjukkan di mana permintaan biasanya tertahan.", "image": "scenes/ITE-blueprint.webp", "prompt": "Apa yang Anda bawa ke rapat keputusan?", "options": [{"label": "Petakan perjalanan satu permintaan bersama kedua unit", "good": true, "title": "Titik serah terima mulai terlihat", "body": "Kedua unit menemukan bahwa nomor berubah saat berkas diteruskan. Temuan itu memberi dasar untuk menilai kebutuhan integrasi."}, {"label": "Ajukan pembelian aplikasi dari kedua unit", "good": false, "title": "Penyebab antrean belum diketahui", "body": "Jika tiap aplikasi memberi nomor sendiri, petugas masih harus mencocokkan permintaan secara manual."}]}, {"title": "Sistem aktif, antrean masih panjang", "body": "Dalam laporan uji coba, aplikasi hampir selalu bisa diakses. Pengguna masih menghubungi petugas untuk menanyakan tabel yang belum dikirim.", "image": "scenes/ITE-operations.webp", "prompt": "Apa yang Anda periksa terlebih dahulu?", "options": [{"label": "Tutup evaluasi karena aplikasi dapat diakses", "good": false, "title": "Laporan hanya menjawab soal ketersediaan", "body": "Aplikasi bisa aktif saat permintaan masih tertahan. Tim belum tahu apakah waktu layanan membaik."}, {"label": "Telusuri waktu penyelesaian dan titik antreannya", "good": true, "title": "Tim bisa memeriksa hambatan layanan", "body": "Catatan waktu menunjukkan sebagian permintaan menunggu persetujuan. Tim bisa membahas proses itu bersama penanggung jawabnya."}]}], "source_checked": "14 November 2026"}</script>
+<section class="lesson-root" data-complete="false" aria-label="Materi awal">
+ <div class="lesson-cover scene-intro"><div class="scene-copy"><span class="scene-eyebrow">MATERI DAN LATIHAN</span><h2>IT Enterprise</h2><p>Pelajari cara menyelaraskan strategi, tata kelola, dan arsitektur TI dengan kebutuhan organisasi. Lewat kasus layanan statistik, susun prioritas pembiayaan dan tentukan cara mengukur kinerja layanan.</p><button type="button" class="lesson-open">Mulai belajar →</button></div></div>
+ <div class="lesson-study" hidden><header class="lesson-study-header"><span class="lesson-count"></span><span>MATERI AWAL</span></header><div class="lesson-content"></div><footer class="lesson-controls"><button type="button" data-lesson-action="prev">← Sebelumnya</button><button type="button" data-lesson-action="next">Materi berikutnya →</button><div class="lesson-launch" hidden><label class="simple-timer"><input type="checkbox" id="simple-timer"> Gunakan timer 2 menit</label><button type="button" class="scene-free" disabled>Coba situasinya →</button></div></footer></div>
+</section></div>]]></htmlView>
+          <jsonProperties><![CDATA[{"ideviceId":"202611151635101Z31IN","textInfoDurationInput":"","textInfoDurationTextInput":"Duration","textInfoParticipantsInput":"","textInfoParticipantsTextInput":"Grouping","textTextarea":"<div class=\"lcm-stage\" data-lcm-phase=\"0\" data-course=\"ITE\"></div><img data-scene-image src=\"asset://18c5ed71-e117-04ad-5f51-dc8f86add3dc.webp\" alt=\"Ilustrasi situasi IT Enterprise\" hidden><img data-card-label=\"Peta arsitektur\" src=\"asset://b9939726-4ade-1313-0bc7-51b4a65c55ba.webp\" alt=\"\" hidden><img data-card-label=\"Operasi layanan\" src=\"asset://d8e1e1b0-ffee-b1c6-93e6-abc167b001a5.webp\" alt=\"\" hidden><img data-brand-logo src=\"asset://60bc03cb-cad1-ba54-4edd-9240e6b7c43e.png\" alt=\"\" hidden><script class=\"lesson-config\" type=\"application/json\">{\"objective\": \"Pelajari cara menyelaraskan strategi, tata kelola, dan arsitektur TI dengan kebutuhan organisasi. Lewat kasus layanan statistik, susun prioritas pembiayaan dan tentukan cara mengukur kinerja layanan.\", \"lessons\": [{\"title\": \"Tujuan layanan dan tata kelola\", \"body\": \"Strategi TI menerjemahkan sasaran organisasi menjadi prioritas yang bisa dikerjakan tim. Bila sasaran unit adalah mempercepat layanan, cari dulu bagian proses yang membuat pengguna menunggu. Temuan itu menjadi dasar untuk memilih perubahan yang perlu dibiayai.\\n\\nTata kelola menetapkan siapa yang mengambil keputusan, siapa yang menjalankan pekerjaan, dan bagaimana hasilnya ditinjau. Kebijakan memberi batas yang dipakai bersama. Misalnya, kebijakan bisa menetapkan siapa yang berwenang menyetujui perubahan akses pada sebuah layanan.\", \"references\": [{\"publisher\": \"Pemerintah Republik Indonesia\", \"title\": \"Peraturan Presiden Nomor 95 Tahun 2018 tentang SPBE\", \"year\": \"2018\", \"url\": \"https://peraturan.bpk.go.id/Download/87472/Perpres%20Nomor%2095%20Tahun%202018.pdf\", \"verified_on\": \"2026-11-14\", \"verification\": \"Naskah resmi diperiksa di JDIH BPK.\", \"section\": \"Pasal 4 dan 59–61, unsur tata kelola dan koordinasi SPBE\"}], \"paragraph_sources\": [[1], [1]], \"module_pages\": \"3–19\", \"example\": \"Permintaan tabel statistik sering tertahan saat berpindah unit. Pemilik layanan mencatat titik antrean, lalu menyepakati penanggung jawab dan batas waktu serah terima. Tim TI memakai temuan itu untuk menentukan perubahan yang perlu dibuat.\", \"example_note\": \"Situasi dan angka dalam contoh ini dibuat untuk latihan.\", \"mode\": \"example\", \"image\": \"scenes/ITE-blueprint.webp\", \"module_reference\": \"Badan Pusat Statistik (2025), Modul IT Enterprise, katalog 1303158, hlm. 3–19.\"}, {\"title\": \"Arsitektur dan kondisi target\", \"body\": \"Arsitektur enterprise menggambarkan hubungan antara proses bisnis, data dan informasi, aplikasi, infrastruktur, keamanan, dan layanan. Dalam kerangka SPBE, enam domain itu membantu tim menelusuri dampak perubahan. Menggabungkan dua aplikasi, misalnya, juga bisa mengubah cara data dipertukarkan dan siapa yang boleh mengaksesnya.\\n\\nMulailah dengan memetakan kondisi saat ini, lalu tulis kondisi target yang bisa diperiksa. Selisih keduanya menunjukkan pekerjaan yang belum tertangani. Jika targetnya pelacakan permintaan lintas unit, tiap unit perlu memakai pengenal yang bisa dicocokkan saat permintaan berpindah.\", \"references\": [{\"publisher\": \"Pemerintah Republik Indonesia\", \"title\": \"Peraturan Presiden Nomor 95 Tahun 2018 tentang SPBE\", \"year\": \"2018\", \"url\": \"https://peraturan.bpk.go.id/Download/87472/Perpres%20Nomor%2095%20Tahun%202018.pdf\", \"verified_on\": \"2026-11-14\", \"verification\": \"Naskah resmi diperiksa di JDIH BPK.\", \"section\": \"Pasal 7 dan 11, domain arsitektur dan penyelarasan dengan rencana strategis\"}], \"paragraph_sources\": [[1], [1]], \"module_pages\": \"21–34\", \"example\": \"Saat ini satu permintaan mendapat nomor berbeda di dua unit. Targetnya satu nomor yang tetap terbaca sampai tabel dikirim. Tim perlu menyepakati aturan penomoran dan menguji apakah kedua aplikasi dapat mempertahankan nomor itu.\", \"example_note\": \"Situasi dan angka dalam contoh ini dibuat untuk latihan.\", \"mode\": \"example\", \"image\": \"scenes/ITE-blueprint.webp\", \"module_reference\": \"Badan Pusat Statistik (2025), Modul IT Enterprise, katalog 1303158, hlm. 21–34.\"}, {\"title\": \"Dari peta rencana ke evaluasi\", \"body\": \"Peta rencana mengubah kebutuhan arsitektur menjadi pekerjaan bertahap. Periksa dependensi sebelum menetapkan anggaran. Jika pelacakan lintas unit memerlukan nomor bersama, biayai kesepakatan data dan uji pertukaran lebih dulu. Perkirakan juga biaya operasi, seperti dukungan pengguna dan pemeliharaan integrasi.\\n\\nPemantauan mencatat keadaan layanan secara berkala. Evaluasi memakai catatan itu untuk menilai apakah perubahan mencapai sasaran dan apa yang harus diperbaiki. Jika sasarannya mempercepat pemberian tabel, ukur waktu dari permintaan diterima sampai tabel dikirim. Jumlah permintaan dapat memberi konteks ketika beban berubah.\", \"references\": [{\"publisher\": \"Pemerintah Republik Indonesia\", \"title\": \"Peraturan Presiden Nomor 95 Tahun 2018 tentang SPBE\", \"year\": \"2018\", \"url\": \"https://peraturan.bpk.go.id/Download/87472/Perpres%20Nomor%2095%20Tahun%202018.pdf\", \"verified_on\": \"2026-11-14\", \"verification\": \"Naskah resmi diperiksa di JDIH BPK.\", \"section\": \"Pasal 18 dan 20, peta rencana serta anggaran. Pasal 70, tujuan pemantauan dan evaluasi.\"}], \"paragraph_sources\": [[1], [1]], \"module_pages\": \"35–50\", \"example\": \"Sebelum uji coba, median waktu penyelesaian adalah empat hari. Setelah dua unit memakai nomor yang sama, median menjadi dua hari. Tim memeriksa jumlah permintaan dan jenisnya pada kedua periode sebelum menilai hasil uji.\", \"example_note\": \"Situasi dan angka dalam contoh ini dibuat untuk latihan.\", \"mode\": \"check\", \"prompt\": \"Tim ingin mengetahui apakah nomor permintaan bersama mempercepat layanan. Data mana yang paling tepat disiapkan sebelum uji coba?\", \"options\": [\"Jumlah aplikasi yang dimiliki setiap unit\", \"Harga pengadaan perangkat pada tahun lalu\", \"Waktu permintaan diterima dan selesai dikirim pada setiap transaksi\"], \"correct\": 2, \"feedback\": \"Dengan dua cap waktu itu, tim bisa menghitung waktu penyelesaian sebelum dan sesudah uji coba.\", \"image\": \"scenes/ITE-operations.webp\", \"module_reference\": \"Badan Pusat Statistik (2025), Modul IT Enterprise, katalog 1303158, hlm. 35–50.\"}], \"situations\": [{\"title\": \"Dua unit mengusulkan aplikasi baru\", \"body\": \"Pengguna mengeluhkan permintaan tabel yang sulit dilacak. Dua unit menawarkan aplikasi masing-masing. Keduanya belum menunjukkan di mana permintaan biasanya tertahan.\", \"image\": \"scenes/ITE-blueprint.webp\", \"prompt\": \"Apa yang Anda bawa ke rapat keputusan?\", \"options\": [{\"label\": \"Petakan perjalanan satu permintaan bersama kedua unit\", \"good\": true, \"title\": \"Titik serah terima mulai terlihat\", \"body\": \"Kedua unit menemukan bahwa nomor berubah saat berkas diteruskan. Temuan itu memberi dasar untuk menilai kebutuhan integrasi.\"}, {\"label\": \"Ajukan pembelian aplikasi dari kedua unit\", \"good\": false, \"title\": \"Penyebab antrean belum diketahui\", \"body\": \"Jika tiap aplikasi memberi nomor sendiri, petugas masih harus mencocokkan permintaan secara manual.\"}]}, {\"title\": \"Sistem aktif, antrean masih panjang\", \"body\": \"Dalam laporan uji coba, aplikasi hampir selalu bisa diakses. Pengguna masih menghubungi petugas untuk menanyakan tabel yang belum dikirim.\", \"image\": \"scenes/ITE-operations.webp\", \"prompt\": \"Apa yang Anda periksa terlebih dahulu?\", \"options\": [{\"label\": \"Tutup evaluasi karena aplikasi dapat diakses\", \"good\": false, \"title\": \"Laporan hanya menjawab soal ketersediaan\", \"body\": \"Aplikasi bisa aktif saat permintaan masih tertahan. Tim belum tahu apakah waktu layanan membaik.\"}, {\"label\": \"Telusuri waktu penyelesaian dan titik antreannya\", \"good\": true, \"title\": \"Tim bisa memeriksa hambatan layanan\", \"body\": \"Catatan waktu menunjukkan sebagian permintaan menunggu persetujuan. Tim bisa membahas proses itu bersama penanggung jawabnya.\"}]}], \"source_checked\": \"14 November 2026\"}</script>\n<section class=\"lesson-root\" data-complete=\"false\" aria-label=\"Materi awal\">\n <div class=\"lesson-cover scene-intro\"><div class=\"scene-copy\"><span class=\"scene-eyebrow\">MATERI DAN LATIHAN</span><h2>IT Enterprise</h2><p>Pelajari cara menyelaraskan strategi, tata kelola, dan arsitektur TI dengan kebutuhan organisasi. Lewat kasus layanan statistik, susun prioritas pembiayaan dan tentukan cara mengukur kinerja layanan.</p><button type=\"button\" class=\"lesson-open\">Mulai belajar →</button></div></div>\n <div class=\"lesson-study\" hidden><header class=\"lesson-study-header\"><span class=\"lesson-count\"></span><span>MATERI AWAL</span></header><div class=\"lesson-content\"></div><footer class=\"lesson-controls\"><button type=\"button\" data-lesson-action=\"prev\">← Sebelumnya</button><button type=\"button\" data-lesson-action=\"next\">Materi berikutnya →</button><div class=\"lesson-launch\" hidden><label class=\"simple-timer\"><input type=\"checkbox\" id=\"simple-timer\"> Gunakan timer 2 menit</label><button type=\"button\" class=\"scene-free\" disabled>Coba situasinya →</button></div></footer></div>\n</section>","textFeedbackInput":"Show Feedback","textFeedbackTextarea":""}]]></jsonProperties>
+          <odeComponentsOrder>0</odeComponentsOrder>
+          <odeComponentsProperties>
+            <odeComponentsProperty>
+              <key>visibility</key>
+              <value>true</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>teacherOnly</key>
+              <value>false</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>cssClass</key>
+              <value></value>
+            </odeComponentsProperty>
+          </odeComponentsProperties>
+        </odeComponent>
+      </odeComponents>
+    </odePagStructure>
+    <odePagStructure>
+      <odePageId>20261115163510LRIM8U</odePageId>
+      <odeBlockId>20261115163510UEW4UO</odeBlockId>
+      <blockName>Berkas misi</blockName>
+      <iconName></iconName>
+      <odePagStructureOrder>1</odePagStructureOrder>
+      <odePagStructureProperties>
+        <odePagStructureProperty>
+          <key>visibility</key>
+          <value>true</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>teacherOnly</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>allowToggle</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>minimized</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>cssClass</key>
+          <value></value>
+        </odePagStructureProperty>
+      </odePagStructureProperties>
+      <odeComponents>
+        <odeComponent>
+          <odePageId>20261115163510LRIM8U</odePageId>
+          <odeBlockId>20261115163510UEW4UO</odeBlockId>
+          <odeIdeviceId>202611151635103DQZXI</odeIdeviceId>
+          <odeIdeviceTypeName>text</odeIdeviceTypeName>
+          <htmlView><![CDATA[<div class="exe-text-template"><div class="lcm-stage" data-lcm-phase="1" data-course="ITE"></div><section class="sim-root" data-course="ITE" data-complete="false" aria-label="Simulasi keputusan"><div class="sim-scroll"><div class="sim-content"></div></div><footer class="sim-controls"><button type="button" data-simple-sim="back" disabled>← Sebelumnya</button><button type="button" class="sim-next" data-simple-sim="next" disabled>Lanjut →</button></footer></section><script class="word-config" type="application/json">{"grid": ["QVTHUFAFII", "TWYLVYNUPM", "STRATEGIKQ", "LOEYFUGMXW", "QEVALUASIJ", "GBFYOSRLQI", "BKEBIJAKAN", "UXILDQNEGF", "PIEFGIAEMV", "ARSITEKTUR"], "words": [{"term": "STRATEGI", "clue": "Arah pilihan TI yang berangkat dari sasaran organisasi.", "meaning": "Prioritas investasi dibangun dari kebutuhan layanan.", "cells": [[2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5], [2, 6], [2, 7]]}, {"term": "KEBIJAKAN", "clue": "Pedoman formal yang menjadi pegangan saat menetapkan tindakan.", "meaning": "Aturan akses membantu unit menerapkan ketentuan yang sama.", "cells": [[6, 1], [6, 2], [6, 3], [6, 4], [6, 5], [6, 6], [6, 7], [6, 8], [6, 9]]}, {"term": "ARSITEKTUR", "clue": "Gambaran hubungan proses, data, aplikasi, infrastruktur, keamanan, dan layanan.", "meaning": "Peta hubungan antardomain membantu menemukan dampak perubahan.", "cells": [[9, 0], [9, 1], [9, 2], [9, 3], [9, 4], [9, 5], [9, 6], [9, 7], [9, 8], [9, 9]]}, {"term": "ANGGARAN", "clue": "Dana yang disiapkan untuk menjalankan dan memelihara pekerjaan.", "meaning": "Biaya integrasi dan dukungan dipertimbangkan sejak tahap perencanaan.", "cells": [[0, 6], [1, 6], [2, 6], [3, 6], [4, 6], [5, 6], [6, 6], [7, 6]]}, {"term": "EVALUASI", "clue": "Penilaian atas hasil perubahan untuk memilih tindak lanjut.", "meaning": "Hasil pengukuran dibandingkan dengan sasaran layanan.", "cells": [[4, 1], [4, 2], [4, 3], [4, 4], [4, 5], [4, 6], [4, 7], [4, 8]]}]}</script><section class="word-root" data-complete="false" data-found="0" aria-label="Find the words" hidden></section><script class="dt-config" type="application/json">{"words": [{"id": "invoice", "label": "nilai kontrak"}, {"id": "target", "label": "kondisi target"}, {"id": "monitor", "label": "waktu penyelesaian"}, {"id": "owner", "label": "pemilik layanan"}], "gaps": [{"id": "g1", "before": "Tetapkan", "after": "yang bisa diuji, misalnya satu nomor untuk permintaan yang berpindah unit.", "answer": "target", "feedback": "Rancangan tujuan memberi dasar untuk menemukan jarak dari kondisi sekarang."}, {"id": "g2", "before": "Keputusan tentang alur persetujuan dibahas bersama", "after": "yang bertanggung jawab atas proses tersebut.", "answer": "owner", "feedback": "Perubahan alur kerja memerlukan keputusan dari pihak yang bertanggung jawab atas layanan."}, {"id": "g3", "before": "Untuk menilai apakah tabel lebih cepat diterima, bandingkan", "after": "sebelum dan sesudah uji coba.", "answer": "monitor", "feedback": "Indikator ini mengukur pengalaman pemohon dari awal sampai tabel dikirim."}]}</script><section class="dt-root" data-complete="false" data-correct="0" data-assisted="false" aria-label="Drag the Words" hidden></section><script class="sp-config" type="application/json">{"title": "Dari antrean ke rencana kerja", "initial_order": ["p3", "p1", "p4", "p2"], "correct_order": ["p1", "p2", "p3", "p4"], "explanation": "Temuan lapangan memberi arah pada target. Target menunjukkan pekerjaan yang perlu disiapkan sebelum manfaatnya diukur.", "paragraphs": [{"id": "p1", "text": "Petugas dari dua unit menelusuri satu permintaan. Mereka menemukan bahwa nomor permintaan berganti saat tabel diteruskan."}, {"id": "p2", "text": "Berdasarkan temuan itu, kedua unit menetapkan satu nomor yang tetap dipakai sampai tabel dikirim. Mereka menentukan siapa yang boleh melihat status permintaan."}, {"id": "p3", "text": "Setelah aturan nomor dan akses disepakati, tim menganggarkan pekerjaan integrasi dan menyiapkan uji coba pada dua unit."}, {"id": "p4", "text": "Pada akhir uji coba, pemilik layanan membandingkan waktu penyelesaian dengan catatan sebelum perubahan. Hasilnya dipakai untuk memutuskan apakah cakupan diperluas."}]}</script><section class="sp-root" data-complete="false" data-correct="0" data-assisted="false" aria-label="Sort the Paragraphs" hidden></section><script type="application/json" class="dnd-config">{"course": "ITE", "label": "KASUS LAYANAN STATISTIK", "art": "scenes/ITE-blueprint.webp", "success": "Rencana siap diuji. Nomor dan aturan akses disepakati, pertukaran diuji, lalu hasil layanan ditinjau.", "steps": [{"kind": "sort", "title": "Bedakan temuan dan kondisi yang dituju", "intro": "Tim akan merencanakan pelacakan permintaan tabel lintas unit. Tempatkan lima kartu sesuai perannya dalam rancangan.", "instruction": "Kelompokkan setiap kartu sebagai temuan saat ini atau kondisi target.", "feedback": "Cari penanda waktunya. Temuan menjelaskan keadaan yang sudah diamati. Target menjelaskan keadaan yang ingin diwujudkan.", "items": [{"id": "shared", "label": "Satu nomor lintas unit", "detail": "Nomor yang sama akan dibawa sampai pengiriman tabel.", "image": "scenes/ITE-blueprint.webp"}, {"id": "duplicate", "label": "Nomor berbeda", "detail": "Petugas melihat dua nomor untuk satu permintaan."}, {"id": "access", "label": "Hak akses sesuai peran", "detail": "Pemohon akan melihat status miliknya sendiri."}, {"id": "manual", "label": "Pencocokan lewat telepon", "detail": "Saat ini petugas harus menelepon unit lain untuk menemukan berkas.", "image": "scenes/ITE-operations.webp"}, {"id": "log", "label": "Riwayat perpindahan", "detail": "Targetnya petugas dapat melihat kapan berkas berpindah unit."}], "zones": [{"id": "current", "label": "Kondisi saat ini", "hint": "Yang sudah diamati"}, {"id": "target", "label": "Kondisi target", "hint": "Yang akan diwujudkan"}], "solution": {"shared": "target", "duplicate": "current", "access": "target", "manual": "current", "log": "target"}}, {"kind": "sequence", "title": "Susun rencana uji sebelum memperluas layanan", "intro": "Rencana harus berangkat dari aturan nomor dan akses, diteruskan dengan uji pada dua unit, lalu dinilai berdasarkan catatan waktu. Sisakan dua kartu yang tidak mendukung urutan ini.", "instruction": "Letakkan tiga tindakan pada urutan 1–3. Biarkan dua pilihan lain di tempat asal.", "feedback": "Uji pertukaran memerlukan aturan yang sudah disepakati. Uji dilakukan sebelum tim bisa menilai manfaatnya.", "items": [{"id": "review", "label": "Bandingkan waktu penyelesaian", "detail": "Tinjau data sebelum dan sesudah uji coba."}, {"id": "rollout", "label": "Perluas ke semua unit sekarang", "detail": "Terapkan sebelum aturan dan pertukaran diperiksa."}, {"id": "agree", "label": "Sepakati aturan nomor dan akses", "detail": "Libatkan pemilik layanan dan pengelola data."}, {"id": "count", "label": "Hitung jumlah aplikasi", "detail": "Gunakan jumlah aplikasi sebagai ukuran kecepatan layanan."}, {"id": "test", "label": "Uji pertukaran pada dua unit", "detail": "Cocokkan nomor dan periksa siapa yang dapat melihat status."}], "zones": [{"id": "first", "label": "1 · Siapkan aturan", "hint": "Syarat sebelum menguji"}, {"id": "second", "label": "2 · Jalankan uji coba", "hint": "Batasi pada dua unit"}, {"id": "third", "label": "3 · Tinjau hasil", "hint": "Gunakan sasaran layanan"}], "solution": {"agree": "first", "test": "second", "review": "third", "rollout": "bank", "count": "bank"}}]}</script><img class="dnd-image-ref" data-dnd-art="scenes/ITE-blueprint.webp" src="asset://b9939726-4ade-1313-0bc7-51b4a65c55ba.webp" alt="" hidden><img class="dnd-image-ref" data-dnd-art="scenes/ITE-operations.webp" src="asset://d8e1e1b0-ffee-b1c6-93e6-abc167b001a5.webp" alt="" hidden><section class="dnd-challenge" hidden aria-label="Tantangan kasus bertahap"><div class="dnd-workspace"></div><div class="dnd-status" role="status" aria-live="polite"></div></section></div>]]></htmlView>
+          <jsonProperties><![CDATA[{"ideviceId":"202611151635103DQZXI","textInfoDurationInput":"","textInfoDurationTextInput":"Duration","textInfoParticipantsInput":"","textInfoParticipantsTextInput":"Grouping","textTextarea":"<div class=\"lcm-stage\" data-lcm-phase=\"1\" data-course=\"ITE\"></div><section class=\"sim-root\" data-course=\"ITE\" data-complete=\"false\" aria-label=\"Simulasi keputusan\"><div class=\"sim-scroll\"><div class=\"sim-content\"></div></div><footer class=\"sim-controls\"><button type=\"button\" data-simple-sim=\"back\" disabled>← Sebelumnya</button><button type=\"button\" class=\"sim-next\" data-simple-sim=\"next\" disabled>Lanjut →</button></footer></section><script class=\"word-config\" type=\"application/json\">{\"grid\": [\"QVTHUFAFII\", \"TWYLVYNUPM\", \"STRATEGIKQ\", \"LOEYFUGMXW\", \"QEVALUASIJ\", \"GBFYOSRLQI\", \"BKEBIJAKAN\", \"UXILDQNEGF\", \"PIEFGIAEMV\", \"ARSITEKTUR\"], \"words\": [{\"term\": \"STRATEGI\", \"clue\": \"Arah pilihan TI yang berangkat dari sasaran organisasi.\", \"meaning\": \"Prioritas investasi dibangun dari kebutuhan layanan.\", \"cells\": [[2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5], [2, 6], [2, 7]]}, {\"term\": \"KEBIJAKAN\", \"clue\": \"Pedoman formal yang menjadi pegangan saat menetapkan tindakan.\", \"meaning\": \"Aturan akses membantu unit menerapkan ketentuan yang sama.\", \"cells\": [[6, 1], [6, 2], [6, 3], [6, 4], [6, 5], [6, 6], [6, 7], [6, 8], [6, 9]]}, {\"term\": \"ARSITEKTUR\", \"clue\": \"Gambaran hubungan proses, data, aplikasi, infrastruktur, keamanan, dan layanan.\", \"meaning\": \"Peta hubungan antardomain membantu menemukan dampak perubahan.\", \"cells\": [[9, 0], [9, 1], [9, 2], [9, 3], [9, 4], [9, 5], [9, 6], [9, 7], [9, 8], [9, 9]]}, {\"term\": \"ANGGARAN\", \"clue\": \"Dana yang disiapkan untuk menjalankan dan memelihara pekerjaan.\", \"meaning\": \"Biaya integrasi dan dukungan dipertimbangkan sejak tahap perencanaan.\", \"cells\": [[0, 6], [1, 6], [2, 6], [3, 6], [4, 6], [5, 6], [6, 6], [7, 6]]}, {\"term\": \"EVALUASI\", \"clue\": \"Penilaian atas hasil perubahan untuk memilih tindak lanjut.\", \"meaning\": \"Hasil pengukuran dibandingkan dengan sasaran layanan.\", \"cells\": [[4, 1], [4, 2], [4, 3], [4, 4], [4, 5], [4, 6], [4, 7], [4, 8]]}]}</script><section class=\"word-root\" data-complete=\"false\" data-found=\"0\" aria-label=\"Find the words\" hidden></section><script class=\"dt-config\" type=\"application/json\">{\"words\": [{\"id\": \"invoice\", \"label\": \"nilai kontrak\"}, {\"id\": \"target\", \"label\": \"kondisi target\"}, {\"id\": \"monitor\", \"label\": \"waktu penyelesaian\"}, {\"id\": \"owner\", \"label\": \"pemilik layanan\"}], \"gaps\": [{\"id\": \"g1\", \"before\": \"Tetapkan\", \"after\": \"yang bisa diuji, misalnya satu nomor untuk permintaan yang berpindah unit.\", \"answer\": \"target\", \"feedback\": \"Rancangan tujuan memberi dasar untuk menemukan jarak dari kondisi sekarang.\"}, {\"id\": \"g2\", \"before\": \"Keputusan tentang alur persetujuan dibahas bersama\", \"after\": \"yang bertanggung jawab atas proses tersebut.\", \"answer\": \"owner\", \"feedback\": \"Perubahan alur kerja memerlukan keputusan dari pihak yang bertanggung jawab atas layanan.\"}, {\"id\": \"g3\", \"before\": \"Untuk menilai apakah tabel lebih cepat diterima, bandingkan\", \"after\": \"sebelum dan sesudah uji coba.\", \"answer\": \"monitor\", \"feedback\": \"Indikator ini mengukur pengalaman pemohon dari awal sampai tabel dikirim.\"}]}</script><section class=\"dt-root\" data-complete=\"false\" data-correct=\"0\" data-assisted=\"false\" aria-label=\"Drag the Words\" hidden></section><script class=\"sp-config\" type=\"application/json\">{\"title\": \"Dari antrean ke rencana kerja\", \"initial_order\": [\"p3\", \"p1\", \"p4\", \"p2\"], \"correct_order\": [\"p1\", \"p2\", \"p3\", \"p4\"], \"explanation\": \"Temuan lapangan memberi arah pada target. Target menunjukkan pekerjaan yang perlu disiapkan sebelum manfaatnya diukur.\", \"paragraphs\": [{\"id\": \"p1\", \"text\": \"Petugas dari dua unit menelusuri satu permintaan. Mereka menemukan bahwa nomor permintaan berganti saat tabel diteruskan.\"}, {\"id\": \"p2\", \"text\": \"Berdasarkan temuan itu, kedua unit menetapkan satu nomor yang tetap dipakai sampai tabel dikirim. Mereka menentukan siapa yang boleh melihat status permintaan.\"}, {\"id\": \"p3\", \"text\": \"Setelah aturan nomor dan akses disepakati, tim menganggarkan pekerjaan integrasi dan menyiapkan uji coba pada dua unit.\"}, {\"id\": \"p4\", \"text\": \"Pada akhir uji coba, pemilik layanan membandingkan waktu penyelesaian dengan catatan sebelum perubahan. Hasilnya dipakai untuk memutuskan apakah cakupan diperluas.\"}]}</script><section class=\"sp-root\" data-complete=\"false\" data-correct=\"0\" data-assisted=\"false\" aria-label=\"Sort the Paragraphs\" hidden></section><script type=\"application/json\" class=\"dnd-config\">{\"course\": \"ITE\", \"label\": \"KASUS LAYANAN STATISTIK\", \"art\": \"scenes/ITE-blueprint.webp\", \"success\": \"Rencana siap diuji. Nomor dan aturan akses disepakati, pertukaran diuji, lalu hasil layanan ditinjau.\", \"steps\": [{\"kind\": \"sort\", \"title\": \"Bedakan temuan dan kondisi yang dituju\", \"intro\": \"Tim akan merencanakan pelacakan permintaan tabel lintas unit. Tempatkan lima kartu sesuai perannya dalam rancangan.\", \"instruction\": \"Kelompokkan setiap kartu sebagai temuan saat ini atau kondisi target.\", \"feedback\": \"Cari penanda waktunya. Temuan menjelaskan keadaan yang sudah diamati. Target menjelaskan keadaan yang ingin diwujudkan.\", \"items\": [{\"id\": \"shared\", \"label\": \"Satu nomor lintas unit\", \"detail\": \"Nomor yang sama akan dibawa sampai pengiriman tabel.\", \"image\": \"scenes/ITE-blueprint.webp\"}, {\"id\": \"duplicate\", \"label\": \"Nomor berbeda\", \"detail\": \"Petugas melihat dua nomor untuk satu permintaan.\"}, {\"id\": \"access\", \"label\": \"Hak akses sesuai peran\", \"detail\": \"Pemohon akan melihat status miliknya sendiri.\"}, {\"id\": \"manual\", \"label\": \"Pencocokan lewat telepon\", \"detail\": \"Saat ini petugas harus menelepon unit lain untuk menemukan berkas.\", \"image\": \"scenes/ITE-operations.webp\"}, {\"id\": \"log\", \"label\": \"Riwayat perpindahan\", \"detail\": \"Targetnya petugas dapat melihat kapan berkas berpindah unit.\"}], \"zones\": [{\"id\": \"current\", \"label\": \"Kondisi saat ini\", \"hint\": \"Yang sudah diamati\"}, {\"id\": \"target\", \"label\": \"Kondisi target\", \"hint\": \"Yang akan diwujudkan\"}], \"solution\": {\"shared\": \"target\", \"duplicate\": \"current\", \"access\": \"target\", \"manual\": \"current\", \"log\": \"target\"}}, {\"kind\": \"sequence\", \"title\": \"Susun rencana uji sebelum memperluas layanan\", \"intro\": \"Rencana harus berangkat dari aturan nomor dan akses, diteruskan dengan uji pada dua unit, lalu dinilai berdasarkan catatan waktu. Sisakan dua kartu yang tidak mendukung urutan ini.\", \"instruction\": \"Letakkan tiga tindakan pada urutan 1–3. Biarkan dua pilihan lain di tempat asal.\", \"feedback\": \"Uji pertukaran memerlukan aturan yang sudah disepakati. Uji dilakukan sebelum tim bisa menilai manfaatnya.\", \"items\": [{\"id\": \"review\", \"label\": \"Bandingkan waktu penyelesaian\", \"detail\": \"Tinjau data sebelum dan sesudah uji coba.\"}, {\"id\": \"rollout\", \"label\": \"Perluas ke semua unit sekarang\", \"detail\": \"Terapkan sebelum aturan dan pertukaran diperiksa.\"}, {\"id\": \"agree\", \"label\": \"Sepakati aturan nomor dan akses\", \"detail\": \"Libatkan pemilik layanan dan pengelola data.\"}, {\"id\": \"count\", \"label\": \"Hitung jumlah aplikasi\", \"detail\": \"Gunakan jumlah aplikasi sebagai ukuran kecepatan layanan.\"}, {\"id\": \"test\", \"label\": \"Uji pertukaran pada dua unit\", \"detail\": \"Cocokkan nomor dan periksa siapa yang dapat melihat status.\"}], \"zones\": [{\"id\": \"first\", \"label\": \"1 · Siapkan aturan\", \"hint\": \"Syarat sebelum menguji\"}, {\"id\": \"second\", \"label\": \"2 · Jalankan uji coba\", \"hint\": \"Batasi pada dua unit\"}, {\"id\": \"third\", \"label\": \"3 · Tinjau hasil\", \"hint\": \"Gunakan sasaran layanan\"}], \"solution\": {\"agree\": \"first\", \"test\": \"second\", \"review\": \"third\", \"rollout\": \"bank\", \"count\": \"bank\"}}]}</script><img class=\"dnd-image-ref\" data-dnd-art=\"scenes/ITE-blueprint.webp\" src=\"asset://b9939726-4ade-1313-0bc7-51b4a65c55ba.webp\" alt=\"\" hidden><img class=\"dnd-image-ref\" data-dnd-art=\"scenes/ITE-operations.webp\" src=\"asset://d8e1e1b0-ffee-b1c6-93e6-abc167b001a5.webp\" alt=\"\" hidden><section class=\"dnd-challenge\" hidden aria-label=\"Tantangan kasus bertahap\"><div class=\"dnd-workspace\"></div><div class=\"dnd-status\" role=\"status\" aria-live=\"polite\"></div></section>","textFeedbackInput":"Show Feedback","textFeedbackTextarea":""}]]></jsonProperties>
+          <odeComponentsOrder>0</odeComponentsOrder>
+          <odeComponentsProperties>
+            <odeComponentsProperty>
+              <key>visibility</key>
+              <value>true</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>teacherOnly</key>
+              <value>false</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>cssClass</key>
+              <value></value>
+            </odeComponentsProperty>
+          </odeComponentsProperties>
+        </odeComponent>
+      </odeComponents>
+    </odePagStructure>
+    <odePagStructure>
+      <odePageId>20261115163510LRIM8U</odePageId>
+      <odeBlockId>202611151635100EQAX4</odeBlockId>
+      <blockName>Dua keputusan</blockName>
+      <iconName></iconName>
+      <odePagStructureOrder>2</odePagStructureOrder>
+      <odePagStructureProperties>
+        <odePagStructureProperty>
+          <key>visibility</key>
+          <value>true</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>teacherOnly</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>allowToggle</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>minimized</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>cssClass</key>
+          <value></value>
+        </odePagStructureProperty>
+      </odePagStructureProperties>
+      <odeComponents>
+        <odeComponent>
+          <odePageId>20261115163510LRIM8U</odePageId>
+          <odeBlockId>202611151635100EQAX4</odeBlockId>
+          <odeIdeviceId>20261115163510TGSFTD</odeIdeviceId>
+          <odeIdeviceTypeName>text</odeIdeviceTypeName>
+          <htmlView><![CDATA[<div class="exe-text-template"><div class="lcm-stage" data-lcm-phase="2" data-course="ITE"></div><div class="scene-quiz-note"><span class="scene-eyebrow">CEK PEMAHAMAN</span><p>Jawab kedua pertanyaan berikut berdasarkan materi dan latihan tadi.</p></div></div>]]></htmlView>
+          <jsonProperties><![CDATA[{"ideviceId":"20261115163510TGSFTD","textInfoDurationInput":"","textInfoDurationTextInput":"Duration","textInfoParticipantsInput":"","textInfoParticipantsTextInput":"Grouping","textTextarea":"<div class=\"lcm-stage\" data-lcm-phase=\"2\" data-course=\"ITE\"></div><div class=\"scene-quiz-note\"><span class=\"scene-eyebrow\">CEK PEMAHAMAN</span><p>Jawab kedua pertanyaan berikut berdasarkan materi dan latihan tadi.</p></div>","textFeedbackInput":"Show Feedback","textFeedbackTextarea":""}]]></jsonProperties>
+          <odeComponentsOrder>0</odeComponentsOrder>
+          <odeComponentsProperties>
+            <odeComponentsProperty>
+              <key>visibility</key>
+              <value>true</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>teacherOnly</key>
+              <value>false</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>cssClass</key>
+              <value></value>
+            </odeComponentsProperty>
+          </odeComponentsProperties>
+        </odeComponent>
+      </odeComponents>
+    </odePagStructure>
+    <odePagStructure>
+      <odePageId>20261115163510LRIM8U</odePageId>
+      <odeBlockId>20261115163510MXGJ24</odeBlockId>
+      <blockName>Uji pemahaman</blockName>
+      <iconName></iconName>
+      <odePagStructureOrder>3</odePagStructureOrder>
+      <odePagStructureProperties>
+        <odePagStructureProperty>
+          <key>visibility</key>
+          <value>true</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>teacherOnly</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>allowToggle</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>minimized</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>cssClass</key>
+          <value></value>
+        </odePagStructureProperty>
+      </odePagStructureProperties>
+      <odeComponents>
+        <odeComponent>
+          <odePageId>20261115163510LRIM8U</odePageId>
+          <odeBlockId>20261115163510MXGJ24</odeBlockId>
+          <odeIdeviceId>202611151635103CZUG8</odeIdeviceId>
+          <odeIdeviceTypeName>form</odeIdeviceTypeName>
+          <htmlView><![CDATA[<div class="exe-form-container">
+  <div class="game-evaluation-ids js-hidden" data-id="202611151635103CZUG8" data-evaluationb="false" data-evaluationid="b10a9d21-4fb8-4d35-9490-8246f1ce0413"></div>
+            <div id="frmMainContainer-202611151635103CZUG8" class="form-IDevice" data-id="202611151635103CZUG8">
+                <div class="form-Data js-hidden">{}</div>
+                <div class="form-instructions"><p>Dua keputusan untuk Anda</p></div>
+                <div class="FRMP-GameScoreBoard" style="display:none;">
+                    <div>
+                        <strong><span class="sr-av">Time per question:</span></strong>
+                        <span id="frmPTime-202611151635103CZUG8">00:00</span>
+                    </div>
+                </div>
+                <div class="FRMP-StartGame" id="frmStartGameDiv-202611151635103CZUG8" style="display:none;">
+                      <button  id="frmStartGame-202611151635103CZUG8" type="button" class="btn btn-primary">Click here to start</button>
+                </div>
+                <div class="form-body" id="frmBody-202611151635103CZUG8" style="display:block;">
+                    <div class="FRMP-Questions">
+                        <div id="form-questions-202611151635103CZUG8" > </div>
+                        <div id="frmCover-202611151635103CZUG8" class="FRMP-Cover"> </div>
+                    </div>
+                    <div id="resultsContainer-202611151635103CZUG8" class="form-results-container inline">
+                        <div id="form-score-202611151635103CZUG8" class="score-text">Score.</div>
+                        <div id="form-result-test-202611151635103CZUG8" class="score-text phrase-score"></div>
+                    </div>
+                    <div class="form-buttons-container inline">
+                        <input id="form-button-check-202611151635103CZUG8" class="btn btn-primary" type="button" value="Periksa jawaban"
+                            data-id="202611151635103CZUG8" />
+                        <input id="form-button-reset-202611151635103CZUG8" type="button" value="Reset"
+                            data-id="202611151635103CZUG8" class="btn btn-primary"  style="display:none" />
+                        <input id="form-button-show-answers-202611151635103CZUG8" class="btn btn-primary" type="button" value="Lihat pembahasan"
+                            data-id="202611151635103CZUG8" style="display: " />
+
+                    </div>
+                </div>
+                <div class="Games-BottonContainer d-flex align-items-center justify-content-end mx-auto p-0 w-100"><div class="Games-GetScore d-flex align-items-center justify-content-center w-100 mt-3"><span class="Games-RepeatActivity"></span></div></div>
+                
+            </div>
+            <div class="questionsMedia" style="display:none"></div>
+            
+</div>]]></htmlView>
+          <jsonProperties><![CDATA[{"ideviceId":"202611151635103CZUG8","evaluation":false,"evaluationID":"202611151635101U9OYB","passScoreMode":"global","passScoreCustom":5,"repeatActivity":true,"isScorm":1,"textButtonScorm":"Periksa jawaban","weighted":100,"msgs":{"msgScoreScorm":"Preview: nilai belum dikirim ke LMS.","msgYouScore":"Skor Anda","msgEndGameScore":"Please start the game before saving your score.","msgScore":"Skor","msgWeight":"Weight","msgYouLastScore":"Nilai terakhir tersimpan","msgOnlySaveScore":"You can only save the score once!","msgOnlySave":"You can only save once","msgOnlySaveAuto":"Your score will be saved after each question. You can only play once.","msgSaveAuto":"Nilai dikirim otomatis ke LMS.","msgSeveralScore":"You can save the score as many times as you want","msgPlaySeveralTimes":"You can do this activity as many times as you want","msgActityComply":"You have already done this activity.","msgUncompletedActivity":"Incomplete activity","msgSuccessfulActivity":"Activity: Passed. Score: %s","msgUnsuccessfulActivity":"Activity: Not passed. Score: %s","msgPassScore":"Minimum score needed to pass this activity: %s","msgTypeGame":"Tantangan","msgStartGame":"Click here to start","msgTime":"Time per question","msgSaveScore":"Simpan nilai","msgResult":"Result","msgCheck":"Periksa jawaban","msgReset":"Ulangi","msgShowAnswers":"Lihat pembahasan","msgTestResultPass":"Misi selesai. Bawa pelajarannya ke pekerjaan.","msgTestResultNotPass":"Misi selesai. Tinjau lagi bukti dan pembahasannya.","msgTrueFalseHelp":"Select whether the statement is true or false","msgDropdownHelp":"Choose the correct answer among the options proposed","msgFillHelp":"Fill in the blanks with the appropriate word","msgSingleSelectionHelp":"Pilih satu jawaban yang paling tepat.","msgMultipleSelectionHelp":"Multiple choice with multiple corrects answers","msgPlayStart":"Mulai tantangan","msgTrue":"True","msgFalse":"False","msgNext":"Berikutnya","msgPrevious":"Sebelumnya","msgSuggestion":"Suggestion","msgOk":"Tepat","msgKO":"Perlu ditinjau","msgHide":"Hide","msgSubmit":"Periksa","msgPlayAgain":"Coba lagi","msgHits":"Tepat","msgErrors":"Perlu ditinjau","msgNumQuestions":"Jumlah kartu","msgFullScreen":"Layar penuh","msgExitFullScreen":"Keluar layar penuh","msgMinimize":"Perkecil","msgMaximize":"Perbesar","mgsGameStart":"Tantangan dimulai. Seret kartu ke kategori yang sesuai.","msgContinue":"Lanjutkan","msgTimeOver":"Waktu habis. Mari pelajari pembahasannya.","msgTestPassed":"Keputusan Anda tepat.","msgTestFailed":"Pelajari kembali alasan di balik jawaban yang tepat.","msgAllCorrect":"Semua kartu sudah tepat.","msgRebootGame":"Ulangi tantangan ini?"},"id":"202611151635103CZUG8","questionsRandom":false,"percentageQuestions":"100","time":"0","eXeFormInstructions":"<p>Dua keputusan. Pilih satu jawaban pada setiap soal, lalu tekan Periksa jawaban. Skor: 0, 50, atau 100.</p>","questionsData":[{"id":"20261115163510XBSUKR","activityType":"selection","baseText":"<p>Peta saat ini menunjukkan nomor permintaan berubah setiap kali berkas berpindah unit. Tim menargetkan satu nomor sampai tabel dikirim. Pekerjaan apa yang langsung menutup selisih itu?</p>","feedbackRight":"Sepakati aturan nomor, lalu uji apakah kedua aplikasi mempertahankan nomor yang sama saat satu permintaan berpindah.","feedbackWrong":"Sepakati aturan nomor, lalu uji apakah kedua aplikasi mempertahankan nomor yang sama saat satu permintaan berpindah.","suggestion":"","wrongAnswersValue":"","selectionType":"single","answers":[[false,"Menambah jumlah akun petugas di setiap unit"],[true,"Menyepakati pengenal bersama dan menguji pertukarannya"],[false,"Mengubah tampilan beranda kedua aplikasi"]],"answer":"2","capitalization":false,"strict":false,"order":0,"customScore":1,"time":0},{"id":"2026111516351099F4UJ","activityType":"selection","baseText":"<p>Setelah uji coba, aplikasi tersedia hampir sepanjang bulan. Pimpinan ingin tahu apakah pemohon menerima tabel lebih cepat. Ukuran mana yang menjawab pertanyaan tersebut?</p>","feedbackRight":"Median waktu penyelesaian langsung mengukur lamanya pemohon menunggu. Bandingkan periode dan periksa apakah beban serta jenis permintaannya sebanding.","feedbackWrong":"Median waktu penyelesaian langsung mengukur lamanya pemohon menunggu. Bandingkan periode dan periksa apakah beban serta jenis permintaannya sebanding.","suggestion":"","wrongAnswersValue":"","selectionType":"single","answers":[[true,"Median waktu dari permintaan diterima sampai tabel dikirim"],[false,"Persentase waktu aplikasi dapat diakses"],[false,"Jumlah petugas yang mengikuti sosialisasi"]],"answer":"1","capitalization":false,"strict":false,"order":1,"customScore":1,"time":0}],"addBtnAnswers":true,"eXeIdeviceTextAfter":"","showSlider":true}]]></jsonProperties>
+          <odeComponentsOrder>0</odeComponentsOrder>
+          <odeComponentsProperties>
+            <odeComponentsProperty>
+              <key>visibility</key>
+              <value>true</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>teacherOnly</key>
+              <value>false</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>cssClass</key>
+              <value></value>
+            </odeComponentsProperty>
+          </odeComponentsProperties>
+        </odeComponent>
+      </odeComponents>
+    </odePagStructure>
+    <odePagStructure>
+      <odePageId>20261115163510LRIM8U</odePageId>
+      <odeBlockId>20261115163510QRSUUI</odeBlockId>
+      <blockName>Bawa ke pekerjaan</blockName>
+      <iconName></iconName>
+      <odePagStructureOrder>4</odePagStructureOrder>
+      <odePagStructureProperties>
+        <odePagStructureProperty>
+          <key>visibility</key>
+          <value>true</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>teacherOnly</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>allowToggle</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>minimized</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>cssClass</key>
+          <value></value>
+        </odePagStructureProperty>
+      </odePagStructureProperties>
+      <odeComponents>
+        <odeComponent>
+          <odePageId>20261115163510LRIM8U</odePageId>
+          <odeBlockId>20261115163510QRSUUI</odeBlockId>
+          <odeIdeviceId>20261115163510FDJTJ8</odeIdeviceId>
+          <odeIdeviceTypeName>text</odeIdeviceTypeName>
+          <htmlView><![CDATA[<div class="exe-text-template"><div class="lcm-stage" data-lcm-phase="3" data-course="ITE"></div><section class="scene-review"><span class="scene-eyebrow">PEMBAHASAN</span><h2>Meninjau keputusan dalam uji coba</h2><p class="scene-review-lead">Temuan di titik serah terima memberi dasar untuk memilih pekerjaan TI. Setelah solusi diuji, catatan waktu membantu tim menilai perubahan dari sisi pemohon.</p><div class="scene-review-points"><article><span>1</span><div><h3>Peta saat ini menunjukkan nomor permintaan berubah setiap kali berkas berpindah unit. Tim menargetkan satu nomor sampai tabel dikirim. Pekerjaan apa yang langsung menutup selisih itu?</h3><p>Sepakati aturan nomor, lalu uji apakah kedua aplikasi mempertahankan nomor yang sama saat satu permintaan berpindah.</p></div></article><article><span>2</span><div><h3>Setelah uji coba, aplikasi tersedia hampir sepanjang bulan. Pimpinan ingin tahu apakah pemohon menerima tabel lebih cepat. Ukuran mana yang menjawab pertanyaan tersebut?</h3><p>Median waktu penyelesaian langsung mengukur lamanya pemohon menunggu. Bandingkan periode dan periksa apakah beban serta jenis permintaannya sebanding.</p></div></article></div></section></div>]]></htmlView>
+          <jsonProperties><![CDATA[{"ideviceId":"20261115163510FDJTJ8","textInfoDurationInput":"","textInfoDurationTextInput":"Duration","textInfoParticipantsInput":"","textInfoParticipantsTextInput":"Grouping","textTextarea":"<div class=\"lcm-stage\" data-lcm-phase=\"3\" data-course=\"ITE\"></div><section class=\"scene-review\"><span class=\"scene-eyebrow\">PEMBAHASAN</span><h2>Meninjau keputusan dalam uji coba</h2><p class=\"scene-review-lead\">Temuan di titik serah terima memberi dasar untuk memilih pekerjaan TI. Setelah solusi diuji, catatan waktu membantu tim menilai perubahan dari sisi pemohon.</p><div class=\"scene-review-points\"><article><span>1</span><div><h3>Peta saat ini menunjukkan nomor permintaan berubah setiap kali berkas berpindah unit. Tim menargetkan satu nomor sampai tabel dikirim. Pekerjaan apa yang langsung menutup selisih itu?</h3><p>Sepakati aturan nomor, lalu uji apakah kedua aplikasi mempertahankan nomor yang sama saat satu permintaan berpindah.</p></div></article><article><span>2</span><div><h3>Setelah uji coba, aplikasi tersedia hampir sepanjang bulan. Pimpinan ingin tahu apakah pemohon menerima tabel lebih cepat. Ukuran mana yang menjawab pertanyaan tersebut?</h3><p>Median waktu penyelesaian langsung mengukur lamanya pemohon menunggu. Bandingkan periode dan periksa apakah beban serta jenis permintaannya sebanding.</p></div></article></div></section>","textFeedbackInput":"Show Feedback","textFeedbackTextarea":""}]]></jsonProperties>
+          <odeComponentsOrder>0</odeComponentsOrder>
+          <odeComponentsProperties>
+            <odeComponentsProperty>
+              <key>visibility</key>
+              <value>true</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>teacherOnly</key>
+              <value>false</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>cssClass</key>
+              <value></value>
+            </odeComponentsProperty>
+          </odeComponentsProperties>
+        </odeComponent>
+      </odeComponents>
+    </odePagStructure>
+    <odePagStructure>
+      <odePageId>20261115163510LRIM8U</odePageId>
+      <odeBlockId>20261115163510FDKABV</odeBlockId>
+      <blockName>Misi selesai</blockName>
+      <iconName></iconName>
+      <odePagStructureOrder>5</odePagStructureOrder>
+      <odePagStructureProperties>
+        <odePagStructureProperty>
+          <key>visibility</key>
+          <value>true</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>teacherOnly</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>allowToggle</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>minimized</key>
+          <value>false</value>
+        </odePagStructureProperty>
+        <odePagStructureProperty>
+          <key>cssClass</key>
+          <value></value>
+        </odePagStructureProperty>
+      </odePagStructureProperties>
+      <odeComponents>
+        <odeComponent>
+          <odePageId>20261115163510LRIM8U</odePageId>
+          <odeBlockId>20261115163510FDKABV</odeBlockId>
+          <odeIdeviceId>20261115163510K9J7LN</odeIdeviceId>
+          <odeIdeviceTypeName>text</odeIdeviceTypeName>
+          <htmlView><![CDATA[<div class="exe-text-template"><div class="lcm-stage" data-lcm-phase="4" data-course="ITE"></div><section class="scene-ending"><img src="asset://97a5cc67-4c70-fca9-283d-f67da0f5d224.webp" alt="Lencana penyelesaian latihan"><div><h2>Hasil latihan</h2><p class="scene-final-score" role="status"></p><p>Saat mengusulkan perubahan TI, bawa satu contoh hambatan layanan, kondisi yang Anda tuju, dan ukuran yang bisa diperiksa setelah uji coba.</p><button type="button" class="scene-confirm" data-scene-action="restart">Ulangi latihan</button></div></section></div>]]></htmlView>
+          <jsonProperties><![CDATA[{"ideviceId":"20261115163510K9J7LN","textInfoDurationInput":"","textInfoDurationTextInput":"Duration","textInfoParticipantsInput":"","textInfoParticipantsTextInput":"Grouping","textTextarea":"<div class=\"lcm-stage\" data-lcm-phase=\"4\" data-course=\"ITE\"></div><section class=\"scene-ending\"><img src=\"asset://97a5cc67-4c70-fca9-283d-f67da0f5d224.webp\" alt=\"Lencana penyelesaian latihan\"><div><h2>Hasil latihan</h2><p class=\"scene-final-score\" role=\"status\"></p><p>Saat mengusulkan perubahan TI, bawa satu contoh hambatan layanan, kondisi yang Anda tuju, dan ukuran yang bisa diperiksa setelah uji coba.</p><button type=\"button\" class=\"scene-confirm\" data-scene-action=\"restart\">Ulangi latihan</button></div></section>","textFeedbackInput":"Show Feedback","textFeedbackTextarea":""}]]></jsonProperties>
+          <odeComponentsOrder>0</odeComponentsOrder>
+          <odeComponentsProperties>
+            <odeComponentsProperty>
+              <key>visibility</key>
+              <value>true</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>teacherOnly</key>
+              <value>false</value>
+            </odeComponentsProperty>
+            <odeComponentsProperty>
+              <key>cssClass</key>
+              <value></value>
+            </odeComponentsProperty>
+          </odeComponentsProperties>
+        </odeComponent>
+      </odeComponents>
+    </odePagStructure>
+  </odePagStructures>
+</odeNavStructure>
+</odeNavStructures>
+</ode>

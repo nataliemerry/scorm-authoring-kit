@@ -1,0 +1,356 @@
+{
+  "C01": {
+    "grid": [
+      "RFLKJUMKUA",
+      "ILVMSAEKCY",
+      "SVOQFBFHBM",
+      "INOOEKIAQO",
+      "KMLUJQSCVU",
+      "OTGTZLIBJT",
+      "FSXPVJEHAC",
+      "INPUTDNYLO",
+      "XAWTATSUMM",
+      "DLHJMIIQOE"
+    ],
+    "words": [
+      {
+        "term": "INPUT",
+        "meaning": "Sumber daya yang digunakan.",
+        "cells": [
+          [
+            7,
+            0
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            4
+          ]
+        ],
+        "clue": "Sumber daya yang digunakan untuk menjalankan kegiatan."
+      },
+      {
+        "term": "OUTPUT",
+        "meaning": "Produk atau layanan yang dihasilkan.",
+        "cells": [
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            8,
+            3
+          ]
+        ],
+        "clue": "Produk atau layanan yang langsung dihasilkan suatu kegiatan."
+      },
+      {
+        "term": "OUTCOME",
+        "meaning": "Efek dari keluaran kegiatan.",
+        "cells": [
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "clue": "Efek jangka pendek atau menengah dari produk dan layanan yang dihasilkan."
+      },
+      {
+        "term": "EFISIENSI",
+        "meaning": "Penggunaan sumber daya secara ekonomis dan tepat waktu.",
+        "cells": [
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            9,
+            6
+          ]
+        ],
+        "clue": "Penggunaan sumber daya secara ekonomis dan tepat waktu."
+      },
+      {
+        "term": "RISIKO",
+        "meaning": "Faktor yang dapat menghambat pencapaian tujuan.",
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ]
+        ],
+        "clue": "Faktor yang dapat menghambat pencapaian tujuan."
+      }
+    ]
+  },
+  "C12": {
+    "grid": [
+      "RPOEPIZRPS",
+      "TMLKODEXHX",
+      "ARAVOEEYIL",
+      "UOZBPNORSB",
+      "TEPXGTNCHY",
+      "APJNFIDKIX",
+      "NWZVTTKXNF",
+      "MZGSCAGOGC",
+      "ADASHSCNGB",
+      "HWMFAZESON"
+    ],
+    "words": [
+      {
+        "term": "PHISHING",
+        "meaning": "Pesan penipuan yang menyamar sebagai pihak tepercaya.",
+        "cells": [
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "clue": "Penipuan melalui pesan yang menyamar sebagai pihak tepercaya."
+      },
+      {
+        "term": "MFA",
+        "meaning": "Pemeriksaan identitas dengan dua atau lebih jenis faktor.",
+        "cells": [
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            9,
+            4
+          ]
+        ],
+        "clue": "Cara masuk akun yang memerlukan dua atau lebih jenis faktor pemeriksaan."
+      },
+      {
+        "term": "IDENTITAS",
+        "meaning": "Identitas pengirim perlu diperiksa, bukan hanya nama tampilannya.",
+        "cells": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            8,
+            5
+          ]
+        ],
+        "clue": "Informasi tentang siapa pengirim sebenarnya, yang perlu diperiksa terpisah dari nama tampilannya."
+      },
+      {
+        "term": "TAUTAN",
+        "meaning": "Teks yang terlihat dapat berbeda dari alamat tujuannya.",
+        "cells": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "clue": "Bagian pesan yang mengarahkan Anda ke alamat lain saat dipilih."
+      },
+      {
+        "term": "KODE",
+        "meaning": "Kode verifikasi tetap perlu dijaga.",
+        "cells": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        "clue": "Rangkaian angka atau karakter untuk verifikasi akses yang tidak boleh dibagikan."
+      }
+    ]
+  }
+}

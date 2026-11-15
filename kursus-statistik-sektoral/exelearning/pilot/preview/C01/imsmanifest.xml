@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest identifier="eXe-MANIFEST-202611141433217AKE74"
+<manifest identifier="eXe-MANIFEST-20261115163458BH8SYW"
   xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
   xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
   xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_v1p2">
@@ -8,19 +8,19 @@
     <schemaversion>1.2</schemaversion>
     <adlcp:location>imslrm.xml</adlcp:location>
   </metadata>
-  <organizations default="eXe-202611141433217AKE74">
-    <organization identifier="eXe-202611141433217AKE74" structure="hierarchical">
+  <organizations default="eXe-20261115163458BH8SYW">
+    <organization identifier="eXe-20261115163458BH8SYW" structure="hierarchical">
       <title>C01 Smart Budgeting</title>
-      <item identifier="ITEM-ROOT-202611141433217AKE74" isvisible="true">
+      <item identifier="ITEM-ROOT-20261115163458BH8SYW" isvisible="true">
         <title>C01 Smart Budgeting</title>
-        <item identifier="ITEM-2026111414332185E3PX" identifierref="RES-2026111414332185E3PX" isvisible="true">
+        <item identifier="ITEM-20261115163458AXF033" identifierref="RES-20261115163458AXF033" isvisible="true">
           <title>Misi</title>
         </item>
       </item>
     </organization>
   </organizations>
   <resources>
-    <resource identifier="RES-2026111414332185E3PX" type="webcontent" adlcp:scormtype="sco" href="index.html">
+    <resource identifier="RES-20261115163458AXF033" type="webcontent" adlcp:scormtype="sco" href="index.html">
       <file href="index.html"/>
       <dependency identifierref="COMMON_FILES"/>
     </resource>

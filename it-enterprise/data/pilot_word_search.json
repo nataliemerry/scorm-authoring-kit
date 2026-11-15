@@ -1,0 +1,225 @@
+{
+  "ITE": {
+    "grid": [
+      "QVTHUFAFII",
+      "TWYLVYNUPM",
+      "STRATEGIKQ",
+      "LOEYFUGMXW",
+      "QEVALUASIJ",
+      "GBFYOSRLQI",
+      "BKEBIJAKAN",
+      "UXILDQNEGF",
+      "PIEFGIAEMV",
+      "ARSITEKTUR"
+    ],
+    "words": [
+      {
+        "term": "STRATEGI",
+        "clue": "Arah pilihan TI yang berangkat dari sasaran organisasi.",
+        "meaning": "Prioritas investasi dibangun dari kebutuhan layanan.",
+        "cells": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "term": "KEBIJAKAN",
+        "clue": "Pedoman formal yang menjadi pegangan saat menetapkan tindakan.",
+        "meaning": "Aturan akses membantu unit menerapkan ketentuan yang sama.",
+        "cells": [
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "term": "ARSITEKTUR",
+        "clue": "Gambaran hubungan proses, data, aplikasi, infrastruktur, keamanan, dan layanan.",
+        "meaning": "Peta hubungan antardomain membantu menemukan dampak perubahan.",
+        "cells": [
+          [
+            9,
+            0
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ]
+      },
+      {
+        "term": "ANGGARAN",
+        "clue": "Dana yang disiapkan untuk menjalankan dan memelihara pekerjaan.",
+        "meaning": "Biaya integrasi dan dukungan dipertimbangkan sejak tahap perencanaan.",
+        "cells": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ]
+        ]
+      },
+      {
+        "term": "EVALUASI",
+        "clue": "Penilaian atas hasil perubahan untuk memilih tindak lanjut.",
+        "meaning": "Hasil pengukuran dibandingkan dengan sasaran layanan.",
+        "cells": [
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      }
+    ]
+  }
+}

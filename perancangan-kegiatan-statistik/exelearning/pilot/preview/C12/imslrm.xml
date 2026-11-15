@@ -3,7 +3,7 @@
   <general uniqueElementName="general">
     <identifier>
       <catalog uniqueElementName="catalog">none</catalog>
-      <entry uniqueElementName="entry">ODE-20261114143321SFMU5A</entry>
+      <entry uniqueElementName="entry">ODE-20261115163504C110D4</entry>
     </identifier>
     <title>
       <string language="id">C12 Cybersecurity Challenge</string>
@@ -25,7 +25,7 @@
       </role>
       <entity>BEGIN:VCARD VERSION:3.0 FN:BPS Corporate University EMAIL;TYPE=INTERNET: ORG: END:VCARD</entity>
       <date>
-        <dateTime uniqueElementName="dateTime">2026-11-14T14:33:57.00+07:00</dateTime>
+        <dateTime uniqueElementName="dateTime">2026-11-15T16:35:59.00+07:00</dateTime>
         <description>
           <string language="id">Metadata creation date</string>
         </description>
@@ -40,7 +40,7 @@
       </role>
       <entity>BEGIN:VCARD VERSION:3.0 FN:BPS Corporate University EMAIL;TYPE=INTERNET: ORG: END:VCARD</entity>
       <date>
-        <dateTime uniqueElementName="dateTime">2026-11-14T14:33:57.00+07:00</dateTime>
+        <dateTime uniqueElementName="dateTime">2026-11-15T16:35:59.00+07:00</dateTime>
         <description>
           <string language="id">Metadata creation date</string>
         </description>

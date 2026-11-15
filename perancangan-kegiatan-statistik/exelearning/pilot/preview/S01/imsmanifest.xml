@@ -1,20 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generated for SCORM 1.2 LCM Scenes -->
-<manifest identifier="LCM-S01-Persiapan-Penyelenggaraan-Kegiatan-Statistik" version="1.2" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="eXe-MANIFEST-20261115163504L6AO7V"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_v1p2">
   <metadata>
     <schema>ADL SCORM</schema>
     <schemaversion>1.2</schemaversion>
+    <adlcp:location>imslrm.xml</adlcp:location>
   </metadata>
-  <organizations default="BPS_CorpU">
-    <organization identifier="BPS_CorpU">
+  <organizations default="eXe-20261115163504L6AO7V">
+    <organization identifier="eXe-20261115163504L6AO7V" structure="hierarchical">
       <title>S01 Persiapan Penyelenggaraan Kegiatan Statistik</title>
-      <item identifier="ITEM-S01" identifierref="RES-S01">
+      <item identifier="ITEM-ROOT-20261115163504L6AO7V" isvisible="true">
         <title>S01 Persiapan Penyelenggaraan Kegiatan Statistik</title>
+        <item identifier="ITEM-20261115163504GN95VQ" identifierref="RES-20261115163504GN95VQ" isvisible="true">
+          <title>Misi</title>
+        </item>
       </item>
     </organization>
   </organizations>
   <resources>
-    <resource identifier="RES-S01" type="webcontent" adlcp:scormtype="sco" href="index.html">
+    <resource identifier="RES-20261115163504GN95VQ" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <dependency identifierref="COMMON_FILES"/>
+    </resource>
+    <resource identifier="COMMON_FILES" type="webcontent" adlcp:scormtype="asset">
       <file href="content.dtd"/>
       <file href="content.xml"/>
       <file href="content/css/base.css"/>
@@ -26,27 +36,6 @@
       <file href="content/resources/scenes/S01-sampling.webp"/>
       <file href="content/resources/scenes/S01-survey.webp"/>
       <file href="content/resources/scenes/S01.webp"/>
-      <file href="idevices/classify/clasificaHome.png"/>
-      <file href="idevices/classify/clasificaIcon.png"/>
-      <file href="idevices/classify/classify.css"/>
-      <file href="idevices/classify/classify.js"/>
-      <file href="idevices/classify/exequextaudio.svg"/>
-      <file href="idevices/classify/exequextcursor.gif"/>
-      <file href="idevices/classify/exequextfull.svg"/>
-      <file href="idevices/classify/exequexthits.svg"/>
-      <file href="idevices/classify/exequextmin.svg"/>
-      <file href="idevices/classify/exequextnumber.svg"/>
-      <file href="idevices/classify/exequextplayaudio.svg"/>
-      <file href="idevices/classify/exequextreload.svg"/>
-      <file href="idevices/classify/exequextreply.svg"/>
-      <file href="idevices/classify/exequextrerrors.svg"/>
-      <file href="idevices/classify/exequextscore.svg"/>
-      <file href="idevices/classify/exequextsq.svg"/>
-      <file href="idevices/classify/exequexttime.svg"/>
-      <file href="idevices/classify/exezoomf.png"/>
-      <file href="idevices/classify/exezoomn.png"/>
-      <file href="idevices/classify/quextCursor.gif"/>
-      <file href="idevices/classify/quextImageVideo.png"/>
       <file href="idevices/form/exequexthits.svg"/>
       <file href="idevices/form/exequextrerrors.svg"/>
       <file href="idevices/form/exequextsq.svg"/>
@@ -64,7 +53,6 @@
       <file href="idevices/text/text.html"/>
       <file href="idevices/text/text.js"/>
       <file href="imslrm.xml"/>
-      <file href="index.html"/>
       <file href="libs/SCOFunctions.js"/>
       <file href="libs/SCORM_API_wrapper.js"/>
       <file href="libs/bootstrap/bootstrap.bundle.min.js"/>
@@ -73,7 +61,6 @@
       <file href="libs/common_i18n.js"/>
       <file href="libs/exe_export.js"/>
       <file href="libs/favicon.ico"/>
-      <file href="libs/jquery-ui/jquery-ui.min.js"/>
       <file href="libs/jquery/jquery.min.js"/>
       <file href="theme/config.xml"/>
       <file href="theme/fonts/bricolage-grotesque-OFL.txt"/>

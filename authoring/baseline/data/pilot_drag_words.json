@@ -1,0 +1,88 @@
+{
+  "C01": {
+    "words": [
+      {
+        "id": "outcome",
+        "label": "outcome"
+      },
+      {
+        "id": "serapan",
+        "label": "serapan"
+      },
+      {
+        "id": "input",
+        "label": "input"
+      },
+      {
+        "id": "output",
+        "label": "output"
+      }
+    ],
+    "gaps": [
+      {
+        "id": "g1",
+        "before": "Dana, waktu, dan tenaga yang digunakan merupakan",
+        "after": ".",
+        "answer": "input",
+        "feedback": "Input adalah sumber daya yang dipakai untuk menjalankan kegiatan."
+      },
+      {
+        "id": "g2",
+        "before": "Server yang kembali berfungsi setelah perbaikan merupakan",
+        "after": ".",
+        "answer": "output",
+        "feedback": "Output adalah produk atau layanan yang langsung dihasilkan kegiatan."
+      },
+      {
+        "id": "g3",
+        "before": "Pengumpulan data yang dapat berjalan lagi adalah",
+        "after": "yang ingin dicapai dari perbaikan server.",
+        "answer": "outcome",
+        "feedback": "Outcome menjelaskan efek yang diharapkan dari keluaran kegiatan."
+      }
+    ]
+  },
+  "C12": {
+    "words": [
+      {
+        "id": "code",
+        "label": "kode verifikasi"
+      },
+      {
+        "id": "logo",
+        "label": "logo pengirim"
+      },
+      {
+        "id": "link",
+        "label": "tautan"
+      },
+      {
+        "id": "contact",
+        "label": "kontak resmi"
+      }
+    ],
+    "gaps": [
+      {
+        "id": "g1",
+        "before": "Saat menerima email login yang mencurigakan, jangan langsung membuka",
+        "after": "di dalamnya.",
+        "answer": "link",
+        "feedback": "Tautan dalam pesan yang meragukan dapat mengarah ke halaman palsu."
+      },
+      {
+        "id": "g2",
+        "before": "Pastikan permintaan melalui",
+        "after": "yang sudah dikenal, di luar pesan tersebut.",
+        "answer": "contact",
+        "feedback": "Jalur yang dikenal memberi pemeriksaan terpisah dari pesan pengirim."
+      },
+      {
+        "id": "g3",
+        "before": "Jangan membacakan",
+        "after": "kepada penelepon yang mengaku petugas TI.",
+        "answer": "code",
+        "feedback": "Pengakuan sebagai petugas belum membuktikan siapa penelepon tersebut."
+      }
+    ]
+  }
+}
