@@ -31,3 +31,7 @@ Prototipe video visual diganti dengan video Juliandra Ariiq K berdurasi 7:44 dan
 ## Fullscreen video — 16 November 2026
 
 IT Enterprise menghapus batas inline 1000px/54vh ketika frame masuk fullscreen. Video mengikuti lebar dan tinggi viewport dengan object-fit:contain; panel pertanyaan mengikuti area fullscreen dan kontrol tetap terjangkau. Pengujian API fullscreen nyata mencakup masuk/keluar, dimensi video/frame, kontrol, interaksi pertanyaan serta kembalinya tata letak biasa pada desktop dan viewport ponsel. Ukuran hasil pengukuran tersimpan pada laporan QA dan it-enterprise-extended-report.json.
+
+## Label objek hotspot — 16 November 2026
+
+Setiap area pilihan memiliki label teks ringkas di tepi ilustrasi. IT Enterprise memakai istilah konsep yang sesuai pertanyaan dan teori agar peserta memahami peran tiap pilihan; nomor dan label yang sama tersedia pada tombol alternatif. Renderer portabel mendukung displayLabel dengan fallback label, dengan pemeriksaan konfigurasi. QA ekspor IT Enterprise memeriksa kesamaan label, ukuran huruf minimal 14px, teks tidak terpotong, batas label di dalam area, pilihan salah/benar, Ulangi, dan syarat lanjut pada desktop serta ponsel. Screenshot: ITE-hotspot-labels.png dan ITE-hotspot-labels-mobile.png di QA kursus.

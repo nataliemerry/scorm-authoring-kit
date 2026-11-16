@@ -111,8 +111,8 @@
       {
         "course": "ITE",
         "archive": "IT_Enterprise_SCORM12.zip",
-        "bytes": 62204673,
-        "sha256": "fe370053d5182fe0f00185d869636f447d5ed56e75d5eaacb5e60f2d1f06cb1c",
+        "bytes": 62205086,
+        "sha256": "4a6e6117ef9d99f8d303b1bd8af13386f210aa0dacf3cd968db12d50732a3a4d",
         "sco_count": 1,
         "manifest_files_valid": true,
         "bundled_fonts": 2,
@@ -159,7 +159,7 @@
     },
     "review_matches_baseline": true,
     "original_logo_and_fonts_match": true,
-    "native_export_sha256": "fe370053d5182fe0f00185d869636f447d5ed56e75d5eaacb5e60f2d1f06cb1c",
+    "native_export_sha256": "4a6e6117ef9d99f8d303b1bd8af13386f210aa0dacf3cd968db12d50732a3a4d",
     "actual_export_and_preview_verified": true,
     "qa_report": "simple-experience-report.json",
     "profile": "User-supplied IT Enterprise video with audio + five formative markers; native Form final scoring",
@@ -179,7 +179,7 @@
       "illustrated_case_cards": 10,
       "video_audio": true
     },
-    "theme": "lcm-scenes-it-enterprise-responsive-video-20261116",
+    "theme": "lcm-scenes-it-enterprise-labeled-hotspots-20261116",
     "media_provenance": "media-provenance.json",
     "encoding_fix": "Sequence labels use 1., 2., 3.; corrupted separator and instruction range removed.",
     "source_video_sha256": "42971eef5bde060359db0cbb2cf5fff632b711a475f50baca485499e5fc556f2",
@@ -336,6 +336,17 @@
           "max": "none"
         }
       ]
+    },
+    "hotspot_labels": {
+      "visible_before_selection": true,
+      "theory_aligned_labels": [
+        "Pengenal lintas unit",
+        "Aturan akses",
+        "Riwayat perpindahan",
+        "Dekorasi meja"
+      ],
+      "alternative_buttons_match": true,
+      "desktop_mobile_bounds_checked": true
     }
   },
   "scope_dates": {

@@ -14,7 +14,7 @@
     },
     "review_matches_baseline": true,
     "original_logo_and_fonts_match": true,
-    "native_export_sha256": "fe370053d5182fe0f00185d869636f447d5ed56e75d5eaacb5e60f2d1f06cb1c",
+    "native_export_sha256": "4a6e6117ef9d99f8d303b1bd8af13386f210aa0dacf3cd968db12d50732a3a4d",
     "actual_export_and_preview_verified": true,
     "qa_report": "simple-experience-report.json",
     "profile": "User-supplied IT Enterprise video with audio + five formative markers; native Form final scoring",
@@ -34,7 +34,7 @@
       "illustrated_case_cards": 10,
       "video_audio": true
     },
-    "theme": "lcm-scenes-it-enterprise-responsive-video-20261116",
+    "theme": "lcm-scenes-it-enterprise-labeled-hotspots-20261116",
     "media_provenance": "media-provenance.json",
     "encoding_fix": "Sequence labels use 1., 2., 3.; corrupted separator and instruction range removed.",
     "source_video_sha256": "42971eef5bde060359db0cbb2cf5fff632b711a475f50baca485499e5fc556f2",
@@ -191,13 +191,24 @@
           "max": "none"
         }
       ]
+    },
+    "hotspot_labels": {
+      "visible_before_selection": true,
+      "theory_aligned_labels": [
+        "Pengenal lintas unit",
+        "Aturan akses",
+        "Riwayat perpindahan",
+        "Dekorasi meja"
+      ],
+      "alternative_buttons_match": true,
+      "desktop_mobile_bounds_checked": true
     }
   },
   "structure": {
     "status": "passed",
     "platform": "eXeLearning 4.0.6, official static browser distribution",
-    "size": 62204673,
-    "sha256": "fe370053d5182fe0f00185d869636f447d5ed56e75d5eaacb5e60f2d1f06cb1c",
+    "size": 62205086,
+    "sha256": "4a6e6117ef9d99f8d303b1bd8af13386f210aa0dacf3cd968db12d50732a3a4d",
     "sco_count": 1,
     "illustrations": 15,
     "illustrated_case_cards": 10,
@@ -236,6 +247,7 @@
     "ITE raw 50: verified primary-source citations on all three theory pages, simulated examples labeled, study-first prerequisite, example reveal, standard radio check, two-choice consequence, back preserves selection, clue-only word search, answers hidden until found/revealed and hidden again on retry, mouse/keyboard, forward selection and per-item hints, help/retry do not inflate found count, optional continue, Drag the Words mouse/touch/keyboard, empty/wrong/correct checks, replacement/undo/remove/reset, assisted solution never counts as independent, no LMS score changes, Sort the Paragraphs mouse/touch/button/keyboard reordering, Escape/undo restoration, correct positions/transitions, assisted reveal/reset, optional continue, simulation gate, real pointer drag, keyboard placement, undo, prerequisite gate, wrong-plan feedback, all stages complete, native LMS score; review matches participant choice, key and correct status",
     "Short desktop: board fits scroll area, vertical word reachable, keyboard focus does not scroll outer page",
     "120-second challenge keeps unfinished work and never submits unanswered quiz",
+    "Hotspot object labels match alternative buttons, fit within regions without clipped text at desktop/390px; wrong/correct/retry and completion gates preserved",
     "390px real touch drag plus select-and-place; all photographed text >=14px",
     "Original 7:44 user video playback with audio, five topic-aligned markers, real fullscreen enter/exit with viewport-sized video and contain scaling on desktop/mobile, keyboard seek, mute and volume; timer starts after video, hotspot wrong/correct/retry, three-question checkpoint blank/wrong/correct/retry, no final LMS score mutation, and all ten case cards have loaded topic-specific illustrations",
     "Official transparent BPS CorpU logo loads without header overlap on desktop/mobile; no JavaScript page errors"
@@ -252,7 +264,7 @@
     "concept_questions": 3,
     "native_final_questions": 2,
     "source_map": "video-quiz-source-map.json",
-    "native_export_sha256": "fe370053d5182fe0f00185d869636f447d5ed56e75d5eaacb5e60f2d1f06cb1c",
+    "native_export_sha256": "4a6e6117ef9d99f8d303b1bd8af13386f210aa0dacf3cd968db12d50732a3a4d",
     "timer_starts_after_video": true,
     "fullscreen_measurements": [
       {

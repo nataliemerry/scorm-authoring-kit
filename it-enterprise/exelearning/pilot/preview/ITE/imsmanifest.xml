@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest identifier="eXe-MANIFEST-20261116082210HJIR30"
+<manifest identifier="eXe-MANIFEST-20261116090934VYJ1YZ"
   xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
   xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
   xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_v1p2">
@@ -8,19 +8,19 @@
     <schemaversion>1.2</schemaversion>
     <adlcp:location>imslrm.xml</adlcp:location>
   </metadata>
-  <organizations default="eXe-20261116082210HJIR30">
-    <organization identifier="eXe-20261116082210HJIR30" structure="hierarchical">
+  <organizations default="eXe-20261116090934VYJ1YZ">
+    <organization identifier="eXe-20261116090934VYJ1YZ" structure="hierarchical">
       <title>ITE IT Enterprise</title>
-      <item identifier="ITEM-ROOT-20261116082210HJIR30" isvisible="true">
+      <item identifier="ITEM-ROOT-20261116090934VYJ1YZ" isvisible="true">
         <title>ITE IT Enterprise</title>
-        <item identifier="ITEM-20261116082210FCEF2B" identifierref="RES-20261116082210FCEF2B" isvisible="true">
+        <item identifier="ITEM-20261116090934H9KZW6" identifierref="RES-20261116090934H9KZW6" isvisible="true">
           <title>Misi</title>
         </item>
       </item>
     </organization>
   </organizations>
   <resources>
-    <resource identifier="RES-20261116082210FCEF2B" type="webcontent" adlcp:scormtype="sco" href="index.html">
+    <resource identifier="RES-20261116090934H9KZW6" type="webcontent" adlcp:scormtype="sco" href="index.html">
       <file href="index.html"/>
       <dependency identifierref="COMMON_FILES"/>
     </resource>

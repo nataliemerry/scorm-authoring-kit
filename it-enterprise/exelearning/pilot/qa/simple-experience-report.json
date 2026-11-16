@@ -7,6 +7,7 @@
     "ITE raw 50: verified primary-source citations on all three theory pages, simulated examples labeled, study-first prerequisite, example reveal, standard radio check, two-choice consequence, back preserves selection, clue-only word search, answers hidden until found/revealed and hidden again on retry, mouse/keyboard, forward selection and per-item hints, help/retry do not inflate found count, optional continue, Drag the Words mouse/touch/keyboard, empty/wrong/correct checks, replacement/undo/remove/reset, assisted solution never counts as independent, no LMS score changes, Sort the Paragraphs mouse/touch/button/keyboard reordering, Escape/undo restoration, correct positions/transitions, assisted reveal/reset, optional continue, simulation gate, real pointer drag, keyboard placement, undo, prerequisite gate, wrong-plan feedback, all stages complete, native LMS score; review matches participant choice, key and correct status",
     "Short desktop: board fits scroll area, vertical word reachable, keyboard focus does not scroll outer page",
     "120-second challenge keeps unfinished work and never submits unanswered quiz",
+    "Hotspot object labels match alternative buttons, fit within regions without clipped text at desktop/390px; wrong/correct/retry and completion gates preserved",
     "390px real touch drag plus select-and-place; all photographed text >=14px",
     "Original 7:44 user video playback with audio, five topic-aligned markers, real fullscreen enter/exit with viewport-sized video and contain scaling on desktop/mobile, keyboard seek, mute and volume; timer starts after video, hotspot wrong/correct/retry, three-question checkpoint blank/wrong/correct/retry, no final LMS score mutation, and all ten case cards have loaded topic-specific illustrations",
     "Official transparent BPS CorpU logo loads without header overlap on desktop/mobile; no JavaScript page errors"
@@ -23,6 +24,7 @@
     "ITE-word-search.png",
     "ITE-drag-words.png",
     "ITE-sort-paragraphs.png",
+    "ITE-hotspot-labels.png",
     "ITE-hotspot.png",
     "ITE-question-set.png",
     "ITE-challenge-start.png",
@@ -38,10 +40,10 @@
     "ITE-word-search-mobile.png",
     "ITE-drag-words-mobile.png",
     "ITE-sort-paragraphs-mobile.png",
+    "ITE-hotspot-labels-mobile.png",
     "ITE-hotspot-mobile.png",
     "ITE-question-set-mobile.png",
-    "ITE-challenge-mobile.png",
-    "ITE-video-fullscreen-fixed.png"
+    "ITE-challenge-mobile.png"
   ],
   "fullscreen": [
     {
@@ -191,12 +193,6 @@
   ],
   "mode": "actual-eXeLearning-export",
   "tested_artifacts": {
-    "IT_Enterprise_SCORM12.zip": "fe370053d5182fe0f00185d869636f447d5ed56e75d5eaacb5e60f2d1f06cb1c"
-  },
-  "fullscreen_visual": {
-    "width": 1918,
-    "height": 1080,
-    "fit": "contain",
-    "screenshot": "ITE-video-fullscreen-fixed.png"
+    "IT_Enterprise_SCORM12.zip": "4a6e6117ef9d99f8d303b1bd8af13386f210aa0dacf3cd968db12d50732a3a4d"
   }
 }

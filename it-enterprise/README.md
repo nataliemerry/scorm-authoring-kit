@@ -38,3 +38,5 @@ Tiga pertanyaan latihan konsep serta dua soal akhir diselaraskan dengan isi vide
 Konfigurasi: data/enhanced_interactions.json. Pemetaan jawaban dan sumber: video-quiz-source-map.json. Provenance dan SHA-256 video: media-provenance.json. Generator scripts/build_learning_video.py hanya untuk prototipe lama dan menolak mengganti video aktif pengguna. Berkas besar disimpan melalui Git LFS; jalankan git lfs pull setelah clone.
 
 Fullscreen video mengikuti lebar dan tinggi layar dengan object-fit:contain; batas 1000px/54vh hanya untuk tampilan biasa. Panel pertanyaan dan kontrol ikut menyesuaikan. Pengujian menggunakan Fullscreen API sebenarnya pada desktop 1918×1080 dan viewport ponsel 390×844.
+
+Hotspot: setiap objek memiliki label ringkas (Pengenal lintas unit, Aturan akses, Riwayat perpindahan, Dekorasi meja) di tepi area pilihan. Tombol alternatif memakai label yang sama; label menjelaskan komponen yang diwakili ilustrasi tanpa menandai benar atau salah. Label tetap terlihat sebelum dipilih dan setelah Ulangi.

@@ -35,6 +35,9 @@ def validate(config):
         correct = sum(r.get('correct') is True for r in regions)
         require(type(hotspot.get('required')) is int and 1 <= hotspot['required'] <= correct, 'Hotspot required exceeds available correct regions')
         for region in regions:
+            require(isinstance(region.get('label'), str) and region['label'].strip(), 'Hotspot label is required')
+            if 'displayLabel' in region:
+                require(isinstance(region['displayLabel'], str) and region['displayLabel'].strip(), 'Hotspot displayLabel must be nonempty text')
             require(all(type(region.get(k)) in (int, float) for k in ('x', 'y', 'width', 'height')), 'Hotspot geometry must be numeric')
             require(0 <= region['x'] < 100 and 0 <= region['y'] < 100 and
                     0 < region['width'] <= 100-region['x'] and

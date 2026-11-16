@@ -1,6 +1,6 @@
 {
   "version": "LCM-2026-11-15-unified",
-  "archive_sha256": "443463628d9c7a296ff4dcc9678f97e03559ef0a7c90467efcfc7834e9081bb0",
+  "archive_sha256": "b01745ddf412ed657a58e4f772ebdfbabdb7406543755a1c6146f57873a408e1",
   "files": {
     "AGENTS.md": "edb257596d7344eb670d3e4729efbbf172d22c04bda1bcc2c593494b752918a9",
     "START-HERE.md": "0c3a43aca2ff513ef9ccf370985f0332a622b3dd4e099e41b2cf439876e47ad3",
@@ -48,9 +48,9 @@
     "exelearning/pilot/dist_scorm/C12_Cybersecurity_Challenge_SCORM12.zip": "dbc0aab5e119b5734abc82729fb136c6ff83232cd6c0736668ad89000e98490c",
     "exelearning/pilot/drag-words.css": "7d496e0cd94a4a06799b0219354947beb2579cc0df8994744386f8ce8203a998",
     "exelearning/pilot/drag-words.js": "372afed38faf0b2021d8cb39f5d5695a7a8658c339224636b5c6521cd91a9c2a",
-    "exelearning/pilot/enhanced-interactions.css": "a4521ecb3b17b81abca31c120b4597d9cd41e172477676ba82d20ed5269bc542",
+    "exelearning/pilot/enhanced-interactions.css": "c43edea8e14b741c391366cc0909779892d75894cc33b76873461943f254ca9d",
     "exelearning/pilot/enhanced-interactions.example.json": "2cab53f2cbb1013ebbc80040200683516df91fff77f9aad07b08f7789899fb83",
-    "exelearning/pilot/enhanced-interactions.js": "1dade8054b96d436cf7078cce4413d5e89856b954f177fcdbed16f8a1d19f498",
+    "exelearning/pilot/enhanced-interactions.js": "1eda3c0213fd421646a2de389e27f861ab6936ed7137585c48dfcb90aea7e6dc",
     "exelearning/pilot/experience.humanized.css": "1707b9fb7b870deee5ef785d809d9be2a500a07ca36f6768a3b150f4556c7ac1",
     "exelearning/pilot/experience.humanized.js": "bdf09cac2f362027a8350e048c295acfd0d7985b235470ef8dcbe15a29a80db9",
     "exelearning/pilot/form-compat.js": "389c1dcbe7c61ea839e41cb9ac8ea81894928a257157f4424c940f71fec3e483",

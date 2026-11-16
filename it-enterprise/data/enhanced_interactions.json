@@ -94,7 +94,8 @@
         "width": 43,
         "height": 43,
         "correct": true,
-        "feedback": "Satu pengenal yang dipertahankan lintas unit membantu petugas menelusuri permintaan yang sama."
+        "feedback": "Satu pengenal yang dipertahankan lintas unit membantu petugas menelusuri permintaan yang sama.",
+        "displayLabel": "Pengenal lintas unit"
       },
       {
         "id": "access",
@@ -104,7 +105,8 @@
         "width": 43,
         "height": 43,
         "correct": true,
-        "feedback": "Aturan akses menentukan siapa yang boleh melihat dan memperbarui status. Pemohon tidak otomatis dapat melihat permintaan orang lain."
+        "feedback": "Aturan akses menentukan siapa yang boleh melihat dan memperbarui status. Pemohon tidak otomatis dapat melihat permintaan orang lain.",
+        "displayLabel": "Aturan akses"
       },
       {
         "id": "history",
@@ -114,7 +116,8 @@
         "width": 43,
         "height": 43,
         "correct": true,
-        "feedback": "Riwayat serah terima menunjukkan kapan permintaan berpindah dan unit mana yang menanganinya."
+        "feedback": "Riwayat serah terima menunjukkan kapan permintaan berpindah dan unit mana yang menanganinya.",
+        "displayLabel": "Riwayat perpindahan"
       },
       {
         "id": "decoration",
@@ -124,7 +127,8 @@
         "width": 43,
         "height": 43,
         "correct": false,
-        "feedback": "Tanaman dan cangkir tidak menyimpan identitas, hak akses, atau riwayat layanan. Cari komponen yang membantu penelusuran permintaan."
+        "feedback": "Tanaman dan cangkir tidak menyimpan identitas, hak akses, atau riwayat layanan. Cari komponen yang membantu penelusuran permintaan.",
+        "displayLabel": "Dekorasi meja"
       }
     ]
   },

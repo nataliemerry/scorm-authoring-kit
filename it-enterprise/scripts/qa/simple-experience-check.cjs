@@ -54,7 +54,7 @@ async function videoActivity(p,cid,shots){
   await p.locator('.iv-check').click();assert((await p.locator('.iv-feedback').innerText()).includes(i===0?'belum tepat':'tepat'));
   if(i===1)await shot(p,shots?'ITE-video-question.png':'ITE-video-question-mobile.png');
   await p.locator('.iv-resume').click();
-  if(i===0){await p.locator('.iv-player-fullscreen').click();await p.waitForFunction(()=>!document.fullscreenElement);await p.setViewportSize(originalViewport);assert.equal(await p.locator('.iv-player-fullscreen').getAttribute('aria-label'),'Buka video layar penuh');}
+  if(i===0){await p.locator('.iv-player-fullscreen').click();await p.waitForFunction(()=>!document.fullscreenElement);await p.setViewportSize(originalViewport);await p.waitForFunction(()=>document.querySelector('.iv-player-fullscreen')?.getAttribute('aria-label')==='Buka video layar penuh');}
  }
  await p.locator('.iv-finish').click();assert(await p.locator('.sim-root').isVisible());
  assert(await p.locator('.iv-video').evaluate(e=>e.paused));
@@ -65,6 +65,15 @@ async function videoActivity(p,cid,shots){
 async function newActivities(p,cid,shots){
  const before=await p.evaluate(()=>window.lms?.values?.['cmi.core.score.raw']||null);
  assert(await p.locator('.hotspot-root').isVisible());assert(await p.locator('[data-ite-next="checkpoint"]').isDisabled());
+ const labels=['Pengenal lintas unit','Aturan akses','Riwayat perpindahan','Dekorasi meja'];
+ assert.deepEqual(await p.locator('.hotspot-caption').allTextContents(),labels);
+ for(let i=0;i<labels.length;i++){
+  const marker=p.locator('.hotspot-marker').nth(i),caption=marker.locator('.hotspot-caption');
+  assert((await p.locator('.hotspot-list button').nth(i).innerText()).includes(labels[i]));
+  const bounds=await caption.evaluate(e=>{const b=e.getBoundingClientRect(),r=e.closest('button').getBoundingClientRect();return {inside:b.left>=r.left&&b.right<=r.right&&b.top>=r.top&&b.bottom<=r.bottom,unclipped:e.scrollWidth<=e.clientWidth,font:parseFloat(getComputedStyle(e).fontSize)};});
+  assert(bounds.inside&&bounds.unclipped&&bounds.font>=14,JSON.stringify(bounds));
+ }
+ await shot(p,shots?'ITE-hotspot-labels.png':'ITE-hotspot-labels-mobile.png');
  await p.locator('.hotspot-list [data-hotspot="decoration"]').press('Enter');assert.equal(await p.locator('.hotspot-root').getAttribute('data-complete'),'false');
  const region=p.locator('.hotspot-marker[data-hotspot="identifier"]');if(await p.evaluate(()=>matchMedia('(pointer:coarse)').matches))await region.tap();else await region.click();await p.locator('.hotspot-retry').click();
  assert((await p.locator('.hotspot-progress').innerText()).includes('0 dari 3'));
@@ -248,5 +257,5 @@ async function lab(p,cid,shots=true){
  }
  const mobileContext=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true});const mobile=await mobileContext.newPage();mobile.on("pageerror",e=>errors.push(e.message));
  for(const cid of ['ITE']){await mobile.goto(base+'/'+cid+'/index.html');await learn(mobile,cid,false,false);await shot(mobile,cid+'-simple-mobile.png');await lab(mobile,cid,false);await shot(mobile,cid+'-challenge-mobile.png');assert(await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));const id='shared',zone='target';const source=mobile.locator(`[data-drag="${id}"]`),target=mobile.locator(`[data-mobile-target="${zone}"]`);await source.scrollIntoViewIfNeeded();const a=await source.boundingBox(),b=await target.boundingBox();const cdp=await mobileContext.newCDPSession(mobile);await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:a.x+a.width/2,y:a.y+a.height/2}]});for(let i=1;i<=18;i++)await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:a.x+a.width/2+(b.x+b.width/2-a.x-a.width/2)*i/18,y:a.y+a.height/2+(b.y+b.height/2-a.y-a.height/2)*i/18}]});await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await mobile.waitForTimeout(450);assert.equal(await mobile.locator(`[data-drag="${id}"]`).evaluate(e=>e.closest('[data-drop]').dataset.drop),zone);await mobile.locator('[data-dnd-action=undo]').click();await mobile.locator(`[data-drag="${id}"]`).tap();await target.tap();assert.equal(await mobile.locator(`[data-drag="${id}"]`).evaluate(e=>e.closest('[data-drop]').dataset.drop),zone);}
- report.checks.push('390px real touch drag plus select-and-place; all photographed text >=14px');assert.deepEqual(errors,[]);report.checks.push('Original 7:44 user video playback with audio, five topic-aligned markers, real fullscreen enter/exit with viewport-sized video and contain scaling on desktop/mobile, keyboard seek, mute and volume; timer starts after video, hotspot wrong/correct/retry, three-question checkpoint blank/wrong/correct/retry, no final LMS score mutation, and all ten case cards have loaded topic-specific illustrations');report.checks.push('Official transparent BPS CorpU logo loads without header overlap on desktop/mobile; no JavaScript page errors');console.log(JSON.stringify(report,null,2));
+ report.checks.push('Hotspot object labels match alternative buttons, fit within regions without clipped text at desktop/390px; wrong/correct/retry and completion gates preserved');report.checks.push('390px real touch drag plus select-and-place; all photographed text >=14px');assert.deepEqual(errors,[]);report.checks.push('Original 7:44 user video playback with audio, five topic-aligned markers, real fullscreen enter/exit with viewport-sized video and contain scaling on desktop/mobile, keyboard seek, mute and volume; timer starts after video, hotspot wrong/correct/retry, three-question checkpoint blank/wrong/correct/retry, no final LMS score mutation, and all ten case cards have loaded topic-specific illustrations');report.checks.push('Official transparent BPS CorpU logo loads without header overlap on desktop/mobile; no JavaScript page errors');console.log(JSON.stringify(report,null,2));
 })().catch(e=>{report.failure=e.stack;console.error(e);process.exitCode=1;}).finally(async()=>{fs.writeFileSync(path.join(out,'simple-experience-report.json'),JSON.stringify(report,null,2));if(browser)await browser.close();server.close();});
