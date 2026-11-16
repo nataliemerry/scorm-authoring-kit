@@ -10,6 +10,152 @@
   "concept_questions": 3,
   "native_final_questions": 2,
   "source_map": "video-quiz-source-map.json",
-  "native_export_sha256": "8033d517d4a82b749cc252c8e4a9d723d5e1cde9fb65ca0be57d7c26ffd5e653",
-  "timer_starts_after_video": true
+  "native_export_sha256": "fe370053d5182fe0f00185d869636f447d5ed56e75d5eaacb5e60f2d1f06cb1c",
+  "timer_starts_after_video": true,
+  "fullscreen_measurements": [
+    {
+      "w": 1918,
+      "h": 1080,
+      "frame": [
+        0,
+        0,
+        1918,
+        1080
+      ],
+      "video": [
+        0,
+        0,
+        1918,
+        1080
+      ],
+      "controls": [
+        0,
+        1016,
+        1918,
+        1080
+      ],
+      "fit": "contain",
+      "max": "none"
+    },
+    {
+      "w": 1918,
+      "h": 1080,
+      "frame": [
+        0,
+        0,
+        1918,
+        1080
+      ],
+      "video": [
+        0,
+        0,
+        1918,
+        1080
+      ],
+      "controls": [
+        0,
+        1016,
+        1918,
+        1080
+      ],
+      "fit": "contain",
+      "max": "none"
+    },
+    {
+      "w": 1918,
+      "h": 1080,
+      "frame": [
+        0,
+        0,
+        1918,
+        1080
+      ],
+      "video": [
+        0,
+        0,
+        1918,
+        1080
+      ],
+      "controls": [
+        0,
+        1016,
+        1918,
+        1080
+      ],
+      "fit": "contain",
+      "max": "none"
+    },
+    {
+      "w": 1536,
+      "h": 674,
+      "frame": [
+        0,
+        0,
+        1536,
+        674
+      ],
+      "video": [
+        0,
+        0,
+        1536,
+        674
+      ],
+      "controls": [
+        0,
+        610,
+        1536,
+        674
+      ],
+      "fit": "contain",
+      "max": "none"
+    },
+    {
+      "w": 1600,
+      "h": 1100,
+      "frame": [
+        0,
+        0,
+        1600,
+        1100
+      ],
+      "video": [
+        0,
+        0,
+        1600,
+        1100
+      ],
+      "controls": [
+        0,
+        1036,
+        1600,
+        1100
+      ],
+      "fit": "contain",
+      "max": "none"
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "frame": [
+        0,
+        0,
+        390,
+        844
+      ],
+      "video": [
+        0,
+        0,
+        390,
+        844
+      ],
+      "controls": [
+        0,
+        742,
+        390,
+        844
+      ],
+      "fit": "contain",
+      "max": "none"
+    }
+  ]
 }

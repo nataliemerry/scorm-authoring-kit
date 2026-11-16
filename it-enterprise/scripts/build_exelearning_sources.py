@@ -142,8 +142,8 @@ def main(course_ids=None):
         prop(root,'odeProperties','odeProperty','pp_theme','lcm-interactive')
         prop(root,'userPreferences','userPreference','theme','lcm-interactive')
         if PILOT:
-            prop(root,'odeProperties','odeProperty','pp_theme','lcm-scenes-it-enterprise-juliandra-video-20261116')
-            prop(root,'userPreferences','userPreference','theme','lcm-scenes-it-enterprise-juliandra-video-20261116')
+            prop(root,'odeProperties','odeProperty','pp_theme','lcm-scenes-it-enterprise-responsive-video-20261116')
+            prop(root,'userPreferences','userPreference','theme','lcm-scenes-it-enterprise-responsive-video-20261116')
         prop(root,'odeProperties','odeProperty','pp_extraHeadContent','')
         prop(root,'odeProperties','odeProperty','pp_addPagination','false')
         # Context paths are required for the importer to register image references.
@@ -169,7 +169,7 @@ def main(course_ids=None):
         files['theme/style.css']+=b'\n'+(BASE/'exelearning/lcm-exe.css').read_bytes()
         files['theme/style.js']+=b'\nwindow.addEventListener("DOMContentLoaded",function(){'+(BASE/'exelearning/lcm-pacing.js').read_bytes()+b'});\n'
         if PILOT:
-            files['theme/config.xml']=config.replace('lcm-interactive','lcm-scenes-it-enterprise-juliandra-video-20261116').replace('LCM Interactive','LCM Scenes IT Enterprise Juliandra Video').encode('utf-8')
+            files['theme/config.xml']=config.replace('lcm-interactive','lcm-scenes-it-enterprise-responsive-video-20261116').replace('LCM Interactive','LCM Scenes IT Enterprise Responsive Video').encode('utf-8')
             for font in (BASE/'assets/fonts').glob('*'):
                 if font.suffix=='.woff2' or font.name.endswith('-OFL.txt'):files['theme/fonts/'+font.name]=font.read_bytes()
             files['theme/style.css']=z2.read('theme/style.css')+b'\n'+(BASE/'exelearning/pilot/scene.css').read_bytes()+(BASE/'exelearning/pilot/challenge.css').read_bytes()+(BASE/'exelearning/pilot/experience.humanized.css').read_bytes()+(BASE/'exelearning/pilot/word-search.css').read_bytes()+(BASE/'exelearning/pilot/drag-words.css').read_bytes()+(BASE/'exelearning/pilot/sort-paragraphs.css').read_bytes()+(BASE/'exelearning/pilot/enhanced-interactions.css').read_bytes()+(BASE/'exelearning/pilot/ite-enhanced.css').read_bytes()

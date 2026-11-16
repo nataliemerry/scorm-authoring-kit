@@ -14,7 +14,7 @@
     },
     "review_matches_baseline": true,
     "original_logo_and_fonts_match": true,
-    "native_export_sha256": "8033d517d4a82b749cc252c8e4a9d723d5e1cde9fb65ca0be57d7c26ffd5e653",
+    "native_export_sha256": "fe370053d5182fe0f00185d869636f447d5ed56e75d5eaacb5e60f2d1f06cb1c",
     "actual_export_and_preview_verified": true,
     "qa_report": "simple-experience-report.json",
     "profile": "User-supplied IT Enterprise video with audio + five formative markers; native Form final scoring",
@@ -34,18 +34,170 @@
       "illustrated_case_cards": 10,
       "video_audio": true
     },
-    "theme": "lcm-scenes-it-enterprise-juliandra-video-20261116",
+    "theme": "lcm-scenes-it-enterprise-responsive-video-20261116",
     "media_provenance": "media-provenance.json",
     "encoding_fix": "Sequence labels use 1., 2., 3.; corrupted separator and instruction range removed.",
     "source_video_sha256": "42971eef5bde060359db0cbb2cf5fff632b711a475f50baca485499e5fc556f2",
     "quiz_source_map": "video-quiz-source-map.json",
-    "timer_start": "After video completion"
+    "timer_start": "After video completion",
+    "fullscreen": {
+      "viewport_sized_video": true,
+      "object_fit": "contain",
+      "inline_limits_removed": true,
+      "actual_api_enter_exit_tested": true,
+      "measurements": [
+        {
+          "w": 1918,
+          "h": 1080,
+          "frame": [
+            0,
+            0,
+            1918,
+            1080
+          ],
+          "video": [
+            0,
+            0,
+            1918,
+            1080
+          ],
+          "controls": [
+            0,
+            1016,
+            1918,
+            1080
+          ],
+          "fit": "contain",
+          "max": "none"
+        },
+        {
+          "w": 1918,
+          "h": 1080,
+          "frame": [
+            0,
+            0,
+            1918,
+            1080
+          ],
+          "video": [
+            0,
+            0,
+            1918,
+            1080
+          ],
+          "controls": [
+            0,
+            1016,
+            1918,
+            1080
+          ],
+          "fit": "contain",
+          "max": "none"
+        },
+        {
+          "w": 1918,
+          "h": 1080,
+          "frame": [
+            0,
+            0,
+            1918,
+            1080
+          ],
+          "video": [
+            0,
+            0,
+            1918,
+            1080
+          ],
+          "controls": [
+            0,
+            1016,
+            1918,
+            1080
+          ],
+          "fit": "contain",
+          "max": "none"
+        },
+        {
+          "w": 1536,
+          "h": 674,
+          "frame": [
+            0,
+            0,
+            1536,
+            674
+          ],
+          "video": [
+            0,
+            0,
+            1536,
+            674
+          ],
+          "controls": [
+            0,
+            610,
+            1536,
+            674
+          ],
+          "fit": "contain",
+          "max": "none"
+        },
+        {
+          "w": 1600,
+          "h": 1100,
+          "frame": [
+            0,
+            0,
+            1600,
+            1100
+          ],
+          "video": [
+            0,
+            0,
+            1600,
+            1100
+          ],
+          "controls": [
+            0,
+            1036,
+            1600,
+            1100
+          ],
+          "fit": "contain",
+          "max": "none"
+        },
+        {
+          "w": 390,
+          "h": 844,
+          "frame": [
+            0,
+            0,
+            390,
+            844
+          ],
+          "video": [
+            0,
+            0,
+            390,
+            844
+          ],
+          "controls": [
+            0,
+            742,
+            390,
+            844
+          ],
+          "fit": "contain",
+          "max": "none"
+        }
+      ]
+    }
   },
   "structure": {
     "status": "passed",
     "platform": "eXeLearning 4.0.6, official static browser distribution",
-    "size": 62204510,
-    "sha256": "8033d517d4a82b749cc252c8e4a9d723d5e1cde9fb65ca0be57d7c26ffd5e653",
+    "size": 62204673,
+    "sha256": "fe370053d5182fe0f00185d869636f447d5ed56e75d5eaacb5e60f2d1f06cb1c",
     "sco_count": 1,
     "illustrations": 15,
     "illustrated_case_cards": 10,
@@ -85,7 +237,7 @@
     "Short desktop: board fits scroll area, vertical word reachable, keyboard focus does not scroll outer page",
     "120-second challenge keeps unfinished work and never submits unanswered quiz",
     "390px real touch drag plus select-and-place; all photographed text >=14px",
-    "Original 7:44 user video playback with audio, five topic-aligned markers, keyboard seek, mute and volume; timer starts after video, hotspot wrong/correct/retry, three-question checkpoint blank/wrong/correct/retry, no final LMS score mutation, and all ten case cards have loaded topic-specific illustrations",
+    "Original 7:44 user video playback with audio, five topic-aligned markers, real fullscreen enter/exit with viewport-sized video and contain scaling on desktop/mobile, keyboard seek, mute and volume; timer starts after video, hotspot wrong/correct/retry, three-question checkpoint blank/wrong/correct/retry, no final LMS score mutation, and all ten case cards have loaded topic-specific illustrations",
     "Official transparent BPS CorpU logo loads without header overlap on desktop/mobile; no JavaScript page errors"
   ],
   "source_video_verification": {
@@ -100,7 +252,299 @@
     "concept_questions": 3,
     "native_final_questions": 2,
     "source_map": "video-quiz-source-map.json",
-    "native_export_sha256": "8033d517d4a82b749cc252c8e4a9d723d5e1cde9fb65ca0be57d7c26ffd5e653",
-    "timer_starts_after_video": true
-  }
+    "native_export_sha256": "fe370053d5182fe0f00185d869636f447d5ed56e75d5eaacb5e60f2d1f06cb1c",
+    "timer_starts_after_video": true,
+    "fullscreen_measurements": [
+      {
+        "w": 1918,
+        "h": 1080,
+        "frame": [
+          0,
+          0,
+          1918,
+          1080
+        ],
+        "video": [
+          0,
+          0,
+          1918,
+          1080
+        ],
+        "controls": [
+          0,
+          1016,
+          1918,
+          1080
+        ],
+        "fit": "contain",
+        "max": "none"
+      },
+      {
+        "w": 1918,
+        "h": 1080,
+        "frame": [
+          0,
+          0,
+          1918,
+          1080
+        ],
+        "video": [
+          0,
+          0,
+          1918,
+          1080
+        ],
+        "controls": [
+          0,
+          1016,
+          1918,
+          1080
+        ],
+        "fit": "contain",
+        "max": "none"
+      },
+      {
+        "w": 1918,
+        "h": 1080,
+        "frame": [
+          0,
+          0,
+          1918,
+          1080
+        ],
+        "video": [
+          0,
+          0,
+          1918,
+          1080
+        ],
+        "controls": [
+          0,
+          1016,
+          1918,
+          1080
+        ],
+        "fit": "contain",
+        "max": "none"
+      },
+      {
+        "w": 1536,
+        "h": 674,
+        "frame": [
+          0,
+          0,
+          1536,
+          674
+        ],
+        "video": [
+          0,
+          0,
+          1536,
+          674
+        ],
+        "controls": [
+          0,
+          610,
+          1536,
+          674
+        ],
+        "fit": "contain",
+        "max": "none"
+      },
+      {
+        "w": 1600,
+        "h": 1100,
+        "frame": [
+          0,
+          0,
+          1600,
+          1100
+        ],
+        "video": [
+          0,
+          0,
+          1600,
+          1100
+        ],
+        "controls": [
+          0,
+          1036,
+          1600,
+          1100
+        ],
+        "fit": "contain",
+        "max": "none"
+      },
+      {
+        "w": 390,
+        "h": 844,
+        "frame": [
+          0,
+          0,
+          390,
+          844
+        ],
+        "video": [
+          0,
+          0,
+          390,
+          844
+        ],
+        "controls": [
+          0,
+          742,
+          390,
+          844
+        ],
+        "fit": "contain",
+        "max": "none"
+      }
+    ]
+  },
+  "fullscreen_measurements": [
+    {
+      "w": 1918,
+      "h": 1080,
+      "frame": [
+        0,
+        0,
+        1918,
+        1080
+      ],
+      "video": [
+        0,
+        0,
+        1918,
+        1080
+      ],
+      "controls": [
+        0,
+        1016,
+        1918,
+        1080
+      ],
+      "fit": "contain",
+      "max": "none"
+    },
+    {
+      "w": 1918,
+      "h": 1080,
+      "frame": [
+        0,
+        0,
+        1918,
+        1080
+      ],
+      "video": [
+        0,
+        0,
+        1918,
+        1080
+      ],
+      "controls": [
+        0,
+        1016,
+        1918,
+        1080
+      ],
+      "fit": "contain",
+      "max": "none"
+    },
+    {
+      "w": 1918,
+      "h": 1080,
+      "frame": [
+        0,
+        0,
+        1918,
+        1080
+      ],
+      "video": [
+        0,
+        0,
+        1918,
+        1080
+      ],
+      "controls": [
+        0,
+        1016,
+        1918,
+        1080
+      ],
+      "fit": "contain",
+      "max": "none"
+    },
+    {
+      "w": 1536,
+      "h": 674,
+      "frame": [
+        0,
+        0,
+        1536,
+        674
+      ],
+      "video": [
+        0,
+        0,
+        1536,
+        674
+      ],
+      "controls": [
+        0,
+        610,
+        1536,
+        674
+      ],
+      "fit": "contain",
+      "max": "none"
+    },
+    {
+      "w": 1600,
+      "h": 1100,
+      "frame": [
+        0,
+        0,
+        1600,
+        1100
+      ],
+      "video": [
+        0,
+        0,
+        1600,
+        1100
+      ],
+      "controls": [
+        0,
+        1036,
+        1600,
+        1100
+      ],
+      "fit": "contain",
+      "max": "none"
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "frame": [
+        0,
+        0,
+        390,
+        844
+      ],
+      "video": [
+        0,
+        0,
+        390,
+        844
+      ],
+      "controls": [
+        0,
+        742,
+        390,
+        844
+      ],
+      "fit": "contain",
+      "max": "none"
+    }
+  ]
 }

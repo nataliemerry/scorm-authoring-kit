@@ -8,7 +8,7 @@
     "Short desktop: board fits scroll area, vertical word reachable, keyboard focus does not scroll outer page",
     "120-second challenge keeps unfinished work and never submits unanswered quiz",
     "390px real touch drag plus select-and-place; all photographed text >=14px",
-    "Original 7:44 user video playback with audio, five topic-aligned markers, keyboard seek, mute and volume; timer starts after video, hotspot wrong/correct/retry, three-question checkpoint blank/wrong/correct/retry, no final LMS score mutation, and all ten case cards have loaded topic-specific illustrations",
+    "Original 7:44 user video playback with audio, five topic-aligned markers, real fullscreen enter/exit with viewport-sized video and contain scaling on desktop/mobile, keyboard seek, mute and volume; timer starts after video, hotspot wrong/correct/retry, three-question checkpoint blank/wrong/correct/retry, no final LMS score mutation, and all ten case cards have loaded topic-specific illustrations",
     "Official transparent BPS CorpU logo loads without header overlap on desktop/mobile; no JavaScript page errors"
   ],
   "screenshots": [
@@ -16,6 +16,7 @@
     "ITE-simple-material-1.png",
     "ITE-simple-material-2.png",
     "ITE-interactive-video.png",
+    "ITE-video-fullscreen.png",
     "ITE-video-question.png",
     "ITE-simple-situation-1.png",
     "ITE-simple-situation-2.png",
@@ -32,16 +33,170 @@
     "ITE-result-50.png",
     "ITE-video-question-mobile.png",
     "ITE-word-search-short.png",
+    "ITE-video-fullscreen-mobile.png",
     "ITE-simple-mobile.png",
     "ITE-word-search-mobile.png",
     "ITE-drag-words-mobile.png",
     "ITE-sort-paragraphs-mobile.png",
     "ITE-hotspot-mobile.png",
     "ITE-question-set-mobile.png",
-    "ITE-challenge-mobile.png"
+    "ITE-challenge-mobile.png",
+    "ITE-video-fullscreen-fixed.png"
+  ],
+  "fullscreen": [
+    {
+      "w": 1918,
+      "h": 1080,
+      "frame": [
+        0,
+        0,
+        1918,
+        1080
+      ],
+      "video": [
+        0,
+        0,
+        1918,
+        1080
+      ],
+      "controls": [
+        0,
+        1016,
+        1918,
+        1080
+      ],
+      "fit": "contain",
+      "max": "none"
+    },
+    {
+      "w": 1918,
+      "h": 1080,
+      "frame": [
+        0,
+        0,
+        1918,
+        1080
+      ],
+      "video": [
+        0,
+        0,
+        1918,
+        1080
+      ],
+      "controls": [
+        0,
+        1016,
+        1918,
+        1080
+      ],
+      "fit": "contain",
+      "max": "none"
+    },
+    {
+      "w": 1918,
+      "h": 1080,
+      "frame": [
+        0,
+        0,
+        1918,
+        1080
+      ],
+      "video": [
+        0,
+        0,
+        1918,
+        1080
+      ],
+      "controls": [
+        0,
+        1016,
+        1918,
+        1080
+      ],
+      "fit": "contain",
+      "max": "none"
+    },
+    {
+      "w": 1536,
+      "h": 674,
+      "frame": [
+        0,
+        0,
+        1536,
+        674
+      ],
+      "video": [
+        0,
+        0,
+        1536,
+        674
+      ],
+      "controls": [
+        0,
+        610,
+        1536,
+        674
+      ],
+      "fit": "contain",
+      "max": "none"
+    },
+    {
+      "w": 1600,
+      "h": 1100,
+      "frame": [
+        0,
+        0,
+        1600,
+        1100
+      ],
+      "video": [
+        0,
+        0,
+        1600,
+        1100
+      ],
+      "controls": [
+        0,
+        1036,
+        1600,
+        1100
+      ],
+      "fit": "contain",
+      "max": "none"
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "frame": [
+        0,
+        0,
+        390,
+        844
+      ],
+      "video": [
+        0,
+        0,
+        390,
+        844
+      ],
+      "controls": [
+        0,
+        742,
+        390,
+        844
+      ],
+      "fit": "contain",
+      "max": "none"
+    }
   ],
   "mode": "actual-eXeLearning-export",
   "tested_artifacts": {
-    "IT_Enterprise_SCORM12.zip": "8033d517d4a82b749cc252c8e4a9d723d5e1cde9fb65ca0be57d7c26ffd5e653"
+    "IT_Enterprise_SCORM12.zip": "fe370053d5182fe0f00185d869636f447d5ed56e75d5eaacb5e60f2d1f06cb1c"
+  },
+  "fullscreen_visual": {
+    "width": 1918,
+    "height": 1080,
+    "fit": "contain",
+    "screenshot": "ITE-video-fullscreen-fixed.png"
   }
 }

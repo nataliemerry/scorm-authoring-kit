@@ -27,3 +27,7 @@ Validator brief kini menerima aset tambahan dengan role unik sambil tetap mewaji
 ## Video pengguna aktif — 16 November 2026
 
 Prototipe video visual diganti dengan video Juliandra Ariiq K berdurasi 7:44 dan audio asli. Lima pertanyaan video, tiga latihan konsep dan dua soal akhir disesuaikan dengan lima pilar dalam video. Timer dua menit dimulai setelah video. MP4 di dalam ekspor identik SHA-256 dengan file pengguna; poster diambil dari video yang sama. Ekspor aktual, playback/seek/audio, penanda, kuis, skor native 0/50/100 serta desktop/mobile lulus. Bukti terbaru ada di it-enterprise-extended-report.json dan QA proyek IT Enterprise.
+
+## Fullscreen video — 16 November 2026
+
+IT Enterprise menghapus batas inline 1000px/54vh ketika frame masuk fullscreen. Video mengikuti lebar dan tinggi viewport dengan object-fit:contain; panel pertanyaan mengikuti area fullscreen dan kontrol tetap terjangkau. Pengujian API fullscreen nyata mencakup masuk/keluar, dimensi video/frame, kontrol, interaksi pertanyaan serta kembalinya tata letak biasa pada desktop dan viewport ponsel. Ukuran hasil pengukuran tersimpan pada laporan QA dan it-enterprise-extended-report.json.
