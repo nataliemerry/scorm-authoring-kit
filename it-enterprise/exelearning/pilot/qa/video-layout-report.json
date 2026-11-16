@@ -1,0 +1,413 @@
+{
+  "checks": [
+    "Header contains the entire description; inline player starts below header with visible gap; footer follows player; no horizontal overflow at 1918x930,1536x674,1366x768,1024x600,390x844 and enlarged introduction text; player remains scroll-reachable."
+  ],
+  "measurements": [
+    {
+      "width": 1918,
+      "height": 930,
+      "enlarged": false,
+      "header": {
+        "top": 103,
+        "bottom": 226,
+        "left": 115.296875,
+        "right": 1787.703125
+      },
+      "description": {
+        "top": 196,
+        "bottom": 226,
+        "left": 115.296875,
+        "right": 1535.90625
+      },
+      "title": {
+        "top": 142,
+        "bottom": 188,
+        "left": 115.296875,
+        "right": 1535.90625
+      },
+      "player": {
+        "top": 242,
+        "bottom": 804.5,
+        "left": 451.5,
+        "right": 1451.5
+      },
+      "footer": {
+        "top": 816.5,
+        "bottom": 854.890625,
+        "left": 461.5,
+        "right": 1441.5
+      },
+      "viewport": [
+        1918,
+        930
+      ],
+      "pageWidth": 1918
+    },
+    {
+      "width": 1918,
+      "height": 930,
+      "enlarged": true,
+      "header": {
+        "top": 103,
+        "bottom": 294.78125,
+        "left": 115.296875,
+        "right": 1787.703125
+      },
+      "description": {
+        "top": 205.1875,
+        "bottom": 294.78125,
+        "left": 115.296875,
+        "right": 1535.90625
+      },
+      "title": {
+        "top": 142,
+        "bottom": 197.1875,
+        "left": 115.296875,
+        "right": 1535.90625
+      },
+      "player": {
+        "top": 310.78125,
+        "bottom": 873.28125,
+        "left": 451.5,
+        "right": 1451.5
+      },
+      "footer": {
+        "top": 885.28125,
+        "bottom": 923.671875,
+        "left": 461.5,
+        "right": 1441.5
+      },
+      "viewport": [
+        1918,
+        930
+      ],
+      "pageWidth": 1918
+    },
+    {
+      "width": 1536,
+      "height": 674,
+      "enlarged": false,
+      "header": {
+        "top": 103,
+        "bottom": 256,
+        "left": 98.109375,
+        "right": 1422.890625
+      },
+      "description": {
+        "top": 196,
+        "bottom": 256,
+        "left": 98.109375,
+        "right": 1171.09375
+      },
+      "title": {
+        "top": 142,
+        "bottom": 188,
+        "left": 98.109375,
+        "right": 1171.09375
+      },
+      "player": {
+        "top": 272,
+        "bottom": 834.5,
+        "left": 260.5,
+        "right": 1260.5
+      },
+      "footer": {
+        "top": 846.5,
+        "bottom": 884.890625,
+        "left": 270.5,
+        "right": 1250.5
+      },
+      "viewport": [
+        1536,
+        674
+      ],
+      "pageWidth": 1536
+    },
+    {
+      "width": 1536,
+      "height": 674,
+      "enlarged": true,
+      "header": {
+        "top": -134,
+        "bottom": 57.78125,
+        "left": 98.109375,
+        "right": 1422.890625
+      },
+      "description": {
+        "top": -31.8125,
+        "bottom": 57.78125,
+        "left": 98.109375,
+        "right": 1171.09375
+      },
+      "title": {
+        "top": -95,
+        "bottom": -39.8125,
+        "left": 98.109375,
+        "right": 1171.09375
+      },
+      "player": {
+        "top": 73.78125,
+        "bottom": 636.28125,
+        "left": 260.5,
+        "right": 1260.5
+      },
+      "footer": {
+        "top": 648.28125,
+        "bottom": 686.671875,
+        "left": 270.5,
+        "right": 1250.5
+      },
+      "viewport": [
+        1536,
+        674
+      ],
+      "pageWidth": 1536
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "enlarged": false,
+      "header": {
+        "top": 103,
+        "bottom": 253.984375,
+        "left": 90.46875,
+        "right": 1260.53125
+      },
+      "description": {
+        "top": 193.984375,
+        "bottom": 253.984375,
+        "left": 90.46875,
+        "right": 1008.734375
+      },
+      "title": {
+        "top": 142,
+        "bottom": 185.984375,
+        "left": 90.46875,
+        "right": 1008.734375
+      },
+      "player": {
+        "top": 269.984375,
+        "bottom": 832.484375,
+        "left": 175.5,
+        "right": 1175.5
+      },
+      "footer": {
+        "top": 844.484375,
+        "bottom": 882.875,
+        "left": 185.5,
+        "right": 1165.5
+      },
+      "viewport": [
+        1366,
+        768
+      ],
+      "pageWidth": 1366
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "enlarged": true,
+      "header": {
+        "top": -59,
+        "bottom": 177.578125,
+        "left": 90.46875,
+        "right": 1260.53125
+      },
+      "description": {
+        "top": 43.1875,
+        "bottom": 177.578125,
+        "left": 90.46875,
+        "right": 1008.734375
+      },
+      "title": {
+        "top": -20,
+        "bottom": 35.1875,
+        "left": 90.46875,
+        "right": 1008.734375
+      },
+      "player": {
+        "top": 193.578125,
+        "bottom": 756.078125,
+        "left": 175.5,
+        "right": 1175.5
+      },
+      "footer": {
+        "top": 768.078125,
+        "bottom": 806.46875,
+        "left": 185.5,
+        "right": 1165.5
+      },
+      "viewport": [
+        1366,
+        768
+      ],
+      "pageWidth": 1366
+    },
+    {
+      "width": 1024,
+      "height": 600,
+      "enlarged": false,
+      "header": {
+        "top": 103,
+        "bottom": 272.96875,
+        "left": 75.078125,
+        "right": 933.921875
+      },
+      "description": {
+        "top": 182.96875,
+        "bottom": 272.96875,
+        "left": 75.078125,
+        "right": 682.125
+      },
+      "title": {
+        "top": 142,
+        "bottom": 174.96875,
+        "left": 75.078125,
+        "right": 682.125
+      },
+      "player": {
+        "top": 288.96875,
+        "bottom": 772.0625,
+        "left": 75.078125,
+        "right": 933.921875
+      },
+      "footer": {
+        "top": 784.0625,
+        "bottom": 822.453125,
+        "left": 75.078125,
+        "right": 933.921875
+      },
+      "viewport": [
+        1024,
+        600
+      ],
+      "pageWidth": 1024
+    },
+    {
+      "width": 1024,
+      "height": 600,
+      "enlarged": true,
+      "header": {
+        "top": -279,
+        "bottom": 57.5625,
+        "left": 75.078125,
+        "right": 933.921875
+      },
+      "description": {
+        "top": -121.625,
+        "bottom": 57.5625,
+        "left": 75.078125,
+        "right": 682.125
+      },
+      "title": {
+        "top": -240,
+        "bottom": -129.625,
+        "left": 75.078125,
+        "right": 682.125
+      },
+      "player": {
+        "top": 73.5625,
+        "bottom": 556.65625,
+        "left": 75.078125,
+        "right": 933.921875
+      },
+      "footer": {
+        "top": 568.65625,
+        "bottom": 607.046875,
+        "left": 75.078125,
+        "right": 933.921875
+      },
+      "viewport": [
+        1024,
+        600
+      ],
+      "pageWidth": 1024
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "enlarged": false,
+      "header": {
+        "top": 107,
+        "bottom": 426.875,
+        "left": 31,
+        "right": 344
+      },
+      "description": {
+        "top": 214.375,
+        "bottom": 349.375,
+        "left": 31,
+        "right": 344
+      },
+      "title": {
+        "top": 142,
+        "bottom": 206.375,
+        "left": 31,
+        "right": 344
+      },
+      "player": {
+        "top": 442.875,
+        "bottom": 618.9375,
+        "left": 31,
+        "right": 344
+      },
+      "footer": {
+        "top": 630.9375,
+        "bottom": 691.71875,
+        "left": 31,
+        "right": 344
+      },
+      "viewport": [
+        390,
+        844
+      ],
+      "pageWidth": 390
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "enlarged": true,
+      "header": {
+        "top": 107,
+        "bottom": 806.625,
+        "left": 31,
+        "right": 344
+      },
+      "description": {
+        "top": 370.75,
+        "bottom": 729.125,
+        "left": 31,
+        "right": 344
+      },
+      "title": {
+        "top": 142,
+        "bottom": 362.75,
+        "left": 31,
+        "right": 344
+      },
+      "player": {
+        "top": 822.625,
+        "bottom": 998.6875,
+        "left": 31,
+        "right": 344
+      },
+      "footer": {
+        "top": 1010.6875,
+        "bottom": 1071.46875,
+        "left": 31,
+        "right": 344
+      },
+      "viewport": [
+        390,
+        844
+      ],
+      "pageWidth": 390
+    }
+  ],
+  "screenshots": [
+    "ITE-video-introduction-fixed.png",
+    "ITE-video-introduction-mobile.png"
+  ],
+  "mode": "actual-eXeLearning-export",
+  "native_export_sha256": "5c1ad03fa37aa20e2cd67911fb9b639b5dc7cb35c48f63accb6254f6cbfc7414"
+}

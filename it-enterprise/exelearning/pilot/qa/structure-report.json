@@ -2,8 +2,8 @@
   {
     "course": "ITE",
     "archive": "IT_Enterprise_SCORM12.zip",
-    "bytes": 62208719,
-    "sha256": "99172f3a30629962a98a250274eb764e5290f2cfccdfa730289f15c1dc1578ab",
+    "bytes": 62208843,
+    "sha256": "5c1ad03fa37aa20e2cd67911fb9b639b5dc7cb35c48f63accb6254f6cbfc7414",
     "sco_count": 1,
     "manifest_files_valid": true,
     "bundled_fonts": 2,

@@ -25,7 +25,7 @@ with ZipFile(PACKAGE) as package, ZipFile(SOURCE) as source, ZipFile(COURSE / 'L
     html = package.read('index.html')
     assert b'IT Enterprise' in html and b'{{context_path}}' not in html
     assert all(marker in html for marker in (b'lesson-config', b'sim-root', b'word-config', b'dt-config', b'sp-config', b'dnd-config', b'iv-config', b'hotspot-config', b'quiz-set-config', b'exe-form-container'))
-    assert b'lcm-scenes-it-enterprise-section-settings-20261116' in package.read('theme/config.xml')
+    assert b'lcm-scenes-it-enterprise-video-layout-20261116' in package.read('theme/config.xml')
     for name in ('style.js', 'style.css'):
         assert package.read('theme/' + name) == source.read('theme/' + name) == theme.read(name)
     for font in ('bricolage-grotesque', 'source-sans-3'):

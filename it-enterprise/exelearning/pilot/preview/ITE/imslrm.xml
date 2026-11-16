@@ -3,7 +3,7 @@
   <general uniqueElementName="general">
     <identifier>
       <catalog uniqueElementName="catalog">none</catalog>
-      <entry uniqueElementName="entry">ODE-202611161220097W2LG0</entry>
+      <entry uniqueElementName="entry">ODE-20261116123343VEZNZD</entry>
     </identifier>
     <title>
       <string language="id">ITE IT Enterprise</string>
@@ -25,7 +25,7 @@
       </role>
       <entity>BEGIN:VCARD VERSION:3.0 FN:BPS Corporate University EMAIL;TYPE=INTERNET: ORG: END:VCARD</entity>
       <date>
-        <dateTime uniqueElementName="dateTime">2026-11-16T12:20:58.00+07:00</dateTime>
+        <dateTime uniqueElementName="dateTime">2026-11-16T12:34:28.00+07:00</dateTime>
         <description>
           <string language="id">Metadata creation date</string>
         </description>
@@ -40,7 +40,7 @@
       </role>
       <entity>BEGIN:VCARD VERSION:3.0 FN:BPS Corporate University EMAIL;TYPE=INTERNET: ORG: END:VCARD</entity>
       <date>
-        <dateTime uniqueElementName="dateTime">2026-11-16T12:20:58.00+07:00</dateTime>
+        <dateTime uniqueElementName="dateTime">2026-11-16T12:34:28.00+07:00</dateTime>
         <description>
           <string language="id">Metadata creation date</string>
         </description>
