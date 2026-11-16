@@ -12,7 +12,7 @@
   },
   "review_matches_baseline": true,
   "original_logo_and_fonts_match": true,
-  "native_export_sha256": "4a6e6117ef9d99f8d303b1bd8af13386f210aa0dacf3cd968db12d50732a3a4d",
+  "native_export_sha256": "99172f3a30629962a98a250274eb764e5290f2cfccdfa730289f15c1dc1578ab",
   "actual_export_and_preview_verified": true,
   "qa_report": "simple-experience-report.json",
   "profile": "User-supplied IT Enterprise video with audio + five formative markers; native Form final scoring",
@@ -32,12 +32,12 @@
     "illustrated_case_cards": 10,
     "video_audio": true
   },
-  "theme": "lcm-scenes-it-enterprise-labeled-hotspots-20261116",
+  "theme": "lcm-scenes-it-enterprise-section-settings-20261116",
   "media_provenance": "media-provenance.json",
   "encoding_fix": "Sequence labels use 1., 2., 3.; corrupted separator and instruction range removed.",
   "source_video_sha256": "42971eef5bde060359db0cbb2cf5fff632b711a475f50baca485499e5fc556f2",
   "quiz_source_map": "video-quiz-source-map.json",
-  "timer_start": "After video completion",
+  "timer_start": "After enabled video; after initial learning when video is hidden",
   "fullscreen": {
     "viewport_sized_video": true,
     "object_fit": "contain",
@@ -200,5 +200,27 @@
     ],
     "alternative_buttons_match": true,
     "desktop_mobile_bounds_checked": true
+  },
+  "section_settings": {
+    "scope": "IT Enterprise only",
+    "toggles": 11,
+    "default": "all visible",
+    "fixed": [
+      "cover",
+      "native quiz",
+      "result"
+    ],
+    "storage": "browser localStorage",
+    "actual_export_checks": [
+      "All 11 sections enabled by default; cancel/Escape discard edits and restore focus",
+      "All optional sections off: directly opens quiz without empty practice screen or fake completion; preferences survive reload; blank quiz guarded; native score 100 and review skipped to result",
+      "Video alone requires its five answers and routes directly to quiz without reopening hidden situations",
+      "Check off preserves all three theory pages including the combined last lesson",
+      "Optional timer starts without video and pauses while settings are open",
+      "Theory off/check on: check alone with real answer gate; hidden activities bypassed to hotspot and then quiz",
+      "Mixed route skips Drag the Words/hotspot, updates next labels, preserves concept and case gates without LMS writes",
+      "Drag the Words alone reaches quiz; restore all persists; opening/cancelling settings preserves current lesson",
+      "390px settings dialog scrolls, fixed actions remain visible, independent browser context defaults to all enabled"
+    ]
   }
 }

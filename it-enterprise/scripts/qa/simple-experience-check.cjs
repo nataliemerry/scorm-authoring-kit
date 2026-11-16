@@ -9,7 +9,7 @@ let browser;const report={checks:[],screenshots:[]};
 function mock(){window.lms={values:{'cmi.core.lesson_status':'not attempted'},calls:[]};window.API={LMSInitialize:()=> 'true',LMSGetValue:k=>window.lms.values[k]||(k.endsWith('_count')?'0':''),LMSSetValue:(k,v)=>{window.lms.values[k]=v;window.lms.calls.push([k,v]);return 'true';},LMSCommit:()=> 'true',LMSFinish:()=> 'true',LMSGetLastError:()=> '0',LMSGetErrorString:()=>'',LMSGetDiagnostic:()=>''};}
 async function shot(p,n){
  await p.evaluate(()=>document.fonts.ready);
- assert.equal(await p.locator('.scene-chrome-right > *').count(),1);assert.equal(await p.locator('.scene-chrome-right > .scene-fullscreen').count(),1);assert.equal(await p.locator('.scene-chrome .scene-clock').count(),0);
+ assert.equal(await p.locator('.scene-chrome-right > *').count(),2);assert.equal(await p.locator('.scene-chrome-right > .scene-fullscreen').count(),1);assert.equal(await p.locator('.scene-chrome .scene-clock').count(),0);
  const logo=p.locator('.scene-brand-logo');assert.equal(await logo.count(),1);assert(await logo.isVisible());
  assert(await logo.evaluate(e=>e.complete&&e.naturalWidth===958&&e.naturalHeight===980),'Official logo must load at original dimensions');
  const header=await p.locator('.scene-chrome').evaluate(e=>{const a=e.querySelector('.scene-identity').getBoundingClientRect(),b=e.querySelector('.scene-chrome-right').getBoundingClientRect();return {left:a.left,right:a.right,controls:b.left,width:innerWidth};});

@@ -13,7 +13,7 @@ Kursus mikro untuk Pranata Komputer kategori keahlian dan pengelola layanan digi
 
 ## Alur
 
-Sampul, tiga bagian teori dengan sumber dan contoh, cek pemahaman, video asli pengguna berdurasi 7 menit 44 detik dengan audio dan lima pertanyaan, dua situasi dengan konsekuensi, Find the Words dengan arah kiri ke kanan atau atas ke bawah dan petunjuk huruf awal per soal, Drag the Words, Sort the Paragraphs, image hotspot tiga komponen, question set tiga pertanyaan latihan, kasus drag-and-drop dua tahap, dua soal Form native, pembahasan, dan hasil. Ketiga latihan kata/paragraf opsional. Kasus harus selesai sebelum kuis. Timer dua menit bersifat opsional dan tidak mengirim kuis secara otomatis.
+Sampul, tiga bagian teori dengan sumber dan contoh, cek pemahaman, video asli pengguna berdurasi 7 menit 44 detik dengan audio dan lima pertanyaan, dua situasi dengan konsekuensi, Find the Words dengan arah kiri ke kanan atau atas ke bawah dan petunjuk huruf awal per soal, Drag the Words, Sort the Paragraphs, image hotspot tiga komponen, question set tiga pertanyaan latihan, kasus drag-and-drop dua tahap, dua soal Form native, pembahasan, dan hasil. Ketiga latihan kata/paragraf opsional. Kasus yang diaktifkan harus selesai sebelum kuis. Timer dua menit bersifat opsional dan tidak mengirim kuis secara otomatis.
 
 Empat ilustrasi awal dipertahankan. Sebelas aset tambahan dibuat melalui image_gen: sepuluh kartu kasus dan satu gambar hotspot. Seluruhnya dipaketkan secara lokal bersama master PNG dan WebP. Logo asli BPS CorpU serta font Bricolage Grotesque dan Source Sans 3 mengikuti kit.
 
@@ -40,3 +40,13 @@ Konfigurasi: data/enhanced_interactions.json. Pemetaan jawaban dan sumber: video
 Fullscreen video mengikuti lebar dan tinggi layar dengan object-fit:contain; batas 1000px/54vh hanya untuk tampilan biasa. Panel pertanyaan dan kontrol ikut menyesuaikan. Pengujian menggunakan Fullscreen API sebenarnya pada desktop 1918×1080 dan viewport ponsel 390×844.
 
 Hotspot: setiap objek memiliki label ringkas (Pengenal lintas unit, Aturan akses, Riwayat perpindahan, Dekorasi meja) di tepi area pilihan. Tombol alternatif memakai label yang sama; label menjelaskan komponen yang diwakili ilustrasi tanpa menandai benar atau salah. Label tetap terlihat sebelum dipilih dan setelah Ulangi.
+
+## Pengaturan bagian kursus
+
+Tombol Pengaturan tersedia pada header IT Enterprise, di samping fullscreen. Halaman pengaturan menyediakan 11 pilihan: materi awal, cek pemahaman, video, situasi, Find the Words, Drag the Words, Sort the Paragraphs, hotspot, latihan konsep, kasus drag-and-drop, dan pembahasan. Semua aktif secara bawaan. Sampul, dua soal Form native, dan hasil tetap aktif.
+
+Bila tidak ada bagian latihan berikutnya, alur langsung masuk ke kuis tanpa halaman kosong. Nomor fase menyesuaikan bagian yang tampil. Bagian yang dinonaktifkan dilewati oleh router; tidak ditandai selesai secara palsu. Tombol lanjut mengikuti bagian aktif berikutnya. Prasyarat bagian aktif tetap berlaku. Materi dan cek dapat diatur terpisah tanpa menghilangkan teori halaman ketiga. Menonaktifkan pembahasan mengarahkan kuis langsung ke hasil setelah dua jawaban terisi.
+
+Simpan & mulai ulang menyimpan pilihan dengan localStorage (lcm:ITE:sections:v1) dan memuat ulang alur; jawaban tampilan saat ini tidak dipertahankan. Preferensi berlaku pada browser/origin/perangkat tersebut, bukan mengubah ZIP atau konfigurasi peserta lain di LMS. Batal/Esc membuang perubahan belum tersimpan. Tampilkan semua mengaktifkan seluruh pilihan, lalu Simpan untuk menerapkan. Membuka pengaturan menjeda video dan timer; video dilanjutkan manual setelah halaman ditutup.
+
+Implementasi khusus kursus: exelearning/pilot/ite-settings.js dan ite-enhanced-flow.js. Kit canonical dan kursus lain belum diberi fitur ini. QA tambahan: node scripts/qa/section-settings-check.cjs (tambahkan --dev untuk preview pengembangan); bukti ada di qa/section-settings-report.json.

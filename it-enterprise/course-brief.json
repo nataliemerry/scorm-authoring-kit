@@ -900,5 +900,29 @@
     "duration_seconds": 464.05,
     "has_audio": true
   },
-  "timing_policy": "Untimed by default. Optional 120-second practice timer starts after the 7:44 source video and its five questions."
+  "timing_policy": "Untimed by default. Optional 120-second practice timer starts after the 7:44 source video and its five questions.",
+  "section_settings": {
+    "scope": "IT Enterprise only; user-requested configurable learning flow",
+    "default": "All sections visible",
+    "storage": "localStorage per browser/origin, course-specific v1 key",
+    "configurable": [
+      "theory",
+      "check",
+      "video",
+      "situations",
+      "wordSearch",
+      "dragWords",
+      "sortParagraphs",
+      "hotspot",
+      "concept",
+      "case",
+      "review"
+    ],
+    "always_visible": [
+      "cover",
+      "native final quiz",
+      "results"
+    ],
+    "apply": "Save and restart current presentation; never fabricate completion for hidden practice or delete submitted LMS scores"
+  }
 }

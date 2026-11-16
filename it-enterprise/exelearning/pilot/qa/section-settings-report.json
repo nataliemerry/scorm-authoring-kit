@@ -1,0 +1,19 @@
+{
+  "checks": [
+    "All 11 sections enabled by default; cancel/Escape discard edits and restore focus",
+    "All optional sections off: directly opens quiz without empty practice screen or fake completion; preferences survive reload; blank quiz guarded; native score 100 and review skipped to result",
+    "Video alone requires its five answers and routes directly to quiz without reopening hidden situations",
+    "Check off preserves all three theory pages including the combined last lesson",
+    "Optional timer starts without video and pauses while settings are open",
+    "Theory off/check on: check alone with real answer gate; hidden activities bypassed to hotspot and then quiz",
+    "Mixed route skips Drag the Words/hotspot, updates next labels, preserves concept and case gates without LMS writes",
+    "Drag the Words alone reaches quiz; restore all persists; opening/cancelling settings preserves current lesson",
+    "390px settings dialog scrolls, fixed actions remain visible, independent browser context defaults to all enabled"
+  ],
+  "screenshots": [
+    "ITE-settings-desktop.png",
+    "ITE-settings-mobile.png"
+  ],
+  "mode": "actual-eXeLearning-export",
+  "native_export_sha256": "99172f3a30629962a98a250274eb764e5290f2cfccdfa730289f15c1dc1578ab"
+}

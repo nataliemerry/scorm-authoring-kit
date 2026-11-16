@@ -10,7 +10,7 @@
   "concept_questions": 3,
   "native_final_questions": 2,
   "source_map": "video-quiz-source-map.json",
-  "native_export_sha256": "4a6e6117ef9d99f8d303b1bd8af13386f210aa0dacf3cd968db12d50732a3a4d",
+  "native_export_sha256": "99172f3a30629962a98a250274eb764e5290f2cfccdfa730289f15c1dc1578ab",
   "timer_starts_after_video": true,
   "fullscreen_measurements": [
     {

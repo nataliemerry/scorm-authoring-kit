@@ -12,7 +12,7 @@
  const found=new Set(),ends=[15,45,85,104,120],names=['Materi','Situasi & latihan','Kuis','Pembahasan','Hasil'];
  const safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const brandLogo=document.querySelector('[data-brand-logo]');
- const chrome=document.createElement('div');chrome.className='scene-chrome';chrome.innerHTML=`<div class="scene-identity">${brandLogo?`<img class="scene-brand-logo" src="${safe(brandLogo.src)}" alt="Logo BPS CorpU" width="50" height="52">`:""}<div class="scene-identity-copy"><div class="scene-brand">BPS CORPORATE UNIVERSITY</div><div class="scene-course-title">${safe(title)}</div></div></div><div class="scene-chrome-right"><button type="button" class="scene-fullscreen" aria-label="Buka layar penuh">⛶</button></div>`;document.body.append(chrome);
+ const chrome=document.createElement('div');chrome.className='scene-chrome';chrome.innerHTML=`<div class="scene-identity">${brandLogo?`<img class="scene-brand-logo" src="${safe(brandLogo.src)}" alt="Logo BPS CorpU" width="50" height="52">`:""}<div class="scene-identity-copy"><div class="scene-brand">BPS CORPORATE UNIVERSITY</div><div class="scene-course-title">${safe(title)}</div></div></div><div class="scene-chrome-right"><button type="button" class="ite-settings-open" aria-label="Pengaturan bagian kursus">⚙ <span>Pengaturan</span></button><button type="button" class="scene-fullscreen" aria-label="Buka layar penuh">⛶</button></div>`;document.body.append(chrome);
  const bottom=document.createElement('div');bottom.className='scene-bottom';bottom.innerHTML=`<nav class="scene-progress" aria-label="Progres pengalaman">${names.map((n,i)=>`<button type="button" data-scene-phase="${i}" aria-label="${n}">${i+1}</button>`).join('')}<span class="scene-progress-label"></span></nav><span class="scene-next-note"></span><div class="scene-clock" hidden><span></span><small>SISA WAKTU</small></div><button type="button" class="scene-next"></button>`;document.body.append(bottom);
  const back=document.createElement('button');back.className='scene-arena-back';back.type='button';back.textContent='← Kembali ke kasus';back.hidden=true;document.body.append(back);
  function say(message){document.querySelector('.scene-announcement')?.remove();const box=document.createElement('div');box.className='scene-announcement';box.setAttribute('role','status');box.textContent=message;document.body.append(box);clearTimeout(toastTimer);toastTimer=setTimeout(()=>box.remove(),5000);}
@@ -83,24 +83,30 @@
    }
    phase=next;arena=false;document.body.dataset.scenePhase=phase;
    articles.forEach(a=>{a.hidden=Number(a.dataset.scenePanel)!==phase||a.classList.contains('scene-native-arena');});back.hidden=true;
-   bottom.querySelectorAll('button[data-scene-phase]').forEach((b,i)=>{b.disabled=false;b.setAttribute('aria-current',i===phase?'step':'false');});
+   let visibleStep=0;bottom.querySelectorAll('button[data-scene-phase]').forEach((b,i)=>{b.hidden=(i===3&&!window.iteSections.enabled('review'))||(i===1&&!['video','situations','wordSearch','dragWords','sortParagraphs','hotspot','concept','case'].some(window.iteSections.enabled));if(!b.hidden)b.textContent=String(++visibleStep);b.disabled=false;b.setAttribute('aria-current',i===phase?'step':'false');});
    bottom.querySelector('.scene-progress-label').textContent=names[phase];
-   const nextBtn=bottom.querySelector('.scene-next');nextBtn.hidden=phase===0||phase===4||(phase===1&&document.querySelector('.dnd-challenge')?.dataset.complete!=='true');nextBtn.disabled=false;
-   nextBtn.textContent=phase===1?'Lanjut ke kuis →':phase===2?'Lihat pembahasan →':'Lihat hasil →';
+   const nextBtn=bottom.querySelector('.scene-next');nextBtn.hidden=phase===0||phase===4||(phase===1&&!practiceDone());nextBtn.disabled=false;
+   nextBtn.textContent=phase===2&&!window.iteSections.enabled('review')?'Lihat hasil →':phase===1?'Lanjut ke kuis →':phase===2?'Lihat pembahasan →':'Lihat hasil →';
    bottom.querySelector('.scene-next-note').textContent=timed?'Selesaikan sesuai urutan.':'';
    resizeForm();result();if(phase===3)review();
    if(focus){const heading=articles.find(a=>Number(a.dataset.scenePanel)===phase)?.querySelector('h2');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}}
  }
- function practiceDone(){return document.querySelector('.lesson-root')?.dataset.complete==='true'&&document.querySelector('.sim-root')?.dataset.complete==='true'&&document.querySelector('.dnd-challenge')?.dataset.complete==='true';}
- function canMove(target){if(target>0&&document.querySelector('.lesson-root')?.dataset.complete!=='true'){say('Pelajari materi awal dan jawab cek pemahamannya terlebih dahulu.');return false;}if(target>1&&!practiceDone()){say('Selesaikan seluruh tahap tantangan terlebih dahulu.');return false;}if(target>2&&(!check())){say('Jawab kedua pertanyaan terlebih dahulu.');return false;}return true;}
- function clock(){const box=bottom.querySelector('.scene-clock'),span=box.querySelector('span'),small=box.querySelector('small');box.hidden=!timed;if(!timed)return;const left=Math.max(0,120-Math.floor((Date.now()-start)/1000));span.textContent=String(Math.floor(left/60)).padStart(2,'0')+':'+String(left%60).padStart(2,'0');small.textContent='SISA WAKTU';if(left===0){clearInterval(interval);timed=false;small.textContent='WAKTU SELESAI';say('Waktu 2 menit sudah habis. Latihan tetap bisa dilanjutkan.');show(phase,false);}}
+ function practiceDone(){return window.iteSections.learningReady()&&window.iteSections.routeReady;}
+ function canMove(target){if(target>0&&!window.iteSections.learningReady()){say('Pelajari materi awal dan jawab cek pemahamannya terlebih dahulu.');return false;}if(target>1&&!practiceDone()){say('Selesaikan seluruh tahap tantangan terlebih dahulu.');return false;}if(target>2&&(!check())){say('Jawab kedua pertanyaan terlebih dahulu.');return false;}return true;}
+ let settingsOpened=0;
+ document.addEventListener('ite-settings-open',()=>{settingsOpened=Date.now();});
+ document.addEventListener('ite-settings-close',()=>{if(settingsOpened&&timed)start+=Date.now()-settingsOpened;settingsOpened=0;});
+ function clock(){if(settingsOpened)return;const box=bottom.querySelector('.scene-clock'),span=box.querySelector('span'),small=box.querySelector('small');box.hidden=!timed;if(!timed)return;const left=Math.max(0,120-Math.floor((Date.now()-start)/1000));span.textContent=String(Math.floor(left/60)).padStart(2,'0')+':'+String(left%60).padStart(2,'0');small.textContent='SISA WAKTU';if(left===0){clearInterval(interval);timed=false;small.textContent='WAKTU SELESAI';say('Waktu 2 menit sudah habis. Latihan tetap bisa dilanjutkan.');show(phase,false);}}
  let pendingVideoTimer=false;
- document.addEventListener('lcm-lesson-finish',e=>{document.querySelector('.scene-announcement')?.remove();pendingVideoTimer=Boolean(e.detail?.timed);timed=false;clearInterval(interval);show(1);clock();});
- document.addEventListener('lcm-video-finish',()=>{timed=pendingVideoTimer;pendingVideoTimer=false;clearInterval(interval);start=Date.now();clock();if(timed)interval=setInterval(clock,250);});
+ document.addEventListener('lcm-lesson-finish',e=>{document.querySelector('.scene-announcement')?.remove();pendingVideoTimer=Boolean(e.detail?.timed);timed=false;clearInterval(interval);show(1);clock();if(!window.iteSections.enabled('video'))document.dispatchEvent(new Event('ite-start-practice-timer'));});
+ function startPracticeTimer(){timed=pendingVideoTimer;pendingVideoTimer=false;clearInterval(interval);start=Date.now();clock();if(timed)interval=setInterval(clock,250);}
+ document.addEventListener('lcm-video-finish',startPracticeTimer);document.addEventListener('ite-start-practice-timer',startPracticeTimer);
  document.addEventListener('lcm-simulation-finish',()=>show(1,false));
- bottom.querySelector('.scene-next').onclick=()=>{const next=Math.min(4,phase+1);if(canMove(next))show(next);};
+ bottom.querySelector('.scene-next').onclick=()=>{const next=phase===2&&!window.iteSections.enabled('review')?4:Math.min(4,phase+1);if(canMove(next))show(next);};
  bottom.querySelector('nav').onclick=e=>{const b=e.target.closest('[data-scene-phase]');if(!b)return;const next=Number(b.dataset.scenePhase);if(canMove(next))show(next);};
+ document.addEventListener('ite-route-finish',()=>{if(practiceDone())show(2);});
  document.addEventListener('lcm-practice-complete',()=>{say('Latihan selesai. Berikutnya ada dua pertanyaan untuk memeriksa pemahaman Anda.');show(1,false);});
+ chrome.querySelector('.ite-settings-open').onclick=()=>window.iteSections.open();
  chrome.querySelector('.scene-fullscreen').onclick=()=>{if(document.fullscreenElement)document.exitFullscreen?.();else document.documentElement.requestFullscreen?.().catch(()=>say('Gunakan tombol layar penuh pada browser Anda.'));};
  document.querySelector('[data-scene-action="restart"]')?.addEventListener('click',()=>window.location.reload());
  show(0,false);

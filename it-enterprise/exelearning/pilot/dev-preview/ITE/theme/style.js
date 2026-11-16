@@ -159,7 +159,45 @@ $.fn.isInViewport = function () {
   form.lcmTextCompatibility = true;
 })();
 
-window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and visual practice. eXe Form and Classify own assessment logic. */
+window.addEventListener("DOMContentLoaded",function(){/* IT Enterprise only: local presentation preferences, never assessment state. */
+(() => {
+ 'use strict';
+ const key='lcm:ITE:sections:v1';
+ const sections=[
+  ['theory','Materi awal','Tiga halaman teori, sumber, dan contoh.'],
+  ['check','Cek pemahaman','Pertanyaan setelah materi awal.'],
+  ['video','Video interaktif','Video 7:44 dan lima pertanyaan.'],
+  ['situations','Situasi keputusan','Dua kasus dengan pilihan dan konsekuensi.'],
+  ['wordSearch','Find the Words','Pencarian istilah berdasarkan petunjuk.'],
+  ['dragWords','Drag the Words','Melengkapi kalimat dari bank kata.'],
+  ['sortParagraphs','Sort the Paragraphs','Mengurutkan empat paragraf.'],
+  ['hotspot','Image Hotspot','Memilih komponen penelusuran pada gambar.'],
+  ['concept','Latihan konsep','Tiga pertanyaan latihan.'],
+  ['case','Kasus drag-and-drop','Mengelompokkan kondisi dan menyusun rencana.'],
+  ['review','Pembahasan akhir','Pilihan peserta, kunci, dan penjelasan.']
+ ];
+ let stored={};try{stored=JSON.parse(localStorage.getItem(key)||'{}')||{};}catch(_){}
+ const values=Object.fromEntries(sections.map(([id])=>[id,stored[id]!==false]));
+ const chain=['video','situations','wordSearch','dragWords','sortParagraphs','hotspot','concept','case'];
+ const labels={video:'Tonton video →',situations:'Lanjut ke situasi →',wordSearch:'Temukan istilah →',dragWords:'Lanjut ke Drag the Words →',sortParagraphs:'Urutkan paragraf →',hotspot:'Jelajahi komponen →',concept:'Lanjut ke latihan konsep →',case:'Praktik kasus →'};
+ const api=window.iteSections={
+  enabled:id=>values[id]!==false,routeReady:false,
+  nextLabel(id){const next=chain.slice(id==='learning'?0:chain.indexOf(id)+1).find(api.enabled);return labels[next]||'Lanjut ke kuis →';},
+  learningReady(){return (!api.enabled('theory')&&!api.enabled('check'))||document.querySelector('.lesson-root')?.dataset.complete==='true';}
+ };
+ const dialog=document.createElement('dialog');dialog.className='ite-settings-page';dialog.setAttribute('aria-labelledby','ite-settings-title');
+ dialog.innerHTML=`<form class="ite-settings-form"><header><div><span class="scene-eyebrow">IT ENTERPRISE</span><h2 id="ite-settings-title">Pengaturan bagian kursus</h2></div><button type="button" class="ite-settings-close" aria-label="Tutup pengaturan">✕</button></header><div class="ite-settings-scroll"><p>Pilih bagian yang ingin ditampilkan. Bagian yang dinonaktifkan akan dilewati dalam alur belajar.</p><div class="ite-settings-list">${sections.map(([id,title,description])=>`<label class="ite-settings-row"><span><strong>${title}</strong><small>${description}</small></span><input type="checkbox" name="${id}" role="switch"><span class="ite-settings-state" aria-hidden="true"></span></label>`).join('')}</div><p class="ite-settings-fixed"><strong>Selalu aktif:</strong> sampul, kuis akhir (2 soal), dan hasil. Nilai LMS tetap berasal dari kuis akhir.</p><p class="ite-settings-note">Pilihan tersimpan di browser/perangkat ini. Menyimpan perubahan memulai ulang alur belajar dan mengosongkan jawaban pada tampilan saat ini. Nilai yang sudah dikirim ke LMS tidak dihapus.</p><p class="ite-settings-error" role="alert"></p></div><footer><button type="button" class="ite-settings-default">Tampilkan semua</button><div><button type="button" class="ite-settings-cancel">Batal</button><button type="submit" class="ite-settings-save">Simpan & mulai ulang</button></div></footer></form>`;
+ document.body.append(dialog);
+ function update(){dialog.querySelectorAll('input').forEach(input=>{input.closest('label').querySelector('.ite-settings-state').textContent=input.checked?'Tampil':'Sembunyi';});}
+ let opener;
+ api.open=()=>{opener=document.activeElement;sections.forEach(([id])=>{dialog.querySelector(`[name="${id}"]`).checked=api.enabled(id);});dialog.querySelector('.ite-settings-error').textContent='';update();document.querySelector('.iv-video')?.pause();document.dispatchEvent(new Event('ite-settings-open'));dialog.showModal();dialog.querySelector('.ite-settings-close').focus();};
+ dialog.addEventListener('close',()=>{document.dispatchEvent(new Event('ite-settings-close'));opener?.focus({preventScroll:true});});
+ dialog.addEventListener('change',update);
+ dialog.querySelectorAll('.ite-settings-close,.ite-settings-cancel').forEach(button=>button.onclick=()=>dialog.close());
+ dialog.querySelector('.ite-settings-default').onclick=()=>{dialog.querySelectorAll('input').forEach(input=>{input.checked=true;});update();};
+ dialog.querySelector('form').onsubmit=event=>{event.preventDefault();const next=Object.fromEntries(sections.map(([id])=>[id,dialog.querySelector(`[name="${id}"]`).checked]));if(sections.every(([id])=>next[id]===values[id])){dialog.close();return;}try{localStorage.setItem(key,JSON.stringify(next));}catch(_){dialog.querySelector('.ite-settings-error').textContent='Pengaturan belum tersimpan. Izinkan penyimpanan browser, lalu coba lagi.';return;}window.location.reload();};
+})();
+/* Scene navigation and visual practice. eXe Form and Classify own assessment logic. */
 (()=>{'use strict';
  if(!document.body.classList.contains('exe-export'))return;
  const marker=document.querySelector('[data-lcm-phase]');if(!marker)return;
@@ -173,7 +211,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
  const found=new Set(),ends=[15,45,85,104,120],names=['Materi','Situasi & latihan','Kuis','Pembahasan','Hasil'];
  const safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const brandLogo=document.querySelector('[data-brand-logo]');
- const chrome=document.createElement('div');chrome.className='scene-chrome';chrome.innerHTML=`<div class="scene-identity">${brandLogo?`<img class="scene-brand-logo" src="${safe(brandLogo.src)}" alt="Logo BPS CorpU" width="50" height="52">`:""}<div class="scene-identity-copy"><div class="scene-brand">BPS CORPORATE UNIVERSITY</div><div class="scene-course-title">${safe(title)}</div></div></div><div class="scene-chrome-right"><button type="button" class="scene-fullscreen" aria-label="Buka layar penuh">⛶</button></div>`;document.body.append(chrome);
+ const chrome=document.createElement('div');chrome.className='scene-chrome';chrome.innerHTML=`<div class="scene-identity">${brandLogo?`<img class="scene-brand-logo" src="${safe(brandLogo.src)}" alt="Logo BPS CorpU" width="50" height="52">`:""}<div class="scene-identity-copy"><div class="scene-brand">BPS CORPORATE UNIVERSITY</div><div class="scene-course-title">${safe(title)}</div></div></div><div class="scene-chrome-right"><button type="button" class="ite-settings-open" aria-label="Pengaturan bagian kursus">⚙ <span>Pengaturan</span></button><button type="button" class="scene-fullscreen" aria-label="Buka layar penuh">⛶</button></div>`;document.body.append(chrome);
  const bottom=document.createElement('div');bottom.className='scene-bottom';bottom.innerHTML=`<nav class="scene-progress" aria-label="Progres pengalaman">${names.map((n,i)=>`<button type="button" data-scene-phase="${i}" aria-label="${n}">${i+1}</button>`).join('')}<span class="scene-progress-label"></span></nav><span class="scene-next-note"></span><div class="scene-clock" hidden><span></span><small>SISA WAKTU</small></div><button type="button" class="scene-next"></button>`;document.body.append(bottom);
  const back=document.createElement('button');back.className='scene-arena-back';back.type='button';back.textContent='← Kembali ke kasus';back.hidden=true;document.body.append(back);
  function say(message){document.querySelector('.scene-announcement')?.remove();const box=document.createElement('div');box.className='scene-announcement';box.setAttribute('role','status');box.textContent=message;document.body.append(box);clearTimeout(toastTimer);toastTimer=setTimeout(()=>box.remove(),5000);}
@@ -244,24 +282,30 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
    }
    phase=next;arena=false;document.body.dataset.scenePhase=phase;
    articles.forEach(a=>{a.hidden=Number(a.dataset.scenePanel)!==phase||a.classList.contains('scene-native-arena');});back.hidden=true;
-   bottom.querySelectorAll('button[data-scene-phase]').forEach((b,i)=>{b.disabled=false;b.setAttribute('aria-current',i===phase?'step':'false');});
+   let visibleStep=0;bottom.querySelectorAll('button[data-scene-phase]').forEach((b,i)=>{b.hidden=(i===3&&!window.iteSections.enabled('review'))||(i===1&&!['video','situations','wordSearch','dragWords','sortParagraphs','hotspot','concept','case'].some(window.iteSections.enabled));if(!b.hidden)b.textContent=String(++visibleStep);b.disabled=false;b.setAttribute('aria-current',i===phase?'step':'false');});
    bottom.querySelector('.scene-progress-label').textContent=names[phase];
-   const nextBtn=bottom.querySelector('.scene-next');nextBtn.hidden=phase===0||phase===4||(phase===1&&document.querySelector('.dnd-challenge')?.dataset.complete!=='true');nextBtn.disabled=false;
-   nextBtn.textContent=phase===1?'Lanjut ke kuis →':phase===2?'Lihat pembahasan →':'Lihat hasil →';
+   const nextBtn=bottom.querySelector('.scene-next');nextBtn.hidden=phase===0||phase===4||(phase===1&&!practiceDone());nextBtn.disabled=false;
+   nextBtn.textContent=phase===2&&!window.iteSections.enabled('review')?'Lihat hasil →':phase===1?'Lanjut ke kuis →':phase===2?'Lihat pembahasan →':'Lihat hasil →';
    bottom.querySelector('.scene-next-note').textContent=timed?'Selesaikan sesuai urutan.':'';
    resizeForm();result();if(phase===3)review();
    if(focus){const heading=articles.find(a=>Number(a.dataset.scenePanel)===phase)?.querySelector('h2');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}}
  }
- function practiceDone(){return document.querySelector('.lesson-root')?.dataset.complete==='true'&&document.querySelector('.sim-root')?.dataset.complete==='true'&&document.querySelector('.dnd-challenge')?.dataset.complete==='true';}
- function canMove(target){if(target>0&&document.querySelector('.lesson-root')?.dataset.complete!=='true'){say('Pelajari materi awal dan jawab cek pemahamannya terlebih dahulu.');return false;}if(target>1&&!practiceDone()){say('Selesaikan seluruh tahap tantangan terlebih dahulu.');return false;}if(target>2&&(!check())){say('Jawab kedua pertanyaan terlebih dahulu.');return false;}return true;}
- function clock(){const box=bottom.querySelector('.scene-clock'),span=box.querySelector('span'),small=box.querySelector('small');box.hidden=!timed;if(!timed)return;const left=Math.max(0,120-Math.floor((Date.now()-start)/1000));span.textContent=String(Math.floor(left/60)).padStart(2,'0')+':'+String(left%60).padStart(2,'0');small.textContent='SISA WAKTU';if(left===0){clearInterval(interval);timed=false;small.textContent='WAKTU SELESAI';say('Waktu 2 menit sudah habis. Latihan tetap bisa dilanjutkan.');show(phase,false);}}
+ function practiceDone(){return window.iteSections.learningReady()&&window.iteSections.routeReady;}
+ function canMove(target){if(target>0&&!window.iteSections.learningReady()){say('Pelajari materi awal dan jawab cek pemahamannya terlebih dahulu.');return false;}if(target>1&&!practiceDone()){say('Selesaikan seluruh tahap tantangan terlebih dahulu.');return false;}if(target>2&&(!check())){say('Jawab kedua pertanyaan terlebih dahulu.');return false;}return true;}
+ let settingsOpened=0;
+ document.addEventListener('ite-settings-open',()=>{settingsOpened=Date.now();});
+ document.addEventListener('ite-settings-close',()=>{if(settingsOpened&&timed)start+=Date.now()-settingsOpened;settingsOpened=0;});
+ function clock(){if(settingsOpened)return;const box=bottom.querySelector('.scene-clock'),span=box.querySelector('span'),small=box.querySelector('small');box.hidden=!timed;if(!timed)return;const left=Math.max(0,120-Math.floor((Date.now()-start)/1000));span.textContent=String(Math.floor(left/60)).padStart(2,'0')+':'+String(left%60).padStart(2,'0');small.textContent='SISA WAKTU';if(left===0){clearInterval(interval);timed=false;small.textContent='WAKTU SELESAI';say('Waktu 2 menit sudah habis. Latihan tetap bisa dilanjutkan.');show(phase,false);}}
  let pendingVideoTimer=false;
- document.addEventListener('lcm-lesson-finish',e=>{document.querySelector('.scene-announcement')?.remove();pendingVideoTimer=Boolean(e.detail?.timed);timed=false;clearInterval(interval);show(1);clock();});
- document.addEventListener('lcm-video-finish',()=>{timed=pendingVideoTimer;pendingVideoTimer=false;clearInterval(interval);start=Date.now();clock();if(timed)interval=setInterval(clock,250);});
+ document.addEventListener('lcm-lesson-finish',e=>{document.querySelector('.scene-announcement')?.remove();pendingVideoTimer=Boolean(e.detail?.timed);timed=false;clearInterval(interval);show(1);clock();if(!window.iteSections.enabled('video'))document.dispatchEvent(new Event('ite-start-practice-timer'));});
+ function startPracticeTimer(){timed=pendingVideoTimer;pendingVideoTimer=false;clearInterval(interval);start=Date.now();clock();if(timed)interval=setInterval(clock,250);}
+ document.addEventListener('lcm-video-finish',startPracticeTimer);document.addEventListener('ite-start-practice-timer',startPracticeTimer);
  document.addEventListener('lcm-simulation-finish',()=>show(1,false));
- bottom.querySelector('.scene-next').onclick=()=>{const next=Math.min(4,phase+1);if(canMove(next))show(next);};
+ bottom.querySelector('.scene-next').onclick=()=>{const next=phase===2&&!window.iteSections.enabled('review')?4:Math.min(4,phase+1);if(canMove(next))show(next);};
  bottom.querySelector('nav').onclick=e=>{const b=e.target.closest('[data-scene-phase]');if(!b)return;const next=Number(b.dataset.scenePhase);if(canMove(next))show(next);};
+ document.addEventListener('ite-route-finish',()=>{if(practiceDone())show(2);});
  document.addEventListener('lcm-practice-complete',()=>{say('Latihan selesai. Berikutnya ada dua pertanyaan untuk memeriksa pemahaman Anda.');show(1,false);});
+ chrome.querySelector('.ite-settings-open').onclick=()=>window.iteSections.open();
  chrome.querySelector('.scene-fullscreen').onclick=()=>{if(document.fullscreenElement)document.exitFullscreen?.();else document.documentElement.requestFullscreen?.().catch(()=>say('Gunakan tombol layar penuh pada browser Anda.'));};
  document.querySelector('[data-scene-action="restart"]')?.addEventListener('click',()=>window.location.reload());
  show(0,false);
@@ -345,6 +389,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
  if(!document.body.classList.contains('exe-export'))return;
  const lesson=document.querySelector('.lesson-root'),config=document.querySelector('.lesson-config'),sim=document.querySelector('.sim-root');if(!lesson||!config||!sim)return;
  const cfg=JSON.parse(config.textContent),cid=sim.dataset.course,content=lesson.querySelector('.lesson-content'),view=sim.querySelector('.sim-content');
+ cfg.lessons=cfg.lessons.filter(l=>window.iteSections.enabled('theory')||(l.mode==='check'&&window.iteSections.enabled('check'))).map(l=>({...l,mode:l.mode==='check'&&!window.iteSections.enabled('check')?'theory':l.mode}));
  const art=Object.fromEntries([...document.querySelectorAll('[data-dnd-art]')].map(i=>[i.dataset.dndArt,i.src]));
  const safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  let page=0,situation=0;const seen=new Set(),examples=new Set(),answers=[null,null],studyAnswers=[null,null,null],checked=new Set();
@@ -353,28 +398,28 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
  function focusHeading(container){const h=container.querySelector('h2');if(h){h.tabIndex=-1;h.focus({preventScroll:true});}}
  function theory(l){return l.body.split(/\n\n/).map((paragraph,i)=>`<p class="lesson-body">${safe(paragraph)} ${(l.paragraph_sources[i]||[]).map(n=>`<a class="lesson-citation" href="${safe(l.references[n-1].url)}" target="_blank" rel="noopener noreferrer" aria-label="Sumber ${n}: ${safe(l.references[n-1].publisher)}">[${n}]</a>`).join(' ')}</p>`).join('');}
  function sources(l){return `<aside class="lesson-sources" aria-label="Sumber materi"><h3>Sumber materi</h3><ol>${l.references.map(r=>`<li><a href="${safe(r.url)}" target="_blank" rel="noopener noreferrer">${safe(r.publisher)} · ${safe(r.title)} (${safe(r.year)})</a><p>${safe(r.section)}</p></li>`).join('')}</ol><p>${safe(l.module_reference)}</p><p class="lesson-source-note">Rujukan daring diperiksa pada ${safe(cfg.source_checked)}.</p></aside>`;}
- function study(){const l=cfg.lessons[page];seen.add(page);const correct=checked.has(page)&&studyAnswers[page]===l.correct;
+ function study(){const l=cfg.lessons[page];seen.add(page);const correct=l.mode!=='check'||(checked.has(page)&&studyAnswers[page]===l.correct);
   const check=l.mode==='check'?`<form class="simple-check"><fieldset><legend>${safe(l.prompt)}</legend><p>Pilih satu jawaban, lalu tekan <strong>Periksa jawaban</strong>.</p>${l.options.map((o,i)=>`<label><input type="radio" name="lesson-answer" value="${i}" ${studyAnswers[page]===i?'checked':''}><span>${safe(o)}</span></label>`).join('')}</fieldset><button type="submit" class="simple-check-button">Periksa jawaban</button></form><div class="simple-check-feedback" role="status" ${!checked.has(page)?'hidden':''}>${checked.has(page)?safe(correct?l.feedback:'Jawaban ini belum sesuai dengan kasus. Coba pilihan lain.'):''}</div>`:'';
-  content.innerHTML=`<div class="simple-lesson-layout"><div class="simple-lesson-art"><img src="${safe(art[imageFor(page)])}" alt=""></div><article class="simple-lesson-copy"><h2>${safe(l.title)}</h2>${theory(l)}${sources(l)}<button type="button" class="simple-example-button" aria-expanded="${examples.has(page)}" aria-controls="lesson-example" data-simple-example>${examples.has(page)?'Tutup contoh':'Lihat contoh'}</button><div id="lesson-example" class="simple-example" ${examples.has(page)?'':'hidden'}><strong>Contoh simulasi</strong><p>${safe(l.example)}</p><p class="lesson-example-note">${safe(l.example_note)}</p></div>${check}</article></div>`;
-  lesson.querySelector('.lesson-count').textContent='Materi '+(page+1)+' dari '+cfg.lessons.length;lesson.querySelector('[data-lesson-action=prev]').disabled=page===0;lesson.querySelector('[data-lesson-action=next]').hidden=page===cfg.lessons.length-1;lesson.querySelector('.lesson-launch').hidden=page!==cfg.lessons.length-1;lesson.querySelector('.scene-free').disabled=page===cfg.lessons.length-1&&!correct;
-  lesson.querySelector('.lesson-study-header span:last-child').textContent=page===cfg.lessons.length-1?'CEK PEMAHAMAN':'MATERI AWAL';content.scrollTop=0;
+  content.innerHTML=`<div class="simple-lesson-layout"><div class="simple-lesson-art"><img src="${safe(art[imageFor(page)])}" alt=""></div><article class="simple-lesson-copy"><h2>${safe(window.iteSections.enabled('theory')?l.title:'Cek pemahaman')}</h2>${window.iteSections.enabled('theory')?theory(l)+sources(l):''}<button type="button" class="simple-example-button" ${window.iteSections.enabled('theory')?'':'hidden'} aria-expanded="${examples.has(page)}" aria-controls="lesson-example" data-simple-example>${examples.has(page)?'Tutup contoh':'Lihat contoh'}</button><div id="lesson-example" class="simple-example" ${examples.has(page)?'':'hidden'}><strong>Contoh simulasi</strong><p>${safe(l.example)}</p><p class="lesson-example-note">${safe(l.example_note)}</p></div>${check}</article></div>`;
+  lesson.querySelector('.lesson-count').textContent='Materi '+(page+1)+' dari '+cfg.lessons.length;lesson.querySelector('[data-lesson-action=prev]').disabled=page===0;lesson.querySelector('[data-lesson-action=next]').hidden=page===cfg.lessons.length-1;lesson.querySelector('.lesson-launch').hidden=page!==cfg.lessons.length-1;lesson.querySelector('.scene-free').disabled=page===cfg.lessons.length-1&&!correct;lesson.querySelector('.scene-free').textContent=window.iteSections.nextLabel('learning');
+  lesson.querySelector('.lesson-study-header span:last-child').textContent=l.mode==='check'?'CEK PEMAHAMAN':'MATERI AWAL';content.scrollTop=0;
  }
- lesson.querySelector('.lesson-open').onclick=()=>{document.querySelector('.scene-announcement')?.remove();lesson.querySelector('.lesson-cover').hidden=true;lesson.querySelector('.lesson-study').hidden=false;study();focusHeading(content);};
+ lesson.querySelector('.lesson-open').onclick=()=>{document.querySelector('.scene-announcement')?.remove();if(!cfg.lessons.length){document.dispatchEvent(new CustomEvent('lcm-lesson-finish',{detail:{timed:false}}));return;}lesson.querySelector('.lesson-cover').hidden=true;lesson.querySelector('.lesson-study').hidden=false;study();focusHeading(content);};
  lesson.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
   if(b.dataset.lessonAction){page=Math.max(0,Math.min(cfg.lessons.length-1,page+(b.dataset.lessonAction==='next'?1:-1)));study();focusHeading(content);}
   if(b.hasAttribute('data-simple-example')){const box=content.querySelector('#lesson-example');box.hidden=!box.hidden;b.setAttribute('aria-expanded',String(!box.hidden));b.textContent=box.hidden?'Lihat contoh':'Tutup contoh';if(box.hidden)examples.delete(page);else examples.add(page);}
-  if(b.classList.contains('scene-free')){const l=cfg.lessons[page];if(seen.size!==cfg.lessons.length||!checked.has(page)||studyAnswers[page]!==l.correct)return;lesson.dataset.complete='true';document.dispatchEvent(new CustomEvent('lcm-lesson-finish',{detail:{timed:Boolean(lesson.querySelector('#simple-timer')?.checked)}}));}
+  if(b.classList.contains('scene-free')){const l=cfg.lessons[page];if(seen.size!==cfg.lessons.length||(l.mode==='check'&&(!checked.has(page)||studyAnswers[page]!==l.correct)))return;lesson.dataset.complete='true';document.dispatchEvent(new CustomEvent('lcm-lesson-finish',{detail:{timed:Boolean(lesson.querySelector('#simple-timer')?.checked)}}));}
  });
  lesson.addEventListener('change',e=>{if(!e.target.matches('input[name="lesson-answer"]'))return;studyAnswers[page]=Number(e.target.value);checked.delete(page);content.querySelector('.simple-check-feedback').hidden=true;lesson.querySelector('.scene-free').disabled=true;});
  lesson.addEventListener('submit',e=>{if(!e.target.matches('.simple-check'))return;e.preventDefault();const feedback=content.querySelector('.simple-check-feedback');feedback.hidden=false;if(studyAnswers[page]===null){feedback.textContent='Pilih satu jawaban terlebih dahulu.';return;}checked.add(page);const right=studyAnswers[page]===cfg.lessons[page].correct;feedback.textContent=right?cfg.lessons[page].feedback:'Jawaban ini belum sesuai. Baca lagi penjelasannya, lalu periksa pilihan lain.';feedback.dataset.correct=String(right);lesson.querySelector('.scene-free').disabled=!right;feedback.scrollIntoView({block:'nearest'});});
  function situationView(){const c=cases[situation],selected=answers[situation],result=selected===null?null:c.options[selected];sim.dataset.mode='simple';sim.dataset.case=String(situation);
   view.innerHTML=`<div class="simple-situation-count">Situasi ${situation+1} dari ${cases.length}</div><div class="simple-situation-layout"><div class="simple-situation-art"><img src="${safe(art[c.image])}" alt=""></div><article class="simple-situation-copy"><h2>${safe(c.title)}</h2><p class="simple-situation-body">${safe(c.body)}</p>${c.snippet?`<div class="simple-message-detail">${safe(c.snippet)}</div>`:''}<fieldset class="simple-actions"><legend>${safe(c.prompt)}</legend><p>Pilih tindakan yang akan Anda ambil.</p>${c.options.map((o,i)=>`<button type="button" data-simple-choice="${i}" aria-pressed="${selected===i}"><span class="simple-choice-mark" aria-hidden="true">${selected===i?'●':'○'}</span><span>${safe(o.label)}</span></button>`).join('')}</fieldset><div class="simple-consequence" role="status" ${result?'':'hidden'} data-good="${result?result.good:''}">${result?`<span>YANG TERJADI</span><h3>${safe(result.title)}</h3><p>${safe(result.body)}</p><span class="simple-retry-hint">Pilih tindakan satunya jika ingin membandingkan hasilnya.</span>`:''}</div></article></div>`;
-  sim.querySelector('[data-simple-sim=back]').disabled=situation===0;const next=sim.querySelector('[data-simple-sim=next]');next.disabled=selected===null;next.textContent=situation===cases.length-1?'Temukan istilah →':'Situasi berikutnya →';
+  sim.querySelector('[data-simple-sim=back]').disabled=situation===0;const next=sim.querySelector('[data-simple-sim=next]');next.disabled=selected===null;next.textContent=situation===cases.length-1?window.iteSections.nextLabel('situations'):'Situasi berikutnya →';
  }
  sim.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
   if(b.dataset.simpleChoice!==undefined){answers[situation]=Number(b.dataset.simpleChoice);const scroll=sim.querySelector('.sim-scroll'),y=scroll.scrollTop;situationView();scroll.scrollTop=y;view.querySelector(`[data-simple-choice="${answers[situation]}"]`).focus({preventScroll:true});view.querySelector('.simple-consequence').scrollIntoView({block:'nearest'});}
   if(b.dataset.simpleSim==='back'){situation=Math.max(0,situation-1);situationView();sim.querySelector('.sim-scroll').scrollTop=0;focusHeading(view);}
-  if(b.dataset.simpleSim==='next'){if(answers[situation]===null)return;if(situation<cases.length-1){situation++;situationView();sim.querySelector('.sim-scroll').scrollTop=0;focusHeading(view);}else if(answers.every(a=>a!==null)){sim.dataset.complete='true';sim.hidden=true;document.querySelector('.word-root').hidden=false;document.dispatchEvent(new CustomEvent('lcm-simulation-finish'));}}
+  if(b.dataset.simpleSim==='next'){if(answers[situation]===null)return;if(situation<cases.length-1){situation++;situationView();sim.querySelector('.sim-scroll').scrollTop=0;focusHeading(view);}else if(answers.every(a=>a!==null)){sim.dataset.complete='true';sim.hidden=true;document.dispatchEvent(new CustomEvent('lcm-simulation-finish'));}}
  });
  situationView();
 })();
@@ -384,7 +429,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
  const root=document.querySelector('.word-root'),node=document.querySelector('.word-config');if(!root||!node)return;
  const cfg=JSON.parse(node.textContent),found=new Set(),revealed=new Set(),hinted=new Set();let activeHint=null,origin=null,start=null,dragging=false,moved=false;
  const safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- root.innerHTML=`<div class="word-scroll"><header class="word-heading"><span class="scene-eyebrow">FIND THE WORDS · LATIHAN ISTILAH</span><h2>Temukan istilah yang baru Anda pelajari.</h2><p>Baca petunjuk untuk menentukan istilahnya. Pilih huruf pertama lalu huruf terakhir, atau seret sepanjang kata. Baca dari kiri ke kanan atau dari atas ke bawah.</p><p class="word-optional">Latihan ini tidak menambah nilai. Anda boleh melanjutkan ke latihan berikutnya kapan saja.</p></header><div class="word-layout"><div><div class="word-board" role="group" aria-label="Kotak pencarian kata, ${cfg.grid.length} baris dan ${cfg.grid[0].length} kolom">${cfg.grid.map((row,r)=>row.split('').map((letter,c)=>`<button type="button" class="word-cell" data-word-cell="${r},${c}" aria-label="Baris ${r+1}, kolom ${c+1}: ${letter}" tabindex="${r===0&&c===0?'0':'-1'}">${letter}</button>`).join('')).join('')}</div><p class="word-keyboard">Keyboard: panah untuk berpindah, Enter untuk memilih awal dan akhir, Esc untuk membatalkan.</p></div><aside class="word-vocabulary"><h3>Petunjuk pencarian</h3><p class="word-progress" role="status"></p><ul>${cfg.words.map((w,i)=>`<li data-word-entry="${safe(w.term)}"><span class="word-clue-number">Petunjuk ${i+1} · ${w.term.length} huruf</span><span class="word-definition">${safe(w.clue)}</span><button class="word-hint" type="button" data-word-hint="${i}" aria-label="Petunjuk tambahan untuk soal ${i+1}" aria-pressed="false">Tunjukkan huruf awal</button><span class="word-term"></span><span class="word-state"></span></li>`).join('')}</ul><div class="word-tools"><button type="button" data-word-action="solution">Tampilkan jawaban</button><button type="button" data-word-action="retry">Ulangi</button></div></aside></div><p class="word-feedback" role="status">Baca petunjuknya, lalu cari istilah yang sesuai di papan.</p></div><footer class="word-controls"><button type="button" data-word-action="continue">Lanjut ke Drag the Words →</button></footer>`;
+ root.innerHTML=`<div class="word-scroll"><header class="word-heading"><span class="scene-eyebrow">FIND THE WORDS · LATIHAN ISTILAH</span><h2>Temukan istilah yang baru Anda pelajari.</h2><p>Baca petunjuk untuk menentukan istilahnya. Pilih huruf pertama lalu huruf terakhir, atau seret sepanjang kata. Baca dari kiri ke kanan atau dari atas ke bawah.</p><p class="word-optional">Latihan ini tidak menambah nilai. Anda boleh melanjutkan ke latihan berikutnya kapan saja.</p></header><div class="word-layout"><div><div class="word-board" role="group" aria-label="Kotak pencarian kata, ${cfg.grid.length} baris dan ${cfg.grid[0].length} kolom">${cfg.grid.map((row,r)=>row.split('').map((letter,c)=>`<button type="button" class="word-cell" data-word-cell="${r},${c}" aria-label="Baris ${r+1}, kolom ${c+1}: ${letter}" tabindex="${r===0&&c===0?'0':'-1'}">${letter}</button>`).join('')).join('')}</div><p class="word-keyboard">Keyboard: panah untuk berpindah, Enter untuk memilih awal dan akhir, Esc untuk membatalkan.</p></div><aside class="word-vocabulary"><h3>Petunjuk pencarian</h3><p class="word-progress" role="status"></p><ul>${cfg.words.map((w,i)=>`<li data-word-entry="${safe(w.term)}"><span class="word-clue-number">Petunjuk ${i+1} · ${w.term.length} huruf</span><span class="word-definition">${safe(w.clue)}</span><button class="word-hint" type="button" data-word-hint="${i}" aria-label="Petunjuk tambahan untuk soal ${i+1}" aria-pressed="false">Tunjukkan huruf awal</button><span class="word-term"></span><span class="word-state"></span></li>`).join('')}</ul><div class="word-tools"><button type="button" data-word-action="solution">Tampilkan jawaban</button><button type="button" data-word-action="retry">Ulangi</button></div></aside></div><p class="word-feedback" role="status">Baca petunjuknya, lalu cari istilah yang sesuai di papan.</p></div><footer class="word-controls"><button type="button" data-word-action="continue">${window.iteSections.nextLabel('wordSearch')}</button></footer>`;
  const cells=[...root.querySelectorAll('.word-cell')],feedback=root.querySelector('.word-feedback');
  function point(cell){return cell.dataset.wordCell.split(',').map(Number);}
  function key(p){return p.join(',');}
@@ -436,7 +481,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
   const action=e.target.closest('[data-word-action]')?.dataset.wordAction;
   if(action==='solution'){activeHint=null;cfg.words.forEach(w=>{if(!found.has(w.term))revealed.add(w.term);});start=null;paint();feedback.textContent='Kata yang belum ditemukan ditandai sebagai bantuan. Temuan dengan bantuan tidak dihitung sebagai temuan sendiri.';}
   if(action==='retry'){found.clear();revealed.clear();hinted.clear();activeHint=null;start=null;paint();feedback.textContent='Papan diulang. Cari kembali istilah berdasarkan petunjuk.';}
-  if(action==='continue'){root.hidden=true;document.querySelector('.dt-root').hidden=false;document.dispatchEvent(new CustomEvent('lcm-wordsearch-finish'));}
+  if(action==='continue'){root.hidden=true;document.dispatchEvent(new CustomEvent('lcm-wordsearch-finish'));}
  });
  root.addEventListener('pointerdown',e=>{const cell=e.target.closest('.word-cell');if(!cell||e.button!==0)return;dragging=true;moved=false;root.setPointerCapture(e.pointerId);origin=point(cell);paint([start||origin]);});
  root.addEventListener('pointermove',e=>{if(!dragging)return;const cell=document.elementFromPoint(e.clientX,e.clientY)?.closest('.word-cell');if(!cell||!root.contains(cell))return;const p=point(cell);if(key(p)!==key(origin))moved=true;if(moved){start=origin;paint(path(start,p));}});
@@ -458,7 +503,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
   root.innerHTML=`<div class="dt-scroll"><header class="dt-heading"><span class="scene-eyebrow">DRAG THE WORDS · LENGKAPI KALIMAT</span><h2>Kata mana yang melengkapi kalimat ini?</h2><p>Seret kata ke bagian yang kosong. Anda juga bisa memilih kata, lalu memilih tempatnya. Ada satu kata yang tidak digunakan.</p><p class="dt-optional">Latihan ini tidak menambah nilai. Tekan Periksa jawaban setelah mengisi kalimat, atau lanjutkan ke latihan berikutnya.</p></header><section class="dt-bank" aria-label="Pilihan kata"><h3>Pilihan kata</h3><div class="dt-bank-cards">${cfg.words.filter(w=>positions[w.id]==='bank').map(w=>`<button type="button" class="dt-card" data-dt-card="${safe(w.id)}" aria-pressed="${selected===w.id}">${safe(w.label)}</button>`).join('')||'<span>Semua kata sedang ditempatkan.</span>'}</div><button type="button" class="dt-return" data-dt-target="bank">Kembalikan kata terpilih ke pilihan</button></section><ol class="dt-sentences">${cfg.gaps.map((g,i)=>{
    const id=cfg.words.find(w=>positions[w.id]===g.id)?.id,right=id===g.answer,state=checked?(id?(right?'correct':'wrong'):'empty'):'';
    return `<li data-dt-gap="${safe(g.id)}" data-state="${state}"><p>${safe(g.before)} <span class="dt-slot"><button type="button" class="dt-target ${id?'dt-filled':''}" data-dt-target="${safe(g.id)}" ${id?`data-dt-card="${safe(id)}" aria-pressed="${selected===id}"`:''} aria-label="Kalimat ${i+1}, ${id?safe(label(id)):'bagian kosong'}">${id?safe(label(id)):'Pilih kata'}</button>${id?`<button type="button" class="dt-remove" data-dt-remove="${safe(id)}" aria-label="Kembalikan kata pada kalimat ${i+1}">×</button>`:''}</span> ${safe(g.after)}</p><p class="dt-gap-feedback">${checked?(id?(right?safe(g.feedback):'Kata ini belum sesuai dengan kalimat. Coba pilihan lain.'):'Bagian ini belum diisi.'):assisted?'Jawaban ditampilkan dengan bantuan.':''}</p></li>`;
-  }).join('')}</ol><div class="dt-tools"><button type="button" data-dt-action="undo" ${history.length?'':'disabled'}>Urungkan</button><button type="button" data-dt-action="retry">Ulangi</button><button type="button" data-dt-action="solution">Tampilkan jawaban</button></div><p class="dt-feedback" role="status">Pilih kata yang sesuai dengan makna kalimat.</p></div><footer class="dt-controls"><button type="button" data-dt-action="check">Periksa jawaban</button><button type="button" data-dt-action="continue">Urutkan paragraf →</button></footer>`;
+  }).join('')}</ol><div class="dt-tools"><button type="button" data-dt-action="undo" ${history.length?'':'disabled'}>Urungkan</button><button type="button" data-dt-action="retry">Ulangi</button><button type="button" data-dt-action="solution">Tampilkan jawaban</button></div><p class="dt-feedback" role="status">Pilih kata yang sesuai dengan makna kalimat.</p></div><footer class="dt-controls"><button type="button" data-dt-action="check">Periksa jawaban</button><button type="button" data-dt-action="continue">${window.iteSections.nextLabel('dragWords')}</button></footer>`;
   root.querySelector('.dt-scroll').scrollTop=scroll;
   const correct=cfg.gaps.filter(g=>positions[g.answer]===g.id).length;root.dataset.correct=String(checked?correct:0);root.dataset.complete=String(checked&&correct===cfg.gaps.length&&!assisted);root.dataset.assisted=String(assisted);
  }
@@ -477,7 +522,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
   if(action==='retry'){positions=Object.fromEntries(cfg.words.map(w=>[w.id,'bank']));history=[];selected=null;checked=false;assisted=false;render();message('Kalimat dikosongkan. Coba kembali dari pilihan kata.');}
   if(action==='solution'){history.push({...positions});positions=Object.fromEntries(cfg.words.map(w=>[w.id,'bank']));cfg.gaps.forEach(g=>positions[g.answer]=g.id);assisted=true;checked=false;selected=null;render();message('Jawaban ditampilkan dengan bantuan. Tekan Ulangi jika ingin mengerjakannya sendiri.');}
   if(action==='check'){checked=true;selected=null;render();const count=Number(root.dataset.correct);message(assisted?'Jawaban ini memakai bantuan. Tekan Ulangi untuk mencoba sendiri.':count===cfg.gaps.length?'Ketiga kalimat sudah tepat. Lanjutkan ke latihan berikutnya.':`${count} dari ${cfg.gaps.length} kalimat sudah tepat. Tinjau bagian yang belum sesuai.`);}
-  if(action==='continue'){root.hidden=true;document.querySelector('.sp-root').hidden=false;document.dispatchEvent(new CustomEvent('lcm-dragwords-finish'));}
+  if(action==='continue'){root.hidden=true;document.dispatchEvent(new CustomEvent('lcm-dragwords-finish'));}
  });
  root.addEventListener('keydown',e=>{if(e.key==='Escape'){selected=null;render();message('Pilihan dibatalkan.');}});
  function tick(){if(!drag?.ghost){frame=null;return;}const scroll=root.querySelector('.dt-scroll'),r=scroll.getBoundingClientRect(),speed=drag.y<r.top+55?-9:drag.y>r.bottom-55?9:0;if(speed)scroll.scrollTop+=speed;frame=requestAnimationFrame(tick);}
@@ -497,7 +542,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
  function say(value){root.querySelector('.sp-feedback').textContent=value;}
  function render(focus=null){
   const y=root.querySelector('.sp-scroll')?.scrollTop||0,correct=order.filter((id,i)=>id===cfg.correct_order[i]).length;
-  root.innerHTML=`<div class="sp-scroll"><header class="sp-heading"><span class="scene-eyebrow">SORT THE PARAGRAPHS · SUSUN ALUR CERITA</span><h2>${safe(cfg.title)}</h2><p>Susun empat paragraf ini menjadi cerita yang runtut. Seret pegangannya, atau gunakan tombol Naik dan Turun.</p><p class="sp-optional">Contoh simulasi. Latihan ini tidak menambah nilai; Anda boleh melanjutkan ke praktik kasus kapan saja.</p></header><p class="sp-keyboard">Keyboard: pilih pegangan dengan Enter atau Spasi, gunakan panah atas/bawah, lalu Enter atau Spasi untuk meletakkan. Esc membatalkan.</p><ol class="sp-list" aria-label="Paragraf yang dapat diurutkan">${order.map((id,i)=>`<li class="sp-card" data-sp-id="${safe(id)}" data-state="${checked?(id===cfg.correct_order[i]?'correct':'wrong'):''}"><div class="sp-card-top"><span class="sp-position">Posisi ${i+1} dari ${order.length}</span><button type="button" class="sp-handle" data-sp-handle="${safe(id)}" aria-label="Geser paragraf di posisi ${i+1}" aria-pressed="${grabbed===id}">⠿ <span>Geser</span></button></div><p>${safe(text(id))}</p><div class="sp-movement"><button type="button" data-sp-up="${safe(id)}" aria-label="Naikkan paragraf di posisi ${i+1}" ${i===0?'disabled':''}>↑ Naik</button><button type="button" data-sp-down="${safe(id)}" aria-label="Turunkan paragraf di posisi ${i+1}" ${i===order.length-1?'disabled':''}>↓ Turun</button><span class="sp-state">${checked?(id===cfg.correct_order[i]?'✓ Posisi tepat':'Tinjau urutannya'):assisted?'Urutan ditampilkan dengan bantuan.':''}</span></div></li>`).join('')}</ol><div class="sp-tools"><button type="button" data-sp-action="undo" ${history.length?'':'disabled'}>Urungkan</button><button type="button" data-sp-action="retry">Ulangi</button><button type="button" data-sp-action="solution">Tampilkan urutan</button></div><p class="sp-feedback" role="status">Baca setiap paragraf dan perhatikan hubungannya dengan paragraf lain.</p></div><footer class="sp-controls"><button type="button" data-sp-action="check">Periksa urutan</button><button type="button" data-sp-action="continue">Praktik kasus →</button></footer>`;
+  root.innerHTML=`<div class="sp-scroll"><header class="sp-heading"><span class="scene-eyebrow">SORT THE PARAGRAPHS · SUSUN ALUR CERITA</span><h2>${safe(cfg.title)}</h2><p>Susun empat paragraf ini menjadi cerita yang runtut. Seret pegangannya, atau gunakan tombol Naik dan Turun.</p><p class="sp-optional">Contoh simulasi. Latihan ini tidak menambah nilai; Anda boleh melanjutkan ke praktik kasus kapan saja.</p></header><p class="sp-keyboard">Keyboard: pilih pegangan dengan Enter atau Spasi, gunakan panah atas/bawah, lalu Enter atau Spasi untuk meletakkan. Esc membatalkan.</p><ol class="sp-list" aria-label="Paragraf yang dapat diurutkan">${order.map((id,i)=>`<li class="sp-card" data-sp-id="${safe(id)}" data-state="${checked?(id===cfg.correct_order[i]?'correct':'wrong'):''}"><div class="sp-card-top"><span class="sp-position">Posisi ${i+1} dari ${order.length}</span><button type="button" class="sp-handle" data-sp-handle="${safe(id)}" aria-label="Geser paragraf di posisi ${i+1}" aria-pressed="${grabbed===id}">⠿ <span>Geser</span></button></div><p>${safe(text(id))}</p><div class="sp-movement"><button type="button" data-sp-up="${safe(id)}" aria-label="Naikkan paragraf di posisi ${i+1}" ${i===0?'disabled':''}>↑ Naik</button><button type="button" data-sp-down="${safe(id)}" aria-label="Turunkan paragraf di posisi ${i+1}" ${i===order.length-1?'disabled':''}>↓ Turun</button><span class="sp-state">${checked?(id===cfg.correct_order[i]?'✓ Posisi tepat':'Tinjau urutannya'):assisted?'Urutan ditampilkan dengan bantuan.':''}</span></div></li>`).join('')}</ol><div class="sp-tools"><button type="button" data-sp-action="undo" ${history.length?'':'disabled'}>Urungkan</button><button type="button" data-sp-action="retry">Ulangi</button><button type="button" data-sp-action="solution">Tampilkan urutan</button></div><p class="sp-feedback" role="status">Baca setiap paragraf dan perhatikan hubungannya dengan paragraf lain.</p></div><footer class="sp-controls"><button type="button" data-sp-action="check">Periksa urutan</button><button type="button" data-sp-action="continue">${window.iteSections.nextLabel('sortParagraphs')}</button></footer>`;
   root.querySelector('.sp-scroll').scrollTop=y;root.dataset.correct=String(checked?correct:0);root.dataset.complete=String(checked&&correct===order.length&&!assisted);root.dataset.assisted=String(assisted);
   if(focus)root.querySelector(`[data-sp-handle="${focus}"]`)?.focus({preventScroll:true});
  }
@@ -511,7 +556,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
   if(action==='retry'){order=[...cfg.initial_order];history=[];checked=false;assisted=false;grabbed=null;original=null;render();say('Urutan diulang. Susun kembali alur ceritanya.');}
   if(action==='solution'){history.push([...order]);order=[...cfg.correct_order];checked=false;assisted=true;grabbed=null;render();say('Urutan ditampilkan dengan bantuan. Tekan Ulangi jika ingin menyusunnya sendiri.');}
   if(action==='check'){checked=true;grabbed=null;render();const correct=Number(root.dataset.correct),connections=order.slice(0,-1).filter((id,i)=>cfg.correct_order.indexOf(order[i+1])===cfg.correct_order.indexOf(id)+1).length;root.dataset.connections=String(connections);say(assisted?'Urutan ini memakai bantuan. Tekan Ulangi untuk mencoba sendiri.':correct===order.length?`Urutan sudah runtut. ${cfg.explanation}`:`${correct} dari ${order.length} paragraf berada di posisi tepat. ${connections} dari ${order.length-1} sambungan sudah sesuai. Baca kembali kalimat pembuka dan hubungan antarapagraf.`);}
-  if(action==='continue'){root.hidden=true;document.querySelector('.dnd-challenge').hidden=false;document.dispatchEvent(new CustomEvent('lcm-sortparagraphs-finish'));}
+  if(action==='continue'){root.hidden=true;document.dispatchEvent(new CustomEvent('lcm-sortparagraphs-finish'));}
  });
  root.addEventListener('keydown',e=>{
   const handle=e.target.closest('[data-sp-handle]');if(!handle)return;const id=handle.dataset.spHandle;
@@ -526,51 +571,25 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
  root.addEventListener('pointerup',e=>end(e,false));root.addEventListener('pointercancel',e=>end(e,true));
  render();
 })();
-/* Topic flow: native Form remains the sole owner of the final LMS score. */
+/* Route through enabled ITE activities without marking skipped work complete. */
 (() => {
-  const video = document.querySelector('.iv-root');
-  const hotspot = document.querySelector('.hotspot-root');
-  const checkpoint = document.querySelector('.quiz-set-root');
-  const practice = document.querySelector('.dnd-challenge');
-  if (!video || !hotspot || !checkpoint || !practice) return;
-  function reveal(root) {
-    root.hidden = false;
-    root.querySelector('h2')?.setAttribute('tabindex', '-1');
-    root.querySelector('h2')?.focus({preventScroll:true});
-    root.querySelector('.hotspot-scroll,.quiz-set-scroll')?.scrollTo(0,0);
-  }
-  document.addEventListener('lcm-lesson-finish', () => {
-    document.querySelector('.sim-root').hidden = true;
-    reveal(video);
-  });
-  document.addEventListener('lcm-sortparagraphs-finish', () => {
-    practice.hidden = true;
-    reveal(hotspot);
-  });
-  document.addEventListener('lcm-hotspot-complete', () => {
-    hotspot.querySelector('[data-ite-next]').disabled = false;
-  });
-  hotspot.addEventListener('click', event => {
-    if (event.target.closest('.hotspot-retry')) hotspot.querySelector('[data-ite-next]').disabled = true;
-    if (event.target.closest('[data-ite-next]') && hotspot.dataset.complete === 'true') {
-      hotspot.hidden = true;
-      reveal(checkpoint);
-    }
-  });
-  document.addEventListener('lcm-quiz-complete', () => {
-    checkpoint.querySelector('[data-ite-next]').disabled = false;
-  });
-  checkpoint.addEventListener('click', event => {
-    if (event.target.closest('.quiz-retry')) checkpoint.querySelector('[data-ite-next]').disabled = true;
-    if (event.target.closest('[data-ite-next]') && checkpoint.dataset.complete === 'true') {
-      checkpoint.hidden = true;
-      reveal(practice);
-    }
-  });
-  const media = video.querySelector('video.iv-video');
-  new MutationObserver(() => {
-    if (document.body.dataset.scenePhase !== '1') media?.pause();
-  }).observe(document.body, {attributes:true, attributeFilter:['data-scene-phase']});
+ const api=window.iteSections;
+ const steps=[['video','.iv-root','lcm-video-finish'],['situations','.sim-root','lcm-simulation-finish'],['wordSearch','.word-root','lcm-wordsearch-finish'],['dragWords','.dt-root','lcm-dragwords-finish'],['sortParagraphs','.sp-root','lcm-sortparagraphs-finish'],['hotspot','.hotspot-root',null],['concept','.quiz-set-root',null],['case','.dnd-challenge',null]];
+ function move(after){
+  steps.forEach(([,selector])=>{document.querySelector(selector).hidden=true;});
+  const next=steps.slice(after+1).find(([id])=>api.enabled(id));
+  if(!next){api.routeReady=true;document.dispatchEvent(new Event('ite-route-finish'));return;}
+  const root=document.querySelector(next[1]);root.hidden=false;root.querySelector('.hotspot-scroll,.quiz-set-scroll')?.scrollTo(0,0);
+  const heading=root.querySelector('h2');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}
+ }
+ document.addEventListener('lcm-lesson-finish',()=>move(-1));
+ steps.forEach(([,selector,event],index)=>{
+  if(event)document.addEventListener(event,()=>move(index));
+  const root=document.querySelector(selector);
+  if(index===5||index===6){const button=root.querySelector('[data-ite-next]');button.textContent=api.nextLabel(steps[index][0]);document.addEventListener(index===5?'lcm-hotspot-complete':'lcm-quiz-complete',()=>{button.disabled=false;});root.addEventListener('click',event=>{if(event.target.closest('.hotspot-retry,.quiz-retry'))button.disabled=true;if(event.target.closest('[data-ite-next]')&&root.dataset.complete==='true')move(index);});}
+ });
+ document.addEventListener('lcm-practice-complete',()=>{api.routeReady=true;},true);
+ const media=document.querySelector('video.iv-video');new MutationObserver(()=>{if(document.body.dataset.scenePhase!=='1')media?.pause();}).observe(document.body,{attributes:true,attributeFilter:['data-scene-phase']});
 })();
 });
 /* IT Enterprise course-specific fork: ungraded checkpoint, native Form owns final score.
@@ -668,7 +687,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
       video.pause();
       root.dataset.complete = 'true';
       root.dispatchEvent(new CustomEvent(cfg.completeEvent || 'lcm-video-finish', { bubbles: true }));
-      if (next) { root.hidden = true; next.hidden = false; next.querySelector('button,[tabindex]')?.focus({ preventScroll: true }); }
+      if (next && !window.iteSections) { root.hidden = true; next.hidden = false; next.querySelector('button,[tabindex]')?.focus({ preventScroll: true }); }
     }
 
     video.addEventListener('loadedmetadata', () => {

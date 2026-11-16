@@ -93,7 +93,7 @@
       video.pause();
       root.dataset.complete = 'true';
       root.dispatchEvent(new CustomEvent(cfg.completeEvent || 'lcm-video-finish', { bubbles: true }));
-      if (next) { root.hidden = true; next.hidden = false; next.querySelector('button,[tabindex]')?.focus({ preventScroll: true }); }
+      if (next && !window.iteSections) { root.hidden = true; next.hidden = false; next.querySelector('button,[tabindex]')?.focus({ preventScroll: true }); }
     }
 
     video.addEventListener('loadedmetadata', () => {
