@@ -1,64 +1,83 @@
 {
   "interactive_video": {
-    "title": "Dari hambatan layanan ke rencana TI",
-    "instruction": "Ikuti video visual ini. Pada empat penanda, video berhenti untuk satu pertanyaan. Anda juga bisa memilih penandanya langsung.",
-    "durationLabel": "48 detik · video visual",
-    "source": "content/resources/video/ITE-service-plan.mp4",
+    "title": "IT Enterprise: lima pilar pengelolaan TI",
+    "instruction": "Tonton penjelasan dalam video. Lima penanda membuka pertanyaan sesuai topik yang baru dibahas. Jawaban dan pembahasan tersedia sebelum video dilanjutkan.",
+    "durationLabel": "7 menit 44 detik · 5 pertanyaan",
+    "source": "content/resources/video/ITE-juliandra-ariiq-k.mp4",
     "mime": "video/mp4",
-    "poster": "content/resources/video/ITE-service-plan-poster.webp",
+    "poster": "content/resources/video/ITE-juliandra-poster.webp",
     "nextSelector": ".sim-root",
     "hideNextUntilComplete": true,
     "interactions": [
       {
-        "at": 10,
-        "timeLabel": "0:10",
-        "question": "Nomor permintaan berubah setiap berpindah unit. Apa yang perlu diperbaiki?",
+        "at": 160,
+        "timeLabel": "2:40",
+        "topic": "Strategi TI",
+        "question": "Apa prinsip business–IT alignment yang dijelaskan dalam video?",
         "options": [
-          "Warna beranda aplikasi",
-          "Pengenal bersama lintas unit",
-          "Jumlah ikon menu"
+          "Teknologi dipilih lebih dahulu, lalu organisasi menyesuaikan tujuannya",
+          "Teknologi digunakan untuk memenuhi kebutuhan dan tujuan organisasi",
+          "Semua proses harus diganti dengan aplikasi baru"
         ],
         "correct": 1,
-        "feedback": "Pengenal bersama membuat satu permintaan tetap bisa ditelusuri saat berpindah unit."
+        "feedback": "Video menekankan bahwa teknologi melayani kebutuhan bisnis. Pemetaan kondisi saat ini dan kebutuhan dilakukan sebelum menetapkan target TI."
       },
       {
-        "at": 22,
-        "timeLabel": "0:22",
-        "question": "Pemohon cukup melihat permintaannya sendiri. Aturan akses mana yang sesuai?",
+        "at": 222,
+        "timeLabel": "3:42",
+        "topic": "Tata kelola dan tata laksana",
+        "question": "Manakah yang termasuk tata kelola (governance), bukan pelaksanaan teknis sehari-hari?",
         "options": [
-          "Semua orang melihat semua berkas",
-          "Gunakan satu akun bersama",
-          "Batasi akses berdasarkan peran dan kepemilikan"
-        ],
-        "correct": 2,
-        "feedback": "Akses perlu mengikuti peran dan kebutuhan, termasuk permintaan yang memang menjadi hak pemohon."
-      },
-      {
-        "at": 34,
-        "timeLabel": "0:34",
-        "question": "Aturan nomor dan akses sudah disepakati. Apa langkah berikutnya?",
-        "options": [
-          "Uji pertukaran pada dua unit",
-          "Perluas langsung ke semua unit",
-          "Hitung jumlah aplikasi yang terpasang"
+          "Menetapkan arah, prioritas, aturan, dan tanggung jawab TI",
+          "Menjalankan pencadangan server setiap hari",
+          "Memasang pembaruan aplikasi pada komputer pengguna"
         ],
         "correct": 0,
-        "feedback": "Uji terbatas memeriksa apakah aturan benar-benar dijalankan sebelum cakupannya diperluas."
+        "feedback": "Governance menentukan apa yang harus dicapai, arah, aturan, dan penanggung jawab. Management atau tata laksana menjalankan cara teknis untuk mencapainya."
       },
       {
-        "at": 46,
-        "timeLabel": "0:46",
-        "question": "Apa ukuran yang langsung menunjukkan pemohon menunggu lebih singkat?",
+        "at": 280,
+        "timeLabel": "4:40",
+        "topic": "Enterprise architecture",
+        "question": "Empat lapisan enterprise architecture yang dipaparkan dalam video adalah ...",
         "options": [
-          "Jumlah aplikasi",
-          "Median waktu dari permintaan diterima sampai tabel dikirim",
-          "Jumlah akun petugas"
+          "Pengadaan, pembayaran, inventaris, dan pelaporan",
+          "Server, jaringan, komputer, dan printer",
+          "Bisnis, data, aplikasi, dan teknologi"
+        ],
+        "correct": 2,
+        "feedback": "Empat lapisan dalam video mencakup proses dan layanan bisnis, data, aplikasi pendukung, serta infrastruktur teknologi. EA memperlihatkan hubungan di antaranya."
+      },
+      {
+        "at": 345,
+        "timeLabel": "5:45",
+        "topic": "Gap analysis",
+        "question": "Sebuah aplikasi lama masih sesuai kebutuhan, kinerjanya baik, dan biaya pemeliharaannya wajar. Dalam gap analysis, aplikasi itu masuk kelompok ...",
+        "options": [
+          "Eliminated: dihentikan",
+          "Retained: dipertahankan",
+          "New: dibangun atau disediakan baru"
         ],
         "correct": 1,
-        "feedback": "Waktu penyelesaian mengukur lamanya pemohon menunggu; jumlah aplikasi tidak menjawab pertanyaan itu."
+        "feedback": "Retained berarti aset masih layak dipertahankan. New digunakan untuk kebutuhan yang belum terpenuhi, sedangkan eliminated untuk aset yang tidak lagi memberi nilai atau menghambat kebutuhan organisasi."
+      },
+      {
+        "at": 425,
+        "timeLabel": "7:05",
+        "topic": "Monitoring dan pembiayaan",
+        "question": "Saat menghitung TCO layanan TI, biaya apa yang perlu diperhitungkan?",
+        "options": [
+          "Harga perangkat keras saat pembelian saja",
+          "Biaya lisensi saja, karena perangkat sudah tersedia",
+          "Biaya total kepemilikan, termasuk pemeliharaan, lisensi, dan pengembangan SDM"
+        ],
+        "correct": 2,
+        "feedback": "Video membedakan TCO dari harga beli awal. Total biaya kepemilikan juga mencakup biaya yang timbul selama penggunaan layanan, seperti pemeliharaan, lisensi, dan pengembangan SDM."
       }
     ],
-    "hasAudio": false
+    "hasAudio": true,
+    "durationSeconds": 464.05,
+    "credit": "Video dari berkas pengguna: Juliandra Ariiq K – IT Enterprise (Compressed).mp4"
   },
   "image_hotspot": {
     "title": "Temukan tiga komponen penelusuran",
@@ -118,64 +137,69 @@
     "questions": [
       {
         "id": "concept-1",
-        "question": "Usulan TI mana yang paling jelas berangkat dari kebutuhan layanan?",
+        "question": "Instansi ingin memilih aplikasi sebelum memeriksa kebutuhan layanannya. Apa langkah yang lebih sesuai dengan strategi TI dalam video?",
         "options": [
-          "Membeli aplikasi karena unit lain memilikinya",
-          "Memperbaiki pengenal karena permintaan sulit ditelusuri",
-          "Menambah menu tanpa memeriksa proses"
+          "Kenali tujuan organisasi, petakan kondisi saat ini, lalu tentukan kebutuhan dan target",
+          "Pilih aplikasi yang paling banyak memiliki fitur",
+          "Gunakan teknologi yang sama dengan instansi lain tanpa memeriksa prosesnya"
         ],
-        "correct": 1,
-        "feedback": "Hambatan yang teramati memberi alasan yang bisa diperiksa untuk memilih pekerjaan TI."
+        "correct": 0,
+        "feedback": "Strategi TI berangkat dari kebutuhan dan tujuan organisasi. Teknologi dipilih untuk mendukungnya, bukan menjadi titik awal yang memaksa proses mengikuti alat."
       },
       {
         "id": "concept-2",
-        "question": "Apa peran peta arsitektur dalam kasus ini?",
+        "question": "Tim menyepakati siapa yang berwenang menyetujui perubahan layanan. Kegiatan ini terutama termasuk ...",
         "options": [
-          "Menunjukkan hubungan proses, data, aplikasi dan infrastruktur",
-          "Menggantikan keputusan pemilik layanan",
-          "Menetapkan satu merek aplikasi untuk semua kebutuhan"
+          "Tata laksana: mengerjakan operasi teknis harian",
+          "Tata kelola: menetapkan peran dan tanggung jawab",
+          "TCO: menjumlahkan biaya kepemilikan"
         ],
-        "correct": 0,
-        "feedback": "Hubungan antarkomponen perlu dipahami agar perbaikan pada satu unit tidak memutus alur di unit lain."
+        "correct": 1,
+        "feedback": "Penetapan kewenangan dan tanggung jawab merupakan bagian tata kelola. Pelaksanaan teknis sehari-hari merupakan tata laksana."
       },
       {
         "id": "concept-3",
-        "question": "Aplikasi tersedia hampir sepanjang bulan. Apakah itu membuktikan tabel diterima lebih cepat?",
+        "question": "Pimpinan ingin melihat bagaimana proses layanan berhubungan dengan data, aplikasi, dan infrastrukturnya. Apa yang membantu menjelaskan hubungan tersebut?",
         "options": [
-          "Ya, ketersediaan sama dengan waktu layanan",
-          "Ya, bila jumlah aplikasinya bertambah",
-          "Belum; periksa juga waktu penyelesaian permintaan"
+          "Daftar harga komputer",
+          "Catatan jumlah akun pengguna saja",
+          "Peta enterprise architecture"
         ],
         "correct": 2,
-        "feedback": "Ketersediaan dan waktu penyelesaian menjawab pertanyaan yang berbeda. Periksa ukuran yang sesuai dengan sasaran layanan."
+        "feedback": "EA memetakan lapisan bisnis, data, aplikasi, dan teknologi beserta hubungannya. Tujuannya agar bagian-bagian organisasi tidak berjalan sebagai pulau aplikasi yang terpisah."
       }
     ]
   },
-  "video_scenes": [
-    {
-      "title": "Mulai dari hambatan layanan",
-      "body": "Nomor berubah saat berkas berpindah unit. Akibatnya, petugas sulit menelusuri satu permintaan sampai tabel dikirim.",
-      "image": "cards/ITE-duplicate.webp"
-    },
-    {
-      "title": "Sepakati nomor dan akses",
-      "body": "Gunakan pengenal yang sama lintas unit. Tentukan siapa yang boleh melihat dan memperbarui status permintaan.",
-      "image": "cards/ITE-agree.webp"
-    },
-    {
-      "title": "Uji pada lingkup kecil",
-      "body": "Coba pertukaran pada dua unit. Pastikan nomor tetap sama dan status hanya terlihat oleh pihak yang berwenang.",
-      "image": "cards/ITE-test.webp"
-    },
-    {
-      "title": "Nilai dari sisi pemohon",
-      "body": "Bandingkan waktu penyelesaian sebelum dan sesudah uji. Periksa juga apakah jenis dan beban permintaannya sebanding.",
-      "image": "cards/ITE-review.webp"
-    }
-  ],
   "resource_files": [
     "scenes/ITE-hotspot.webp",
-    "video/ITE-service-plan.mp4",
-    "video/ITE-service-plan-poster.webp"
+    "video/ITE-juliandra-ariiq-k.mp4",
+    "video/ITE-juliandra-poster.webp"
+  ],
+  "video_summary": [
+    {
+      "title": "Strategi TI",
+      "body": "Video menekankan bahwa teknologi melayani kebutuhan bisnis. Pemetaan kondisi saat ini dan kebutuhan dilakukan sebelum menetapkan target TI.",
+      "at": 160
+    },
+    {
+      "title": "Tata kelola dan tata laksana",
+      "body": "Governance menentukan apa yang harus dicapai, arah, aturan, dan penanggung jawab. Management atau tata laksana menjalankan cara teknis untuk mencapainya.",
+      "at": 222
+    },
+    {
+      "title": "Enterprise architecture",
+      "body": "Empat lapisan dalam video mencakup proses dan layanan bisnis, data, aplikasi pendukung, serta infrastruktur teknologi. EA memperlihatkan hubungan di antaranya.",
+      "at": 280
+    },
+    {
+      "title": "Gap analysis",
+      "body": "Retained berarti aset masih layak dipertahankan. New digunakan untuk kebutuhan yang belum terpenuhi, sedangkan eliminated untuk aset yang tidak lagi memberi nilai atau menghambat kebutuhan organisasi.",
+      "at": 345
+    },
+    {
+      "title": "Monitoring dan pembiayaan",
+      "body": "Video membedakan TCO dari harga beli awal. Total biaya kepemilikan juga mencakup biaya yang timbul selama penggunaan layanan, seperti pemeliharaan, lisensi, dan pengembangan SDM.",
+      "at": 425
+    }
   ]
 }

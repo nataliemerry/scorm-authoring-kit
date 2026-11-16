@@ -9,10 +9,12 @@ def activities():
     def block(host, selector, app, key, extra=''):
         data = json.dumps(cfg[key], ensure_ascii=False).replace('<', '\\u003c')
         return f'<section class="{host}" hidden data-complete="false" {extra}><script type="application/json" class="{selector}">{data}</script><div class="{app}"></div></section>'
-    refs = ('<video hidden preload="none" src="content/resources/video/ITE-service-plan.mp4"></video>'
+    refs = (f'<video hidden preload="none" src="{html.escape(cfg["interactive_video"]["source"], quote=True)}"></video>'
+            f'<img hidden src="{html.escape(cfg["interactive_video"]["poster"], quote=True)}" alt="">'
             '<img hidden src="content/resources/scenes/ITE-hotspot.webp" alt="">')
-    transcript = '<details class="ite-transcript"><summary>Baca isi video</summary><ol>' + ''.join(
-        f'<li><strong>{html.escape(s["title"])}</strong><p>{html.escape(s["body"])}</p></li>' for s in cfg['video_scenes']) + '</ol></details>'
+    transcript = '<details class="ite-transcript"><summary>Ringkasan materi video</summary><p>Ringkasan lima topik dalam video, bukan transkrip kata demi kata.</p><ol>' + ''.join(
+        f'<li><strong>{html.escape(s["title"])}</strong><p>{html.escape(s["body"])}</p></li>' for s in cfg['video_summary']) + '</ol></details>'
+    transcript += '<p class="ite-video-credit">' + html.escape(cfg['interactive_video']['credit']) + '</p>'
     video = block('iv-root', 'iv-config', 'iv-app', 'interactive_video')
     video = video.replace('</section>', transcript + '</section>')
     hotspot = block('hotspot-root', 'hotspot-config', 'hotspot-app', 'image_hotspot')

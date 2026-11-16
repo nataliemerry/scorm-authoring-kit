@@ -42,3 +42,5 @@ Then open `http://127.0.0.1:8874/C01/index.html` or C12. The server is local and
 If UI export is unavailable, deliver the ready source/theme and label the actual export pending. A native export included in the baseline bundle is a reference artifact, not a newly exported new-topic course.
 
 Repository release workflow uses scripts/export_exelearning_ui.cjs and scripts/verify_projects.py. Official eXeLearning 4.0.6 may replace iDevice runtime files on export. form-compat.js carries the retained Form text-decoding fix in the authored theme, and scene.css hides internal Form data. Check both on the actual export. Native seed theme files must contain zero scene initializers.
+
+Updating native questions also requires refreshing the Form host, its JSON data and its HTML in any development preview. Merging only Text blocks retains stale answer keys. The repository IT Enterprise preview helper performs this synchronization; final evidence must still come from the actual eXe export.

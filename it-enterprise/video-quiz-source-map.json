@@ -1,0 +1,78 @@
+{
+  "video_sha256": "42971eef5bde060359db0cbb2cf5fff632b711a475f50baca485499e5fc556f2",
+  "review": "Source video slide content and locally inspected time samples; supplied file is the instructional source. Summary is paraphrased, not a verbatim transcript.",
+  "video_questions": [
+    {
+      "at": 160,
+      "time": "2:40",
+      "topic": "Strategi TI",
+      "question": "Apa prinsip business–IT alignment yang dijelaskan dalam video?",
+      "correct_answer": "Teknologi digunakan untuk memenuhi kebutuhan dan tujuan organisasi",
+      "rationale": "Video menekankan bahwa teknologi melayani kebutuhan bisnis. Pemetaan kondisi saat ini dan kebutuhan dilakukan sebelum menetapkan target TI."
+    },
+    {
+      "at": 222,
+      "time": "3:42",
+      "topic": "Tata kelola dan tata laksana",
+      "question": "Manakah yang termasuk tata kelola (governance), bukan pelaksanaan teknis sehari-hari?",
+      "correct_answer": "Menetapkan arah, prioritas, aturan, dan tanggung jawab TI",
+      "rationale": "Governance menentukan apa yang harus dicapai, arah, aturan, dan penanggung jawab. Management atau tata laksana menjalankan cara teknis untuk mencapainya."
+    },
+    {
+      "at": 280,
+      "time": "4:40",
+      "topic": "Enterprise architecture",
+      "question": "Empat lapisan enterprise architecture yang dipaparkan dalam video adalah ...",
+      "correct_answer": "Bisnis, data, aplikasi, dan teknologi",
+      "rationale": "Empat lapisan dalam video mencakup proses dan layanan bisnis, data, aplikasi pendukung, serta infrastruktur teknologi. EA memperlihatkan hubungan di antaranya."
+    },
+    {
+      "at": 345,
+      "time": "5:45",
+      "topic": "Gap analysis",
+      "question": "Sebuah aplikasi lama masih sesuai kebutuhan, kinerjanya baik, dan biaya pemeliharaannya wajar. Dalam gap analysis, aplikasi itu masuk kelompok ...",
+      "correct_answer": "Retained: dipertahankan",
+      "rationale": "Retained berarti aset masih layak dipertahankan. New digunakan untuk kebutuhan yang belum terpenuhi, sedangkan eliminated untuk aset yang tidak lagi memberi nilai atau menghambat kebutuhan organisasi."
+    },
+    {
+      "at": 425,
+      "time": "7:05",
+      "topic": "Monitoring dan pembiayaan",
+      "question": "Saat menghitung TCO layanan TI, biaya apa yang perlu diperhitungkan?",
+      "correct_answer": "Biaya total kepemilikan, termasuk pemeliharaan, lisensi, dan pengembangan SDM",
+      "rationale": "Video membedakan TCO dari harga beli awal. Total biaya kepemilikan juga mencakup biaya yang timbul selama penggunaan layanan, seperti pemeliharaan, lisensi, dan pengembangan SDM."
+    }
+  ],
+  "concept_question_topics": [
+    "Business–IT alignment",
+    "Governance versus management",
+    "Enterprise architecture"
+  ],
+  "final_quiz_topics": [
+    "Gap analysis: eliminated assets",
+    "SLA: agreed service availability"
+  ],
+  "score_policy": "Only two native final questions grade the LMS: 0/50/100. Video and concept checks are formative.",
+  "final_questions": [
+    {
+      "question": "Dalam analisis kesenjangan, sebuah aplikasi sudah tidak relevan dengan kebutuhan organisasi, mahal dipelihara, dan menghambat integrasi. Kelompok apa yang paling sesuai menurut video?",
+      "options": [
+        "A. Retained: tetap dipertahankan",
+        "B. New: dijadikan kebutuhan baru",
+        "C. Eliminated: dihentikan penggunaannya"
+      ],
+      "answer_key": "C",
+      "feedback": "Video menempatkan aset yang tidak lagi relevan, tidak efisien, atau menghambat integrasi dalam kelompok eliminated."
+    },
+    {
+      "question": "Layanan TI dijanjikan tersedia 99,9% sesuai kesepakatan. Dalam video, janji tingkat layanan ini disebut ...",
+      "options": [
+        "A. SLA: Service Level Agreement",
+        "B. TCO: Total Cost of Ownership",
+        "C. Enterprise architecture"
+      ],
+      "answer_key": "A",
+      "feedback": "SLA merupakan kesepakatan atau janji tingkat layanan, contohnya ketersediaan 99,9%. TCO membahas biaya total kepemilikan, sedangkan EA memetakan hubungan komponen organisasi dan TI."
+    }
+  ]
+}

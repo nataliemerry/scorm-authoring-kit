@@ -1,11 +1,16 @@
 {
   "status": "passed",
   "date": "2026-11-16",
-  "canonical_files": 241,
+  "canonical_files": 245,
   "copied_to": "D:\\Pusdiklat\\Falana\\LCM\\exelearning\\it-enterprise",
   "source_and_target_bytes_identical": true,
   "preview_matches_native_export": true,
-  "backup": "D:\\Pusdiklat\\Falana\\LCM\\docs\\audits\\it-enterprise-template-2026-11-16\\before-extended-sync-011119.zip",
-  "package_sha256": "71c1c4f5a9f2b2681102f838fb7ed1c0c9f95962e7f42c7d8477ca8430ec7782",
-  "encoding_fix_verified": true
+  "backup": "D:\\Pusdiklat\\Falana\\LCM\\docs\\audits\\it-enterprise-video-2026-11-16\\before-sync-080112.zip",
+  "package_sha256": "8033d517d4a82b749cc252c8e4a9d723d5e1cde9fb65ca0be57d7c26ffd5e653",
+  "source_video_sha256": "42971eef5bde060359db0cbb2cf5fff632b711a475f50baca485499e5fc556f2",
+  "quiz_questions": {
+    "video": 5,
+    "concept": 3,
+    "native": 2
+  }
 }

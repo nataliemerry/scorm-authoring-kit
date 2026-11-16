@@ -111,8 +111,8 @@
       {
         "course": "ITE",
         "archive": "IT_Enterprise_SCORM12.zip",
-        "bytes": 3301942,
-        "sha256": "71c1c4f5a9f2b2681102f838fb7ed1c0c9f95962e7f42c7d8477ca8430ec7782",
+        "bytes": 62204510,
+        "sha256": "8033d517d4a82b749cc252c8e4a9d723d5e1cde9fb65ca0be57d7c26ffd5e653",
         "sco_count": 1,
         "manifest_files_valid": true,
         "bundled_fonts": 2,
@@ -159,10 +159,10 @@
     },
     "review_matches_baseline": true,
     "original_logo_and_fonts_match": true,
-    "native_export_sha256": "71c1c4f5a9f2b2681102f838fb7ed1c0c9f95962e7f42c7d8477ca8430ec7782",
+    "native_export_sha256": "8033d517d4a82b749cc252c8e4a9d723d5e1cde9fb65ca0be57d7c26ffd5e653",
     "actual_export_and_preview_verified": true,
     "qa_report": "simple-experience-report.json",
-    "profile": "LCM baseline + IT Enterprise video/hotspot/ungraded question-set extension; native Form final grading",
+    "profile": "User-supplied IT Enterprise video with audio + five formative markers; native Form final scoring",
     "topic_adaptations": [
       "IT Enterprise title and objective",
       "sourced IT Enterprise lessons and situations",
@@ -171,16 +171,20 @@
     "legacy_copy": "D:\\Pusdiklat\\Falana\\LCM\\exelearning\\it-enterprise",
     "lms_limit": "Mock API only; live GOJAGS not tested.",
     "extensions": {
-      "video_questions": 4,
-      "video_duration_seconds": 48,
+      "video_questions": 5,
+      "video_duration_seconds": 464.05,
       "hotspot_regions": 4,
       "hotspot_required": 3,
       "ungraded_concept_questions": 3,
-      "illustrated_case_cards": 10
+      "illustrated_case_cards": 10,
+      "video_audio": true
     },
-    "theme": "lcm-scenes-it-enterprise-enhanced-20261116",
+    "theme": "lcm-scenes-it-enterprise-juliandra-video-20261116",
     "media_provenance": "media-provenance.json",
-    "encoding_fix": "Sequence labels use 1., 2., 3.; corrupted separator and instruction range removed."
+    "encoding_fix": "Sequence labels use 1., 2., 3.; corrupted separator and instruction range removed.",
+    "source_video_sha256": "42971eef5bde060359db0cbb2cf5fff632b711a475f50baca485499e5fc556f2",
+    "quiz_source_map": "video-quiz-source-map.json",
+    "timer_start": "After video completion"
   },
   "scope_dates": {
     "baseline_and_other_native_courses": "2026-11-15",

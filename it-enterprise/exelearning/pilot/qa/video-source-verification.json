@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "date": "2026-11-16",
+  "original_video_bytes": 59753424,
+  "original_video_sha256": "42971eef5bde060359db0cbb2cf5fff632b711a475f50baca485499e5fc556f2",
+  "native_video_identical_to_user_file": true,
+  "video_duration_seconds": 464.05,
+  "has_audio": true,
+  "video_questions": 5,
+  "concept_questions": 3,
+  "native_final_questions": 2,
+  "source_map": "video-quiz-source-map.json",
+  "native_export_sha256": "8033d517d4a82b749cc252c8e4a9d723d5e1cde9fb65ca0be57d7c26ffd5e653",
+  "timer_starts_after_video": true
+}

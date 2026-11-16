@@ -14,10 +14,10 @@
     },
     "review_matches_baseline": true,
     "original_logo_and_fonts_match": true,
-    "native_export_sha256": "71c1c4f5a9f2b2681102f838fb7ed1c0c9f95962e7f42c7d8477ca8430ec7782",
+    "native_export_sha256": "8033d517d4a82b749cc252c8e4a9d723d5e1cde9fb65ca0be57d7c26ffd5e653",
     "actual_export_and_preview_verified": true,
     "qa_report": "simple-experience-report.json",
-    "profile": "LCM baseline + IT Enterprise video/hotspot/ungraded question-set extension; native Form final grading",
+    "profile": "User-supplied IT Enterprise video with audio + five formative markers; native Form final scoring",
     "topic_adaptations": [
       "IT Enterprise title and objective",
       "sourced IT Enterprise lessons and situations",
@@ -26,26 +26,30 @@
     "legacy_copy": "D:\\Pusdiklat\\Falana\\LCM\\exelearning\\it-enterprise",
     "lms_limit": "Mock API only; live GOJAGS not tested.",
     "extensions": {
-      "video_questions": 4,
-      "video_duration_seconds": 48,
+      "video_questions": 5,
+      "video_duration_seconds": 464.05,
       "hotspot_regions": 4,
       "hotspot_required": 3,
       "ungraded_concept_questions": 3,
-      "illustrated_case_cards": 10
+      "illustrated_case_cards": 10,
+      "video_audio": true
     },
-    "theme": "lcm-scenes-it-enterprise-enhanced-20261116",
+    "theme": "lcm-scenes-it-enterprise-juliandra-video-20261116",
     "media_provenance": "media-provenance.json",
-    "encoding_fix": "Sequence labels use 1., 2., 3.; corrupted separator and instruction range removed."
+    "encoding_fix": "Sequence labels use 1., 2., 3.; corrupted separator and instruction range removed.",
+    "source_video_sha256": "42971eef5bde060359db0cbb2cf5fff632b711a475f50baca485499e5fc556f2",
+    "quiz_source_map": "video-quiz-source-map.json",
+    "timer_start": "After video completion"
   },
   "structure": {
     "status": "passed",
     "platform": "eXeLearning 4.0.6, official static browser distribution",
-    "size": 3301942,
-    "sha256": "71c1c4f5a9f2b2681102f838fb7ed1c0c9f95962e7f42c7d8477ca8430ec7782",
+    "size": 62204510,
+    "sha256": "8033d517d4a82b749cc252c8e4a9d723d5e1cde9fb65ca0be57d7c26ffd5e653",
     "sco_count": 1,
     "illustrations": 15,
     "illustrated_case_cards": 10,
-    "video_questions": 4,
+    "video_questions": 5,
     "hotspot_correct_regions": 3,
     "ungraded_concept_questions": 3,
     "fonts": 2,
@@ -55,19 +59,21 @@
   "media": {
     "date": "2026-11-16",
     "video": {
-      "file": "assets/video/ITE-service-plan.mp4",
-      "sha256": "4dd97b6739794b88a7ddc3eb60f980f6786b45614756e0e3ba7b6ffd98afd4cc",
-      "bytes": 919140,
-      "duration_seconds": 48,
-      "audio": false,
-      "method": "Local FFmpeg visual lesson, four generated-art scenes, BPS local fonts",
-      "generator": "scripts/build_learning_video.py",
-      "script": "data/enhanced_interactions.json:video_scenes",
-      "transcript": "Baca isi video in the course"
+      "file": "assets/video/ITE-juliandra-ariiq-k.mp4",
+      "original_source": "C:\\Users\\Pusdiklat\\Downloads\\Video\\Juliandra Ariiq K - IT Enterprise (Compressed).mp4",
+      "sha256": "42971eef5bde060359db0cbb2cf5fff632b711a475f50baca485499e5fc556f2",
+      "bytes": 59753424,
+      "duration_seconds": 464.05,
+      "audio": true,
+      "method": "User-supplied compressed MP4 copied without re-encoding; video and audio bytes preserved",
+      "poster": "assets/video/ITE-juliandra-poster.webp",
+      "poster_source_seconds": 110,
+      "summary": "data/enhanced_interactions.json:video_summary",
+      "timer": "Optional two-minute practice timer starts after the video"
     },
-    "new_generated_raster_assets": 11,
+    "new_generated_raster_assets": 0,
+    "preserved_existing_generated_raster_assets": 11,
     "case_card_illustrations": 10,
-    "source_tool": "Codex built-in image_gen; model identifier not exposed",
     "reused_original_logo": true
   },
   "actual_export_checks": [
@@ -79,7 +85,22 @@
     "Short desktop: board fits scroll area, vertical word reachable, keyboard focus does not scroll outer page",
     "120-second challenge keeps unfinished work and never submits unanswered quiz",
     "390px real touch drag plus select-and-place; all photographed text >=14px",
-    "Four-marker visual video playback and keyboard seek, no audio controls for silent media, hotspot wrong/correct/retry, three-question checkpoint blank/wrong/correct/retry, no final LMS score mutation, and all ten case cards have loaded topic-specific illustrations",
+    "Original 7:44 user video playback with audio, five topic-aligned markers, keyboard seek, mute and volume; timer starts after video, hotspot wrong/correct/retry, three-question checkpoint blank/wrong/correct/retry, no final LMS score mutation, and all ten case cards have loaded topic-specific illustrations",
     "Official transparent BPS CorpU logo loads without header overlap on desktop/mobile; no JavaScript page errors"
-  ]
+  ],
+  "source_video_verification": {
+    "status": "passed",
+    "date": "2026-11-16",
+    "original_video_bytes": 59753424,
+    "original_video_sha256": "42971eef5bde060359db0cbb2cf5fff632b711a475f50baca485499e5fc556f2",
+    "native_video_identical_to_user_file": true,
+    "video_duration_seconds": 464.05,
+    "has_audio": true,
+    "video_questions": 5,
+    "concept_questions": 3,
+    "native_final_questions": 2,
+    "source_map": "video-quiz-source-map.json",
+    "native_export_sha256": "8033d517d4a82b749cc252c8e4a9d723d5e1cde9fb65ca0be57d7c26ffd5e653",
+    "timer_starts_after_video": true
+  }
 }

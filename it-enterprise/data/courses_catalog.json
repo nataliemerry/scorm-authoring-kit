@@ -7,24 +7,24 @@
     "micro_content": "Pelajari cara menyelaraskan strategi, tata kelola, dan arsitektur TI dengan kebutuhan organisasi. Lewat kasus layanan statistik, susun prioritas pembiayaan dan tentukan cara mengukur kinerja layanan.",
     "quizzes": [
       {
-        "question": "Peta saat ini menunjukkan nomor permintaan berubah setiap kali berkas berpindah unit. Tim menargetkan satu nomor sampai tabel dikirim. Pekerjaan apa yang langsung menutup selisih itu?",
+        "question": "Dalam analisis kesenjangan, sebuah aplikasi sudah tidak relevan dengan kebutuhan organisasi, mahal dipelihara, dan menghambat integrasi. Kelompok apa yang paling sesuai menurut video?",
         "options": [
-          "A. Menambah jumlah akun petugas di setiap unit",
-          "B. Menyepakati pengenal bersama dan menguji pertukarannya",
-          "C. Mengubah tampilan beranda kedua aplikasi"
+          "A. Retained: tetap dipertahankan",
+          "B. New: dijadikan kebutuhan baru",
+          "C. Eliminated: dihentikan penggunaannya"
         ],
-        "answer_key": "B",
-        "feedback": "Sepakati aturan nomor, lalu uji apakah kedua aplikasi mempertahankan nomor yang sama saat satu permintaan berpindah."
+        "answer_key": "C",
+        "feedback": "Video menempatkan aset yang tidak lagi relevan, tidak efisien, atau menghambat integrasi dalam kelompok eliminated."
       },
       {
-        "question": "Setelah uji coba, aplikasi tersedia hampir sepanjang bulan. Pimpinan ingin tahu apakah pemohon menerima tabel lebih cepat. Ukuran mana yang menjawab pertanyaan tersebut?",
+        "question": "Layanan TI dijanjikan tersedia 99,9% sesuai kesepakatan. Dalam video, janji tingkat layanan ini disebut ...",
         "options": [
-          "A. Median waktu dari permintaan diterima sampai tabel dikirim",
-          "B. Persentase waktu aplikasi dapat diakses",
-          "C. Jumlah petugas yang mengikuti sosialisasi"
+          "A. SLA: Service Level Agreement",
+          "B. TCO: Total Cost of Ownership",
+          "C. Enterprise architecture"
         ],
         "answer_key": "A",
-        "feedback": "Median waktu penyelesaian langsung mengukur lamanya pemohon menunggu. Bandingkan periode dan periksa apakah beban serta jenis permintaannya sebanding."
+        "feedback": "SLA merupakan kesepakatan atau janji tingkat layanan, contohnya ketersediaan 99,9%. TCO membahas biaya total kepemilikan, sedangkan EA memetakan hubungan komponen organisasi dan TI."
       }
     ]
   }

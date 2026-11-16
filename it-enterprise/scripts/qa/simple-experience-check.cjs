@@ -26,16 +26,19 @@ async function shot(p,n){
 async function videoActivity(p,cid,shots){
  assert(await p.locator('.iv-root').isVisible());assert.equal(await p.locator('.sim-root').isVisible(),false);
  const before=await p.evaluate(()=>window.lms?.values?.['cmi.core.score.raw']||null);
- await p.waitForFunction(()=>document.querySelector('.iv-video').duration>=47);
- assert.equal(await p.locator('.iv-marker').count(),4);
+ await p.waitForFunction(()=>document.querySelector('.iv-video').duration>463&&document.querySelector('.iv-video').duration<465);
+ const cfg=await p.locator('.iv-config').evaluate(e=>JSON.parse(e.textContent));
+ assert(cfg.hasAudio);assert(cfg.interactions.every(item=>item.at<464));
+ assert.equal(await p.locator('.scene-clock').isVisible(),false);
+ assert.equal(await p.locator('.iv-marker').count(),cfg.interactions.length);
  await p.locator('.iv-play').click();await p.waitForFunction(()=>document.querySelector('.iv-video').currentTime>0.05);
  await p.locator('.iv-play').click();
  await p.locator('.iv-timeline').press('Home');await p.locator('.iv-timeline').press('ArrowRight');
  assert(await p.locator('.iv-video').evaluate(e=>e.currentTime>=4));
- assert.equal(await p.locator('.iv-mute').isVisible(),false);
- const cfg=await p.locator('.iv-config').evaluate(e=>JSON.parse(e.textContent));
+ assert(await p.locator('.iv-mute').isVisible());await p.locator('.iv-mute').click();assert(await p.locator('.iv-video').evaluate(e=>e.muted));await p.locator('.iv-mute').click();assert.equal(await p.locator('.iv-video').evaluate(e=>e.muted),false);
+ if(await p.locator('.iv-volume').isVisible()){await p.locator('.iv-volume').press('Home');assert(await p.locator('.iv-video').evaluate(e=>e.muted));await p.locator('.iv-volume').press('End');}
  if(shots)await shot(p,'ITE-interactive-video.png');
- for(let i=0;i<4;i++){
+ for(let i=0;i<cfg.interactions.length;i++){
   await p.locator('[data-iv-marker="'+i+'"]').click();assert(await p.locator('.iv-question').isVisible());
   await p.locator('input[name="iv-answer"]').nth(i===0?(cfg.interactions[i].correct+1)%3:cfg.interactions[i].correct).check();
   await p.locator('.iv-check').click();assert((await p.locator('.iv-feedback').innerText()).includes(i===0?'belum tepat':'tepat'));
@@ -44,6 +47,8 @@ async function videoActivity(p,cid,shots){
  }
  await p.locator('.iv-finish').click();assert(await p.locator('.sim-root').isVisible());
  assert(await p.locator('.iv-video').evaluate(e=>e.paused));
+ // Release the already-tested hidden decoder between screenshot-heavy test stages.
+ await p.locator('.iv-video').evaluate(e=>{e.removeAttribute('src');e.querySelectorAll('source').forEach(s=>s.removeAttribute('src'));e.load();});
  assert.equal(await p.evaluate(()=>window.lms?.values?.['cmi.core.score.raw']||null),before);
 }
 async function newActivities(p,cid,shots){
@@ -207,7 +212,7 @@ async function lab(p,cid,shots=true){
 }
 (async()=>{
  await new Promise(r=>server.listen(0,'127.0.0.1',r));const base='http://127.0.0.1:'+server.address().port;
- browser=await chromium.launch({channel:'chrome',headless:true});const context=await browser.newContext({viewport:{width:1600,height:1100},reducedMotion:'reduce'});await context.addInitScript(mock);const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ browser=await chromium.launch({channel:'chrome',headless:true,args:['--disable-gpu']});const context=await browser.newContext({viewport:{width:1600,height:1100},reducedMotion:'reduce'});await context.addInitScript(mock);const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
  if(!process.argv.includes('--mobile-only')){
  for(const score of [100,0,50]){
   const cid='ITE';
@@ -232,5 +237,5 @@ async function lab(p,cid,shots=true){
  }
  const mobileContext=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true});const mobile=await mobileContext.newPage();mobile.on("pageerror",e=>errors.push(e.message));
  for(const cid of ['ITE']){await mobile.goto(base+'/'+cid+'/index.html');await learn(mobile,cid,false,false);await shot(mobile,cid+'-simple-mobile.png');await lab(mobile,cid,false);await shot(mobile,cid+'-challenge-mobile.png');assert(await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));const id='shared',zone='target';const source=mobile.locator(`[data-drag="${id}"]`),target=mobile.locator(`[data-mobile-target="${zone}"]`);await source.scrollIntoViewIfNeeded();const a=await source.boundingBox(),b=await target.boundingBox();const cdp=await mobileContext.newCDPSession(mobile);await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:a.x+a.width/2,y:a.y+a.height/2}]});for(let i=1;i<=18;i++)await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:a.x+a.width/2+(b.x+b.width/2-a.x-a.width/2)*i/18,y:a.y+a.height/2+(b.y+b.height/2-a.y-a.height/2)*i/18}]});await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await mobile.waitForTimeout(450);assert.equal(await mobile.locator(`[data-drag="${id}"]`).evaluate(e=>e.closest('[data-drop]').dataset.drop),zone);await mobile.locator('[data-dnd-action=undo]').click();await mobile.locator(`[data-drag="${id}"]`).tap();await target.tap();assert.equal(await mobile.locator(`[data-drag="${id}"]`).evaluate(e=>e.closest('[data-drop]').dataset.drop),zone);}
- report.checks.push('390px real touch drag plus select-and-place; all photographed text >=14px');assert.deepEqual(errors,[]);report.checks.push('Four-marker visual video playback and keyboard seek, no audio controls for silent media, hotspot wrong/correct/retry, three-question checkpoint blank/wrong/correct/retry, no final LMS score mutation, and all ten case cards have loaded topic-specific illustrations');report.checks.push('Official transparent BPS CorpU logo loads without header overlap on desktop/mobile; no JavaScript page errors');console.log(JSON.stringify(report,null,2));
+ report.checks.push('390px real touch drag plus select-and-place; all photographed text >=14px');assert.deepEqual(errors,[]);report.checks.push('Original 7:44 user video playback with audio, five topic-aligned markers, keyboard seek, mute and volume; timer starts after video, hotspot wrong/correct/retry, three-question checkpoint blank/wrong/correct/retry, no final LMS score mutation, and all ten case cards have loaded topic-specific illustrations');report.checks.push('Official transparent BPS CorpU logo loads without header overlap on desktop/mobile; no JavaScript page errors');console.log(JSON.stringify(report,null,2));
 })().catch(e=>{report.failure=e.stack;console.error(e);process.exitCode=1;}).finally(async()=>{fs.writeFileSync(path.join(out,'simple-experience-report.json'),JSON.stringify(report,null,2));if(browser)await browser.close();server.close();});

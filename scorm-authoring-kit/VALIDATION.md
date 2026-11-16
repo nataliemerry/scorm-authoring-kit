@@ -18,8 +18,12 @@ Laporan 14 November disimpan di `validation/history/2026-11-14`; laporan kontrak
 
 Batas bukti: pengujian LMS menggunakan mock API, belum pada GOJAGS langsung. Pengelolaan Data tersedia sebagai hasil ekspor datar; tidak ada `.elpx` khusus kursus yang diberikan, sehingga tidak diklaim dibangun ulang melalui UI. Referensi materi dan provenance gambar yang sudah ada dipertahankan dengan tanggal aslinya.
 
-## Pembaruan IT Enterprise — 16 November 2026
+## Pembaruan awal IT Enterprise — 16 November 2026 (prototipe)
 
 Sepuluh kartu kasus kini memakai sepuluh ilustrasi yang relevan. Ditambahkan video visual 48 detik/empat pertanyaan, hotspot tiga komponen dari empat area, serta latihan konsep tiga pertanyaan tanpa nilai LMS. Ekspor asli terbaru, aset/manifest, mouse/sentuh/keyboard, jalur lengkap desktop/mobile, timer, incomplete dan skor native 0/50/100 lulus. Bukti terikat hash paket ada di validation/it-enterprise-extended-report.json. Baseline starter C01/C12 tetap memakai hasil validasi 15 November.
 
 Validator brief kini menerima aset tambahan dengan role unik sambil tetap mewajibkan empat aset primer. Uji menerima sebelas aset tambahan dan menolak scene hilang/role ganda tercatat pada asset-role-contract-report.json. Implementasi ungraded question set adalah fork lokal proyek IT Enterprise, bukan perilaku tersirat dari renderer generic kit.
+
+## Video pengguna aktif — 16 November 2026
+
+Prototipe video visual diganti dengan video Juliandra Ariiq K berdurasi 7:44 dan audio asli. Lima pertanyaan video, tiga latihan konsep dan dua soal akhir disesuaikan dengan lima pilar dalam video. Timer dua menit dimulai setelah video. MP4 di dalam ekspor identik SHA-256 dengan file pengguna; poster diambil dari video yang sama. Ekspor aktual, playback/seek/audio, penanda, kuis, skor native 0/50/100 serta desktop/mobile lulus. Bukti terbaru ada di it-enterprise-extended-report.json dan QA proyek IT Enterprise.

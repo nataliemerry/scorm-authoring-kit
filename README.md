@@ -31,4 +31,4 @@ Pertahankan patch Form pada form-compat.js dan aturan penyembunyian data pada sc
 
 Baseline memakai dua soal Form native. Profil video/hotspot/question set dijelaskan di references/enhanced-interactions.md pada skill. Setiap kursus memilih satu renderer yang memiliki penilaian akhir.
 
-Git LFS dipakai untuk MP4. Jalankan git lfs pull setelah clone jika media masih berupa pointer. Paket Pengelolaan Data yang disediakan berbentuk folder ekspor dengan renderer khusus, dan dipertahankan sebagai input yang diuji. Sumber editabel khusus kursus itu belum disediakan.
+Git LFS dipakai untuk MP4 serta arsip sumber, SCORM, dan paket authoring IT Enterprise yang besar. Jalankan git lfs pull setelah clone jika media masih berupa pointer. Paket Pengelolaan Data yang disediakan berbentuk folder ekspor dengan renderer khusus, dan dipertahankan sebagai input yang diuji. Sumber editabel khusus kursus itu belum disediakan.

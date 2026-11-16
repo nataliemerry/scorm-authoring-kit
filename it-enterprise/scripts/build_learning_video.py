@@ -15,6 +15,8 @@ import imageio_ffmpeg
 
 ROOT = Path(__file__).resolve().parents[1]
 cfg = json.loads((ROOT/'data/enhanced_interactions.json').read_text(encoding='utf-8'))
+if cfg['interactive_video']['source'] != 'content/resources/video/ITE-service-plan.mp4':
+    raise SystemExit('The active course uses a user-supplied video. This historical visual-lesson generator must not replace it.')
 out = ROOT/'assets/video'
 out.mkdir(parents=True, exist_ok=True)
 with tempfile.TemporaryDirectory(prefix='ite-video-') as temp:

@@ -9,7 +9,7 @@ def lesson(cid,copy):
     return f'''<script class="lesson-config" type="application/json">{encoded}</script>
 <section class="lesson-root" data-complete="false" aria-label="Materi awal">
  <div class="lesson-cover scene-intro"><div class="scene-copy"><span class="scene-eyebrow">MATERI DAN LATIHAN</span><h2>IT Enterprise</h2><p>{escape(data['objective'])}</p><button type="button" class="lesson-open">Mulai belajar →</button></div></div>
- <div class="lesson-study" hidden><header class="lesson-study-header"><span class="lesson-count"></span><span>MATERI AWAL</span></header><div class="lesson-content"></div><footer class="lesson-controls"><button type="button" data-lesson-action="prev">← Sebelumnya</button><button type="button" data-lesson-action="next">Materi berikutnya →</button><div class="lesson-launch" hidden><label class="simple-timer"><input type="checkbox" id="simple-timer"> Gunakan timer 2 menit</label><button type="button" class="scene-free" disabled>Coba situasinya →</button></div></footer></div>
+ <div class="lesson-study" hidden><header class="lesson-study-header"><span class="lesson-count"></span><span>MATERI AWAL</span></header><div class="lesson-content"></div><footer class="lesson-controls"><button type="button" data-lesson-action="prev">← Sebelumnya</button><button type="button" data-lesson-action="next">Materi berikutnya →</button><div class="lesson-launch" hidden><label class="simple-timer"><input type="checkbox" id="simple-timer"> Timer 2 menit setelah video</label><button type="button" class="scene-free" disabled>Tonton video →</button></div></footer></div>
 </section>'''
 
 def simulation(cid):
