@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "Video 90s with 3 checkpoints passes and does not modify LMS score",
+    "Hotspot and question set pass with correct labels and ungraded state",
+    "Case challenge solution button and native 2-question quiz pass with score 100"
+  ],
+  "screenshots": [
+    "C12-cover.png",
+    "C12-settings-modal.png",
+    "C12-interactive-video.png",
+    "C12-video-question.png",
+    "C12-hotspot-labels.png",
+    "C12-hotspot-complete.png",
+    "C12-question-set-complete.png",
+    "C12-review.png",
+    "C12-result.png"
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "interactive_video": {
+    "title": "Penguatan Statistik Sektoral dan Rekomendasi Statistik",
+    "instruction": "Tonton penjelasan dalam video berdurasi 1 menit 30 detik. Tiga penanda membuka pertanyaan sesuai topik yang dibahas. Jawaban dan pembahasan tersedia sebelum video dilanjutkan.",
+    "durationLabel": "1 menit 30 detik · 3 pertanyaan",
+    "source": "content/resources/video/C12-penguatan-statistik-sektoral.mp4",
+    "mime": "video/mp4",
+    "poster": "content/resources/video/C12-video-poster.webp",
+    "nextSelector": ".sim-root",
+    "hideNextUntilComplete": true,
+    "interactions": [
+      {
+        "at": 25,
+        "timeLabel": "0:25",
+        "topic": "Koordinasi & Pencegahan Duplikasi",
+        "question": "Apa langkah awal yang harus dilakukan instansi sebelum merancang survei baru?",
+        "options": [
+          "Langsung menyusun kuesioner dan mencetak formulir lapangan",
+          "Menelusuri ketersediaan data dan berkoordinasi agar tidak terjadi duplikasi pengumpulan data",
+          "Menunjuk pihak ketiga tanpa memeriksa kebutuhan data"
+        ],
+        "correct": 1,
+        "feedback": "Video menekankan untuk mencari tahu ketersediaan data dan berkoordinasi dengan BPS/instansi lain dalam Sistem Statistik Nasional agar mencegah dua tim mengumpulkan data yang sama."
+      },
+      {
+        "at": 41,
+        "timeLabel": "0:41",
+        "topic": "Prinsip Satu Data Indonesia",
+        "question": "Empat prinsip Satu Data Indonesia yang disebutkan dalam video agar data dapat dipakai bersama adalah ...",
+        "options": [
+          "Standar Data, Metadata, Interoperabilitas Data, dan Kode Referensi/Data Induk",
+          "Kecepatan rilis, format tertutup, anggaran mandiri, dan publikasi cetak",
+          "Kuesioner panjang, pengumpulan cepat, penyimpanan lokal, dan hak cipta instansi"
+        ],
+        "correct": 0,
+        "feedback": "Empat prinsip SDI meliputi: Standar Data, Metadata, Interoperabilitas Data (dapat dipertukarkan), dan Kode Referensi atau Data Induk yang disepakati."
+      },
+      {
+        "at": 62,
+        "timeLabel": "1:02",
+        "topic": "Rekomendasi Statistik ROMANTIK",
+        "question": "Kapan instansi penyelenggara harus mengajukan rekomendasi kegiatan statistik melalui ROMANTIK?",
+        "options": [
+          "Setelah pengumpulan data di lapangan selesai dilaksanakan",
+          "Saat petugas sudah mulai turun menyebarkan kuesioner",
+          "Pada tahap perancangan kegiatan, sebelum turun ke lapangan"
+        ],
+        "correct": 2,
+        "feedback": "Pengajuan rekomendasi statistik melalui ROMANTIK dilakukan pada tahap rancangan sebelum kegiatan survei atau pengumpulan data turun ke lapangan."
+      }
+    ],
+    "hasAudio": true,
+    "durationSeconds": 90.0,
+    "credit": "Video materi: penguatan-statistik-sektoral-transparan-60fps.mp4"
+  },
+  "image_hotspot": {
+    "title": "Temukan Tiga Pilar Satu Data Indonesia",
+    "instruction": "Pilih tiga pilar utama yang harus dipenuhi dalam penyelenggaraan statistik sektoral agar data dapat dibagi pakai. Baca umpan balik setiap pilihan.",
+    "background": "content/resources/scenes/C12-hotspot.webp",
+    "alt": "Empat panel pilar: Standar Data, Metadata Statistik, Interoperabilitas Data, dan Format Tertutup.",
+    "required": 3,
+    "regions": [
+      {
+        "id": "standar-data",
+        "label": "Standar Data",
+        "x": 5,
+        "y": 5,
+        "width": 43,
+        "height": 43,
+        "correct": true,
+        "feedback": "Standar data memastikan konsep, definisi, klasifikasi, ukuran, dan satuan yang seragam sesuai kaidah SDI.",
+        "displayLabel": "Standar Data"
+      },
+      {
+        "id": "metadata",
+        "label": "Metadata Statistik",
+        "x": 52,
+        "y": 5,
+        "width": 43,
+        "height": 43,
+        "correct": true,
+        "feedback": "Metadata statistik mendokumentasikan informasi terstruktur tentang variabel, indikator, dan metodologi kegiatan.",
+        "displayLabel": "Metadata Statistik"
+      },
+      {
+        "id": "interoperabilitas",
+        "label": "Interoperabilitas Data",
+        "x": 5,
+        "y": 52,
+        "width": 43,
+        "height": 43,
+        "correct": true,
+        "feedback": "Interoperabilitas memastikan data dapat saling dipertukarkan dan diintegrasikan antarsistem elektronik pemerintah.",
+        "displayLabel": "Interoperabilitas Data"
+      },
+      {
+        "id": "format-tertutup",
+        "label": "Format Tertutup",
+        "x": 52,
+        "y": 52,
+        "width": 43,
+        "height": 43,
+        "correct": false,
+        "feedback": "Format data yang eksklusif atau tertutup menghambat integrasi data. Pilih pilar yang mendukung keterbukaan dan interoperabilitas.",
+        "displayLabel": "Format Tertutup"
+      }
+    ]
+  },
+  "question_set": {
+    "renderer": "lcm-question-set",
+    "scored": false,
+    "activityId": "c12-concept-practice",
+    "title": "Latihan Konsep Statistik Sektoral",
+    "intro": "Tiga pertanyaan penguat konsep sebelum masuk ke penyusunan kasus. Latihan ini tidak mengubah nilai akhir kuis.",
+    "questions": [
+      {
+        "id": "concept-1",
+        "question": "Sebelum menyusun kuesioner survei sektoral baru, mengapa instansi wajib memeriksa ketersediaan data terlebih dahulu?",
+        "options": [
+          "Agar dapat langsung meniru kuesioner instansi lain tanpa izin",
+          "Untuk memastikan kebutuhan data belum pernah dikumpulkan dan mencegah duplikasi kegiatan",
+          "Karena survei baru hanya boleh diadakan jika ada sisa pagu anggaran"
+        ],
+        "correct": 1,
+        "feedback": "Pemeriksaan ketersediaan data penting dalam Sistem Statistik Nasional untuk mencegah pemborosan anggaran akibat duplikasi pengumpulan data yang sama."
+      },
+      {
+        "id": "concept-2",
+        "question": "Dalam koordinasi penyelenggaraan statistik sektoral daerah, apa peran utama Walidata (Diskominfo)?",
+        "options": [
+          "Memeriksa rancangan kegiatan statistik bersama produsen data sebelum diajukan ke BPS",
+          "Mengumpulkan seluruh data primer di lapangan menggantikan produsen data",
+          "Menetapkan metodologi sensus penduduk secara mandiri"
+        ],
+        "correct": 0,
+        "feedback": "Walidata bertugas memeriksa kesesuaian rancangan statistik sektoral dari produsen data terhadap prinsip Satu Data sebelum diajukan ke BPS pembina data."
+      },
+      {
+        "id": "concept-3",
+        "question": "Mengapa penggunaan kode referensi dan data induk nasional wajib disepakati bersama?",
+        "options": [
+          "Supaya kode hanya bisa diakses oleh operator pusat",
+          "Agar hasil kompilasi data dari berbagai daerah/instansi dapat langsung digabungkan dan dibandingkan secara konsisten",
+          "Agar tidak perlu lagi menyusun laporan metadata"
+        ],
+        "correct": 1,
+        "feedback": "Kode referensi dan data induk yang terstandar memungkinkan penggabungan (interoperabilitas) data antarsektor dan antardaerah tanpa distorsi definisi."
+      }
+    ]
+  },
+  "resource_files": [
+    "scenes/C12-hotspot.webp",
+    "video/C12-penguatan-statistik-sektoral.mp4",
+    "video/C12-video-poster.webp"
+  ],
+  "video_summary": [
+    {
+      "title": "Pemeriksaan Kebutuhan dan Pencegahan Duplikasi",
+      "body": "Sebelum menyusun kuesioner, periksa apakah data sudah tersedia. Koordinasi dengan BPS dan instansi lain mencegah dua tim mengumpulkan data yang sama.",
+      "at": 25
+    },
+    {
+      "title": "Empat Prinsip Satu Data Indonesia",
+      "body": "Penerapan Standar Data, Metadata Statistik, Interoperabilitas Data, serta Kode Referensi/Data Induk agar data dapat diintegrasikan dan dimanfaatkan bersama.",
+      "at": 41
+    },
+    {
+      "title": "Pengajuan Rekomendasi Statistik (ROMANTIK)",
+      "body": "Instansi mengajukan permohonan rekomendasi melalui ROMANTIK pada tahap rancangan sebelum terjun ke lapangan untuk diverifikasi oleh Walidata dan BPS.",
+      "at": 62
+    }
+  ]
+}

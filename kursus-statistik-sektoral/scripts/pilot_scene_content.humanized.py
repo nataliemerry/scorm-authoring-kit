@@ -22,7 +22,9 @@ def replace_pilot_content(pages,course,copy,art):
     cover+=lesson(cid,copy)
     set_text(pages[0],cover)
     challenge=load("pilot_challenges").challenge
-    set_text(pages[1],marker(1)+simulation(cid)+experiences.word_search(cid)+experiences.drag_words(cid)+experiences.sort_paragraphs(cid)+challenge(cid).replace('class="dnd-challenge"','class="dnd-challenge" hidden'))
+    from pilot_enhanced import activities
+    enhanced_acts = activities(cid)
+    set_text(pages[1],marker(1)+enhanced_acts+simulation(cid)+experiences.word_search(cid)+experiences.drag_words(cid)+experiences.sort_paragraphs(cid)+challenge(cid).replace('class="dnd-challenge"','class="dnd-challenge" hidden'))
     set_text(pages[2],marker(2)+'<div class="scene-quiz-note"><span class="scene-eyebrow">CEK PEMAHAMAN</span><p>Jawab kedua pertanyaan berikut berdasarkan materi dan latihan tadi.</p></div>')
     review=marker(3)+f'<section class="scene-review"><span class="scene-eyebrow">PEMBAHASAN</span><h2>{"Prioritas pada kasus anggaran" if cid=="C01" else "Penguatan Statistik Sektoral dan Rekomendasi"}</h2><p class="scene-review-lead">{esc(copy["reflection"])}</p><div class="scene-review-points">'+''.join(f'<article><span>{i+1}</span><div><h3>{esc(q["question"])}</h3><p>{esc(q["feedback"])}</p></div></article>' for i,q in enumerate(copy['quizzes']))+'</div></section>'
     set_text(pages[3],review)

@@ -1,28 +1,22 @@
 [
   {
     "course": "C01",
-    "archive": "C01_Smart_Budgeting_SCORM12.zip",
     "bytes": 1529971,
-    "sha256": "4aa938429a0a1a50991b6e3c58c8b494e2e468858477be9ed6b609b57ffa7be9",
     "sco_count": 1,
     "manifest_files_valid": true,
     "bundled_fonts": 2,
     "generated_images": 4,
     "official_logo": 1,
-    "source_matches_export": true,
     "preview_matches_export": true
   },
   {
     "course": "C12",
-    "archive": "C12_Penguatan_Statistik_Sektoral_SCORM12.zip",
-    "bytes": 1428894,
-    "sha256": "332196745448a92996d6d43d72be9d4ecf230a872bee2f0c5cfb98721688e82b",
+    "bytes": 15359638,
     "sco_count": 1,
     "manifest_files_valid": true,
     "bundled_fonts": 2,
-    "generated_images": 4,
+    "generated_images": 6,
     "official_logo": 1,
-    "source_matches_export": true,
     "preview_matches_export": true
   }
 ]

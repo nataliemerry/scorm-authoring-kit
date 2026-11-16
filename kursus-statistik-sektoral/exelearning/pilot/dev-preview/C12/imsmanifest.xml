@@ -122,6 +122,9 @@
       <file href="theme/screenshot.png"/>
       <file href="theme/style.css"/>
       <file href="theme/style.js"/>
-    </resource>
+          <file href="content/resources/scenes/C12-hotspot.webp"/>
+      <file href="content/resources/video/C12-penguatan-statistik-sektoral.mp4"/>
+      <file href="content/resources/video/C12-video-poster.webp"/>
+</resource>
   </resources>
 </manifest>

@@ -159,13 +159,53 @@ $.fn.isInViewport = function () {
   form.lcmTextCompatibility = true;
 })();
 
-window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and visual practice. eXe Form and Classify own assessment logic. */
+window.addEventListener("DOMContentLoaded",function(){/* Statistik Sektoral (C12) & generic settings: local presentation preferences, never assessment state. */
+(() => {
+ 'use strict';
+ const cid=document.querySelector('[data-course]')?.dataset.course || document.querySelector('.sim-root')?.dataset.course || 'C12';
+ const key=`lcm:${cid}:sections:v1`;
+ const sections=[
+  ['theory','Materi awal','Tiga halaman teori, sumber, dan contoh.'],
+  ['check','Cek pemahaman','Pertanyaan setelah materi awal.'],
+  ['video','Video interaktif','Video 1:30 dan tiga pertanyaan.'],
+  ['situations','Situasi keputusan','Dua kasus dengan pilihan dan konsekuensi.'],
+  ['wordSearch','Find the Words','Pencarian istilah berdasarkan petunjuk.'],
+  ['dragWords','Drag the Words','Melengkapi kalimat dari bank kata.'],
+  ['sortParagraphs','Sort the Paragraphs','Mengurutkan empat paragraf.'],
+  ['hotspot','Image Hotspot','Memilih pilar Satu Data Indonesia.'],
+  ['concept','Latihan konsep','Tiga pertanyaan latihan konsep.'],
+  ['case','Kasus drag-and-drop','Klasifikasi kegiatan statistik sektoral dan bukan sektoral.'],
+  ['review','Pembahasan akhir','Pilihan peserta, kunci, dan penjelasan.']
+ ];
+ let stored={};try{stored=JSON.parse(localStorage.getItem(key)||'{}')||{};}catch(_){}
+ const values=Object.fromEntries(sections.map(([id])=>[id,stored[id]!==false]));
+ const chain=['video','situations','wordSearch','dragWords','sortParagraphs','hotspot','concept','case'];
+ const labels={video:'Tonton video →',situations:'Lanjut ke situasi →',wordSearch:'Temukan istilah →',dragWords:'Lanjut ke Drag the Words →',sortParagraphs:'Urutkan paragraf →',hotspot:'Jelajahi pilar SDI →',concept:'Lanjut ke latihan konsep →',case:'Praktik kasus →'};
+ const api=window.iteSections=window.courseSections={
+  enabled:id=>values[id]!==false,routeReady:false,
+  nextLabel(id){const next=chain.slice(id==='learning'?0:chain.indexOf(id)+1).find(api.enabled);return labels[next]||'Lanjut ke kuis →';},
+  learningReady(){return (!api.enabled('theory')&&!api.enabled('check'))||document.querySelector('.lesson-root')?.dataset.complete==='true';}
+ };
+ const courseTitle = cid === 'C12' ? 'STATISTIK SEKTORAL' : `${cid} PENGATURAN`;
+ const dialog=document.createElement('dialog');dialog.className='ite-settings-page';dialog.setAttribute('aria-labelledby','ite-settings-title');
+ dialog.innerHTML=`<form class="ite-settings-form"><header><div><span class="scene-eyebrow">${courseTitle}</span><h2 id="ite-settings-title">Pengaturan bagian kursus</h2></div><button type="button" class="ite-settings-close" aria-label="Tutup pengaturan">✕</button></header><div class="ite-settings-scroll"><p>Pilih bagian yang ingin ditampilkan. Bagian yang dinonaktifkan akan dilewati dalam alur belajar.</p><div class="ite-settings-list">${sections.map(([id,title,description])=>`<label class="ite-settings-row"><span><strong>${title}</strong><small>${description}</small></span><input type="checkbox" name="${id}" role="switch"><span class="ite-settings-state" aria-hidden="true"></span></label>`).join('')}</div><p class="ite-settings-fixed"><strong>Selalu aktif:</strong> sampul, kuis akhir (2 soal), dan hasil. Nilai LMS tetap berasal dari kuis akhir.</p><p class="ite-settings-note">Pilihan tersimpan di browser/perangkat ini. Menyimpan perubahan memulai ulang alur belajar dan mengosongkan jawaban pada tampilan saat ini. Nilai yang sudah dikirim ke LMS tidak dihapus.</p><p class="ite-settings-error" role="alert"></p></div><footer><button type="button" class="ite-settings-default">Tampilkan semua</button><div><button type="button" class="ite-settings-cancel">Batal</button><button type="submit" class="ite-settings-save">Simpan & mulai ulang</button></div></footer></form>`;
+ document.body.append(dialog);
+ function update(){dialog.querySelectorAll('input').forEach(input=>{input.closest('label').querySelector('.ite-settings-state').textContent=input.checked?'Tampil':'Sembunyi';});}
+ let opener;
+ api.open=()=>{opener=document.activeElement;sections.forEach(([id])=>{dialog.querySelector(`[name="${id}"]`).checked=api.enabled(id);});dialog.querySelector('.ite-settings-error').textContent='';update();document.querySelector('.iv-video')?.pause();document.dispatchEvent(new Event('ite-settings-open'));dialog.showModal();dialog.querySelector('.ite-settings-close').focus();};
+ dialog.addEventListener('close',()=>{document.dispatchEvent(new Event('ite-settings-close'));opener?.focus({preventScroll:true});});
+ dialog.addEventListener('change',update);
+ dialog.querySelectorAll('.ite-settings-close,.ite-settings-cancel').forEach(button=>button.onclick=()=>dialog.close());
+ dialog.querySelector('.ite-settings-default').onclick=()=>{dialog.querySelectorAll('input').forEach(input=>{input.checked=true;});update();};
+ dialog.querySelector('form').onsubmit=event=>{event.preventDefault();const next=Object.fromEntries(sections.map(([id])=>[id,dialog.querySelector(`[name="${id}"]`).checked]));if(sections.every(([id])=>next[id]===values[id])){dialog.close();return;}try{localStorage.setItem(key,JSON.stringify(next));}catch(_){dialog.querySelector('.ite-settings-error').textContent='Pengaturan belum tersimpan. Izinkan penyimpanan browser, lalu coba lagi.';return;}window.location.reload();};
+})();
+/* Scene navigation and visual practice. eXe Form and Classify own assessment logic. */
 (()=>{'use strict';
  if(!document.body.classList.contains('exe-export'))return;
  const marker=document.querySelector('[data-lcm-phase]');if(!marker)return;
  const cid=marker.dataset.course,art=document.querySelector('[data-scene-image]');
  if(art)document.body.style.setProperty('--scene-art',`url("${art.src}")`);
- const title=document.querySelector('.package-title')?.textContent||cid;
+ const title=document.querySelector('.package-title')?.textContent?.replace(/^(?:C12|C01|ITE)\s+/,'')||(cid==='C12'?'Penguatan Statistik Sektoral':'Smart Budgeting');
  const evidence=JSON.parse(document.querySelector('.scene-evidence')?.textContent||'[]');
  const articles=[...document.querySelectorAll('article.box')];let previous=0;
  articles.forEach(a=>{const m=a.querySelector('[data-lcm-phase]');if(m)previous=Number(m.dataset.lcmPhase);a.dataset.scenePanel=previous;if(a.querySelector('.clasifica-IDevice'))a.classList.add('scene-native-arena');if(a.querySelector('.scene-quiz-note'))a.classList.add('scene-quiz-preamble');if(a.querySelector('.exe-form-container'))a.classList.add('scene-quiz-engine');});
@@ -173,9 +213,9 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
  const found=new Set(),ends=[15,45,85,104,120],names=['Materi','Situasi & latihan','Kuis','Pembahasan','Hasil'];
  const safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const brandLogo=document.querySelector('[data-brand-logo]');
- const chrome=document.createElement('div');chrome.className='scene-chrome';chrome.innerHTML=`<div class="scene-identity">${brandLogo?`<img class="scene-brand-logo" src="${safe(brandLogo.src)}" alt="Logo BPS CorpU" width="50" height="52">`:""}<div class="scene-identity-copy"><div class="scene-brand">BPS CORPORATE UNIVERSITY</div><div class="scene-course-title">${safe(title)}</div></div></div><div class="scene-chrome-right"><button type="button" class="scene-fullscreen" aria-label="Buka layar penuh">⛶</button></div>`;document.body.append(chrome);
+ const chrome=document.createElement('div');chrome.className='scene-chrome';chrome.innerHTML=`<div class="scene-identity">${brandLogo?`<img class="scene-brand-logo" src="${safe(brandLogo.src)}" alt="Logo BPS CorpU" width="50" height="52">`:""}<div class="scene-identity-copy"><div class="scene-brand">BPS CORPORATE UNIVERSITY</div><div class="scene-course-title">${safe(title)}</div></div></div><div class="scene-chrome-right"><button type="button" class="ite-settings-open" aria-label="Pengaturan bagian kursus">⚙ <span>Pengaturan</span></button><button type="button" class="scene-fullscreen" aria-label="Buka layar penuh">⛶</button></div>`;document.body.append(chrome);
  const bottom=document.createElement('div');bottom.className='scene-bottom';bottom.innerHTML=`<nav class="scene-progress" aria-label="Progres pengalaman">${names.map((n,i)=>`<button type="button" data-scene-phase="${i}" aria-label="${n}">${i+1}</button>`).join('')}<span class="scene-progress-label"></span></nav><span class="scene-next-note"></span><div class="scene-clock" hidden><span></span><small>SISA WAKTU</small></div><button type="button" class="scene-next"></button>`;document.body.append(bottom);
- const back=document.createElement('button');back.className='scene-arena-back';back.type='button';back.textContent=cid==='C01'?'← Kembali ke alokasi':'← Kembali ke email';back.hidden=true;document.body.append(back);
+ const back=document.createElement('button');back.className='scene-arena-back';back.type='button';back.textContent=cid==='C01'?'← Kembali ke alokasi':'← Kembali ke kasus';back.hidden=true;document.body.append(back);
  function say(message){document.querySelector('.scene-announcement')?.remove();const box=document.createElement('div');box.className='scene-announcement';box.setAttribute('role','status');box.textContent=message;document.body.append(box);clearTimeout(toastTimer);toastTimer=setTimeout(()=>box.remove(),5000);}
  function resizeForm(){requestAnimationFrame(()=>{if(window.$form?.instances)Object.values(window.$form.instances).forEach(data=>window.$form.resizeSlideShow(data));window.dispatchEvent(new Event('resize'));});}
  function answersCount(){return new Set([...document.querySelectorAll('.exe-form-container input[type=radio]:checked')].map(r=>r.name)).size;}
@@ -237,24 +277,37 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
      art.innerHTML=`<span class="scene-review-num">${safe(numText)}</span><div class="scene-review-body"><h3>${safe(questionTitle)}</h3>${userBlock}${keyBlock}${expBlock}</div>`;
    });
  }
- function show(next,focus=true){if(next!==phase){clearTimeout(toastTimer);document.querySelector(".scene-announcement")?.remove();}phase=next;arena=false;document.body.dataset.scenePhase=phase;
+ function show(next,focus=true){
+   if(next!==phase){
+     clearTimeout(toastTimer);
+     document.querySelector('.scene-announcement')?.remove();
+   }
+   phase=next;arena=false;document.body.dataset.scenePhase=phase;
    articles.forEach(a=>{a.hidden=Number(a.dataset.scenePanel)!==phase||a.classList.contains('scene-native-arena');});back.hidden=true;
-   bottom.querySelectorAll('button[data-scene-phase]').forEach((b,i)=>{b.disabled=false;b.setAttribute('aria-current',i===phase?'step':'false');});
+   let visibleStep=0;bottom.querySelectorAll('button[data-scene-phase]').forEach((b,i)=>{b.hidden=(i===3&&!window.iteSections?.enabled('review'))||(i===1&&!['video','situations','wordSearch','dragWords','sortParagraphs','hotspot','concept','case'].some(id=>window.iteSections?.enabled(id)));if(!b.hidden)b.textContent=String(++visibleStep);b.disabled=false;b.setAttribute('aria-current',i===phase?'step':'false');});
    bottom.querySelector('.scene-progress-label').textContent=names[phase];
-   const nextBtn=bottom.querySelector('.scene-next');nextBtn.hidden=phase===0||phase===4||(phase===1&&document.querySelector('.dnd-challenge')?.dataset.complete!=='true');nextBtn.disabled=false;
-   nextBtn.textContent=phase===1?'Lanjut ke kuis →':phase===2?'Lihat pembahasan →':'Lihat hasil →';
+   const nextBtn=bottom.querySelector('.scene-next');nextBtn.hidden=phase===0||phase===4||(phase===1&&!practiceDone());nextBtn.disabled=false;
+   nextBtn.textContent=phase===2&&!window.iteSections?.enabled('review')?'Lihat hasil →':phase===1?'Lanjut ke kuis →':phase===2?'Lihat pembahasan →':'Lihat hasil →';
    bottom.querySelector('.scene-next-note').textContent=timed?'Selesaikan sesuai urutan.':'';
    resizeForm();result();if(phase===3)review();
    if(focus){const heading=articles.find(a=>Number(a.dataset.scenePanel)===phase)?.querySelector('h2');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}}
  }
- function practiceDone(){return document.querySelector('.lesson-root')?.dataset.complete==='true'&&document.querySelector('.sim-root')?.dataset.complete==='true'&&document.querySelector('.dnd-challenge')?.dataset.complete==='true';}
- function canMove(target){if(target>0&&document.querySelector('.lesson-root')?.dataset.complete!=='true'){say('Pelajari materi awal dan jawab cek pemahamannya terlebih dahulu.');return false;}if(target>1&&!practiceDone()){say('Selesaikan seluruh tahap tantangan terlebih dahulu.');return false;}if(target>2&&(!check())){say('Jawab kedua pertanyaan terlebih dahulu.');return false;}return true;}
- function clock(){const box=bottom.querySelector('.scene-clock'),span=box.querySelector('span'),small=box.querySelector('small');box.hidden=!timed;if(!timed)return;const left=Math.max(0,120-Math.floor((Date.now()-start)/1000));span.textContent=String(Math.floor(left/60)).padStart(2,'0')+':'+String(left%60).padStart(2,'0');small.textContent='SISA WAKTU';if(left===0){clearInterval(interval);timed=false;small.textContent='WAKTU SELESAI';say('Waktu 2 menit sudah habis. Latihan tetap bisa dilanjutkan.');show(phase,false);}}
- document.addEventListener('lcm-lesson-finish',e=>{document.querySelector('.scene-announcement')?.remove();timed=Boolean(e.detail?.timed);clearInterval(interval);start=Date.now();show(1);clock();if(timed)interval=setInterval(clock,250);});
+ function practiceDone(){return window.iteSections ? (window.iteSections.learningReady()&&window.iteSections.routeReady) : (document.querySelector('.lesson-root')?.dataset.complete==='true'&&document.querySelector('.sim-root')?.dataset.complete==='true'&&document.querySelector('.dnd-challenge')?.dataset.complete==='true');}
+ function canMove(target){if(target>0&&!(window.iteSections ? window.iteSections.learningReady() : document.querySelector('.lesson-root')?.dataset.complete==='true')){say('Pelajari materi awal dan jawab cek pemahamannya terlebih dahulu.');return false;}if(target>1&&!practiceDone()){say('Selesaikan seluruh tahap tantangan terlebih dahulu.');return false;}if(target>2&&(!check())){say('Jawab kedua pertanyaan terlebih dahulu.');return false;}return true;}
+ let settingsOpened=0;
+ document.addEventListener('ite-settings-open',()=>{settingsOpened=Date.now();});
+ document.addEventListener('ite-settings-close',()=>{if(settingsOpened&&timed)start+=Date.now()-settingsOpened;settingsOpened=0;});
+ function clock(){if(settingsOpened)return;const box=bottom.querySelector('.scene-clock'),span=box.querySelector('span'),small=box.querySelector('small');box.hidden=!timed;if(!timed)return;const left=Math.max(0,120-Math.floor((Date.now()-start)/1000));span.textContent=String(Math.floor(left/60)).padStart(2,'0')+':'+String(left%60).padStart(2,'0');small.textContent='SISA WAKTU';if(left===0){clearInterval(interval);timed=false;small.textContent='WAKTU SELESAI';say('Waktu 2 menit sudah habis. Latihan tetap bisa dilanjutkan.');show(phase,false);}}
+ let pendingVideoTimer=false;
+ document.addEventListener('lcm-lesson-finish',e=>{document.querySelector('.scene-announcement')?.remove();pendingVideoTimer=Boolean(e.detail?.timed);timed=false;clearInterval(interval);show(1);clock();if(!window.iteSections?.enabled('video'))document.dispatchEvent(new Event('ite-start-practice-timer'));});
+ function startPracticeTimer(){timed=pendingVideoTimer;pendingVideoTimer=false;clearInterval(interval);start=Date.now();clock();if(timed)interval=setInterval(clock,250);}
+ document.addEventListener('lcm-video-finish',startPracticeTimer);document.addEventListener('ite-start-practice-timer',startPracticeTimer);
  document.addEventListener('lcm-simulation-finish',()=>show(1,false));
- bottom.querySelector('.scene-next').onclick=()=>{const next=Math.min(4,phase+1);if(canMove(next))show(next);};
+ bottom.querySelector('.scene-next').onclick=()=>{const next=phase===2&&!window.iteSections?.enabled('review')?4:Math.min(4,phase+1);if(canMove(next))show(next);};
  bottom.querySelector('nav').onclick=e=>{const b=e.target.closest('[data-scene-phase]');if(!b)return;const next=Number(b.dataset.scenePhase);if(canMove(next))show(next);};
+ document.addEventListener('ite-route-finish',()=>{if(practiceDone())show(2);});
  document.addEventListener('lcm-practice-complete',()=>{say('Latihan selesai. Berikutnya ada dua pertanyaan untuk memeriksa pemahaman Anda.');show(1,false);});
+ chrome.querySelector('.ite-settings-open').onclick=()=>window.iteSections?.open();
  chrome.querySelector('.scene-fullscreen').onclick=()=>{if(document.fullscreenElement)document.exitFullscreen?.();else document.documentElement.requestFullscreen?.().catch(()=>say('Gunakan tombol layar penuh pada browser Anda.'));};
  document.querySelector('[data-scene-action="restart"]')?.addEventListener('click',()=>window.location.reload());
  show(0,false);
@@ -347,10 +400,13 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
  if(!document.body.classList.contains('exe-export'))return;
  const lesson=document.querySelector('.lesson-root'),config=document.querySelector('.lesson-config'),sim=document.querySelector('.sim-root');if(!lesson||!config||!sim)return;
  const cfg=JSON.parse(config.textContent),cid=sim.dataset.course,content=lesson.querySelector('.lesson-content'),view=sim.querySelector('.sim-content');
+ if(window.iteSections){
+   cfg.lessons=cfg.lessons.filter(l=>window.iteSections.enabled('theory')||(l.mode==='check'&&window.iteSections.enabled('check'))).map(l=>({...l,mode:l.mode==='check'&&!window.iteSections.enabled('check')?'theory':l.mode}));
+ }
  const art=Object.fromEntries([...document.querySelectorAll('[data-dnd-art]')].map(i=>[i.dataset.dndArt,i.src]));
  const safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  let page=0,situation=0;const seen=new Set(),examples=new Set(),answers=[null,null],studyAnswers=[null,null,null],checked=new Set();
- const cases=cid==='C01'?[
+ const cases=cfg.situations||(cid==='C01'?[
   {title:'Server berhenti saat laporan masih harus masuk.',body:'Perbaikan diperkirakan memerlukan tiga hari. Sementara itu, tim masih menerima data yang perlu segera ditangani.',image:'scenes/C01-server.webp',prompt:'Apa yang Anda lakukan sementara?',options:[
    {label:'Gunakan prosedur sementara yang disetujui, lalu periksa datanya',good:true,title:'Data prioritas masih dapat ditangani.',body:'Pekerjaan sementara menambah pencatatan bagi tim. Data tetap perlu diperiksa, lalu dicocokkan kembali setelah server pulih.'},
    {label:'Tunggu perbaikan selesai tanpa menyiapkan penanganan sementara',good:false,title:'Antrean menunggu server pulih.',body:'Selama perbaikan, data yang menunggu akan bertambah. Jika tersedia prosedur sementara yang disetujui, tim bisa menggunakannya dengan tetap memeriksa data.'}]},
@@ -363,29 +419,34 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
    {label:'Cetak kuesioner dan segera lakukan pencacahan di lapangan',good:false,title:'Pengumpulan data mengabaikan prosedur rekomendasi.',body:'Pelaksanaan tanpa rekomendasi berisiko menghasilkan data yang bias, duplikatif, dan tidak dapat diintegrasikan ke portal Satu Data Indonesia.'}]},
   {title:'Publikasi Data Indikator Tanpa Dokumen Metadata',body:'Data hasil kompilasi administrasi sektoral telah siap disajikan ke publik. Bagian hubungan masyarakat mengusulkan agar tabel angka langsung diunggah ke website tanpa perlu menyusun dokumen metadata indikator karena dianggap merepotkan.',image:'scenes/C12-lock.webp',prompt:'Bagaimana tindakan Anda dalam situasi ini?',options:[
    {label:'Susun metadata statistik sebelum data dipublikasikan',good:true,title:'Data terdokumentasi dan transparan bagi pengguna.',body:'Metadata memuat konsep, definisi, dan metodologi sehingga data dapat dipahami dan dipertanggungjawabkan lintas instansi pemerintah.'},
-   {label:'Unggah tabel angka langsung tanpa dokumen metadata',good:false,title:'Angka rilis tanpa kejelasan konsep dan definisi.',body:'Pengguna data tidak mengetahui cakupan variabel dan batasannya, sehingga berpotensi menimbulkan salah interpretasi kebijakan.'}]}
- ];
- function imageFor(index){return cid==='C01'?(index===2?'scenes/C01-meeting.webp':'scenes/C01-server.webp'):(index===2?'scenes/C12-lock.webp':'scenes/C12-mail.webp');}
+   {label:'Unggah tabel angka langsung tanpa dokumen metadata',good:false,title:'Angka rilis tanpa kejelasan konsep dan definisi.',body:'Pengguna data tidak mengetahui cakupan variabel dan batasan metodologi, sehingga berpotensi menimbulkan salah interpretasi dalam pengambilan kebijakan.'}]}
+ ]);
+ function imageFor(index){return cfg.lessons[index]?.image || (cid==='C01'?(index===2?'scenes/C01-meeting.webp':'scenes/C01-server.webp'):(index===2?'scenes/C12-lock.webp':'scenes/C12-mail.webp'));}
  function focusHeading(container){const h=container.querySelector('h2');if(h){h.tabIndex=-1;h.focus({preventScroll:true});}}
  function theory(l){return l.body.split(/\n\n/).map((paragraph,i)=>`<p class="lesson-body">${safe(paragraph)} ${(l.paragraph_sources[i]||[]).map(n=>`<a class="lesson-citation" href="${safe(l.references[n-1].url)}" target="_blank" rel="noopener noreferrer" aria-label="Sumber ${n}: ${safe(l.references[n-1].publisher)}">[${n}]</a>`).join(' ')}</p>`).join('');}
- function sources(l){return `<aside class="lesson-sources" aria-label="Sumber materi"><h3>Sumber materi</h3><ol>${l.references.map(r=>`<li><a href="${safe(r.url)}" target="_blank" rel="noopener noreferrer">${safe(r.publisher)} · ${safe(r.title)} (${safe(r.year)})</a><p>${safe(r.section)}</p></li>`).join('')}</ol><p class="lesson-source-note">Diparafrasakan dalam bahasa Indonesia. Sumber diperiksa pada ${cid==='C01'?'13 November 2026':'14 November 2026'}.</p></aside>`;}
- function study(){const l=cfg.lessons[page];seen.add(page);const correct=checked.has(page)&&studyAnswers[page]===l.correct;
+ function sources(l){return `<aside class="lesson-sources" aria-label="Sumber materi"><h3>Sumber materi</h3><ol>${l.references.map(r=>`<li><a href="${safe(r.url)}" target="_blank" rel="noopener noreferrer">${safe(r.publisher)} · ${safe(r.title)} (${safe(r.year)})</a><p>${safe(r.section)}</p></li>`).join('')}</ol><p>${safe(l.module_reference)}</p><p class="lesson-source-note">Rujukan daring diperiksa pada ${safe(cfg.source_checked)}.</p></aside>`;}
+ function study(){const l=cfg.lessons[page];seen.add(page);const correct=l.mode!=='check'||(checked.has(page)&&studyAnswers[page]===l.correct);
   const check=l.mode==='check'?`<form class="simple-check"><fieldset><legend>${safe(l.prompt)}</legend><p>Pilih satu jawaban, lalu tekan <strong>Periksa jawaban</strong>.</p>${l.options.map((o,i)=>`<label><input type="radio" name="lesson-answer" value="${i}" ${studyAnswers[page]===i?'checked':''}><span>${safe(o)}</span></label>`).join('')}</fieldset><button type="submit" class="simple-check-button">Periksa jawaban</button></form><div class="simple-check-feedback" role="status" ${!checked.has(page)?'hidden':''}>${checked.has(page)?safe(correct?l.feedback:'Jawaban ini belum sesuai dengan kasus. Coba pilihan lain.'):''}</div>`:'';
-  content.innerHTML=`<div class="simple-lesson-layout"><div class="simple-lesson-art"><img src="${safe(art[imageFor(page)])}" alt=""></div><article class="simple-lesson-copy"><h2>${safe(l.title)}</h2>${theory(l)}${sources(l)}<button type="button" class="simple-example-button" aria-expanded="${examples.has(page)}" aria-controls="lesson-example" data-simple-example>${examples.has(page)?'Tutup contoh':'Lihat contoh'}</button><div id="lesson-example" class="simple-example" ${examples.has(page)?'':'hidden'}><strong>Contoh simulasi</strong><p>${safe(l.example)}</p><p class="lesson-example-note">${safe(l.example_note)}</p></div>${check}</article></div>`;
-  lesson.querySelector('.lesson-count').textContent='Materi '+(page+1)+' dari '+cfg.lessons.length;lesson.querySelector('[data-lesson-action=prev]').disabled=page===0;lesson.querySelector('[data-lesson-action=next]').hidden=page===cfg.lessons.length-1;lesson.querySelector('.lesson-launch').hidden=page!==cfg.lessons.length-1;lesson.querySelector('.scene-free').disabled=page===cfg.lessons.length-1&&!correct;
-  lesson.querySelector('.lesson-study-header span:last-child').textContent=page===cfg.lessons.length-1?'CEK PEMAHAMAN':'MATERI AWAL';content.scrollTop=0;
+  const showTheory = !window.iteSections || window.iteSections.enabled('theory');
+  const imgPath = imageFor(page);
+  const imgSrc = art[imgPath] || ('content/resources/' + imgPath);
+  content.innerHTML=`<div class="simple-lesson-layout"><div class="simple-lesson-art"><img src="${safe(imgSrc)}" alt=""></div><article class="simple-lesson-copy"><h2>${safe(showTheory?l.title:'Cek pemahaman')}</h2>${showTheory?theory(l)+sources(l):''}<button type="button" class="simple-example-button" ${showTheory?'':'hidden'} aria-expanded="${examples.has(page)}" aria-controls="lesson-example" data-simple-example>${examples.has(page)?'Tutup contoh':'Lihat contoh'}</button><div id="lesson-example" class="simple-example" ${examples.has(page)?'':'hidden'}><strong>Contoh simulasi</strong><p>${safe(l.example)}</p><p class="lesson-example-note">${safe(l.example_note)}</p></div>${check}</article></div>`;
+  lesson.querySelector('.lesson-count').textContent='Materi '+(page+1)+' dari '+cfg.lessons.length;lesson.querySelector('[data-lesson-action=prev]').disabled=page===0;lesson.querySelector('[data-lesson-action=next]').hidden=page===cfg.lessons.length-1;lesson.querySelector('.lesson-launch').hidden=page!==cfg.lessons.length-1;lesson.querySelector('.scene-free').disabled=page===cfg.lessons.length-1&&!correct;lesson.querySelector('.scene-free').textContent=window.iteSections ? window.iteSections.nextLabel('learning') : 'Tantangan situasi →';
+  lesson.querySelector('.lesson-study-header span:last-child').textContent=l.mode==='check'?'CEK PEMAHAMAN':'MATERI AWAL';content.scrollTop=0;
  }
- lesson.querySelector('.lesson-open').onclick=()=>{document.querySelector('.scene-announcement')?.remove();lesson.querySelector('.lesson-cover').hidden=true;lesson.querySelector('.lesson-study').hidden=false;study();focusHeading(content);};
+ lesson.querySelector('.lesson-open').onclick=()=>{document.querySelector('.scene-announcement')?.remove();if(!cfg.lessons.length){document.dispatchEvent(new CustomEvent('lcm-lesson-finish',{detail:{timed:false}}));return;}lesson.querySelector('.lesson-cover').hidden=true;lesson.querySelector('.lesson-study').hidden=false;study();focusHeading(content);};
  lesson.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
   if(b.dataset.lessonAction){page=Math.max(0,Math.min(cfg.lessons.length-1,page+(b.dataset.lessonAction==='next'?1:-1)));study();focusHeading(content);}
   if(b.hasAttribute('data-simple-example')){const box=content.querySelector('#lesson-example');box.hidden=!box.hidden;b.setAttribute('aria-expanded',String(!box.hidden));b.textContent=box.hidden?'Lihat contoh':'Tutup contoh';if(box.hidden)examples.delete(page);else examples.add(page);}
-  if(b.classList.contains('scene-free')){const l=cfg.lessons[page];if(seen.size!==cfg.lessons.length||!checked.has(page)||studyAnswers[page]!==l.correct)return;lesson.dataset.complete='true';document.dispatchEvent(new CustomEvent('lcm-lesson-finish',{detail:{timed:Boolean(lesson.querySelector('#simple-timer')?.checked)}}));}
+  if(b.classList.contains('scene-free')){const l=cfg.lessons[page];if(seen.size!==cfg.lessons.length||(l.mode==='check'&&(!checked.has(page)||studyAnswers[page]!==l.correct)))return;lesson.dataset.complete='true';document.dispatchEvent(new CustomEvent('lcm-lesson-finish',{detail:{timed:Boolean(lesson.querySelector('#simple-timer')?.checked)}}));}
  });
  lesson.addEventListener('change',e=>{if(!e.target.matches('input[name="lesson-answer"]'))return;studyAnswers[page]=Number(e.target.value);checked.delete(page);content.querySelector('.simple-check-feedback').hidden=true;lesson.querySelector('.scene-free').disabled=true;});
  lesson.addEventListener('submit',e=>{if(!e.target.matches('.simple-check'))return;e.preventDefault();const feedback=content.querySelector('.simple-check-feedback');feedback.hidden=false;if(studyAnswers[page]===null){feedback.textContent='Pilih satu jawaban terlebih dahulu.';return;}checked.add(page);const right=studyAnswers[page]===cfg.lessons[page].correct;feedback.textContent=right?cfg.lessons[page].feedback:'Jawaban ini belum sesuai. Baca lagi penjelasannya, lalu periksa pilihan lain.';feedback.dataset.correct=String(right);lesson.querySelector('.scene-free').disabled=!right;feedback.scrollIntoView({block:'nearest'});});
  function situationView(){const c=cases[situation],selected=answers[situation],result=selected===null?null:c.options[selected];sim.dataset.mode='simple';sim.dataset.case=String(situation);
-  view.innerHTML=`<div class="simple-situation-count">Situasi ${situation+1} dari ${cases.length}</div><div class="simple-situation-layout"><div class="simple-situation-art"><img src="${safe(art[c.image])}" alt=""></div><article class="simple-situation-copy"><h2>${safe(c.title)}</h2><p class="simple-situation-body">${safe(c.body)}</p>${c.snippet?`<div class="simple-message-detail">${safe(c.snippet)}</div>`:''}<fieldset class="simple-actions"><legend>${safe(c.prompt)}</legend><p>Pilih tindakan yang akan Anda ambil.</p>${c.options.map((o,i)=>`<button type="button" data-simple-choice="${i}" aria-pressed="${selected===i}"><span class="simple-choice-mark" aria-hidden="true">${selected===i?'●':'○'}</span><span>${safe(o.label)}</span></button>`).join('')}</fieldset><div class="simple-consequence" role="status" ${result?'':'hidden'} data-good="${result?result.good:''}">${result?`<span>YANG TERJADI</span><h3>${safe(result.title)}</h3><p>${safe(result.body)}</p><span class="simple-retry-hint">Pilih tindakan satunya jika ingin membandingkan hasilnya.</span>`:''}</div></article></div>`;
-  sim.querySelector('[data-simple-sim=back]').disabled=situation===0;const next=sim.querySelector('[data-simple-sim=next]');next.disabled=selected===null;next.textContent=situation===cases.length-1?'Temukan istilah →':'Situasi berikutnya →';
+  const cImg = c.image;
+  const cSrc = art[cImg] || ('content/resources/' + cImg);
+  view.innerHTML=`<div class="simple-situation-count">Situasi ${situation+1} dari ${cases.length}</div><div class="simple-situation-layout"><div class="simple-situation-art"><img src="${safe(cSrc)}" alt=""></div><article class="simple-situation-copy"><h2>${safe(c.title)}</h2><p class="simple-situation-body">${safe(c.body)}</p>${c.snippet?`<div class="simple-message-detail">${safe(c.snippet)}</div>`:''}<fieldset class="simple-actions"><legend>${safe(c.prompt)}</legend><p>Pilih tindakan yang akan Anda ambil.</p>${c.options.map((o,i)=>`<button type="button" data-simple-choice="${i}" aria-pressed="${selected===i}"><span class="simple-choice-mark" aria-hidden="true">${selected===i?'●':'○'}</span><span>${safe(o.label)}</span></button>`).join('')}</fieldset><div class="simple-consequence" role="status" ${result?'':'hidden'} data-good="${result?result.good:''}">${result?`<span>YANG TERJADI</span><h3>${safe(result.title)}</h3><p>${safe(result.body)}</p><span class="simple-retry-hint">Pilih tindakan satunya jika ingin membandingkan hasilnya.</span>`:''}</div></article></div>`;
+  sim.querySelector('[data-simple-sim=back]').disabled=situation===0;const next=sim.querySelector('[data-simple-sim=next]');next.disabled=selected===null;next.textContent=situation===cases.length-1 ? (window.iteSections ? window.iteSections.nextLabel('situations') : 'Lanjut ke Find the Words →') : 'Situasi berikutnya →';
  }
  sim.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
   if(b.dataset.simpleChoice!==undefined){answers[situation]=Number(b.dataset.simpleChoice);const scroll=sim.querySelector('.sim-scroll'),y=scroll.scrollTop;situationView();scroll.scrollTop=y;view.querySelector(`[data-simple-choice="${answers[situation]}"]`).focus({preventScroll:true});view.querySelector('.simple-consequence').scrollIntoView({block:'nearest'});}
@@ -400,7 +461,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
  const root=document.querySelector('.word-root'),node=document.querySelector('.word-config');if(!root||!node)return;
  const cfg=JSON.parse(node.textContent),found=new Set(),revealed=new Set(),hinted=new Set();let activeHint=null,origin=null,start=null,dragging=false,moved=false;
  const safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- root.innerHTML=`<div class="word-scroll"><header class="word-heading"><span class="scene-eyebrow">FIND THE WORDS · LATIHAN ISTILAH</span><h2>Temukan istilah yang baru Anda pelajari.</h2><p>Baca petunjuk untuk menentukan istilahnya. Pilih huruf pertama lalu huruf terakhir, atau seret sepanjang kata. Baca dari kiri ke kanan atau dari atas ke bawah.</p><p class="word-optional">Latihan ini tidak menambah nilai. Anda boleh melanjutkan ke latihan berikutnya kapan saja.</p></header><div class="word-layout"><div><div class="word-board" role="group" aria-label="Kotak pencarian kata, ${cfg.grid.length} baris dan ${cfg.grid[0].length} kolom">${cfg.grid.map((row,r)=>row.split('').map((letter,c)=>`<button type="button" class="word-cell" data-word-cell="${r},${c}" aria-label="Baris ${r+1}, kolom ${c+1}: ${letter}" tabindex="${r===0&&c===0?'0':'-1'}">${letter}</button>`).join('')).join('')}</div><p class="word-keyboard">Keyboard: panah untuk berpindah, Enter untuk memilih awal dan akhir, Esc untuk membatalkan.</p></div><aside class="word-vocabulary"><h3>Petunjuk pencarian</h3><p class="word-progress" role="status"></p><ul>${cfg.words.map((w,i)=>`<li data-word-entry="${safe(w.term)}"><span class="word-clue-number">Petunjuk ${i+1} · ${w.term.length} huruf</span><span class="word-definition">${safe(w.clue)}</span><button class="word-hint" type="button" data-word-hint="${i}" aria-label="Petunjuk tambahan untuk soal ${i+1}" aria-pressed="false">Tunjukkan huruf awal</button><span class="word-term"></span><span class="word-state"></span></li>`).join('')}</ul><div class="word-tools"><button type="button" data-word-action="solution">Tampilkan jawaban</button><button type="button" data-word-action="retry">Ulangi</button></div></aside></div><p class="word-feedback" role="status">Baca petunjuknya, lalu cari istilah yang sesuai di papan.</p></div><footer class="word-controls"><button type="button" data-word-action="continue">Lanjut ke Drag the Words →</button></footer>`;
+ root.innerHTML=`<div class="word-scroll"><header class="word-heading"><span class="scene-eyebrow">FIND THE WORDS · LATIHAN ISTILAH</span><h2>Temukan istilah yang baru Anda pelajari.</h2><p>Baca petunjuk untuk menentukan istilahnya. Pilih huruf pertama lalu huruf terakhir, atau seret sepanjang kata. Baca dari kiri ke kanan atau dari atas ke bawah.</p><p class="word-optional">Latihan ini tidak menambah nilai. Anda boleh melanjutkan ke latihan berikutnya kapan saja.</p></header><div class="word-layout"><div><div class="word-board" role="group" aria-label="Kotak pencarian kata, ${cfg.grid.length} baris dan ${cfg.grid[0].length} kolom">${cfg.grid.map((row,r)=>row.split('').map((letter,c)=>`<button type="button" class="word-cell" data-word-cell="${r},${c}" aria-label="Baris ${r+1}, kolom ${c+1}: ${letter}" tabindex="${r===0&&c===0?'0':'-1'}">${letter}</button>`).join('')).join('')}</div><p class="word-keyboard">Keyboard: panah untuk berpindah, Enter untuk memilih awal dan akhir, Esc untuk membatalkan.</p></div><aside class="word-vocabulary"><h3>Petunjuk pencarian</h3><p class="word-progress" role="status"></p><ul>${cfg.words.map((w,i)=>`<li data-word-entry="${safe(w.term)}"><span class="word-clue-number">Petunjuk ${i+1} · ${w.term.length} huruf</span><span class="word-definition">${safe(w.clue)}</span><button class="word-hint" type="button" data-word-hint="${i}" aria-label="Petunjuk tambahan untuk soal ${i+1}" aria-pressed="false">Tunjukkan huruf awal</button><span class="word-term"></span><span class="word-state"></span></li>`).join('')}</ul><div class="word-tools"><button type="button" data-word-action="solution">Tampilkan jawaban</button><button type="button" data-word-action="retry">Ulangi</button></div></aside></div><p class="word-feedback" role="status">Baca petunjuknya, lalu cari istilah yang sesuai di papan.</p></div><footer class="word-controls"><button type="button" data-word-action="continue">${window.iteSections.nextLabel('wordSearch')}</button></footer>`;
  const cells=[...root.querySelectorAll('.word-cell')],feedback=root.querySelector('.word-feedback');
  function point(cell){return cell.dataset.wordCell.split(',').map(Number);}
  function key(p){return p.join(',');}
@@ -452,7 +513,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
   const action=e.target.closest('[data-word-action]')?.dataset.wordAction;
   if(action==='solution'){activeHint=null;cfg.words.forEach(w=>{if(!found.has(w.term))revealed.add(w.term);});start=null;paint();feedback.textContent='Kata yang belum ditemukan ditandai sebagai bantuan. Temuan dengan bantuan tidak dihitung sebagai temuan sendiri.';}
   if(action==='retry'){found.clear();revealed.clear();hinted.clear();activeHint=null;start=null;paint();feedback.textContent='Papan diulang. Cari kembali istilah berdasarkan petunjuk.';}
-  if(action==='continue'){root.hidden=true;document.querySelector('.dt-root').hidden=false;document.dispatchEvent(new CustomEvent('lcm-wordsearch-finish'));}
+  if(action==='continue'){root.hidden=true;document.dispatchEvent(new CustomEvent('lcm-wordsearch-finish'));}
  });
  root.addEventListener('pointerdown',e=>{const cell=e.target.closest('.word-cell');if(!cell||e.button!==0)return;dragging=true;moved=false;root.setPointerCapture(e.pointerId);origin=point(cell);paint([start||origin]);});
  root.addEventListener('pointermove',e=>{if(!dragging)return;const cell=document.elementFromPoint(e.clientX,e.clientY)?.closest('.word-cell');if(!cell||!root.contains(cell))return;const p=point(cell);if(key(p)!==key(origin))moved=true;if(moved){start=origin;paint(path(start,p));}});
@@ -474,7 +535,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
   root.innerHTML=`<div class="dt-scroll"><header class="dt-heading"><span class="scene-eyebrow">DRAG THE WORDS · LENGKAPI KALIMAT</span><h2>Kata mana yang melengkapi kalimat ini?</h2><p>Seret kata ke bagian yang kosong. Anda juga bisa memilih kata, lalu memilih tempatnya. Ada satu kata yang tidak digunakan.</p><p class="dt-optional">Latihan ini tidak menambah nilai. Tekan Periksa jawaban setelah mengisi kalimat, atau lanjutkan ke latihan berikutnya.</p></header><section class="dt-bank" aria-label="Pilihan kata"><h3>Pilihan kata</h3><div class="dt-bank-cards">${cfg.words.filter(w=>positions[w.id]==='bank').map(w=>`<button type="button" class="dt-card" data-dt-card="${safe(w.id)}" aria-pressed="${selected===w.id}">${safe(w.label)}</button>`).join('')||'<span>Semua kata sedang ditempatkan.</span>'}</div><button type="button" class="dt-return" data-dt-target="bank">Kembalikan kata terpilih ke pilihan</button></section><ol class="dt-sentences">${cfg.gaps.map((g,i)=>{
    const id=cfg.words.find(w=>positions[w.id]===g.id)?.id,right=id===g.answer,state=checked?(id?(right?'correct':'wrong'):'empty'):'';
    return `<li data-dt-gap="${safe(g.id)}" data-state="${state}"><p>${safe(g.before)} <span class="dt-slot"><button type="button" class="dt-target ${id?'dt-filled':''}" data-dt-target="${safe(g.id)}" ${id?`data-dt-card="${safe(id)}" aria-pressed="${selected===id}"`:''} aria-label="Kalimat ${i+1}, ${id?safe(label(id)):'bagian kosong'}">${id?safe(label(id)):'Pilih kata'}</button>${id?`<button type="button" class="dt-remove" data-dt-remove="${safe(id)}" aria-label="Kembalikan kata pada kalimat ${i+1}">×</button>`:''}</span> ${safe(g.after)}</p><p class="dt-gap-feedback">${checked?(id?(right?safe(g.feedback):'Kata ini belum sesuai dengan kalimat. Coba pilihan lain.'):'Bagian ini belum diisi.'):assisted?'Jawaban ditampilkan dengan bantuan.':''}</p></li>`;
-  }).join('')}</ol><div class="dt-tools"><button type="button" data-dt-action="undo" ${history.length?'':'disabled'}>Urungkan</button><button type="button" data-dt-action="retry">Ulangi</button><button type="button" data-dt-action="solution">Tampilkan jawaban</button></div><p class="dt-feedback" role="status">Pilih kata yang sesuai dengan makna kalimat.</p></div><footer class="dt-controls"><button type="button" data-dt-action="check">Periksa jawaban</button><button type="button" data-dt-action="continue">Urutkan paragraf →</button></footer>`;
+  }).join('')}</ol><div class="dt-tools"><button type="button" data-dt-action="undo" ${history.length?'':'disabled'}>Urungkan</button><button type="button" data-dt-action="retry">Ulangi</button><button type="button" data-dt-action="solution">Tampilkan jawaban</button></div><p class="dt-feedback" role="status">Pilih kata yang sesuai dengan makna kalimat.</p></div><footer class="dt-controls"><button type="button" data-dt-action="check">Periksa jawaban</button><button type="button" data-dt-action="continue">${window.iteSections.nextLabel('dragWords')}</button></footer>`;
   root.querySelector('.dt-scroll').scrollTop=scroll;
   const correct=cfg.gaps.filter(g=>positions[g.answer]===g.id).length;root.dataset.correct=String(checked?correct:0);root.dataset.complete=String(checked&&correct===cfg.gaps.length&&!assisted);root.dataset.assisted=String(assisted);
  }
@@ -493,7 +554,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
   if(action==='retry'){positions=Object.fromEntries(cfg.words.map(w=>[w.id,'bank']));history=[];selected=null;checked=false;assisted=false;render();message('Kalimat dikosongkan. Coba kembali dari pilihan kata.');}
   if(action==='solution'){history.push({...positions});positions=Object.fromEntries(cfg.words.map(w=>[w.id,'bank']));cfg.gaps.forEach(g=>positions[g.answer]=g.id);assisted=true;checked=false;selected=null;render();message('Jawaban ditampilkan dengan bantuan. Tekan Ulangi jika ingin mengerjakannya sendiri.');}
   if(action==='check'){checked=true;selected=null;render();const count=Number(root.dataset.correct);message(assisted?'Jawaban ini memakai bantuan. Tekan Ulangi untuk mencoba sendiri.':count===cfg.gaps.length?'Ketiga kalimat sudah tepat. Lanjutkan ke latihan berikutnya.':`${count} dari ${cfg.gaps.length} kalimat sudah tepat. Tinjau bagian yang belum sesuai.`);}
-  if(action==='continue'){root.hidden=true;document.querySelector('.sp-root').hidden=false;document.dispatchEvent(new CustomEvent('lcm-dragwords-finish'));}
+  if(action==='continue'){root.hidden=true;document.dispatchEvent(new CustomEvent('lcm-dragwords-finish'));}
  });
  root.addEventListener('keydown',e=>{if(e.key==='Escape'){selected=null;render();message('Pilihan dibatalkan.');}});
  function tick(){if(!drag?.ghost){frame=null;return;}const scroll=root.querySelector('.dt-scroll'),r=scroll.getBoundingClientRect(),speed=drag.y<r.top+55?-9:drag.y>r.bottom-55?9:0;if(speed)scroll.scrollTop+=speed;frame=requestAnimationFrame(tick);}
@@ -513,7 +574,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
  function say(value){root.querySelector('.sp-feedback').textContent=value;}
  function render(focus=null){
   const y=root.querySelector('.sp-scroll')?.scrollTop||0,correct=order.filter((id,i)=>id===cfg.correct_order[i]).length;
-  root.innerHTML=`<div class="sp-scroll"><header class="sp-heading"><span class="scene-eyebrow">SORT THE PARAGRAPHS · SUSUN ALUR CERITA</span><h2>${safe(cfg.title)}</h2><p>Susun empat paragraf ini menjadi cerita yang runtut. Seret pegangannya, atau gunakan tombol Naik dan Turun.</p><p class="sp-optional">Contoh simulasi. Latihan ini tidak menambah nilai; Anda boleh melanjutkan ke praktik kasus kapan saja.</p></header><p class="sp-keyboard">Keyboard: pilih pegangan dengan Enter atau Spasi, gunakan panah atas/bawah, lalu Enter atau Spasi untuk meletakkan. Esc membatalkan.</p><ol class="sp-list" aria-label="Paragraf yang dapat diurutkan">${order.map((id,i)=>`<li class="sp-card" data-sp-id="${safe(id)}" data-state="${checked?(id===cfg.correct_order[i]?'correct':'wrong'):''}"><div class="sp-card-top"><span class="sp-position">Posisi ${i+1} dari ${order.length}</span><button type="button" class="sp-handle" data-sp-handle="${safe(id)}" aria-label="Geser paragraf di posisi ${i+1}" aria-pressed="${grabbed===id}">⠿ <span>Geser</span></button></div><p>${safe(text(id))}</p><div class="sp-movement"><button type="button" data-sp-up="${safe(id)}" aria-label="Naikkan paragraf di posisi ${i+1}" ${i===0?'disabled':''}>↑ Naik</button><button type="button" data-sp-down="${safe(id)}" aria-label="Turunkan paragraf di posisi ${i+1}" ${i===order.length-1?'disabled':''}>↓ Turun</button><span class="sp-state">${checked?(id===cfg.correct_order[i]?'✓ Posisi tepat':'Tinjau urutannya'):assisted?'Urutan ditampilkan dengan bantuan.':''}</span></div></li>`).join('')}</ol><div class="sp-tools"><button type="button" data-sp-action="undo" ${history.length?'':'disabled'}>Urungkan</button><button type="button" data-sp-action="retry">Ulangi</button><button type="button" data-sp-action="solution">Tampilkan urutan</button></div><p class="sp-feedback" role="status">Baca setiap paragraf dan perhatikan hubungannya dengan paragraf lain.</p></div><footer class="sp-controls"><button type="button" data-sp-action="check">Periksa urutan</button><button type="button" data-sp-action="continue">Praktik kasus →</button></footer>`;
+  root.innerHTML=`<div class="sp-scroll"><header class="sp-heading"><span class="scene-eyebrow">SORT THE PARAGRAPHS · SUSUN ALUR CERITA</span><h2>${safe(cfg.title)}</h2><p>Susun empat paragraf ini menjadi cerita yang runtut. Seret pegangannya, atau gunakan tombol Naik dan Turun.</p><p class="sp-optional">Contoh simulasi. Latihan ini tidak menambah nilai; Anda boleh melanjutkan ke praktik kasus kapan saja.</p></header><p class="sp-keyboard">Keyboard: pilih pegangan dengan Enter atau Spasi, gunakan panah atas/bawah, lalu Enter atau Spasi untuk meletakkan. Esc membatalkan.</p><ol class="sp-list" aria-label="Paragraf yang dapat diurutkan">${order.map((id,i)=>`<li class="sp-card" data-sp-id="${safe(id)}" data-state="${checked?(id===cfg.correct_order[i]?'correct':'wrong'):''}"><div class="sp-card-top"><span class="sp-position">Posisi ${i+1} dari ${order.length}</span><button type="button" class="sp-handle" data-sp-handle="${safe(id)}" aria-label="Geser paragraf di posisi ${i+1}" aria-pressed="${grabbed===id}">⠿ <span>Geser</span></button></div><p>${safe(text(id))}</p><div class="sp-movement"><button type="button" data-sp-up="${safe(id)}" aria-label="Naikkan paragraf di posisi ${i+1}" ${i===0?'disabled':''}>↑ Naik</button><button type="button" data-sp-down="${safe(id)}" aria-label="Turunkan paragraf di posisi ${i+1}" ${i===order.length-1?'disabled':''}>↓ Turun</button><span class="sp-state">${checked?(id===cfg.correct_order[i]?'✓ Posisi tepat':'Tinjau urutannya'):assisted?'Urutan ditampilkan dengan bantuan.':''}</span></div></li>`).join('')}</ol><div class="sp-tools"><button type="button" data-sp-action="undo" ${history.length?'':'disabled'}>Urungkan</button><button type="button" data-sp-action="retry">Ulangi</button><button type="button" data-sp-action="solution">Tampilkan urutan</button></div><p class="sp-feedback" role="status">Baca setiap paragraf dan perhatikan hubungannya dengan paragraf lain.</p></div><footer class="sp-controls"><button type="button" data-sp-action="check">Periksa urutan</button><button type="button" data-sp-action="continue">${window.iteSections.nextLabel('sortParagraphs')}</button></footer>`;
   root.querySelector('.sp-scroll').scrollTop=y;root.dataset.correct=String(checked?correct:0);root.dataset.complete=String(checked&&correct===order.length&&!assisted);root.dataset.assisted=String(assisted);
   if(focus)root.querySelector(`[data-sp-handle="${focus}"]`)?.focus({preventScroll:true});
  }
@@ -527,7 +588,7 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
   if(action==='retry'){order=[...cfg.initial_order];history=[];checked=false;assisted=false;grabbed=null;original=null;render();say('Urutan diulang. Susun kembali alur ceritanya.');}
   if(action==='solution'){history.push([...order]);order=[...cfg.correct_order];checked=false;assisted=true;grabbed=null;render();say('Urutan ditampilkan dengan bantuan. Tekan Ulangi jika ingin menyusunnya sendiri.');}
   if(action==='check'){checked=true;grabbed=null;render();const correct=Number(root.dataset.correct),connections=order.slice(0,-1).filter((id,i)=>cfg.correct_order.indexOf(order[i+1])===cfg.correct_order.indexOf(id)+1).length;root.dataset.connections=String(connections);say(assisted?'Urutan ini memakai bantuan. Tekan Ulangi untuk mencoba sendiri.':correct===order.length?`Urutan sudah runtut. ${cfg.explanation}`:`${correct} dari ${order.length} paragraf berada di posisi tepat. ${connections} dari ${order.length-1} sambungan sudah sesuai. Baca kembali kalimat pembuka dan hubungan antarapagraf.`);}
-  if(action==='continue'){root.hidden=true;document.querySelector('.dnd-challenge').hidden=false;document.dispatchEvent(new CustomEvent('lcm-sortparagraphs-finish'));}
+  if(action==='continue'){root.hidden=true;document.dispatchEvent(new CustomEvent('lcm-sortparagraphs-finish'));}
  });
  root.addEventListener('keydown',e=>{
   const handle=e.target.closest('[data-sp-handle]');if(!handle)return;const id=handle.dataset.spHandle;
@@ -542,4 +603,215 @@ window.addEventListener("DOMContentLoaded",function(){/* Scene navigation and vi
  root.addEventListener('pointerup',e=>end(e,false));root.addEventListener('pointercancel',e=>end(e,true));
  render();
 })();
+/* Route through enabled ITE activities without marking skipped work complete. */
+(() => {
+ const api=window.iteSections;
+ const steps=[['video','.iv-root','lcm-video-finish'],['situations','.sim-root','lcm-simulation-finish'],['wordSearch','.word-root','lcm-wordsearch-finish'],['dragWords','.dt-root','lcm-dragwords-finish'],['sortParagraphs','.sp-root','lcm-sortparagraphs-finish'],['hotspot','.hotspot-root',null],['concept','.quiz-set-root',null],['case','.dnd-challenge',null]];
+ function move(after){
+  steps.forEach(([,selector])=>{document.querySelector(selector).hidden=true;});
+  const next=steps.slice(after+1).find(([id])=>api.enabled(id));
+  if(!next){api.routeReady=true;document.dispatchEvent(new Event('ite-route-finish'));return;}
+  const root=document.querySelector(next[1]);root.hidden=false;root.querySelector('.hotspot-scroll,.quiz-set-scroll')?.scrollTo(0,0);
+  const heading=root.querySelector('h2');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}
+ }
+ document.addEventListener('lcm-lesson-finish',()=>move(-1));
+ steps.forEach(([,selector,event],index)=>{
+  if(event)document.addEventListener(event,()=>move(index));
+  const root=document.querySelector(selector);
+  if(index===5||index===6){const button=root.querySelector('[data-ite-next]');button.textContent=api.nextLabel(steps[index][0]);document.addEventListener(index===5?'lcm-hotspot-complete':'lcm-quiz-complete',()=>{button.disabled=false;});root.addEventListener('click',event=>{if(event.target.closest('.hotspot-retry,.quiz-retry'))button.disabled=true;if(event.target.closest('[data-ite-next]')&&root.dataset.complete==='true')move(index);});}
+ });
+ document.addEventListener('lcm-practice-complete',()=>{api.routeReady=true;},true);
+ const media=document.querySelector('video.iv-video');new MutationObserver(()=>{if(document.body.dataset.scenePhase!=='1')media?.pause();}).observe(document.body,{attributes:true,attributeFilter:['data-scene-phase']});
+})();
 });
+/* IT Enterprise course-specific fork: ungraded checkpoint, native Form owns final score.
+ * LCM enhanced interactions: offline video, image hotspot and optional SCORM question set. */
+(() => {
+  'use strict';
+
+  const esc = (value) => String(value).replace(/[&<>"']/g, (char) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  })[char]);
+
+  const readConfig = (root, selector) => {
+    const node = root.querySelector(selector);
+    return node ? JSON.parse(node.textContent) : null;
+  };
+
+  const icons = {
+    play: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>',
+    pause: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"></path></svg>',
+    volume: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h4l5 4V6L8 10H4zm12-1a4 4 0 010 6m2-8a7 7 0 010 10"></path></svg>',
+    mute: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h4l5 4V6L8 10H4m8 2l8 8m0-8l-8 8"></path></svg>',
+    fullscreen: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"></path></svg>',
+    exit: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h5V3M21 8h-5V3M3 16h5v5M21 16h-5v5"></path></svg>'
+  };
+
+  function initVideo(root) {
+    const cfg = readConfig(root, '.iv-config');
+    const app = root.querySelector('.iv-app');
+    if (!cfg || !app) return;
+    const items = Array.isArray(cfg.interactions) ? cfg.interactions : [];
+    const next = cfg.nextSelector ? document.querySelector(cfg.nextSelector) : null;
+    const answered = new Set();
+    let active = -1;
+    let selected = null;
+    let triggerTimes = [];
+    if (next && cfg.hideNextUntilComplete !== false) next.hidden = true;
+
+    app.innerHTML = `<div class="iv-shell">
+      <header class="iv-header"><div><span class="scene-eyebrow">VIDEO INTERAKTIF</span><h2>${esc(cfg.title)}</h2><p>${esc(cfg.instruction)}</p></div><div class="iv-header-meta"><span class="iv-duration">${esc(cfg.durationLabel || 'Video pembelajaran')}</span><span class="iv-interaction-count" role="status">0 dari ${items.length} pertanyaan selesai</span></div></header>
+      <div class="iv-video-frame"><video class="iv-video" playsinline preload="metadata" ${cfg.poster ? `poster="${esc(cfg.poster)}"` : ''}><source src="${esc(cfg.source)}" type="${esc(cfg.mime || 'video/mp4')}">Browser Anda tidak mendukung video HTML5.</video><div class="iv-question" hidden role="dialog" aria-modal="true" aria-labelledby="iv-question-title"><div class="iv-question-card"></div></div>
+      <div class="iv-player-controls" role="group" aria-label="Kontrol video"><button type="button" class="iv-play" aria-label="Putar video">${icons.play}</button><span class="iv-time">0:00 / 0:00</span><div class="iv-timeline-wrap"><div class="iv-timeline" role="slider" tabindex="0" aria-label="Posisi video" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0" aria-valuetext="0:00"><span class="iv-timeline-fill"></span></div>${items.map((item, index) => `<button type="button" class="iv-marker" data-iv-marker="${index}" aria-label="Buka pertanyaan ${index + 1}, ${esc(item.timeLabel)}"><span>${index + 1}</span></button>`).join('')}</div><button type="button" class="iv-mute" aria-label="Bisukan video">${icons.volume}</button><input class="iv-volume" type="range" min="0" max="1" step="0.05" value="1" aria-label="Volume video"><button type="button" class="iv-player-fullscreen" aria-label="Buka video layar penuh">${icons.fullscreen}</button></div></div>
+      <footer class="iv-footer"><p>Penanda bernomor pada timeline menunjukkan pertanyaan interaktif.</p><button type="button" class="iv-finish" hidden>${esc(cfg.continueLabel || 'Lanjutkan')}</button></footer></div>`;
+
+    const video = app.querySelector('.iv-video');
+    const frame = app.querySelector('.iv-video-frame');
+    const overlay = app.querySelector('.iv-question');
+    const card = app.querySelector('.iv-question-card');
+    const finish = app.querySelector('.iv-finish');
+    const fill = app.querySelector('.iv-timeline-fill');
+    const timeline = app.querySelector('.iv-timeline');
+    const play = app.querySelector('.iv-play');
+    const mute = app.querySelector('.iv-mute');
+    const volume = app.querySelector('.iv-volume');
+    if (cfg.hasAudio === false) { mute.hidden = true; volume.hidden = true; }
+    const fullscreen = app.querySelector('.iv-player-fullscreen');
+    const timeText = app.querySelector('.iv-time');
+    const count = app.querySelector('.iv-interaction-count');
+    const markers = [...app.querySelectorAll('.iv-marker')];
+    const format = (value) => { const seconds = Math.max(0, Math.floor(Number(value) || 0)); return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`; };
+
+    function updatePlayer() {
+      const duration = Number.isFinite(video.duration) ? video.duration : 0;
+      const current = video.currentTime || 0;
+      fill.style.width = duration ? `${Math.min(100, current / duration * 100)}%` : '0';
+      timeText.textContent = `${format(current)} / ${format(duration)}`;
+      timeline.setAttribute('aria-valuemax', String(Math.round(duration)));
+      timeline.setAttribute('aria-valuenow', String(Math.round(current)));
+      timeline.setAttribute('aria-valuetext', format(current));
+    }
+
+    function updateStatus() {
+      count.textContent = `${answered.size} dari ${items.length} pertanyaan selesai`;
+      markers.forEach((marker, index) => marker.classList.toggle('is-complete', answered.has(index)));
+      finish.hidden = answered.size !== items.length;
+    }
+
+    function showQuestion(index) {
+      if (answered.has(index)) return;
+      const item = items[index];
+      active = index;
+      selected = null;
+      video.pause();
+      card.innerHTML = `<span class="iv-question-label">PERTANYAAN ${index + 1} DARI ${items.length} - ${esc(item.timeLabel)}</span><h3 id="iv-question-title" tabindex="-1">${esc(item.question)}</h3><fieldset><legend>Pilih satu jawaban.</legend>${item.options.map((option, optionIndex) => `<label><input type="radio" name="iv-answer" value="${optionIndex}"><span>${String.fromCharCode(65 + optionIndex)}. ${esc(option)}</span></label>`).join('')}</fieldset><div class="iv-question-actions"><button type="button" class="iv-check" disabled>Periksa jawaban</button><button type="button" class="iv-resume" hidden>Lanjutkan video</button></div><p class="iv-feedback" role="status"></p>`;
+      overlay.hidden = false;
+      card.querySelector('h3').focus({ preventScroll: true });
+    }
+
+    function nextDue() {
+      if (active >= 0) return -1;
+      return triggerTimes.findIndex((time, index) => !answered.has(index) && video.currentTime >= time);
+    }
+
+    function complete() {
+      if (answered.size !== items.length) return;
+      video.pause();
+      root.dataset.complete = 'true';
+      root.dispatchEvent(new CustomEvent(cfg.completeEvent || 'lcm-video-finish', { bubbles: true }));
+      if (next && !window.iteSections) { root.hidden = true; next.hidden = false; next.querySelector('button,[tabindex]')?.focus({ preventScroll: true }); }
+    }
+
+    video.addEventListener('loadedmetadata', () => {
+      const duration = video.duration;
+      triggerTimes = items.map((item) => item.at === 'middle' ? duration / 2 : Number(item.at));
+      markers.forEach((marker, index) => { marker.style.left = `${Math.min(100, Math.max(0, triggerTimes[index] / duration * 100))}%`; });
+      updatePlayer();
+    });
+    video.addEventListener('timeupdate', () => { updatePlayer(); const due = nextDue(); if (due >= 0) showQuestion(due); });
+    video.addEventListener('play', () => { play.innerHTML = icons.pause; play.setAttribute('aria-label', 'Jeda video'); });
+    video.addEventListener('pause', () => { play.innerHTML = icons.play; play.setAttribute('aria-label', 'Putar video'); });
+    video.addEventListener('ended', () => { const pending = items.findIndex((item, index) => !answered.has(index)); if (pending >= 0) showQuestion(pending); });
+    play.addEventListener('click', () => { if (video.paused) video.play().catch(() => {}); else video.pause(); });
+    video.addEventListener('click', () => play.click());
+    mute.addEventListener('click', () => { video.muted = !video.muted; mute.innerHTML = video.muted ? icons.mute : icons.volume; });
+    volume.addEventListener('input', () => { video.volume = Number(volume.value); video.muted = video.volume === 0; });
+    timeline.addEventListener('pointerdown', (event) => { const rect = timeline.getBoundingClientRect(); video.currentTime = Math.min(1, Math.max(0, (event.clientX - rect.left) / rect.width)) * video.duration; });
+    timeline.addEventListener('keydown', (event) => { if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return; event.preventDefault(); if (event.key === 'Home') video.currentTime = 0; else if (event.key === 'End') video.currentTime = video.duration; else video.currentTime = Math.min(video.duration, Math.max(0, video.currentTime + (event.key === 'ArrowRight' ? 5 : -5))); });
+    fullscreen.addEventListener('click', () => { if (document.fullscreenElement === frame) document.exitFullscreen?.(); else frame.requestFullscreen?.(); });
+    document.addEventListener('fullscreenchange', () => { const isFullscreen = document.fullscreenElement === frame; fullscreen.innerHTML = isFullscreen ? icons.exit : icons.fullscreen; fullscreen.setAttribute('aria-label', isFullscreen ? 'Keluar dari video layar penuh' : 'Buka video layar penuh'); });
+    app.addEventListener('change', (event) => { const input = event.target.closest('input[name="iv-answer"]'); if (!input || active < 0) return; selected = Number(input.value); card.querySelector('.iv-check').disabled = false; });
+    app.addEventListener('click', (event) => {
+      const marker = event.target.closest('[data-iv-marker]');
+      if (marker) { const index = Number(marker.dataset.ivMarker); video.currentTime = triggerTimes[index] || 0; showQuestion(index); return; }
+      if (event.target.closest('.iv-check') && active >= 0 && selected !== null) { const item = items[active]; answered.add(active); card.querySelectorAll('input').forEach((input) => { input.disabled = true; }); card.querySelector('.iv-check').hidden = true; card.querySelector('.iv-resume').hidden = false; card.querySelector('.iv-feedback').innerHTML = `<b>${selected === Number(item.correct) ? 'Jawaban tepat.' : 'Jawaban belum tepat.'}</b> ${esc(item.feedback)}`; updateStatus(); return; }
+      if (event.target.closest('.iv-resume')) { overlay.hidden = true; active = -1; selected = null; video.play().catch(() => {}); return; }
+      if (event.target.closest('.iv-finish')) complete();
+    });
+    updateStatus();
+  }
+
+  function initHotspot(root) {
+    const cfg = readConfig(root, '.hotspot-config');
+    const app = root.querySelector('.hotspot-app');
+    if (!cfg || !app) return;
+    const found = new Set();
+    const attempted = new Set();
+    app.innerHTML = `<div class="hotspot-scroll"><header><span class="scene-eyebrow">IMAGE HOTSPOT</span><h2>${esc(cfg.title)}</h2><p>${esc(cfg.instruction)} Area yang dapat dipilih ditandai garis tipis, nomor, dan label singkat.</p><p class="hotspot-progress" role="status">0 dari ${cfg.required} komponen ditemukan.</p></header><div class="hotspot-layout"><div class="hotspot-image-wrap"><img src="${esc(cfg.background)}" alt="${esc(cfg.alt)}">${cfg.regions.map((region, index) => `<button type="button" class="hotspot-marker" style="left:${region.x}%;top:${region.y}%;width:${region.width}%;height:${region.height}%" data-hotspot="${esc(region.id)}" aria-label="Area ${index + 1}: ${esc(region.label)}" aria-pressed="false"><span class="hotspot-number">${index + 1}</span><small class="hotspot-caption">${esc(region.displayLabel || region.label)}</small></button>`).join('')}</div><aside class="hotspot-side"><h3>Alternatif keyboard</h3><p>Pilih objek pada gambar atau tombol dengan label yang sama.</p><div class="hotspot-list">${cfg.regions.map((region, index) => `<button type="button" data-hotspot="${esc(region.id)}">${index + 1}. ${esc(region.displayLabel || region.label)}</button>`).join('')}</div><div class="hotspot-feedback" role="status">Pilih objek pada gambar atau gunakan tombol area.</div><button type="button" class="hotspot-retry">Ulangi</button></aside></div></div>`;
+    const progress = app.querySelector('.hotspot-progress');
+    const feedback = app.querySelector('.hotspot-feedback');
+    function choose(id) {
+      const region = cfg.regions.find((item) => item.id === id);
+      if (!region || attempted.has(id)) return;
+      attempted.add(id);
+      app.querySelectorAll(`[data-hotspot="${CSS.escape(id)}"]`).forEach((button) => { button.setAttribute('aria-pressed', 'true'); button.classList.add(region.correct ? 'is-correct' : 'is-wrong'); });
+      feedback.textContent = region.feedback;
+      if (region.correct) found.add(id);
+      progress.textContent = `${found.size} dari ${cfg.required} komponen ditemukan.`;
+      if (found.size === cfg.required) { root.dataset.complete = 'true'; progress.textContent = 'Semua komponen ditemukan.'; root.dispatchEvent(new CustomEvent(cfg.completeEvent || 'lcm-hotspot-complete', { bubbles: true })); }
+    }
+    app.addEventListener('click', (event) => { const choice = event.target.closest('[data-hotspot]'); if (choice) choose(choice.dataset.hotspot); if (event.target.closest('.hotspot-retry')) { found.clear(); attempted.clear(); root.dataset.complete = 'false'; app.querySelectorAll('[data-hotspot]').forEach((button) => { button.setAttribute('aria-pressed', 'false'); button.classList.remove('is-correct', 'is-wrong'); }); progress.textContent = `0 dari ${cfg.required} komponen ditemukan.`; feedback.textContent = 'Pilih objek pada gambar atau gunakan tombol area.'; } });
+  }
+
+  function initQuestionSet(root) {
+    const cfg = readConfig(root, '.quiz-set-config');
+    const app = root.querySelector('.quiz-set-app');
+    if (!cfg || !app) return;
+    const answers = Array(cfg.questions.length).fill(null);
+    let current = 0;
+    let finished = false;
+    const activityId = cfg.activityId || 'lcm-question-set';
+    const scored = cfg.scored !== false;
+    const registry = scored ? window.exeScorm12?.activities : null;
+    const policy = scored ? window.exeScorm12?.policy : null;
+    const client = scored ? window.exeScorm12?.client : null;
+    if (scored) window.exeScorm12?.setPageHasScoredActivities?.(true);
+    registry?.register(activityId, { evaluable: true, completionRequired: true, completed: false, answered: 0, total: cfg.questions.length, score: null, minimumScore: 0, maximumScore: 100, weight: 1, successThreshold: 0 });
+    const score = () => Math.round(cfg.questions.reduce((total, question, index) => total + (answers[index] === question.correct ? 100 / cfg.questions.length : 0), 0));
+    function persist(value) { if (!scored) return false; registry?.update(activityId, { evaluable: true, completionRequired: true, completed: true, answered: cfg.questions.length, total: cfg.questions.length, score: value, minimumScore: 0, maximumScore: 100, weight: 1, successThreshold: 0 }); if (!client?.isActive?.() || !policy) return false; const write = policy.setScoreDetailed(value, 0, 100); policy.persistActivities(); policy.recordActivityOutcome(value); return write.requiredWritten === true && client.commit(); }
+    function render() {
+      root.scrollTop = 0;
+      if (finished) { const value = Number(root.dataset.score); app.innerHTML = `<div class="quiz-set-scroll quiz-result"><span class="scene-eyebrow">HASIL LATIHAN KONSEP</span><h2>${esc(cfg.title)}</h2><div class="quiz-score"><strong>${value}</strong><span>/100</span></div><div class="quiz-result-list">${cfg.questions.map((question, index) => `<div class="${answers[index] === question.correct ? 'is-correct' : 'is-wrong'}"><b>Soal ${index + 1}: ${answers[index] === question.correct ? 'Benar' : 'Belum tepat'}</b><p>${esc(question.feedback)}</p></div>`).join('')}</div><button type="button" class="quiz-retry">Ulangi latihan</button></div>`; return; }
+      const question = cfg.questions[current];
+      app.innerHTML = `<div class="quiz-set-scroll"><header class="quiz-set-head"><div><span class="scene-eyebrow">LATIHAN KONSEP</span><h2>${esc(cfg.title)}</h2><p>${esc(cfg.intro)}</p></div><div class="quiz-count">Soal ${current + 1} dari ${cfg.questions.length}</div></header><section class="quiz-card"><fieldset><legend>${esc(question.question)}</legend>${question.options.map((option, index) => `<label class="quiz-option ${answers[current] === index ? 'is-selected' : ''}"><input type="radio" name="quiz-${esc(question.id)}" value="${index}" ${answers[current] === index ? 'checked' : ''}><span>${String.fromCharCode(65 + index)}. ${esc(option)}</span></label>`).join('')}</fieldset></section><footer class="quiz-actions"><button type="button" class="quiz-prev" ${current === 0 ? 'disabled' : ''}>Sebelumnya</button><span>${answers.filter((answer) => answer !== null).length} dari ${cfg.questions.length} dijawab</span><button type="button" class="quiz-next">${current === cfg.questions.length - 1 ? 'Periksa latihan' : 'Berikutnya'}</button></footer><p class="quiz-alert" role="status"></p></div>`;
+    }
+    app.addEventListener('change', (event) => { const input = event.target.closest('input[type="radio"]'); if (!input) return; answers[current] = Number(input.value); app.querySelectorAll(".quiz-option").forEach(label => label.classList.toggle("is-selected", label.contains(input))); });
+    app.addEventListener('click', (event) => { if (event.target.closest('.quiz-prev')) { current = Math.max(0, current - 1); render(); return; } if (event.target.closest('.quiz-next')) { if (current < cfg.questions.length - 1) { current += 1; render(); return; } if (answers.some((answer) => answer === null)) { app.querySelector('.quiz-alert').textContent = 'Jawab seluruh pertanyaan sebelum menyelesaikan kuis.'; return; } const value = score(); root.dataset.score = String(value); root.dataset.complete = 'true'; root.dataset.scormSaved = persist(value) ? 'true' : 'false'; finished = true; render(); root.dispatchEvent(new CustomEvent(cfg.completeEvent || 'lcm-quiz-complete', { bubbles: true, detail: { score: value } })); return; } if (event.target.closest('.quiz-retry')) {
+      answers.fill(null); current = 0; finished = false;
+      root.dataset.complete = 'false'; root.dataset.score = ''; root.dataset.scormSaved = 'false';
+      registry?.update(activityId, { evaluable: true, completionRequired: true, completed: false, answered: 0, total: cfg.questions.length, score: null, minimumScore: 0, maximumScore: 100, weight: 1, successThreshold: 0 });
+      if (client?.isActive?.() && policy) {
+        policy.reconcilePendingActivities?.(); policy.persistActivities(); client.commit();
+      }
+      render();
+    } });
+    render();
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    if (!document.body.classList.contains('exe-export')) return;
+    document.querySelectorAll('.iv-root').forEach(initVideo);
+    document.querySelectorAll('.hotspot-root').forEach(initHotspot);
+    document.querySelectorAll('.quiz-set-root[data-renderer="lcm-question-set"]').forEach(initQuestionSet);
+  });
+})();

@@ -12,3 +12,5 @@ scorm-authoring-kit/scorm-exe-scenes/assets/enhanced-interactions/** -text
 it-enterprise/IT_Enterprise_Paket_Authoring.zip filter=lfs diff=lfs merge=lfs -text
 it-enterprise/exelearning/pilot/sources/*.elpx filter=lfs diff=lfs merge=lfs -text
 it-enterprise/exelearning/pilot/dist_scorm/*.zip filter=lfs diff=lfs merge=lfs -text
+kursus-statistik-sektoral/exelearning/pilot/sources/*.elpx filter=lfs diff=lfs merge=lfs -text
+kursus-statistik-sektoral/exelearning/pilot/dist_scorm/*.zip filter=lfs diff=lfs merge=lfs -text

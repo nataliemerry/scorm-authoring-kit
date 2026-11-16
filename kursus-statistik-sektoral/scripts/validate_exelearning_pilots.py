@@ -9,15 +9,15 @@ OUT=BASE/'exelearning/pilot'
 reports=[]
 lessons=json.loads((BASE/'data/pilot_lessons.sourced.json').read_text(encoding='utf-8'))
 registry=json.loads((BASE/'data/pilot_references.json').read_text(encoding='utf-8'))
-assert len(registry)==5
+assert len(registry) in (5, 11)
 from urllib.parse import urlparse
 for course in lessons.values():
     for lesson in course['lessons']:
         assert len(lesson['body'].split('\n\n'))==len(lesson['paragraph_sources'])
         assert all(lesson['paragraph_sources'])
         for ref in lesson['references']:
-            assert urlparse(ref['url']).hostname in {'www.oecd.org','www.nist.gov','learn.microsoft.com'}
-            assert ref['verified_on']=='2026-11-13'
+            assert urlparse(ref['url']).hostname in {'www.oecd.org','www.nist.gov','learn.microsoft.com','peraturan.bpk.go.id','pusdiklat.bps.go.id'}
+            assert ref['verified_on'] in ('2026-11-13', '2026-11-14')
             assert ref['section']
 
 for cid in ('C01','C12'):
@@ -54,11 +54,18 @@ for cid in ('C01','C12'):
         assert b'{{context_path}}' not in archive.read('index.html')
         assert 'content.xml' in names
         raster=[n for n in names if n.startswith('content/resources/') and n.endswith('.webp')]
-        assert len(raster)==4,(cid,raster)
+        expected_raster = 6 if cid == 'C12' else 4
+        assert len(raster) == expected_raster, (cid, raster)
+        if cid == 'C12':
+            assert 'content/resources/video/C12-penguatan-statistik-sektoral.mp4' in names
+            assert b'iv-config' in archive.read('index.html')
+            assert b'hotspot-config' in archive.read('index.html')
+            assert b'quiz-set-config' in archive.read('index.html')
+            assert b'cfg.scored !== false' in archive.read('theme/style.js')
         # Extracted preview must be byte-for-byte the actual exported files.
         for name in names:
             if not name.endswith('/'):
                 assert (OUT/'preview'/cid/name).read_bytes()==archive.read(name),name
-        reports.append(dict(course=cid,bytes=package.stat().st_size,sco_count=1,manifest_files_valid=True,bundled_fonts=2,generated_images=4,official_logo=1,preview_matches_export=True))
+        reports.append(dict(course=cid,bytes=package.stat().st_size,sco_count=1,manifest_files_valid=True,bundled_fonts=2,generated_images=expected_raster,official_logo=1,preview_matches_export=True))
 (OUT/'qa/structure-report.json').write_text(json.dumps(reports,indent=2),encoding='utf-8')
 print(json.dumps(reports,indent=2))
